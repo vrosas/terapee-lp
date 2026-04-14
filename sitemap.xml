@@ -5,32 +5,32 @@
 
   <!-- Funcionalidades -->
   <url><loc>https://terapee.com.br/funcionalidades/</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
-  <url><loc>https://terapee.com.br/funcionalidades/agenda.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://terapee.com.br/funcionalidades/prontuario-eletronico.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://terapee.com.br/funcionalidades/lembretes-whatsapp.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://terapee.com.br/funcionalidades/gestao-financeira.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://terapee.com.br/funcionalidades/gestao-de-pacientes.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://terapee.com.br/funcionalidades/emissao-de-recibos.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://terapee.com.br/funcionalidades/cobranca-automatica.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://terapee.com.br/funcionalidades/formularios-personalizaveis.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://terapee.com.br/funcionalidades/multi-agenda.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://terapee.com.br/funcionalidades/check-in.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/funcionalidades/agenda</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/funcionalidades/prontuario-eletronico</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/funcionalidades/lembretes-whatsapp</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/funcionalidades/gestao-financeira</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/funcionalidades/gestao-de-pacientes</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/funcionalidades/emissao-de-recibos</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/funcionalidades/cobranca-automatica</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/funcionalidades/formularios-personalizaveis</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/funcionalidades/multi-agenda</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/funcionalidades/check-in</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
 
   <!-- Especialidades -->
-  <url><loc>https://terapee.com.br/para-psicologos.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://terapee.com.br/para-fonoaudiologos.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://terapee.com.br/para-terapeutas-ocupacionais.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://terapee.com.br/para-clinicas-multidisciplinares.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://terapee.com.br/para-terapia-infantil.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/para-psicologos</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/para-fonoaudiologos</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/para-terapeutas-ocupacionais</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/para-clinicas-multidisciplinares</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/para-terapia-infantil</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
 
   <!-- Comparativos -->
-  <url><loc>https://terapee.com.br/alternativas/psicoplanner.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://terapee.com.br/alternativas/ninsaude.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://terapee.com.br/alternativas/clinica-agil.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://terapee.com.br/terapee-vs-psicoplanner.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/alternativas/psicoplanner</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/alternativas/ninsaude</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/alternativas/clinica-agil</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/terapee-vs-psicoplanner</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
 
   <!-- Legal -->
-  <url><loc>https://terapee.com.br/politica-de-privacidade.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
-  <url><loc>https://terapee.com.br/termos-de-uso.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://terapee.com.br/politica-de-privacidade</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://terapee.com.br/termos-de-uso</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
 
 </urlset>
