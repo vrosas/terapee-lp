@@ -140,28 +140,6 @@ img { max-width: 100%; display: block; }
   .footer-inner { flex-direction: column; }
 }
 
-/* Login Modal */
-.login-modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.6);backdrop-filter:blur(4px);z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s ease;}
-.login-modal-overlay.open{opacity:1;pointer-events:all;}
-.login-modal-card{background:#fff;border-radius:20px;padding:40px 36px;width:100%;max-width:480px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.18);transform:translateY(16px);transition:transform .25s ease;}
-.login-modal-overlay.open .login-modal-card{transform:translateY(0);}
-.login-modal-close{position:absolute;top:16px;right:20px;background:none;border:none;font-size:24px;color:#64748b;cursor:pointer;line-height:1;}
-.login-modal-close:hover{color:#0f172a;}
-.login-modal-logo{text-align:center;margin-bottom:20px;}
-.login-modal-title{font-size:22px;font-weight:700;color:#0f172a;text-align:center;margin:0 0 8px;}
-.login-modal-subtitle{font-size:14px;color:#64748b;text-align:center;margin:0 0 24px;}
-.login-modal-options{display:flex;flex-direction:column;gap:12px;}
-.login-modal-option{display:block;padding:20px;border-radius:14px;border:2px solid #e2e8f0;text-decoration:none;position:relative;transition:border-color .2s,box-shadow .2s;}
-.login-modal-option:hover{box-shadow:0 4px 20px rgba(68,76,231,.15);}
-.login-modal-option--new{border-color:#444CE7;}
-.login-modal-option--new:hover{border-color:#3538CD;}
-.login-modal-option--legacy:hover{border-color:#94a3b8;}
-.login-modal-option-badge{position:absolute;top:12px;right:12px;background:#444CE7;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px;}
-.login-modal-option-icon{font-size:22px;margin-bottom:6px;color:#444CE7;}
-.login-modal-option--legacy .login-modal-option-icon{color:#94a3b8;}
-.login-modal-option-title{font-size:15px;font-weight:700;color:#0f172a;margin-bottom:2px;}
-.login-modal-option-desc{font-size:13px;color:#64748b;}
-@media(max-width:480px){.login-modal-card{margin:16px;padding:28px 20px;}}
 </style>
 <script type="application/ld+json">
 {
@@ -201,7 +179,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/#fale-conosco">Fale Conosco</a>
     </nav>
     <div class="header-actions">
-      <button onclick="document.getElementById('login-modal').classList.add('open')" class="btn btn-outline" style="padding:10px 20px;font-size:14px;">Entrar</button>
+      <a href="https://web.terapee.com.br/" target="_blank" class="btn btn-outline" style="padding:10px 20px;font-size:14px;">Entrar</a>
       <a href="https://tally.so/r/zxrQpk" class="btn btn-primary" style="padding:10px 20px;font-size:14px;">Começar grátis</a>
     </div>
     <button class="mobile-toggle" onclick="toggleMobileNav()">
@@ -494,31 +472,5 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
-<div id="login-modal" class="login-modal-overlay" onclick="if(event.target===this)this.classList.remove('open')">
-  <div class="login-modal-card">
-    <button class="login-modal-close" onclick="document.getElementById('login-modal').classList.remove('open')">&times;</button>
-    <div class="login-modal-logo">
-      <img src="/logo-terapee.svg" alt="Terapee" style="height:32px;">
-    </div>
-    <h2 class="login-modal-title">Como deseja entrar?</h2>
-    <p class="login-modal-subtitle">Selecione a versão da plataforma da sua clínica.</p>
-    <div class="login-modal-options">
-      <a href="https://web.terapee.com.br" target="_blank" class="login-modal-option login-modal-option--new">
-        <div class="login-modal-option-badge">Novo</div>
-        <div class="login-modal-option-icon">✦</div>
-        <div class="login-modal-option-title">Minha clínica está na versão 2.0</div>
-        <div class="login-modal-option-desc">Acesse a nova plataforma Terapee</div>
-      </a>
-      <a href="https://app.terapee.com.br" target="_blank" class="login-modal-option login-modal-option--legacy">
-        <div class="login-modal-option-icon">◷</div>
-        <div class="login-modal-option-title">Minha clínica ainda não foi migrada</div>
-        <div class="login-modal-option-desc">Acesse a versão anterior</div>
-      </a>
-    </div>
-  </div>
-</div>
-<script>
-document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('login-modal').classList.remove('open');});
-</script>
 </body>
 </html>
