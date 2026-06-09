@@ -873,6 +873,104 @@ img { max-width: 100%; display: block; }
 .mini-notif .dot.green { background: #22c55e; }
 .mini-notif .dot.blue { background: #3b82f6; }
 .mini-notif .dot.orange { background: #f59e0b; }
+.mini-notif svg { width: 16px; height: 16px; flex-shrink: 0; color: var(--primary); }
+
+/* ========== HIGHLIGHTS (DESTAQUES) ========== */
+.highlights { background: var(--white); }
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.highlight-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+.highlight-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-400));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.highlight-card:hover::before { opacity: 1; }
+.highlight-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.highlight-icon svg { width: 26px; height: 26px; color: var(--primary); }
+.highlight-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+.highlight-card > p {
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+.highlight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.highlight-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--gray-700);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.highlight-list li .check {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.highlight-list li .check svg { width: 12px; height: 12px; color: var(--primary); }
+.highlight-card .benefit-mini-ui { margin-top: auto; }
+.highlight-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  transition: gap 0.2s;
+}
+.highlight-link:hover { gap: 10px; }
 
 /* ========== FEATURES GRID ========== */
 .features { background: linear-gradient(180deg, var(--gray-50) 0%, var(--primary-50) 50%, var(--gray-50) 100%); }
@@ -1431,6 +1529,7 @@ img { max-width: 100%; display: block; }
   .hero p { font-size: 16px; }
   .section { padding: 70px 0; }
   .benefits-grid { grid-template-columns: 1fr; }
+  .highlights-grid { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .tab-content { flex-direction: column; }
@@ -1803,6 +1902,100 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- ============ DESTAQUES ============ -->
+<section class="highlights section" id="destaques">
+  <div class="container">
+    <div style="text-align:center;" class="animate-on-scroll">
+      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg></span> Destaques</span>
+      <h2 class="section-title">As funcionalidades que mais transformam sua rotina</h2>
+      <p class="section-subtitle" style="margin:0 auto;">Conheça em detalhes os recursos que mais economizam seu tempo e organizam a sua clínica.</p>
+    </div>
+    <div class="highlights-grid">
+
+      <!-- Prontuário eletrônico -->
+      <div class="highlight-card animate-on-scroll">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>Prontuário eletrônico</h3>
+        <p>Registre a evolução de cada sessão e consulte todo o histórico clínico do paciente de qualquer lugar, com segurança e em conformidade com a LGPD.</p>
+        <ul class="highlight-list">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Registro por sessão com data e hora automáticas</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Histórico completo acessível em segundos</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Anexo de laudos, avaliações e exames</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Criptografia AES-256 e controle de acesso</li>
+        </ul>
+        <div class="benefit-mini-ui">
+          <div class="mini-notif"><span class="dot blue"></span>Evolução da sessão salva</div>
+          <div class="mini-notif"><span class="dot green"></span>Histórico sincronizado em todos os dispositivos</div>
+        </div>
+        <a href="/funcionalidades/prontuario-eletronico" class="highlight-link">Saiba mais →</a>
+      </div>
+
+      <!-- Telemedicina -->
+      <div class="highlight-card animate-on-scroll">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        </div>
+        <h3>Telemedicina</h3>
+        <p>Atenda seus pacientes por vídeo com qualidade e segurança, sem precisar instalar nada. A sala de atendimento abre direto no navegador e fica integrada à sua agenda.</p>
+        <ul class="highlight-list">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Sala de vídeo por link, sem instalar aplicativos</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Link enviado ao paciente pelo WhatsApp</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Acesso pelo celular, tablet ou computador</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Conexão segura e integrada ao prontuário</li>
+        </ul>
+        <div class="benefit-mini-ui">
+          <div class="mini-notif"><span class="dot green"></span>Sala de vídeo iniciada</div>
+          <div class="mini-notif"><span class="dot blue"></span>Link de atendimento enviado via WhatsApp</div>
+        </div>
+        <a href="/funcionalidades/telemedicina" class="highlight-link">Saiba mais →</a>
+      </div>
+
+      <!-- Lembretes automáticos via WhatsApp -->
+      <div class="highlight-card animate-on-scroll">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        </div>
+        <h3>Lembretes automáticos via WhatsApp</h3>
+        <p>Reduza faltas em até 50% com lembretes enviados automaticamente antes de cada sessão. Os pacientes confirmam presença e a sua agenda se mantém sempre organizada.</p>
+        <ul class="highlight-list">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio automático antes de cada atendimento</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Confirmação de presença pelo paciente</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Menos faltas e remarcações de última hora</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Lembrete de aniversariantes incluído</li>
+        </ul>
+        <div class="benefit-mini-ui">
+          <div class="mini-notif"><span class="dot green"></span>Lembrete de consulta enviado</div>
+          <div class="mini-notif"><span class="dot blue"></span>Paciente confirmou presença</div>
+        </div>
+        <a href="/funcionalidades/lembretes-whatsapp" class="highlight-link">Saiba mais →</a>
+      </div>
+
+      <!-- Documentos personalizáveis -->
+      <div class="highlight-card animate-on-scroll">
+        <div class="highlight-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/><path d="M9 7h1"/></svg>
+        </div>
+        <h3>Documentos personalizáveis</h3>
+        <p>Gere atestados, declarações, relatórios e contratos em segundos, com os dados do paciente preenchidos automaticamente e a identidade visual da sua clínica.</p>
+        <ul class="highlight-list">
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Modelos prontos e personalizáveis</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Dados do paciente preenchidos automaticamente</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Atestados, declarações, relatórios e contratos</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Exportação em PDF pronta para envio</li>
+        </ul>
+        <div class="benefit-mini-ui">
+          <div class="mini-notif"><span class="dot orange"></span>Atestado gerado em PDF</div>
+          <div class="mini-notif"><span class="dot green"></span>Contrato pronto para envio</div>
+        </div>
+        <a href="/funcionalidades/documentos-personalizaveis" class="highlight-link">Saiba mais →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ============ FUNCIONALIDADES ============ -->
 <section class="features section" id="funcionalidades">
   <div class="container">
@@ -1838,6 +2031,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <h3>Lembretes via WhatsApp</h3>
         <p>Envio automático de lembretes para reduzir faltas e manter sua agenda organizada.</p>
+      </div>
+      <div class="feature-card animate-on-scroll">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        </div>
+        <h3>Telemedicina</h3>
+        <p>Atenda por vídeo direto do navegador, com sala segura e integrada à sua agenda.</p>
       </div>
       <div class="feature-card animate-on-scroll">
         <div class="feature-icon">
@@ -2136,6 +2336,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Check-in</div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Lembretes via WhatsApp</div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Prontuário eletrônico</div>
+          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Telemedicina <span class="new-tag">Novo</span></div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Formulários personalizáveis <span class="new-tag">Novo</span></div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Envio de cobranças via WhatsApp</div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Cadastro de pacientes</div>
@@ -2165,6 +2366,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Check-in</div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Lembretes via WhatsApp</div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Prontuário eletrônico</div>
+          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Telemedicina <span class="new-tag">Novo</span></div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Formulários personalizáveis <span class="new-tag">Novo</span></div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Envio de cobranças via WhatsApp</div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Cadastro de pacientes</div>
@@ -2304,6 +2506,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="footer-col-links">
           <a href="/funcionalidades/agenda">Gestão de agenda</a>
           <a href="/funcionalidades/prontuario-eletronico">Prontuário eletrônico</a>
+          <a href="/funcionalidades/telemedicina">Telemedicina</a>
           <a href="/funcionalidades/lembretes-whatsapp">Lembretes via WhatsApp</a>
           <a href="/funcionalidades/gestao-financeira">Gestão financeira</a>
           <a href="/funcionalidades/gestao-de-pacientes">Gestão de pacientes</a>
