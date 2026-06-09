@@ -7,6 +7,7 @@
   <url><loc>https://terapee.com.br/funcionalidades/</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://terapee.com.br/funcionalidades/agenda</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://terapee.com.br/funcionalidades/prontuario-eletronico</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://terapee.com.br/funcionalidades/telemedicina</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://terapee.com.br/funcionalidades/lembretes-whatsapp</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://terapee.com.br/funcionalidades/gestao-financeira</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://terapee.com.br/funcionalidades/gestao-de-pacientes</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
