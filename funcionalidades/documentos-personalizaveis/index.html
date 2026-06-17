@@ -140,6 +140,21 @@ img { max-width: 100%; display: block; }
   .footer-inner { flex-direction: column; }
 }
 
+
+/* ========== FAQ ========== */
+.faq-layout { display: flex; gap: 60px; margin-top: 48px; }
+.faq-left { flex: 0 0 320px; }
+.faq-left p { font-size: 16px; color: var(--gray-600); line-height: 1.7; margin-bottom: 24px; }
+.faq-right { flex: 1; }
+.faq-item { border-bottom: 1px solid var(--gray-200); }
+.faq-question { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; cursor: pointer; background: none; border: none; width: 100%; text-align: left; font-family: inherit; font-size: 15px; font-weight: 700; color: var(--dark); transition: color 0.2s; }
+.faq-question:hover { color: var(--primary); }
+.faq-question svg { width: 20px; height: 20px; color: var(--gray-400); transition: transform 0.3s; flex-shrink: 0; margin-left: 16px; }
+.faq-item.open .faq-question svg { transform: rotate(180deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+.faq-answer-inner { padding: 0 0 20px; font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+@media (max-width: 768px) { .faq-layout { flex-direction: column; gap: 32px; } .faq-left { flex: unset; } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -159,6 +174,46 @@ img { max-width: 100%; display: block; }
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "h8iifiakrd");
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quais documentos a Terapee gera automaticamente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Atestados, declarações de comparecimento, encaminhamentos, contratos de atendimento, relatórios de evolução e qualquer modelo personalizado que a sua clínica criar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Os dados do paciente são preenchidos sozinhos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Ao escolher o tipo de documento, a Terapee preenche automaticamente os dados do paciente e da clínica; você apenas revisa, assina e gera o PDF."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso usar a identidade visual da minha clínica nos documentos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Os modelos aceitam a identidade visual da clínica, e o resultado sai em PDF pronto para imprimir ou enviar por WhatsApp e e-mail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Os documentos ficam salvos no histórico do paciente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Todo documento gerado fica arquivado no histórico do paciente, fácil de localizar e reenviar sempre que necessário."
+      }
+    }
+  ]
+}
 </script>
 </head>
 <body>
@@ -371,6 +426,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- CTA -->
+<section class="faq-page-section" style="background:var(--white);padding:80px 0;">
+  <div class="container">
+    <div style="text-align:center;">
+      <h2 class="section-title">Perguntas frequentes sobre documentos personalizáveis</h2>
+    </div>
+    <div class="faq-layout">
+      <div class="faq-left">
+        <p>Ficou com alguma dúvida sobre documentos personalizáveis? Fale com o nosso suporte que a gente te ajuda.</p>
+        <a href="https://api.whatsapp.com/send?phone=552123422477&text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20o%20Terapee" class="btn btn-outline">Fale conosco</a>
+      </div>
+      <div class="faq-right">
+        <div class="faq-item">
+          <button class="faq-question">Quais documentos a Terapee gera automaticamente?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Atestados, declarações de comparecimento, encaminhamentos, contratos de atendimento, relatórios de evolução e qualquer modelo personalizado que a sua clínica criar.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Os dados do paciente são preenchidos sozinhos?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Sim. Ao escolher o tipo de documento, a Terapee preenche automaticamente os dados do paciente e da clínica; você apenas revisa, assina e gera o PDF.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Posso usar a identidade visual da minha clínica nos documentos?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Sim. Os modelos aceitam a identidade visual da clínica, e o resultado sai em PDF pronto para imprimir ou enviar por WhatsApp e e-mail.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Os documentos ficam salvos no histórico do paciente?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Sim. Todo documento gerado fica arquivado no histórico do paciente, fácil de localizar e reenviar sempre que necessário.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="cta-banner">
   <div class="container">
     <h2>Chega de documentos manuais</h2>
@@ -467,6 +562,16 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const answer = item.querySelector('.faq-answer');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-answer').style.maxHeight = null; });
+    if (!isOpen) { item.classList.add('open'); answer.style.maxHeight = answer.scrollHeight + 'px'; }
+  });
+});
 window.addEventListener('scroll', () => {
   const h = document.getElementById('header');
   h.style.boxShadow = window.scrollY > 50 ? '0 2px 20px rgba(0,0,0,0.08)' : 'none';
