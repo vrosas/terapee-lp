@@ -1748,7 +1748,7 @@ img { max-width: 100%; display: block; }
       "@type": "ListItem",
       "position": 3,
       "name": "Cobrança automática",
-      "item": "https://terapee.com.br/funcionalidades/cobranca-automatica.html"
+      "item": "https://terapee.com.br/funcionalidades/cobranca-automatica"
     }
   ]
 }
@@ -1760,6 +1760,46 @@ img { max-width: 100%; display: block; }
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "h8iifiakrd");
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Como a Terapee cobra o paciente automaticamente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Você define as pendências e a Terapee envia a cobrança por WhatsApp ou e-mail, com mensagem profissional e instruções de pagamento — sem que você precise abordar o assunto pessoalmente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso agendar o envio das cobranças?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Os envios podem ser agendados, por exemplo alguns dias antes do vencimento ou logo após a sessão, e você acompanha todas as pendências em um único painel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A cobrança atualiza o financeiro sozinha?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Quando o pagamento é confirmado, o status da pendência muda automaticamente e o recebimento entra no controle financeiro, sem nenhum lançamento manual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O paciente se sente constrangido com a cobrança automática?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A mensagem é padronizada, discreta e profissional, o que torna a cobrança mais natural para os dois lados e evita o desconforto de ter que tocar no assunto pessoalmente."
+      }
+    }
+  ]
+}
 </script>
 </head>
 <body>
@@ -1892,6 +1932,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<section class="faq-page-section" style="background:var(--white);padding:80px 0;">
+  <div class="container">
+    <div style="text-align:center;">
+      <h2 class="section-title">Perguntas frequentes sobre a cobrança automática</h2>
+    </div>
+    <div class="faq-layout">
+      <div class="faq-left">
+        <p>Ficou com alguma dúvida sobre a cobrança automática? Fale com o nosso suporte que a gente te ajuda.</p>
+        <a href="https://api.whatsapp.com/send?phone=552123422477&text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20o%20Terapee" class="btn btn-outline">Fale conosco</a>
+      </div>
+      <div class="faq-right">
+        <div class="faq-item">
+          <button class="faq-question">Como a Terapee cobra o paciente automaticamente?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Você define as pendências e a Terapee envia a cobrança por WhatsApp ou e-mail, com mensagem profissional e instruções de pagamento — sem que você precise abordar o assunto pessoalmente.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Posso agendar o envio das cobranças?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Sim. Os envios podem ser agendados, por exemplo alguns dias antes do vencimento ou logo após a sessão, e você acompanha todas as pendências em um único painel.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">A cobrança atualiza o financeiro sozinha?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Sim. Quando o pagamento é confirmado, o status da pendência muda automaticamente e o recebimento entra no controle financeiro, sem nenhum lançamento manual.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">O paciente se sente constrangido com a cobrança automática?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">A mensagem é padronizada, discreta e profissional, o que torna a cobrança mais natural para os dois lados e evita o desconforto de ter que tocar no assunto pessoalmente.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="cta-banner">
   <div class="container">
     <h2>Pronto para simplificar sua rotina?</h2>
@@ -1981,6 +2061,16 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const answer = item.querySelector('.faq-answer');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-answer').style.maxHeight = null; });
+    if (!isOpen) { item.classList.add('open'); answer.style.maxHeight = answer.scrollHeight + 'px'; }
+  });
+});
 window.addEventListener('scroll', () => {
   const h = document.getElementById('header');
   h.style.boxShadow = window.scrollY > 50 ? '0 2px 20px rgba(0,0,0,0.08)' : 'none';
