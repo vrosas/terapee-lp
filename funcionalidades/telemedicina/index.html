@@ -1801,6 +1801,14 @@ img { max-width: 100%; display: block; }
   ]
 }
 </script>
+<style>
+/* feature art in subpage hero */
+.subpage-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;}
+.subpage-hero-copy h1,.subpage-hero-copy p.lead{max-width:none;}
+.subpage-hero-art{position:relative;width:100%;height:380px;border-radius:24px;overflow:hidden;box-shadow:0 1px 3px rgba(17,17,17,0.06);}
+@keyframes tk-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+@media(max-width:900px){.subpage-hero-grid{grid-template-columns:1fr;gap:36px;}.subpage-hero-art{height:340px;}}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -1833,6 +1841,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="subpage-hero">
   <div class="container">
+    <div class="subpage-hero-grid">
+      <div class="subpage-hero-copy">
     <div class="subpage-badge">Funcionalidade</div>
     <h1><span class="highlight">Telemedicina segura</span> para psicólogos e terapeutas</h1>
     <p class="lead">Atenda seus pacientes por vídeo direto do navegador, sem instalar nada. A sala de atendimento abre com um clique, fica integrada à sua agenda e o link chega ao paciente pelo WhatsApp.</p>
@@ -1841,6 +1851,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/funcionalidades/" class="btn btn-outline">Ver todas as funcionalidades</a>
     </div>
     <p class="subpage-note">Teste grátis por 7 dias · Sem cartão de crédito</p>
+  </div>
+      <div class="subpage-hero-art" style="background:#E8F0FE;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="1.5" style="position:absolute; left:-30px; bottom:-34px; width:200px; height:200px; opacity:0.07;"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2"></rect></svg>
+          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:382px; background:#0E1730; border-radius:16px; box-shadow:0 20px 54px rgba(17,17,17,0.22); padding:14px; overflow:hidden;">
+            <div style="position:relative; height:178px; border-radius:11px; background:linear-gradient(150deg,#2D3F66,#1B2748); display:flex; align-items:center; justify-content:center; overflow:hidden;">
+              <span style="width:74px; height:74px; border-radius:999px; background:rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; font-size:24px; font-weight:700; color:#fff;">BR</span>
+              <div style="position:absolute; top:12px; left:12px; display:flex; align-items:center; gap:6px; padding:5px 10px; background:rgba(22,163,74,0.92); border-radius:999px;"><span style="width:6px; height:6px; border-radius:999px; background:#fff;"></span><span style="font-size:10px; font-weight:600; color:#fff;">Online</span></div>
+              <div style="position:absolute; top:12px; right:12px; padding:5px 10px; background:rgba(0,0,0,0.4); border-radius:999px; font-size:11px; font-weight:600; color:#fff;">12:45</div>
+              <div style="position:absolute; bottom:10px; left:12px; font-size:11px; font-weight:600; color:#fff; text-shadow:0 1px 4px rgba(0,0,0,0.5);">Dra. Beatriz Rocha</div>
+              <div style="position:absolute; bottom:10px; right:10px; width:62px; height:46px; border-radius:8px; background:linear-gradient(150deg,#4A5B82,#2D3A5C); border:2px solid rgba(255,255,255,0.4); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:#fff;">MS</div>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:center; gap:12px; padding:14px 0 4px;">
+              <span style="width:38px; height:38px; border-radius:999px; background:rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+              <span style="width:38px; height:38px; border-radius:999px; background:rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2"></rect></svg></span>
+              <span style="width:38px; height:38px; border-radius:999px; background:#DC2626; display:flex; align-items:center; justify-content:center; transform:rotate(135deg);"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+            </div>
+          </div>
+          <div style="position:absolute; bottom:28px; right:26px; display:flex; align-items:center; gap:8px; padding:9px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5s ease-in-out infinite;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg><span style="font-size:11px; font-weight:600; color:#111;">Ligada à agenda e ao prontuário</span></div>
+        </div>
+    </div>
   </div>
 </section>
 
