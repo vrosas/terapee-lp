@@ -1028,6 +1028,62 @@ img { max-width: 100%; display: block; }
 }
 .highlight-link:hover { gap: 10px; }
 
+/* ========== FEATURE SHOWCASE (alternating art + text) ========== */
+@keyframes tk-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+.feature-showcase { display: flex; flex-direction: column; gap: 80px; margin-top: 56px; }
+.feat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 64px;
+}
+.feat-row:nth-child(even) .feat-copy { order: 2; }
+.feat-row:nth-child(even) .feat-art { order: 1; }
+.feat-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 14px; border-radius: 100px; margin-bottom: 18px;
+  font-size: 13px; font-weight: 700;
+}
+.feat-tag svg { width: 15px; height: 15px; }
+.feat-copy h3 {
+  font-size: 30px; font-weight: 800; color: var(--dark);
+  line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px;
+}
+.feat-copy > p {
+  font-size: 16px; line-height: 1.65; color: var(--gray-600);
+  margin-bottom: 22px; max-width: 460px;
+}
+.feat-copy .highlight-list { margin-bottom: 24px; }
+.feat-copy .highlight-list li { font-size: 14.5px; }
+/* the art canvas */
+.feat-art {
+  position: relative; width: 100%; height: 380px;
+  border-radius: 24px; overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.feat-art .deco {
+  position: absolute; width: 210px; height: 210px; opacity: 0.07;
+}
+.feat-card {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  background: #fff; border: 1px solid #EEF0F5; border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(17,17,17,0.12);
+}
+.feat-chip {
+  position: absolute; display: flex; align-items: center; gap: 8px;
+  background: #fff; border: 1px solid #EEF0F5; border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(17,17,17,0.12);
+}
+.feat-float { animation: tk-float 5s ease-in-out infinite; }
+@media (max-width: 900px) {
+  .feature-showcase { gap: 56px; }
+  .feat-row { grid-template-columns: 1fr; gap: 28px; }
+  .feat-row:nth-child(even) .feat-copy { order: 1; }
+  .feat-row:nth-child(even) .feat-art { order: 2; }
+  .feat-art { height: 340px; }
+  .feat-copy h3 { font-size: 25px; }
+}
+
 /* ========== FEATURES GRID ========== */
 .features { background: linear-gradient(180deg, var(--gray-50) 0%, var(--primary-50) 50%, var(--gray-50) 100%); }
 .features-grid {
@@ -1992,86 +2048,182 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="section-title">As funcionalidades que mais transformam sua rotina</h2>
       <p class="section-subtitle" style="margin:0 auto;">Conheça em detalhes os recursos que mais economizam seu tempo e organizam a sua clínica.</p>
     </div>
-    <div class="highlights-grid">
+    <div class="feature-showcase">
 
-      <!-- Prontuário eletrônico -->
-      <div class="highlight-card animate-on-scroll">
-        <div class="highlight-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      <!-- 1 · AGENDA -->
+      <div class="feat-row animate-on-scroll">
+        <div class="feat-copy">
+          <span class="feat-tag" style="background:rgba(68,76,231,0.10);color:#444CE7;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>Agenda</span>
+          <h3>Uma agenda que organiza a clínica inteira</h3>
+          <p>Veja a semana de toda a equipe em uma só tela. Crie sessões avulsas ou recorrentes, evite conflitos de horário e acompanhe as confirmações em tempo real.</p>
+          <ul class="highlight-list">
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Visão diária, semanal e por profissional</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Sessões recorrentes em poucos cliques</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Status de confirmação atualizado na hora</li>
+          </ul>
+          <a href="/funcionalidades/agenda" class="highlight-link">Saiba mais →</a>
         </div>
-        <h3>Prontuário eletrônico</h3>
-        <p>Registre a evolução de cada sessão e consulte todo o histórico clínico do paciente de qualquer lugar, com segurança e em conformidade com a LGPD.</p>
-        <ul class="highlight-list">
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Registro por sessão com data e hora automáticas</li>
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Histórico completo acessível em segundos</li>
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Anexo de laudos, avaliações e exames</li>
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Criptografia AES-256 e controle de acesso</li>
-        </ul>
-        <div class="benefit-mini-ui">
-          <div class="mini-notif"><span class="dot blue"></span>Evolução da sessão salva</div>
-          <div class="mini-notif"><span class="dot green"></span>Histórico sincronizado em todos os dispositivos</div>
+        <div class="feat-art" style="background:#EEF4FF;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="1.5" style="position:absolute; right:-30px; bottom:-40px; width:210px; height:210px; opacity:0.07;"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:372px; background:#fff; border:1px solid #EEF0F5; border-radius:16px; box-shadow:0 18px 50px rgba(17,17,17,0.12); padding:18px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
+              <div style="font-size:15px; font-weight:700; color:#111;">Janeiro 2025</div>
+              <span style="padding:5px 10px; background:#EEF4FF; border-radius:999px; font-size:11px; font-weight:600; color:#444CE7;">Semana</span>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:8px;">
+              <div style="display:flex; flex-direction:column; gap:6px;"><div style="text-align:center;"><div style="font-size:10px; font-weight:600; letter-spacing:0.06em; color:#C9CDD8;">SEG</div><div style="font-size:14px; font-weight:700; color:#111;">12</div></div><div style="border-left:3px solid #444CE7; background:rgba(68,76,231,0.08); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">09:00</div><div style="font-size:10px; color:#4A4F5C;">Maria S.</div></div><div style="border-left:3px solid #F59E0B; background:rgba(245,158,11,0.10); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">14:00</div><div style="font-size:10px; color:#4A4F5C;">João P.</div></div></div>
+              <div style="display:flex; flex-direction:column; gap:6px;"><div style="text-align:center;"><div style="font-size:10px; font-weight:600; letter-spacing:0.06em; color:#C9CDD8;">TER</div><div style="font-size:14px; font-weight:700; color:#111;">13</div></div><div style="border-left:3px solid #0D9488; background:rgba(13,148,136,0.10); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">10:00</div><div style="font-size:10px; color:#4A4F5C;">Lúcia F.</div></div></div>
+              <div style="display:flex; flex-direction:column; gap:6px;"><div style="text-align:center;"><div style="font-size:10px; font-weight:600; letter-spacing:0.06em; color:#444CE7;">QUA</div><div style="font-size:14px; font-weight:700; color:#444CE7;">14</div></div><div style="border-left:3px solid #16A34A; background:rgba(22,163,74,0.10); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">08:00</div><div style="font-size:10px; color:#4A4F5C;">Pedro H.</div></div><div style="border-left:3px solid #9333EA; background:rgba(147,51,234,0.10); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">15:00</div><div style="font-size:10px; color:#4A4F5C;">Ana C.</div></div></div>
+              <div style="display:flex; flex-direction:column; gap:6px;"><div style="text-align:center;"><div style="font-size:10px; font-weight:600; letter-spacing:0.06em; color:#C9CDD8;">QUI</div><div style="font-size:14px; font-weight:700; color:#111;">15</div></div><div style="border-left:3px solid #EC4899; background:rgba(236,72,153,0.10); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">11:00</div><div style="font-size:10px; color:#4A4F5C;">Carla M.</div></div></div>
+            </div>
+          </div>
+          <div style="position:absolute; top:30px; right:28px; display:flex; align-items:center; gap:8px; padding:9px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5s ease-in-out infinite;"><span style="width:24px; height:24px; border-radius:7px; background:rgba(22,163,74,0.12); display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:12px; font-weight:600; color:#111;">Confirmado</span></div>
+          <div style="position:absolute; bottom:28px; left:28px; display:flex; align-items:center; gap:10px; padding:8px 14px 8px 10px; background:#fff; border:1px solid #EEF0F5; border-radius:999px; box-shadow:0 10px 28px rgba(17,17,17,0.12);"><div style="display:flex;"><span style="width:26px; height:26px; border-radius:999px; background:#EEF4FF; color:#444CE7; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 2px #fff;">MS</span><span style="width:26px; height:26px; border-radius:999px; background:#E7F6EF; color:#16A34A; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 2px #fff; margin-left:-8px;">PH</span><span style="width:26px; height:26px; border-radius:999px; background:#F3EAFC; color:#9333EA; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 2px #fff; margin-left:-8px;">AC</span></div><span style="font-size:12px; font-weight:600; color:#4A4F5C; white-space:nowrap;">8 sessões hoje</span></div>
         </div>
-        <a href="/funcionalidades/prontuario-eletronico" class="highlight-link">Saiba mais →</a>
       </div>
 
-      <!-- Telemedicina -->
-      <div class="highlight-card animate-on-scroll">
-        <div class="highlight-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+      <!-- 2 · WHATSAPP -->
+      <div class="feat-row animate-on-scroll">
+        <div class="feat-copy">
+          <span class="feat-tag" style="background:#E7F8ED;color:#0c8a3e;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>Reduz faltas</span>
+          <h3>Lembretes automáticos no WhatsApp</h3>
+          <p>A Terapee envia o lembrete sozinha, no horário certo. O paciente confirma com um toque e a resposta aparece na sua agenda na hora — menos faltas, menos ligações.</p>
+          <ul class="highlight-list">
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio programado 24h antes da sessão</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Confirmação atualiza o status automaticamente</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Até 32% menos faltas no primeiro mês</li>
+          </ul>
+          <a href="/funcionalidades/lembretes-whatsapp" class="highlight-link">Saiba mais →</a>
         </div>
-        <h3>Telemedicina</h3>
-        <p>Atenda seus pacientes por vídeo com qualidade e segurança, sem precisar instalar nada. A sala de atendimento abre direto no navegador e fica integrada à sua agenda.</p>
-        <ul class="highlight-list">
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Sala de vídeo por link, sem instalar aplicativos</li>
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Link enviado ao paciente pelo WhatsApp</li>
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Acesso pelo celular, tablet ou computador</li>
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Conexão segura e integrada ao prontuário</li>
-        </ul>
-        <div class="benefit-mini-ui">
-          <div class="mini-notif"><span class="dot green"></span>Sala de vídeo iniciada</div>
-          <div class="mini-notif"><span class="dot blue"></span>Link de atendimento enviado via WhatsApp</div>
+        <div class="feat-art" style="background:#E7F8ED;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="1.5" style="position:absolute; left:-34px; top:-30px; width:200px; height:200px; opacity:0.10;"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:286px; background:#ECE5DD; border-radius:22px; box-shadow:0 18px 50px rgba(17,17,17,0.16); overflow:hidden;">
+            <div style="display:flex; align-items:center; gap:10px; padding:12px 14px; background:#075E54;"><span style="width:30px; height:30px; border-radius:999px; background:rgba(255,255,255,0.22); display:flex; align-items:center; justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg></span><div><div style="font-size:13px; font-weight:700; color:#fff;">Clínica Terapee</div><div style="font-size:10px; color:rgba(255,255,255,0.7);">online</div></div></div>
+            <div style="padding:16px 14px; display:flex; flex-direction:column; gap:10px;">
+              <div style="align-self:flex-start; max-width:84%; background:#fff; border-radius:12px 12px 12px 4px; padding:9px 11px; box-shadow:0 1px 1px rgba(0,0,0,0.08);"><div style="font-size:12px; color:#111; line-height:1.4;">Olá, Maria! Lembrete da sua sessão <b>amanhã às 14h</b> com a Dra. Beatriz. Posso confirmar?</div><div style="font-size:9px; color:#8A8F9C; text-align:right; margin-top:3px;">09:02</div></div>
+              <div style="align-self:flex-end; max-width:80%; background:#DCF8C6; border-radius:12px 12px 4px 12px; padding:9px 11px; box-shadow:0 1px 1px rgba(0,0,0,0.08);"><div style="font-size:12px; color:#111; line-height:1.4;">Sim, confirmado! Obrigada.</div><div style="display:flex; align-items:center; justify-content:flex-end; gap:3px; margin-top:3px;"><span style="font-size:9px; color:#8A8F9C;">09:05</span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#34B7F1" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></div></div>
+            </div>
+          </div>
+          <div style="position:absolute; top:34px; right:26px; display:flex; align-items:center; gap:8px; padding:9px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5.5s ease-in-out infinite;"><span style="width:24px; height:24px; border-radius:7px; background:rgba(22,163,74,0.12); display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></span><div><div style="font-size:12px; font-weight:700; color:#111; line-height:1;">−32% faltas</div><div style="font-size:10px; color:#8A8F9C; margin-top:2px;">no último mês</div></div></div>
+          <div style="position:absolute; bottom:30px; left:26px; display:flex; align-items:center; gap:7px; padding:8px 12px; background:#fff; border:1px solid #EEF0F5; border-radius:999px; box-shadow:0 10px 28px rgba(17,17,17,0.12);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8A8F9C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span style="font-size:11px; font-weight:600; color:#4A4F5C;">Envio automático · 24h antes</span></div>
         </div>
-        <a href="/funcionalidades/telemedicina" class="highlight-link">Saiba mais →</a>
       </div>
 
-      <!-- Lembretes automáticos via WhatsApp -->
-      <div class="highlight-card animate-on-scroll">
-        <div class="highlight-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+      <!-- 3 · COBRANÇA -->
+      <div class="feat-row animate-on-scroll">
+        <div class="feat-copy">
+          <span class="feat-tag" style="background:rgba(22,163,74,0.12);color:#16A34A;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>Cobrança</span>
+          <h3>Cobrança e conciliação no automático</h3>
+          <p>Gere cobranças por Pix ou cartão, receba a confirmação de pagamento e veja tudo conciliar sozinho. Você acompanha o que entrou e o que falta sem planilha.</p>
+          <ul class="highlight-list">
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Cobranças por Pix e cartão em segundos</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Baixa e conciliação automáticas</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Visão clara do que há a receber no mês</li>
+          </ul>
+          <a href="/funcionalidades/cobranca-automatica" class="highlight-link">Saiba mais →</a>
         </div>
-        <h3>Lembretes automáticos via WhatsApp</h3>
-        <p>Reduza faltas em 20 a 25% com lembretes enviados automaticamente antes de cada sessão. Os pacientes confirmam presença e a sua agenda se mantém sempre organizada.</p>
-        <ul class="highlight-list">
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio automático antes de cada atendimento</li>
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Confirmação de presença pelo paciente</li>
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Menos faltas e remarcações de última hora</li>
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Lembrete de aniversariantes incluído</li>
-        </ul>
-        <div class="benefit-mini-ui">
-          <div class="mini-notif"><span class="dot green"></span>Lembrete de consulta enviado</div>
-          <div class="mini-notif"><span class="dot blue"></span>Paciente confirmou presença</div>
+        <div class="feat-art" style="background:#ECFDF3;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="1.5" style="position:absolute; right:-30px; bottom:-36px; width:200px; height:200px; opacity:0.08;"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:362px; background:#fff; border:1px solid #EEF0F5; border-radius:16px; box-shadow:0 18px 50px rgba(17,17,17,0.12); padding:20px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="font-size:14px; font-weight:700; color:#111;">Cobrança #1042</div><span style="display:flex; align-items:center; gap:5px; font-size:11px; font-weight:600; color:#16A34A; background:rgba(22,163,74,0.10); padding:4px 9px; border-radius:999px;"><span style="width:6px;height:6px;border-radius:999px;background:#16A34A;"></span>Pago</span></div>
+            <div style="display:flex; align-items:center; gap:11px; margin-bottom:16px;"><span style="width:38px; height:38px; border-radius:999px; background:#EEF4FF; color:#444CE7; font-size:13px; font-weight:700; display:flex; align-items:center; justify-content:center;">MS</span><div><div style="font-size:13px; font-weight:600; color:#111;">Maria Santos</div><div style="font-size:11px; color:#8A8F9C;">Sessão · 12/01 · Psicologia</div></div></div>
+            <div style="display:flex; align-items:flex-end; justify-content:space-between; padding-top:14px; border-top:1px solid #EEF0F5;"><div><div style="font-size:11px; color:#8A8F9C;">Valor recebido</div><div style="font-size:26px; font-weight:700; color:#111; letter-spacing:-0.02em;">R$ 250,00</div></div><span style="display:flex; align-items:center; gap:6px; font-size:11px; font-weight:600; color:#4A4F5C; background:#F7F8FC; padding:6px 10px; border-radius:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4A4F5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>Pix</span></div>
+          </div>
+          <div style="position:absolute; top:32px; right:26px; display:flex; align-items:center; gap:9px; padding:10px 14px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5s ease-in-out infinite;"><span style="width:26px; height:26px; border-radius:8px; background:#16A34A; display:flex; align-items:center; justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><div><div style="font-size:12px; font-weight:700; color:#111; line-height:1;">Pagamento recebido</div><div style="font-size:10px; color:#8A8F9C; margin-top:2px;">conciliado automaticamente</div></div></div>
+          <div style="position:absolute; bottom:30px; left:26px; padding:11px 15px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12);"><div style="font-size:10px; color:#8A8F9C;">A receber no mês</div><div style="font-size:18px; font-weight:700; color:#111; letter-spacing:-0.02em; margin-top:2px;">R$ 24.580</div></div>
         </div>
-        <a href="/funcionalidades/lembretes-whatsapp" class="highlight-link">Saiba mais →</a>
       </div>
 
-      <!-- Documentos personalizáveis -->
-      <div class="highlight-card animate-on-scroll">
-        <div class="highlight-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/><path d="M9 7h1"/></svg>
+      <!-- 4 · PRONTUÁRIO -->
+      <div class="feat-row animate-on-scroll">
+        <div class="feat-copy">
+          <span class="feat-tag" style="background:rgba(147,51,234,0.12);color:#9333EA;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v6h6"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Prontuário</span>
+          <h3>Prontuário eletrônico completo e seguro</h3>
+          <p>Registre a evolução de cada sessão e consulte todo o histórico do paciente de qualquer lugar, com anexos, assinatura e total conformidade com a LGPD.</p>
+          <ul class="highlight-list">
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Registro por sessão com data e hora automáticas</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Anexo de laudos, avaliações e exames</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Criptografia AES-256 e controle de acesso</li>
+          </ul>
+          <a href="/funcionalidades/prontuario-eletronico" class="highlight-link">Saiba mais →</a>
         </div>
-        <h3>Documentos personalizáveis</h3>
-        <p>Gere atestados, declarações, relatórios e contratos em segundos, com os dados do paciente preenchidos automaticamente e a identidade visual da sua clínica.</p>
-        <ul class="highlight-list">
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Modelos prontos e personalizáveis</li>
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Dados do paciente preenchidos automaticamente</li>
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Atestados, declarações, relatórios e contratos</li>
-          <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Exportação em PDF pronta para envio</li>
-        </ul>
-        <div class="benefit-mini-ui">
-          <div class="mini-notif"><span class="dot orange"></span>Atestado gerado em PDF</div>
-          <div class="mini-notif"><span class="dot green"></span>Contrato pronto para envio</div>
+        <div class="feat-art" style="background:#F3F0FB;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#9333EA" stroke-width="1.5" style="position:absolute; right:-28px; bottom:-38px; width:200px; height:200px; opacity:0.07;"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v6h6"></path></svg>
+          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:364px; background:#fff; border:1px solid #EEF0F5; border-radius:16px; box-shadow:0 18px 50px rgba(17,17,17,0.12); padding:20px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;"><div><div style="font-size:14px; font-weight:700; color:#111;">Evolução clínica</div><div style="font-size:11px; color:#8A8F9C; margin-top:2px;">12 de janeiro de 2025 · Sessão 8</div></div><span style="display:flex; align-items:center; gap:5px; font-size:11px; font-weight:600; color:#16A34A; background:rgba(22,163,74,0.10); padding:4px 9px; border-radius:999px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Assinado</span></div>
+            <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:16px;"><span style="height:9px; width:100%; border-radius:5px; background:#F1F2F7;"></span><span style="height:9px; width:92%; border-radius:5px; background:#F1F2F7;"></span><span style="height:9px; width:97%; border-radius:5px; background:#F1F2F7;"></span><span style="height:9px; width:64%; border-radius:5px; background:#F1F2F7;"></span></div>
+            <div style="display:flex; align-items:center; gap:9px; padding:9px 11px; border:1px solid #EEF0F5; border-radius:9px;"><span style="width:30px; height:30px; border-radius:8px; background:#F3F0FB; color:#9333EA; display:flex; align-items:center; justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9333EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg></span><div style="flex:1;"><div style="font-size:12px; font-weight:600; color:#111;">avaliacao-neuropsicologica.pdf</div><div style="font-size:10px; color:#8A8F9C;">2,4 MB · anexado</div></div></div>
+          </div>
+          <div style="position:absolute; top:30px; right:26px; display:flex; align-items:center; gap:9px; padding:10px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5.5s ease-in-out infinite;"><span style="width:26px; height:26px; border-radius:999px; background:#F3EAFC; color:#9333EA; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center;">MS</span><div><div style="font-size:11px; font-weight:700; color:#111; line-height:1;">Histórico completo</div><div style="font-size:10px; color:#8A8F9C; margin-top:2px;">8 evoluções</div></div></div>
+          <div style="position:absolute; bottom:30px; left:26px; display:flex; align-items:center; gap:7px; padding:8px 12px; background:#fff; border:1px solid #EEF0F5; border-radius:999px; box-shadow:0 10px 28px rgba(17,17,17,0.12);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg><span style="font-size:11px; font-weight:600; color:#4A4F5C;">Seguro e em conformidade (LGPD)</span></div>
         </div>
-        <a href="/funcionalidades/documentos-personalizaveis" class="highlight-link">Saiba mais →</a>
+      </div>
+
+      <!-- 5 · TELEMEDICINA -->
+      <div class="feat-row animate-on-scroll">
+        <div class="feat-copy">
+          <span class="feat-tag" style="background:rgba(68,76,231,0.10);color:#444CE7;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2"></rect></svg>Telemedicina</span>
+          <h3>Atendimento por vídeo, sem instalar nada</h3>
+          <p>A sala de atendimento abre direto no navegador, com link enviado pelo WhatsApp. Tudo ligado à agenda e ao prontuário, com conexão segura.</p>
+          <ul class="highlight-list">
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Sala de vídeo por link, sem aplicativos</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Acesso pelo celular, tablet ou computador</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Integrada à agenda e ao prontuário</li>
+          </ul>
+          <a href="/funcionalidades/telemedicina" class="highlight-link">Saiba mais →</a>
+        </div>
+        <div class="feat-art" style="background:#E8F0FE;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="1.5" style="position:absolute; left:-30px; bottom:-34px; width:200px; height:200px; opacity:0.07;"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2"></rect></svg>
+          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:382px; background:#0E1730; border-radius:16px; box-shadow:0 20px 54px rgba(17,17,17,0.22); padding:14px; overflow:hidden;">
+            <div style="position:relative; height:178px; border-radius:11px; background:linear-gradient(150deg,#2D3F66,#1B2748); display:flex; align-items:center; justify-content:center; overflow:hidden;">
+              <span style="width:74px; height:74px; border-radius:999px; background:rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; font-size:24px; font-weight:700; color:#fff;">BR</span>
+              <div style="position:absolute; top:12px; left:12px; display:flex; align-items:center; gap:6px; padding:5px 10px; background:rgba(22,163,74,0.92); border-radius:999px;"><span style="width:6px; height:6px; border-radius:999px; background:#fff;"></span><span style="font-size:10px; font-weight:600; color:#fff;">Online</span></div>
+              <div style="position:absolute; top:12px; right:12px; padding:5px 10px; background:rgba(0,0,0,0.4); border-radius:999px; font-size:11px; font-weight:600; color:#fff;">12:45</div>
+              <div style="position:absolute; bottom:10px; left:12px; font-size:11px; font-weight:600; color:#fff; text-shadow:0 1px 4px rgba(0,0,0,0.5);">Dra. Beatriz Rocha</div>
+              <div style="position:absolute; bottom:10px; right:10px; width:62px; height:46px; border-radius:8px; background:linear-gradient(150deg,#4A5B82,#2D3A5C); border:2px solid rgba(255,255,255,0.4); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:#fff;">MS</div>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:center; gap:12px; padding:14px 0 4px;">
+              <span style="width:38px; height:38px; border-radius:999px; background:rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+              <span style="width:38px; height:38px; border-radius:999px; background:rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2"></rect></svg></span>
+              <span style="width:38px; height:38px; border-radius:999px; background:#DC2626; display:flex; align-items:center; justify-content:center; transform:rotate(135deg);"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+            </div>
+          </div>
+          <div style="position:absolute; bottom:28px; right:26px; display:flex; align-items:center; gap:8px; padding:9px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5s ease-in-out infinite;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg><span style="font-size:11px; font-weight:600; color:#111;">Ligada à agenda e ao prontuário</span></div>
+        </div>
+      </div>
+
+      <!-- 6 · FINANCEIRO -->
+      <div class="feat-row animate-on-scroll">
+        <div class="feat-copy">
+          <span class="feat-tag" style="background:rgba(68,76,231,0.10);color:#444CE7;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>Financeiro</span>
+          <h3>Financeiro e relatórios sem planilha</h3>
+          <p>Acompanhe faturamento, consultas e inadimplência em um painel claro. Exporte relatórios prontos para a contabilidade com um clique.</p>
+          <ul class="highlight-list">
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Painel de faturamento mês a mês</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Controle de inadimplência em tempo real</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Relatórios exportáveis em um clique</li>
+          </ul>
+          <a href="/funcionalidades/gestao-financeira" class="highlight-link">Saiba mais →</a>
+        </div>
+        <div class="feat-art" style="background:#EEF4FF;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="1.5" style="position:absolute; right:-26px; top:-34px; width:200px; height:200px; opacity:0.07;"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:380px; background:#fff; border:1px solid #EEF0F5; border-radius:16px; box-shadow:0 18px 50px rgba(17,17,17,0.12); padding:20px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:6px;"><div style="font-size:13px; font-weight:700; color:#111;">Faturamento</div><span style="display:flex; align-items:center; gap:4px; font-size:11px; font-weight:700; color:#16A34A;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>+8%</span></div>
+            <div style="font-size:24px; font-weight:700; color:#111; letter-spacing:-0.02em; margin-bottom:16px;">R$ 24.580</div>
+            <div style="display:flex; align-items:flex-end; gap:12px; height:96px; padding:0 2px; border-bottom:1px solid #EEF0F5; margin-bottom:14px;">
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;"><span style="width:100%; height:42px; border-radius:6px 6px 0 0; background:#C7D7FE;"></span></div>
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;"><span style="width:100%; height:58px; border-radius:6px 6px 0 0; background:#A4BCFD;"></span></div>
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;"><span style="width:100%; height:50px; border-radius:6px 6px 0 0; background:#C7D7FE;"></span></div>
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;"><span style="width:100%; height:72px; border-radius:6px 6px 0 0; background:#6172F3;"></span></div>
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;"><span style="width:100%; height:88px; border-radius:6px 6px 0 0; background:#444CE7;"></span></div>
+            </div>
+            <div style="display:flex; gap:10px;">
+              <div style="flex:1; padding:10px 12px; background:#F7F8FC; border-radius:10px;"><div style="font-size:10px; color:#8A8F9C;">Consultas</div><div style="font-size:16px; font-weight:700; color:#111;">128</div></div>
+              <div style="flex:1; padding:10px 12px; background:#F7F8FC; border-radius:10px;"><div style="font-size:10px; color:#8A8F9C;">Inadimplência</div><div style="font-size:16px; font-weight:700; color:#DC2626;">R$ 1.250</div></div>
+            </div>
+          </div>
+          <div style="position:absolute; top:30px; left:26px; display:flex; align-items:center; gap:9px; padding:10px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5.5s ease-in-out infinite;"><span style="width:26px; height:26px; border-radius:8px; background:rgba(68,76,231,0.12); display:flex; align-items:center; justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg></span><span style="font-size:12px; font-weight:600; color:#111;">Relatório exportado</span></div>
+        </div>
       </div>
 
     </div>

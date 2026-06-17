@@ -1801,6 +1801,14 @@ img { max-width: 100%; display: block; }
   ]
 }
 </script>
+<style>
+/* feature art in subpage hero */
+.subpage-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;}
+.subpage-hero-copy h1,.subpage-hero-copy p.lead{max-width:none;}
+.subpage-hero-art{position:relative;width:100%;height:380px;border-radius:24px;overflow:hidden;box-shadow:0 1px 3px rgba(17,17,17,0.06);}
+@keyframes tk-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+@media(max-width:900px){.subpage-hero-grid{grid-template-columns:1fr;gap:36px;}.subpage-hero-art{height:340px;}}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -1833,6 +1841,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="subpage-hero">
   <div class="container">
+    <div class="subpage-hero-grid">
+      <div class="subpage-hero-copy">
     <div class="subpage-badge">Funcionalidade</div>
     <h1>Controle total das <span class="highlight">finanças do seu consultório</span></h1>
     <p class="lead">Acompanhe recebimentos, pendências e faturamento mensal sem planilhas complicadas. Tudo integrado com sua agenda — atendimento registrado já entra no financeiro.</p>
@@ -1841,6 +1851,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/funcionalidades/" class="btn btn-outline">Ver todas as funcionalidades</a>
     </div>
     <p class="subpage-note">Teste grátis por 7 dias · Sem cartão de crédito</p>
+  </div>
+      <div class="subpage-hero-art" style="background:#EEF4FF;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="1.5" style="position:absolute; right:-26px; top:-34px; width:200px; height:200px; opacity:0.07;"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:380px; background:#fff; border:1px solid #EEF0F5; border-radius:16px; box-shadow:0 18px 50px rgba(17,17,17,0.12); padding:20px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:6px;"><div style="font-size:13px; font-weight:700; color:#111;">Faturamento</div><span style="display:flex; align-items:center; gap:4px; font-size:11px; font-weight:700; color:#16A34A;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>+8%</span></div>
+            <div style="font-size:24px; font-weight:700; color:#111; letter-spacing:-0.02em; margin-bottom:16px;">R$ 24.580</div>
+            <div style="display:flex; align-items:flex-end; gap:12px; height:96px; padding:0 2px; border-bottom:1px solid #EEF0F5; margin-bottom:14px;">
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;"><span style="width:100%; height:42px; border-radius:6px 6px 0 0; background:#C7D7FE;"></span></div>
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;"><span style="width:100%; height:58px; border-radius:6px 6px 0 0; background:#A4BCFD;"></span></div>
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;"><span style="width:100%; height:50px; border-radius:6px 6px 0 0; background:#C7D7FE;"></span></div>
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;"><span style="width:100%; height:72px; border-radius:6px 6px 0 0; background:#6172F3;"></span></div>
+              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;"><span style="width:100%; height:88px; border-radius:6px 6px 0 0; background:#444CE7;"></span></div>
+            </div>
+            <div style="display:flex; gap:10px;">
+              <div style="flex:1; padding:10px 12px; background:#F7F8FC; border-radius:10px;"><div style="font-size:10px; color:#8A8F9C;">Consultas</div><div style="font-size:16px; font-weight:700; color:#111;">128</div></div>
+              <div style="flex:1; padding:10px 12px; background:#F7F8FC; border-radius:10px;"><div style="font-size:10px; color:#8A8F9C;">Inadimplência</div><div style="font-size:16px; font-weight:700; color:#DC2626;">R$ 1.250</div></div>
+            </div>
+          </div>
+          <div style="position:absolute; top:30px; left:26px; display:flex; align-items:center; gap:9px; padding:10px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5.5s ease-in-out infinite;"><span style="width:26px; height:26px; border-radius:8px; background:rgba(68,76,231,0.12); display:flex; align-items:center; justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg></span><span style="font-size:12px; font-weight:600; color:#111;">Relatório exportado</span></div>
+        </div>
+    </div>
   </div>
 </section>
 

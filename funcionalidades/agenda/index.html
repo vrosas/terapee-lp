@@ -1801,6 +1801,14 @@ img { max-width: 100%; display: block; }
   ]
 }
 </script>
+<style>
+/* feature art in subpage hero */
+.subpage-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;}
+.subpage-hero-copy h1,.subpage-hero-copy p.lead{max-width:none;}
+.subpage-hero-art{position:relative;width:100%;height:380px;border-radius:24px;overflow:hidden;box-shadow:0 1px 3px rgba(17,17,17,0.06);}
+@keyframes tk-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+@media(max-width:900px){.subpage-hero-grid{grid-template-columns:1fr;gap:36px;}.subpage-hero-art{height:340px;}}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -1833,6 +1841,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="subpage-hero">
   <div class="container">
+    <div class="subpage-hero-grid">
+      <div class="subpage-hero-copy">
     <div class="subpage-badge">Funcionalidade</div>
     <h1>Gerencie sua <span class="highlight">agenda de consultas</span> de forma simples e eficiente</h1>
     <p class="lead">Crie sessões avulsas ou recorrentes, visualize sua agenda diária ou mensal e envie lembretes automáticos pelo WhatsApp — tudo em poucos cliques.</p>
@@ -1841,6 +1851,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/funcionalidades/" class="btn btn-outline">Ver todas as funcionalidades</a>
     </div>
     <p class="subpage-note">Teste grátis por 7 dias · Sem cartão de crédito</p>
+  </div>
+      <div class="subpage-hero-art" style="background:#EEF4FF;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="1.5" style="position:absolute; right:-30px; bottom:-40px; width:210px; height:210px; opacity:0.07;"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:372px; background:#fff; border:1px solid #EEF0F5; border-radius:16px; box-shadow:0 18px 50px rgba(17,17,17,0.12); padding:18px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
+              <div style="font-size:15px; font-weight:700; color:#111;">Janeiro 2025</div>
+              <span style="padding:5px 10px; background:#EEF4FF; border-radius:999px; font-size:11px; font-weight:600; color:#444CE7;">Semana</span>
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:8px;">
+              <div style="display:flex; flex-direction:column; gap:6px;"><div style="text-align:center;"><div style="font-size:10px; font-weight:600; letter-spacing:0.06em; color:#C9CDD8;">SEG</div><div style="font-size:14px; font-weight:700; color:#111;">12</div></div><div style="border-left:3px solid #444CE7; background:rgba(68,76,231,0.08); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">09:00</div><div style="font-size:10px; color:#4A4F5C;">Maria S.</div></div><div style="border-left:3px solid #F59E0B; background:rgba(245,158,11,0.10); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">14:00</div><div style="font-size:10px; color:#4A4F5C;">João P.</div></div></div>
+              <div style="display:flex; flex-direction:column; gap:6px;"><div style="text-align:center;"><div style="font-size:10px; font-weight:600; letter-spacing:0.06em; color:#C9CDD8;">TER</div><div style="font-size:14px; font-weight:700; color:#111;">13</div></div><div style="border-left:3px solid #0D9488; background:rgba(13,148,136,0.10); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">10:00</div><div style="font-size:10px; color:#4A4F5C;">Lúcia F.</div></div></div>
+              <div style="display:flex; flex-direction:column; gap:6px;"><div style="text-align:center;"><div style="font-size:10px; font-weight:600; letter-spacing:0.06em; color:#444CE7;">QUA</div><div style="font-size:14px; font-weight:700; color:#444CE7;">14</div></div><div style="border-left:3px solid #16A34A; background:rgba(22,163,74,0.10); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">08:00</div><div style="font-size:10px; color:#4A4F5C;">Pedro H.</div></div><div style="border-left:3px solid #9333EA; background:rgba(147,51,234,0.10); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">15:00</div><div style="font-size:10px; color:#4A4F5C;">Ana C.</div></div></div>
+              <div style="display:flex; flex-direction:column; gap:6px;"><div style="text-align:center;"><div style="font-size:10px; font-weight:600; letter-spacing:0.06em; color:#C9CDD8;">QUI</div><div style="font-size:14px; font-weight:700; color:#111;">15</div></div><div style="border-left:3px solid #EC4899; background:rgba(236,72,153,0.10); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">11:00</div><div style="font-size:10px; color:#4A4F5C;">Carla M.</div></div></div>
+            </div>
+          </div>
+          <div style="position:absolute; top:30px; right:28px; display:flex; align-items:center; gap:8px; padding:9px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5s ease-in-out infinite;"><span style="width:24px; height:24px; border-radius:7px; background:rgba(22,163,74,0.12); display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:12px; font-weight:600; color:#111;">Confirmado</span></div>
+          <div style="position:absolute; bottom:28px; left:28px; display:flex; align-items:center; gap:10px; padding:8px 14px 8px 10px; background:#fff; border:1px solid #EEF0F5; border-radius:999px; box-shadow:0 10px 28px rgba(17,17,17,0.12);"><div style="display:flex;"><span style="width:26px; height:26px; border-radius:999px; background:#EEF4FF; color:#444CE7; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 2px #fff;">MS</span><span style="width:26px; height:26px; border-radius:999px; background:#E7F6EF; color:#16A34A; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 2px #fff; margin-left:-8px;">PH</span><span style="width:26px; height:26px; border-radius:999px; background:#F3EAFC; color:#9333EA; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 2px #fff; margin-left:-8px;">AC</span></div><span style="font-size:12px; font-weight:600; color:#4A4F5C; white-space:nowrap;">8 sessões hoje</span></div>
+        </div>
+    </div>
   </div>
 </section>
 
