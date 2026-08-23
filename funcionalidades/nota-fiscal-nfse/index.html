@@ -10,14 +10,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Check-in de pacientes para consultórios | Terapee</title>
-<meta name="description" content="Registre a chegada dos pacientes com um clique. Acompanhe em tempo real quem está esperando e otimize o fluxo do seu consultório.">
+<title>Emissão de NFS-e para clínicas de terapia | Terapee</title>
+<meta name="description" content="Emita a nota fiscal de serviço direto da cobrança já paga, pelo Emissor Nacional do gov.br. Sem abrir o portal da prefeitura e sem redigitar nada. Incluída em todos os planos.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://terapee.com.br/funcionalidades/check-in">
+<link rel="canonical" href="https://terapee.com.br/funcionalidades/nota-fiscal-nfse">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://terapee.com.br/funcionalidades/check-in">
-<meta property="og:title" content="Check-in de pacientes para consultórios | Terapee">
-<meta property="og:description" content="Registre a chegada dos pacientes com um clique. Acompanhe em tempo real quem está esperando e otimize o fluxo do seu consultório.">
+<meta property="og:url" content="https://terapee.com.br/funcionalidades/nota-fiscal-nfse">
+<meta property="og:title" content="Emissão de NFS-e para clínicas de terapia | Terapee">
+<meta property="og:description" content="Emita a nota fiscal de serviço direto da cobrança já paga, pelo Emissor Nacional do gov.br. Sem abrir o portal da prefeitura e sem redigitar nada. Incluída em todos os planos.">
 <meta property="og:image" content="https://terapee.com.br/og-image.png">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1747,8 +1747,8 @@ img { max-width: 100%; display: block; }
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Check-in de pacientes",
-      "item": "https://terapee.com.br/funcionalidades/check-in"
+      "name": "Emissão de NFS-e",
+      "item": "https://terapee.com.br/funcionalidades/nota-fiscal-nfse"
     }
   ]
 }
@@ -1768,39 +1768,82 @@ img { max-width: 100%; display: block; }
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "O que é o check-in digital de pacientes?",
+      "name": "A emissão de NFS-e custa a mais?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "É o registro da chegada do paciente à clínica com um clique. A recepção marca a presença e o profissional vê em tempo real quem já chegou e está aguardando atendimento, sem papel nem lousa."
+        "text": "Não. A emissão de NFS-e está incluída em todos os planos do Terapee, sem taxa por nota, sem módulo à parte e sem upgrade obrigatório. Sua mensalidade continua a mesma."
       }
     },
     {
       "@type": "Question",
-      "name": "Preciso ter secretária para usar o check-in?",
+      "name": "Sou obrigado a usar a emissão de nota fiscal?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Não. O check-in funciona com ou sem recepção: o próprio profissional pode registrar a chegada do paciente direto na agenda quando atende sozinho."
+        "text": "Não. A NFS-e nasce desligada. Nada muda na sua rotina até você ligar a chave em Configurações, e nada aparece na tela dos seus profissionais até lá."
       }
     },
     {
       "@type": "Question",
-      "name": "O check-in fica registrado no histórico do paciente?",
+      "name": "O que preciso para emitir a primeira nota?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. Cada check-in gera um histórico de presença, útil para acompanhar frequência, faltas e o fluxo de atendimento da clínica ao longo do tempo."
+        "text": "Três coisas: o certificado digital A1 (e-CNPJ) da clínica, o seu município aderente ao Emissor Nacional do gov.br e os dados fiscais da clínica (inscrição municipal, regime tributário, item da lista de serviço e alíquota do ISS). São os mesmos dados que o seu contador já usa."
       }
     },
     {
       "@type": "Question",
-      "name": "O check-in se integra com a agenda e o prontuário?",
+      "name": "E se a nota for rejeitada?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. Ao registrar a chegada, a agenda atualiza o status do atendimento e o prontuário do paciente fica acessível para o profissional iniciar a sessão imediatamente."
+        "text": "O motivo aparece na própria linha, escrito por extenso. Você corrige o que estiver errado e tenta de novo pelo mesmo botão, sem perder a numeração e sem risco de emitir duas vezes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Meu município não está na lista do gov.br. E agora?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nesse caso a emissão pelo Emissor Nacional ainda não está disponível na sua cidade. A adesão dos municípios é contínua e a lista é pública, então vale conferir de novo em algumas semanas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Meu certificado digital fica seguro no Terapee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O arquivo e a senha são criptografados antes de serem guardados, em armazenamento privado. O certificado só é aberto no instante de assinar uma nota da sua clínica e nunca trafega para o navegador."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Já emito nota em outro sistema. Perco a numeração?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. Você informa a série e o número da última nota emitida e o Terapee segue a sequência a partir dali."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como envio as notas para a contabilidade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Em um clique. O Terapee reúne o XML e o PDF de toda a competência e envia por e-mail ao contador. O processo roda em segundo plano e você recebe um aviso por e-mail quando termina."
       }
     }
   ]
 }
 </script>
+<style>
+/* feature art in subpage hero */
+.subpage-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;}
+.subpage-hero-copy h1,.subpage-hero-copy p.lead{max-width:none;}
+.subpage-hero-art{position:relative;width:100%;height:380px;border-radius:24px;overflow:hidden;box-shadow:0 1px 3px rgba(17,17,17,0.06);}
+@keyframes tk-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+@media(max-width:900px){.subpage-hero-grid{grid-template-columns:1fr;gap:36px;}.subpage-hero-art{height:340px;}}
+/* selo "incluído no plano" */
+.plan-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:#E7F5EE;border:1px solid #BFE3D2;color:#0B6B48;font-size:13px;font-weight:700;}
+.req-num{width:32px;height:32px;border-radius:10px;background:var(--primary-100);color:var(--primary-600);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;margin-bottom:14px;}
+</style>
 <style>
 /* ========== HEADER MOBILE ==========
    Em telas estreitas o CTA do cabecalho cobria a logo: logo (173px) + botoes
@@ -1840,7 +1883,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     <div class="header-actions">
       <a href="https://web.terapee.com.br/" target="_blank" class="btn btn-outline" style="padding:10px 20px;font-size:14px;">Entrar</a>
-      <a href="https://tally.so/r/zxrQpk" class="btn btn-primary" style="padding:10px 20px;font-size:14px;">Começar grátis</a>
+      <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary" style="padding:10px 20px;font-size:14px;">Começar grátis</a>
     </div>
     <button class="mobile-toggle" onclick="toggleMobileNav()">
       <span></span><span></span><span></span>
@@ -1851,56 +1894,84 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="subpage-hero">
   <div class="container">
-    <div class="subpage-badge">Funcionalidade</div>
-    <h1>Controle a <span class="highlight">chegada dos pacientes</span> com check-in digital</h1>
-    <p class="lead">Registre a chegada com um clique, veja em tempo real quem está aguardando e mantenha o fluxo do atendimento organizado — sem papel, sem lousa, sem confusão.</p>
-    <div class="subpage-cta-group">
-      <a href="https://tally.so/r/zxrQpk" class="btn btn-primary">Começar gratuitamente →</a>
-      <a href="/funcionalidades/" class="btn btn-outline">Ver todas as funcionalidades</a>
+    <div class="subpage-hero-grid">
+      <div class="subpage-hero-copy">
+        <div class="subpage-badge">Novidade</div>
+        <h1><span class="highlight">A nota fiscal</span> sai de dentro do Terapee</h1>
+        <p class="lead">Emita a NFS-e direto na cobrança que já está paga, pelo Emissor Nacional do gov.br. Sem abrir o portal da prefeitura, sem redigitar CPF e valor, sem contratar mais nada.</p>
+        <p style="margin:-8px 0 22px;"><span class="plan-badge">Incluída em todos os planos · sem custo adicional</span></p>
+        <div class="subpage-cta-group">
+          <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary">Começar gratuitamente →</a>
+          <a href="/funcionalidades/" class="btn btn-outline">Ver todas as funcionalidades</a>
+        </div>
+        <p class="subpage-note">Teste grátis por 14 dias · Sem cartão de crédito</p>
+      </div>
+      <div class="subpage-hero-art" style="background:#EEF4FF;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="1.5" style="position:absolute; right:-28px; bottom:-36px; width:205px; height:205px; opacity:0.07;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:376px; background:#fff; border:1px solid #EEF0F5; border-radius:16px; box-shadow:0 18px 50px rgba(17,17,17,0.12); padding:18px;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
+            <div style="font-size:14px; font-weight:700; color:#111;">Receitas</div>
+            <span style="padding:5px 10px; background:#EEF4FF; border-radius:999px; font-size:11px; font-weight:600; color:#444CE7;">Agosto</span>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 11px; border:1px solid #EEF0F5; border-radius:10px; margin-bottom:8px;">
+            <div><div style="font-size:11px; font-weight:700; color:#111;">Maria Silva</div><div style="font-size:10px; color:#8A8F9C;">Sessão de terapia · R$ 180,00</div></div>
+            <span style="padding:5px 11px; background:#444CE7; border-radius:8px; font-size:10px; font-weight:700; color:#fff;">Emitir</span>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 11px; border:1px solid #EEF0F5; border-radius:10px; margin-bottom:8px;">
+            <div><div style="font-size:11px; font-weight:700; color:#111;">João Pereira</div><div style="font-size:10px; color:#8A8F9C;">Sessão de terapia · R$ 180,00</div></div>
+            <span style="display:flex; align-items:center; gap:5px; padding:5px 10px; background:rgba(22,163,74,0.10); border-radius:999px; font-size:10px; font-weight:700; color:#16A34A;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Emitida</span>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 11px; border:1px solid #EEF0F5; border-radius:10px;">
+            <div><div style="font-size:11px; font-weight:700; color:#111;">Lúcia Ferraz</div><div style="font-size:10px; color:#8A8F9C;">Mensalidade · R$ 640,00</div></div>
+            <span style="display:flex; align-items:center; gap:5px; padding:5px 10px; background:rgba(22,163,74,0.10); border-radius:999px; font-size:10px; font-weight:700; color:#16A34A;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Emitida</span>
+          </div>
+        </div>
+        <div style="position:absolute; top:26px; left:24px; display:flex; align-items:center; gap:9px; padding:10px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5.5s ease-in-out infinite;"><span style="width:26px; height:26px; border-radius:8px; background:rgba(22,163,74,0.12); display:flex; align-items:center; justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span style="font-size:12px; font-weight:600; color:#111;">Nota autorizada</span></div>
+        <div style="position:absolute; bottom:26px; right:24px; display:flex; align-items:center; gap:8px; padding:9px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5s ease-in-out infinite;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M7 8h10"></path><path d="M7 12h10"></path><path d="M7 16h6"></path></svg><span style="font-size:11px; font-weight:600; color:#111;">Emissor Nacional · gov.br</span></div>
+      </div>
     </div>
-    <p class="subpage-note">Teste grátis por 14 dias · Sem cartão de crédito</p>
   </div>
 </section>
 
 <section class="features-grid-section">
   <div class="container">
     <h2 class="section-title">O que está incluído</h2>
-    <p class="section-subtitle">Tudo o que você precisa, sem complexidade desnecessária.</p>
+    <p class="section-subtitle">Da emissão ao fechamento do mês com a contabilidade.</p>
     <div class="features-grid">
     <div class="feature-card animate-on-scroll">
-      <div class="feature-icon">✅</div>
-      <h3>Check-in em um clique</h3>
-      <p>A secretária ou o próprio profissional registra a chegada do paciente diretamente na agenda.</p>
+      <div class="feature-icon">🧾</div>
+      <h3>Emissão em dois cliques</h3>
+      <p>Toda cobrança marcada como paga ganha o botão Emitir na aba Receitas do Financeiro. Paciente, valor e descrição já vêm preenchidos.</p>
     </div>
 
     <div class="feature-card animate-on-scroll">
-      <div class="feature-icon">📋</div>
-      <h3>Fila de espera em tempo real</h3>
-      <p>Veja quem chegou, quem está em atendimento e quem está aguardando — tudo atualizado ao vivo.</p>
+      <div class="feature-icon">⚡</div>
+      <h3>Nota autorizada na hora</h3>
+      <p>O Terapee monta a nota, assina com o certificado da sua clínica e transmite ao Sistema Nacional. Em segundos ela volta com número, série e chave de acesso.</p>
     </div>
 
     <div class="feature-card animate-on-scroll">
-      <div class="feature-icon">🔔</div>
-      <h3>Notificação ao profissional</h3>
-      <p>Quando o paciente faz check-in, o profissional recebe uma notificação para agilizar o atendimento.</p>
+      <div class="feature-icon">📤</div>
+      <h3>Envio para a contabilidade</h3>
+      <p>XML e PDF da competência inteira em um clique. Roda em segundo plano e avisa você por e-mail quando termina.</p>
     </div>
 
     <div class="feature-card animate-on-scroll">
-      <div class="feature-icon">📊</div>
-      <h3>Histórico de presença</h3>
-      <p>Consulte o histórico de presença de cada paciente: quantas sessões compareceu, faltou ou cancelou.</p>
+      <div class="feature-icon">📄</div>
+      <h3>PDF da nota para o paciente</h3>
+      <p>Baixe a DANFSe quando quiser — ou envie pelo WhatsApp da clínica, se você tem número próprio conectado.</p>
     </div>
 
     <div class="feature-card animate-on-scroll">
-      <div class="feature-icon">🔗</div>
-      <h3>Integrado com agenda e prontuário</h3>
-      <p>O check-in vincula automaticamente a chegada ao registro da sessão e ao prontuário do paciente.</p>
+      <div class="feature-icon">↩️</div>
+      <h3>Cancelamento com motivo</h3>
+      <p>Cancele quando precisar, com o motivo registrado. A nota cancelada continua visível no histórico, com o motivo à vista.</p>
     </div>
 
     <div class="feature-card animate-on-scroll">
-      <div class="feature-icon">👥</div>
-      <h3>Funciona com secretária ou sem</h3>
-      <p>Em consultórios sem recepcionista, o profissional mesmo faz o check-in na chegada do paciente.</p>
+      <div class="feature-icon">🔢</div>
+      <h3>Sua numeração continua</h3>
+      <p>Já emitia em outro sistema? Informe a série e o número da última nota emitida — o Terapee segue a sequência a partir dali.</p>
     </div></div>
   </div>
 </section>
@@ -1912,78 +1983,157 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="step-item animate-on-scroll">
       <div class="step-num">1</div>
       <div>
-        <h3>O paciente chega à clínica</h3>
-        <p>A secretária localiza o agendamento na agenda do dia.</p>
+        <h3>Configure uma vez</h3>
+        <p>Em Configurações › NFS-e, você sobe o certificado digital A1 da clínica e preenche os dados fiscais. Leva uns 10 minutos e vale para todas as notas.</p>
       </div>
     </div>
 
     <div class="step-item animate-on-scroll">
       <div class="step-num">2</div>
       <div>
-        <h3>Registra o check-in</h3>
-        <p>Um clique no agendamento marca o paciente como 'chegou'. O status muda na agenda em tempo real.</p>
+        <h3>Clique em Emitir na cobrança paga</h3>
+        <p>Na aba Receitas do Financeiro, toda cobrança já paga mostra o botão Emitir. Nenhuma tela nova, nenhuma planilha no meio do caminho.</p>
       </div>
     </div>
 
     <div class="step-item animate-on-scroll">
       <div class="step-num">3</div>
       <div>
-        <h3>O profissional é notificado</h3>
-        <p>O terapeuta recebe um aviso de que o paciente está aguardando — pelo painel ou pelo celular.</p>
+        <h3>Confira e confirme</h3>
+        <p>Paciente, valor e descrição do serviço já vêm preenchidos. Você escolhe se a nota sai no nome do paciente ou do responsável financeiro, ajusta o texto se quiser — e confirma.</p>
       </div>
     </div>
 
     <div class="step-item animate-on-scroll">
       <div class="step-num">4</div>
       <div>
-        <h3>O atendimento inicia</h3>
-        <p>Com tudo registrado, o profissional abre o prontuário e inicia a sessão sem perder tempo.</p>
+        <h3>A nota volta autorizada</h3>
+        <p>Em segundos ela aparece com número, série e chave de acesso na aba NFS-e, onde ficam todas as notas da clínica.</p>
       </div>
     </div></div>
   </div>
 </section>
 
-<section class="testimonial-section">
+<section class="checklist-section">
   <div class="container">
-    <p class="testimonial-quote">A plataforma é rápida, intuitiva e confiável. O check-in organiza totalmente nosso fluxo de recepção.</p>
-    <p class="testimonial-author"><strong>Ricardo Menezes</strong> · Terapeuta Multidisciplinar</p>
+    <h2 class="section-title" style="margin-bottom:8px;">Incluída no seu plano, sem custo por nota</h2>
+    <p class="section-subtitle">A emissão de NFS-e entra no plano que você já tem — do Individual ao Clínica Max.</p>
+    <div class="checklist-grid">
+    <div class="checklist-item">
+      <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      Sem taxa por nota emitida
+    </div>
+
+    <div class="checklist-item">
+      <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      Sem módulo à parte para contratar
+    </div>
+
+    <div class="checklist-item">
+      <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      Sem upgrade obrigatório de plano
+    </div>
+
+    <div class="checklist-item">
+      <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      Sua mensalidade continua a mesma
+    </div>
+
+    <div class="checklist-item">
+      <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      Nasce desligada: você liga quando quiser
+    </div>
+
+    <div class="checklist-item">
+      <div class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      Campos de IBS e CBS prontos para a Reforma Tributária
+    </div></div>
   </div>
 </section>
 
-<section class="faq-page-section" style="background:var(--white);padding:80px 0;">
+<section class="features-grid-section" style="background:var(--white)">
+  <div class="container">
+    <h2 class="section-title">O que você precisa antes da primeira nota</h2>
+    <p class="section-subtitle">Emitir nota fiscal exige alguns dados que só a sua clínica tem. Nenhum deles é novidade para o seu contador.</p>
+    <div class="features-grid">
+    <div class="feature-card animate-on-scroll">
+      <div class="req-num">1</div>
+      <h3>Certificado digital A1 (e-CNPJ)</h3>
+      <p>É o arquivo .pfx que assina as notas em nome da clínica. Você sobe uma vez e ele fica guardado criptografado, com a senha protegida.</p>
+    </div>
+
+    <div class="feature-card animate-on-scroll">
+      <div class="req-num">2</div>
+      <h3>Município aderente ao Emissor Nacional</h3>
+      <p>A lista é pública e cresce todo mês. <a href="https://www.gov.br/nfse/pt-br/municipios/municipios-aderentes" target="_blank" rel="noopener" style="color:var(--primary);text-decoration:underline;">Consulte o seu município no portal do gov.br</a>.</p>
+    </div>
+
+    <div class="feature-card animate-on-scroll">
+      <div class="req-num">3</div>
+      <h3>Os dados fiscais da clínica</h3>
+      <p>Inscrição municipal, regime tributário, item da lista de serviço e alíquota do ISS. São os mesmos que o seu contador já usa.</p>
+    </div></div>
+  </div>
+</section>
+
+<section class="faq-page-section" style="background:var(--gray-50);padding:80px 0;">
   <div class="container">
     <div style="text-align:center;">
-      <h2 class="section-title">Perguntas frequentes sobre o check-in de pacientes</h2>
+      <h2 class="section-title">Perguntas frequentes sobre a NFS-e</h2>
     </div>
     <div class="faq-layout">
       <div class="faq-left">
-        <p>Ficou com alguma dúvida sobre o check-in de pacientes? Fale com o nosso suporte que a gente te ajuda.</p>
-        <a href="https://api.whatsapp.com/send?phone=552123422477&text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20o%20Terapee" class="btn btn-outline">Fale conosco</a>
+        <p>Ficou com alguma dúvida sobre a emissão de nota fiscal? Fale com o nosso suporte que a gente te ajuda a emitir a primeira com você.</p>
+        <a href="https://api.whatsapp.com/send?phone=552123422477&text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20a%20emiss%C3%A3o%20de%20NFS-e%20no%20Terapee" class="btn btn-outline">Fale conosco</a>
       </div>
       <div class="faq-right">
         <div class="faq-item">
-          <button class="faq-question">O que é o check-in digital de pacientes?
+          <button class="faq-question">A emissão de NFS-e custa a mais?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">É o registro da chegada do paciente à clínica com um clique. A recepção marca a presença e o profissional vê em tempo real quem já chegou e está aguardando atendimento, sem papel nem lousa.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Não. A emissão de NFS-e está incluída em todos os planos do Terapee, sem taxa por nota, sem módulo à parte e sem upgrade obrigatório. Sua mensalidade continua a mesma.</div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">Preciso ter secretária para usar o check-in?
+          <button class="faq-question">Sou obrigado a usar?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Não. O check-in funciona com ou sem recepção: o próprio profissional pode registrar a chegada do paciente direto na agenda quando atende sozinho.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Não. A NFS-e nasce desligada. Nada muda na sua rotina até você ligar a chave em Configurações — e nada aparece na tela dos seus profissionais até lá.</div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">O check-in fica registrado no histórico do paciente?
+          <button class="faq-question">O que preciso para emitir a primeira nota?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Sim. Cada check-in gera um histórico de presença, útil para acompanhar frequência, faltas e o fluxo de atendimento da clínica ao longo do tempo.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Três coisas: o certificado digital A1 (e-CNPJ) da clínica, o seu município aderente ao Emissor Nacional do gov.br e os dados fiscais da clínica — inscrição municipal, regime tributário, item da lista de serviço e alíquota do ISS. São os mesmos dados que o seu contador já usa.</div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">O check-in se integra com a agenda e o prontuário?
+          <button class="faq-question">E se a nota for rejeitada?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Sim. Ao registrar a chegada, a agenda atualiza o status do atendimento e o prontuário do paciente fica acessível para o profissional iniciar a sessão imediatamente.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">O motivo aparece na própria linha, escrito por extenso. Você corrige o que estiver errado e tenta de novo pelo mesmo botão — sem perder a numeração nem emitir duas vezes.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Meu município não está na lista do gov.br.
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Então a emissão pelo Emissor Nacional ainda não está disponível aí. A adesão dos municípios é contínua — vale conferir de novo em algumas semanas.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Meu certificado fica seguro?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">O arquivo e a senha são criptografados antes de serem guardados, num armazenamento privado. Ele só é aberto no instante de assinar uma nota sua — e nunca trafega para o seu navegador.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Já emito nota em outro sistema. Perco a numeração?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Não. Você informa a série e o número da última nota emitida e o Terapee segue a sequência a partir dali.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Como envio as notas para a contabilidade?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Em um clique. O Terapee reúne o XML e o PDF de toda a competência e envia por e-mail ao contador. O envio roda em segundo plano e você recebe um aviso por e-mail quando termina.</div></div>
         </div>
       </div>
     </div>
@@ -2002,8 +2152,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="related-section">
   <div class="container">
     <div class="related-label">Veja também</div>
-    <div class="related-links"><a href="/funcionalidades/agenda">Gestão de agenda</a>
-<a href="/funcionalidades/multi-agenda">Multi-agenda</a></div>
+    <div class="related-links"><a href="/funcionalidades/gestao-financeira">Gestão financeira</a>
+<a href="/funcionalidades/emissao-de-recibos">Emissão de recibos</a>
+<a href="/funcionalidades/cobranca-automatica">Cobrança automática</a>
+<a href="/para-clinicas-multidisciplinares">Para clínicas multidisciplinares</a></div>
   </div>
 </section>
 
@@ -2027,9 +2179,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="footer-col-links">
           <a href="/funcionalidades/agenda">Gestão de agenda</a>
           <a href="/funcionalidades/prontuario-eletronico">Prontuário eletrônico</a>
+          <a href="/funcionalidades/telemedicina">Telemedicina</a>
           <a href="/funcionalidades/lembretes-whatsapp">Lembretes WhatsApp</a>
           <a href="/funcionalidades/gestao-financeira">Gestão financeira</a>
-          <a href="/funcionalidades/gestao-de-pacientes">Gestão de pacientes</a>
+          <a href="/funcionalidades/nota-fiscal-nfse">Emissão de NFS-e</a>
         </div>
       </div>
       <div>

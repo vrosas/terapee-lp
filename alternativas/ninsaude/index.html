@@ -1761,6 +1761,24 @@ img { max-width: 100%; display: block; }
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "h8iifiakrd");
 </script>
+<style>
+/* ========== HEADER MOBILE ==========
+   Em telas estreitas o CTA do cabecalho cobria a logo: logo (173px) + botoes
+   + hamburguer nao cabiam na largura. Aqui a logo e o botao encolhem para
+   caber; abaixo de 360px o botao sai (a acao continua no hero e no rodape).
+   Os botoes do header tem padding/font-size inline, dai o !important. */
+@media (max-width: 768px) {
+  .header-inner { padding: 0 16px; gap: 12px; }
+  .logo { flex: 0 0 auto; }
+  .logo .logo-img { height: 28px; }
+  .header-actions { gap: 8px; }
+  .header-actions .btn-outline { display: none; }
+  .header-actions .btn { padding: 9px 14px !important; font-size: 13px !important; white-space: nowrap; }
+}
+@media (max-width: 359px) {
+  .header-actions .btn-primary { display: none; }
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -1820,6 +1838,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li>WhatsApp profundamente integrado</li>
 <li>Preço acessível a partir de R$ 55,90/mês</li>
 <li>Setup rápido — funciona no primeiro dia</li>
+<li>Emissão de NFS-e incluída em todos os planos</li>
 <li>Conformidade LGPD com DPO designado</li></ul>
       </div>
       <div class="summary-card">
@@ -1827,7 +1846,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p style="font-size:12px;color:var(--gray-400);margin-bottom:4px;">Melhor para quem quer...</p>
         <ul><li>Faturamento de convênios (TISS)</li>
 <li>Módulos para clínicas de maior porte</li>
-<li>Emissão de NF-e integrada</li>
 <li>Prontuário médico completo</li></ul>
       </div>
     </div>
@@ -1926,8 +1944,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </tr>
 
     <tr>
-      <td>Emissão de NF-e</td>
-      <td><span class="val-txt">Em breve</span></td>
+      <td>Emissão de NFS-e (nota fiscal de serviço)</td>
+      <td><span class="val-yes">✓ Sim</span></td>
       <td><span class="val-yes">✓ Sim</span></td>
     </tr>
 
