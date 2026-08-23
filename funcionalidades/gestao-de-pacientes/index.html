@@ -1801,6 +1801,24 @@ img { max-width: 100%; display: block; }
   ]
 }
 </script>
+<style>
+/* ========== HEADER MOBILE ==========
+   Em telas estreitas o CTA do cabecalho cobria a logo: logo (173px) + botoes
+   + hamburguer nao cabiam na largura. Aqui a logo e o botao encolhem para
+   caber; abaixo de 360px o botao sai (a acao continua no hero e no rodape).
+   Os botoes do header tem padding/font-size inline, dai o !important. */
+@media (max-width: 768px) {
+  .header-inner { padding: 0 16px; gap: 12px; }
+  .logo { flex: 0 0 auto; }
+  .logo .logo-img { height: 28px; }
+  .header-actions { gap: 8px; }
+  .header-actions .btn-outline { display: none; }
+  .header-actions .btn { padding: 9px 14px !important; font-size: 13px !important; white-space: nowrap; }
+}
+@media (max-width: 359px) {
+  .header-actions .btn-primary { display: none; }
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
