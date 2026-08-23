@@ -537,6 +537,19 @@ img { max-width: 100%; display: block; }
   color: var(--gray-700);
   line-height: 1.6;
 }
+/* O texto ao lado do selo pode conter e-mail: sem isto o item de flex nao
+   encolhe abaixo da largura da palavra e a pagina ganha scroll horizontal. */
+.legal-base > span:not(.legal-base-tag) {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+/* No mobile o selo ocupa quase metade da linha e espremia o texto (o e-mail
+   do Encarregado chegava a quebrar no meio). Empilhado, cada um tem a largura
+   toda. */
+@media (max-width: 600px) {
+  .legal-base { flex-direction: column; gap: 8px; }
+}
 .legal-base-tag {
   font-size: 11px;
   font-weight: 800;
@@ -617,10 +630,17 @@ img { max-width: 100%; display: block; }
 .alert-box svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: 1px; }
 
 /* ---- Suboperators table ---- */
+/* A tabela tem 4 colunas e nao cabe em telas estreitas: ela rola dentro do
+   proprio wrapper, em vez de empurrar a pagina inteira para o lado. */
+.subop-table-wrap {
+  margin-top: 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 .subop-table {
   width: 100%;
+  min-width: 520px;
   border-collapse: collapse;
-  margin-top: 12px;
   font-size: 13.5px;
 }
 .subop-table th {
@@ -653,6 +673,7 @@ img { max-width: 100%; display: block; }
   padding: 3px 10px;
   border-radius: 100px;
 }
+.subop-tag, .subop-loc { white-space: nowrap; }
 .subop-tag.infra { background: #dbeafe; color: #1d4ed8; }
 .subop-tag.payment { background: #d1fae5; color: #065f46; }
 .subop-tag.msg { background: #fce7f3; color: #9d174d; }
@@ -1184,7 +1205,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="sub-section">
           <p class="sub-section-title">Suboperadores essenciais</p>
           <p>Para a prestação do serviço, utilizamos parceiros técnicos (suboperadores) que seguem padrões de segurança compatíveis com a LGPD e estão sujeitos a contratos de confidencialidade e tratamento de dados:</p>
-          <table class="subop-table">
+          <div class="subop-table-wrap">
+            <table class="subop-table">
             <thead>
               <tr>
                 <th>Fornecedor</th>
@@ -1250,6 +1272,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </tr>
             </tbody>
           </table>
+          </div>
         </div>
 
         <div class="sub-section">

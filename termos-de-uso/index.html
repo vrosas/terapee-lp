@@ -617,6 +617,19 @@ img { max-width: 100%; display: block; }
   color: var(--gray-700);
   line-height: 1.6;
 }
+/* Mesma correcao da Politica de Privacidade: o texto ao lado do selo pode
+   conter e-mail e precisa poder quebrar, senao a pagina rola na horizontal. */
+.legal-base > span:not(.legal-base-tag) {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+/* No mobile o selo ocupa quase metade da linha e espremia o texto (o e-mail
+   do Encarregado chegava a quebrar no meio). Empilhado, cada um tem a largura
+   toda. */
+@media (max-width: 600px) {
+  .legal-base { flex-direction: column; gap: 8px; }
+}
 .legal-base-tag {
   font-size: 11px;
   font-weight: 800;
