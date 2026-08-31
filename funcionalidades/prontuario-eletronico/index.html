@@ -212,7 +212,7 @@ img { max-width: 100%; display: block; }
   gap: 0;
 }
 .logo .logo-img { height: 36px; width: auto; }
-.nav { display: flex; align-items: center; gap: 32px; }
+.nav { display: flex; align-items: center; gap: clamp(18px, 2.7vw, 32px); }
 .nav a {
   font-size: 14px;
   font-weight: 600;
@@ -1157,6 +1157,7 @@ img { max-width: 100%; display: block; }
 .footer-logo .logo-img { height: 30px; width: auto; }
 .footer-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 28px;
 }
 .footer-links a {
@@ -1826,6 +1827,13 @@ img { max-width: 100%; display: block; }
 @media (max-width: 359px) {
   .header-actions .btn-primary { display: none; }
 }
+
+/* The header nav needs ~1090px to fit all links without colliding with the
+   logo and the CTA buttons, so it collapses into the mobile menu below that. */
+@media (max-width: 1100px) {
+  .nav { display: none; }
+  .mobile-toggle { display: flex; }
+}
 </style>
 </head>
 <body>
@@ -1844,6 +1852,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/#planos">Planos</a>
       <a href="/#seguranca">Segurança</a>
       <a href="/#faq">Perguntas Frequentes</a>
+      <a href="https://blog.terapee.com.br/">Blog</a>
       <a href="/#fale-conosco">Fale Conosco</a>
     </nav>
     <div class="header-actions">
@@ -2042,6 +2051,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/#planos">Planos</a>
         <a href="/#seguranca">Segurança &amp; LGPD</a>
         <a href="/#faq">Perguntas Frequentes</a>
+        <a href="https://blog.terapee.com.br/">Blog</a>
         <a href="/#fale-conosco">Fale Conosco</a>
       </div>
     </div>
@@ -2073,6 +2083,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="/alternativas/psicoplanner">Alternativa ao PsicoPlanner</a>
           <a href="/alternativas/ninsaude">Alternativa ao Ninsaúde</a>
           <a href="/alternativas/clinica-agil">Alternativa ao Clínica Ágil</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Conteúdo</div>
+        <div class="footer-col-links">
+          <a href="https://blog.terapee.com.br/">Todos os artigos</a>
+          <a href="https://blog.terapee.com.br/category/gestao">Gestão de clínicas</a>
+          <a href="https://blog.terapee.com.br/category/agenda">Agenda</a>
+          <a href="https://blog.terapee.com.br/category/financeiro">Financeiro</a>
+          <a href="https://blog.terapee.com.br/category/prontuario">Prontuário</a>
+          <a href="https://blog.terapee.com.br/category/teleconsulta">Teleconsulta</a>
         </div>
       </div>
     </div>

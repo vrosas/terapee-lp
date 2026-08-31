@@ -154,7 +154,7 @@ img { max-width: 100%; display: block; }
 }
 .logo { display: flex; align-items: center; }
 .logo .logo-img { height: 36px; width: auto; }
-.nav { display: flex; align-items: center; gap: 32px; }
+.nav { display: flex; align-items: center; gap: clamp(18px, 2.7vw, 32px); }
 .nav a {
   font-size: 14px;
   font-weight: 600;
@@ -847,6 +847,13 @@ img { max-width: 100%; display: block; }
 @media (max-width: 359px) {
   .header-actions .btn-primary { display: none; }
 }
+
+/* The header nav needs ~1090px to fit all links without colliding with the
+   logo and the CTA buttons, so it collapses into the mobile menu below that. */
+@media (max-width: 1100px) {
+  .nav { display: none; }
+  .mobile-toggle { display: flex; }
+}
 </style>
 </head>
 <body>
@@ -866,6 +873,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/#planos">Planos</a>
       <a href="/#seguranca">Segurança</a>
       <a href="/#faq">Perguntas Frequentes</a>
+      <a href="https://blog.terapee.com.br/">Blog</a>
       <a href="/#fale-conosco">Fale Conosco</a>
     </nav>
     <div class="header-actions">
@@ -1584,6 +1592,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/#planos">Planos</a>
         <a href="/#seguranca">Segurança & LGPD</a>
         <a href="/#faq">Perguntas Frequentes</a>
+        <a href="https://blog.terapee.com.br/">Blog</a>
         <a href="/#fale-conosco">Fale Conosco</a>
         <a href="/politica-de-privacidade" class="active">Política de Privacidade</a>
       </div>
