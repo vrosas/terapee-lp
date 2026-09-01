@@ -1,0 +1,66 @@
+# Terapee
+
+> Sistema de gestão para clínicas de terapia no Brasil: psicologia, fonoaudiologia,
+> terapia ocupacional, fisioterapia, ABA e clínicas multidisciplinares. Reúne agenda,
+> prontuário eletrônico, lembretes automáticos no WhatsApp, cobrança recorrente,
+> telemedicina e emissão de NFS-e em um só lugar.
+
+Terapee é um software web (SaaS) em português, acessível pelo navegador e pelo celular,
+sem instalação. Atende desde profissionais que trabalham sozinhos até clínicas com
+vários terapeutas.
+
+## Fatos principais
+
+- Site oficial: https://www.terapee.com.br/
+- Aplicação: https://web.terapee.com.br/
+- Idioma e mercado: português do Brasil (pt-BR)
+- Teste grátis: 14 dias, sem cartão de crédito
+- Planos mensais: Start R$ 55,90 · Clínica R$ 89,90 · Clínica Max R$ 175,00
+- Emissão de NFS-e pelo Emissor Nacional do gov.br, incluída em todos os planos
+- Lembretes automáticos no WhatsApp reduzem faltas em até 25%
+- Conformidade com a LGPD; o cliente pode exportar os dados ao cancelar
+- Cancelamento a qualquer momento, sem multa
+- Suporte por telefone: +55 21 2342-2477
+
+## Funcionalidades
+
+- [Agenda online](https://www.terapee.com.br/funcionalidades/agenda): agenda inteligente com horários recorrentes e bloqueios.
+- [Multi-agenda](https://www.terapee.com.br/funcionalidades/multi-agenda): visão unificada da agenda de vários profissionais da clínica.
+- [Prontuário eletrônico](https://www.terapee.com.br/funcionalidades/prontuario-eletronico): evoluções e histórico clínico por paciente.
+- [Gestão de pacientes](https://www.terapee.com.br/funcionalidades/gestao-de-pacientes): cadastro, responsáveis, contatos e documentos.
+- [Lembretes no WhatsApp](https://www.terapee.com.br/funcionalidades/lembretes-whatsapp): confirmação automática de consulta para reduzir faltas.
+- [Telemedicina](https://www.terapee.com.br/funcionalidades/telemedicina): atendimento por vídeo integrado à agenda.
+- [Cobrança automática](https://www.terapee.com.br/funcionalidades/cobranca-automatica): mensalidades e pacotes com cobrança recorrente.
+- [Gestão financeira](https://www.terapee.com.br/funcionalidades/gestao-financeira): receitas, despesas e repasses da clínica.
+- [Emissão de NFS-e](https://www.terapee.com.br/funcionalidades/nota-fiscal-nfse): nota fiscal de serviço emitida direto da cobrança paga.
+- [Emissão de recibos](https://www.terapee.com.br/funcionalidades/emissao-de-recibos): recibos em PDF para os pacientes.
+- [Formulários personalizáveis](https://www.terapee.com.br/funcionalidades/formularios-personalizaveis): anamnese e questionários digitais.
+- [Documentos personalizáveis](https://www.terapee.com.br/funcionalidades/documentos-personalizaveis): laudos, atestados e declarações a partir de modelos.
+- [Check-in de pacientes](https://www.terapee.com.br/funcionalidades/check-in): registro de chegada e presença na recepção.
+- [Todas as funcionalidades](https://www.terapee.com.br/funcionalidades/)
+
+## Para cada especialidade
+
+- [Psicólogos](https://www.terapee.com.br/para-psicologos)
+- [Fonoaudiólogos](https://www.terapee.com.br/para-fonoaudiologos)
+- [Terapeutas ocupacionais](https://www.terapee.com.br/para-terapeutas-ocupacionais)
+- [Clínicas multidisciplinares](https://www.terapee.com.br/para-clinicas-multidisciplinares)
+- [Clínicas de terapia infantil](https://www.terapee.com.br/para-terapia-infantil)
+
+## Comparativos
+
+- [Terapee vs PsicoPlanner](https://www.terapee.com.br/terapee-vs-psicoplanner)
+- [Alternativa ao PsicoPlanner](https://www.terapee.com.br/alternativas/psicoplanner)
+- [Alternativa ao Ninsaúde](https://www.terapee.com.br/alternativas/ninsaude)
+- [Alternativa ao Clínica Ágil](https://www.terapee.com.br/alternativas/clinica-agil)
+
+## Conteúdo
+
+- [Blog da Terapee](https://blog.terapee.com.br/): artigos sobre gestão de clínicas de terapia.
+- [Gestão de clínicas](https://blog.terapee.com.br/category/gestao)
+- [Agenda](https://blog.terapee.com.br/category/agenda)
+
+## Opcional
+
+- [Política de Privacidade](https://www.terapee.com.br/politica-de-privacidade)
+- [Termos de Uso](https://www.terapee.com.br/termos-de-uso)
