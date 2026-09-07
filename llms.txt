@@ -36,7 +36,7 @@ vários terapeutas.
 - [Emissão de recibos](https://www.terapee.com.br/funcionalidades/emissao-de-recibos): recibos em PDF para os pacientes.
 - [Formulários personalizáveis](https://www.terapee.com.br/funcionalidades/formularios-personalizaveis): anamnese e questionários digitais.
 - [Documentos personalizáveis](https://www.terapee.com.br/funcionalidades/documentos-personalizaveis): laudos, atestados e declarações a partir de modelos.
-- [Check-in de pacientes](https://www.terapee.com.br/funcionalidades/check-in): registro de chegada e presença na recepção.
+- [Check-in de pacientes](https://www.terapee.com.br/funcionalidades/check-in): marque presença, falta ou cancelamento e veja as sessões que ficaram sem baixa.
 - [Agendamento online](https://www.terapee.com.br/funcionalidades/agendamento-online): página pública de agendamento; o paciente escolhe um horário livre e você aprova.
 - [Pacotes de sessões](https://www.terapee.com.br/funcionalidades/pacotes-de-sessoes): agende o pacote inteiro de uma vez e acompanhe o saldo de sessões.
 - [Repasse de profissionais](https://www.terapee.com.br/funcionalidades/repasse-profissionais): quanto cada terapeuta recebeu e quanto ficou com a clínica.
