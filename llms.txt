@@ -17,7 +17,7 @@ vários terapeutas.
 - Teste grátis: 14 dias, sem cartão de crédito
 - Planos mensais: Start R$ 55,90 · Clínica R$ 89,90 · Clínica Max R$ 175,00
 - Emissão de NFS-e pelo Emissor Nacional do gov.br, incluída em todos os planos
-- Lembretes automáticos no WhatsApp reduzem faltas em até 25%
+- Lembretes automáticos no WhatsApp reduzem faltas em 25%
 - Conformidade com a LGPD; o cliente pode exportar os dados ao cancelar
 - Cancelamento a qualquer momento, sem multa
 - Suporte por telefone: +55 21 2342-2477
