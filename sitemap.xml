@@ -19,6 +19,11 @@
   <url><loc>https://www.terapee.com.br/funcionalidades/check-in</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.terapee.com.br/funcionalidades/documentos-personalizaveis</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
 
+  <url><loc>https://www.terapee.com.br/funcionalidades/agendamento-online</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.terapee.com.br/funcionalidades/pacotes-de-sessoes</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.terapee.com.br/funcionalidades/repasse-profissionais</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.terapee.com.br/funcionalidades/assinatura-digital</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+
   <!-- Especialidades -->
   <url><loc>https://www.terapee.com.br/para-psicologos</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.terapee.com.br/para-fonoaudiologos</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>

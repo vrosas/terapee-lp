@@ -17,7 +17,7 @@ vários terapeutas.
 - Teste grátis: 14 dias, sem cartão de crédito
 - Planos mensais: Start R$ 55,90 · Clínica R$ 89,90 · Clínica Max R$ 175,00
 - Emissão de NFS-e pelo Emissor Nacional do gov.br, incluída em todos os planos
-- Lembretes automáticos no WhatsApp reduzem faltas em até 25%
+- Lembretes automáticos no WhatsApp reduzem faltas em 25%
 - Conformidade com a LGPD; o cliente pode exportar os dados ao cancelar
 - Cancelamento a qualquer momento, sem multa
 - Suporte por telefone: +55 21 2342-2477
@@ -36,7 +36,11 @@ vários terapeutas.
 - [Emissão de recibos](https://www.terapee.com.br/funcionalidades/emissao-de-recibos): recibos em PDF para os pacientes.
 - [Formulários personalizáveis](https://www.terapee.com.br/funcionalidades/formularios-personalizaveis): anamnese e questionários digitais.
 - [Documentos personalizáveis](https://www.terapee.com.br/funcionalidades/documentos-personalizaveis): laudos, atestados e declarações a partir de modelos.
-- [Check-in de pacientes](https://www.terapee.com.br/funcionalidades/check-in): registro de chegada e presença na recepção.
+- [Check-in de pacientes](https://www.terapee.com.br/funcionalidades/check-in): marque presença, falta ou cancelamento e veja as sessões que ficaram sem baixa.
+- [Agendamento online](https://www.terapee.com.br/funcionalidades/agendamento-online): página pública de agendamento; o paciente escolhe um horário livre e você aprova.
+- [Pacotes de sessões](https://www.terapee.com.br/funcionalidades/pacotes-de-sessoes): agende o pacote inteiro de uma vez e acompanhe o saldo de sessões.
+- [Repasse de profissionais](https://www.terapee.com.br/funcionalidades/repasse-profissionais): quanto cada terapeuta recebeu e quanto ficou com a clínica.
+- [Assinatura digital](https://www.terapee.com.br/funcionalidades/assinatura-digital): laudos e documentos assinados com certificado digital ou assinatura eletrônica.
 - [Todas as funcionalidades](https://www.terapee.com.br/funcionalidades/)
 
 ## Para cada especialidade
