@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/terapee-vs-psicoplanner",
+      "destination": "/alternativas/psicoplanner",
+      "permanent": true
+    }
+  ]
+}

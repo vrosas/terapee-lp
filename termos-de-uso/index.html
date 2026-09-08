@@ -844,7 +844,27 @@ img { max-width: 100%; display: block; }
   .nav { display: none; }
   .mobile-toggle { display: flex; }
 }
+
+/* ==== estrutura compartilhada ==== */
+.footer-nav { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--gray-200); }
+.footer-col-title { font-size: 11px; font-weight: 700; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 14px; }
+.footer-col-links { display: flex; flex-direction: column; gap: 9px; }
+.footer-col-links a { font-size: 13px; color: var(--gray-500); font-weight: 500; transition: color 0.2s; }
+.footer-col-links a:hover { color: var(--primary); }
+.footer-contact-item { display: inline-flex; align-items: center; gap: 7px; }
+
+.nav a { white-space: nowrap; }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.terapee.com.br/" },
+    { "@type": "ListItem", "position": 2, "name": "Termos de Uso", "item": "https://www.terapee.com.br/termos-de-uso" }
+  ]
+}
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -859,12 +879,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <img src="/logo-terapee.svg" alt="Terapee" class="logo-img">
     </a>
     <nav class="nav">
-      <a href="/#funcionalidades">Funcionalidades</a>
+      <a href="/funcionalidades/">Funcionalidades</a>
+      <a href="/#para-quem">Para quem</a>
       <a href="/#planos">Planos</a>
       <a href="/#seguranca">Segurança</a>
-      <a href="/#faq">Perguntas Frequentes</a>
+      <a href="/#faq">Dúvidas</a>
       <a href="https://blog.terapee.com.br/">Blog</a>
-      <a href="/#fale-conosco">Fale Conosco</a>
+      <a href="/#fale-conosco">Contato</a>
     </nav>
     <div class="header-actions">
       <a href="https://web.terapee.com.br/" target="_blank" class="btn btn-outline" style="padding:10px 20px;font-size:14px;">Entrar</a>
@@ -1550,18 +1571,94 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="/logo-terapee.svg" alt="Terapee" class="logo-img">
       </a>
       <div class="footer-links">
-        <a href="/#funcionalidades">Funcionalidades</a>
+        <a href="/funcionalidades/">Funcionalidades</a>
+        <a href="/#fluxo">Como funciona</a>
         <a href="/#planos">Planos</a>
-        <a href="/#seguranca">Segurança & LGPD</a>
-        <a href="/#faq">Perguntas Frequentes</a>
+        <a href="/#migracao">Migração</a>
+        <a href="/#seguranca">Segurança &amp; LGPD</a>
+        <a href="/#faq">Dúvidas</a>
         <a href="https://blog.terapee.com.br/">Blog</a>
         <a href="/#fale-conosco">Fale Conosco</a>
-        <a href="/politica-de-privacidade">Política de Privacidade</a>
-        <a href="/termos-de-uso" class="active">Termos de Uso</a>
       </div>
     </div>
+
+    <nav class="footer-nav">
+      <div>
+        <p class="footer-col-title">Funcionalidades</p>
+        <div class="footer-col-links">
+          <a href="/funcionalidades/agenda">Gestão de agenda</a>
+          <a href="/funcionalidades/prontuario-eletronico">Prontuário eletrônico</a>
+          <a href="/funcionalidades/telemedicina">Telemedicina</a>
+          <a href="/funcionalidades/lembretes-whatsapp">Lembretes via WhatsApp</a>
+          <a href="/funcionalidades/gestao-financeira">Gestão financeira</a>
+          <a href="/funcionalidades/gestao-de-pacientes">Gestão de pacientes</a>
+          <a href="/funcionalidades/cobranca-automatica">Cobrança automática</a>
+          <a href="/funcionalidades/nota-fiscal-nfse">Emissão de NFS-e</a>
+          <a href="/funcionalidades/emissao-de-recibos">Emissão de recibos</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Mais funcionalidades</p>
+        <div class="footer-col-links">
+          <a href="/funcionalidades/multi-agenda">Multi-agenda</a>
+          <a href="/funcionalidades/agendamento-online">Agendamento online</a>
+          <a href="/funcionalidades/pacotes-de-sessoes">Pacotes de sessões</a>
+          <a href="/funcionalidades/check-in">Check-in de pacientes</a>
+          <a href="/funcionalidades/formularios-personalizaveis">Formulários personalizáveis</a>
+          <a href="/funcionalidades/documentos-personalizaveis">Documentos personalizáveis</a>
+          <a href="/funcionalidades/assinatura-digital">Assinatura digital</a>
+          <a href="/funcionalidades/repasse-profissionais">Repasse para profissionais</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Para quem</p>
+        <div class="footer-col-links">
+          <a href="/para-psicologos">Psicólogos</a>
+          <a href="/para-fonoaudiologos">Fonoaudiólogos</a>
+          <a href="/para-terapeutas-ocupacionais">Terapeutas Ocupacionais</a>
+          <a href="/para-clinicas-multidisciplinares">Clínicas Multidisciplinares</a>
+          <a href="/para-terapia-infantil">Terapia Infantil</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Comparativos</p>
+        <div class="footer-col-links">
+          <a href="/alternativas/psicoplanner">Alternativa ao PsicoPlanner</a>
+          <a href="/alternativas/ninsaude">Alternativa ao Ninsaúde</a>
+          <a href="/alternativas/clinica-agil">Alternativa ao Clínica Ágil</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Conteúdo</p>
+        <div class="footer-col-links">
+          <a href="https://blog.terapee.com.br/">Todos os artigos</a>
+          <a href="https://blog.terapee.com.br/category/gestao">Gestão de clínicas</a>
+          <a href="https://blog.terapee.com.br/category/agenda">Agenda</a>
+          <a href="https://blog.terapee.com.br/category/financeiro">Financeiro</a>
+          <a href="https://blog.terapee.com.br/category/prontuario">Prontuário</a>
+          <a href="https://blog.terapee.com.br/category/teleconsulta">Teleconsulta</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Contato</p>
+        <div class="footer-col-links">
+          <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20o%20Terapee" class="footer-contact-item" target="_blank" rel="noopener">(21) 2342-2477</a>
+          <a href="mailto:suporte@terapee.com.br" class="footer-contact-item">suporte@terapee.com.br</a>
+        </div>
+      </div>
+    </nav>
+
     <div class="footer-bottom">
-      © Copyright 2026 Terapee – Todos os direitos reservados. AGILLAB SOLUÇÕES EM TECNOLOGIA DA INFORMAÇÃO LTDA.
+      <span>© Copyright 2026 Terapee – Todos os direitos reservados. CNPJ 54.321.098/0001-00</span>
+      <div class="footer-legal">
+        <a href="/politica-de-privacidade">Política de Privacidade</a>
+        <a href="/termos-de-uso">Termos de Uso</a>
+      </div>
     </div>
   </div>
 </footer>
