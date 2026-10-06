@@ -551,6 +551,74 @@ img { max-width: 100%; display: block; }
 
 [hidden] { display: none !important; }
 
+/* Captura de lead: cartão nos resultados + modal com formulário */
+.lead-card {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  box-shadow: 0 10px 30px rgba(68,76,231,0.3);
+}
+.lead-card h3 { font-size: 17px; font-weight: 800; margin-bottom: 6px; }
+.lead-card p { font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 14px; }
+.lead-card ul { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 16px; font-size: 13px; color: rgba(255,255,255,0.9); }
+.lead-card li::before { content: "✓ "; font-weight: 800; }
+.lead-card .btn { padding: 12px 22px; font-size: 15px; }
+.lead-dialog {
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 0;
+  width: min(520px, calc(100% - 24px));
+  max-height: calc(100% - 24px);
+  margin: auto;
+  box-shadow: var(--shadow-lg);
+  color: inherit;
+  font-family: inherit;
+}
+.lead-dialog::backdrop { background: rgba(15,23,42,0.55); backdrop-filter: blur(2px); }
+.lead-dialog .dlg-body { padding: 28px; }
+.lead-dialog .dlg-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 6px; }
+.lead-dialog h2 { font-size: 20px; font-weight: 800; color: var(--dark); line-height: 1.3; }
+.lead-dialog .dlg-close {
+  background: var(--gray-100);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--gray-600);
+  flex-shrink: 0;
+}
+.lead-dialog .dlg-close:hover { background: var(--gray-200); }
+.lead-dialog .dlg-sub { font-size: 14px; color: var(--gray-500); margin-bottom: 20px; line-height: 1.6; }
+.lead-form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; }
+.lead-form .full { grid-column: 1 / -1; }
+.lead-form .input-wrap select { appearance: auto; }
+.lead-form .opt { font-weight: 500; color: var(--gray-400); }
+.check { display: flex; gap: 10px; align-items: flex-start; font-size: 12.5px; color: var(--gray-600); line-height: 1.5; cursor: pointer; }
+.check input { margin-top: 2px; width: 16px; height: 16px; accent-color: var(--primary); flex-shrink: 0; }
+.check a { color: var(--primary); text-decoration: underline; }
+.hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
+.form-error { background: var(--danger-bg); color: var(--danger); font-size: 13px; border-radius: 10px; padding: 10px 12px; }
+.lead-form .btn[type="submit"] { justify-content: center; width: 100%; }
+.lead-form .btn[disabled] { opacity: 0.7; cursor: wait; transform: none; }
+.form-note { font-size: 12px; color: var(--gray-400); text-align: center; }
+.dlg-success { text-align: center; padding: 8px 0; }
+.dlg-success .ok-icon {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--success-bg); color: var(--success);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 28px; font-weight: 800; margin-bottom: 14px;
+}
+.dlg-success p { font-size: 15px; color: var(--gray-600); line-height: 1.6; margin: 8px 0 20px; }
+.dlg-success .btn { justify-content: center; }
+@media (max-width: 560px) {
+  .lead-form { grid-template-columns: 1fr; }
+  .lead-dialog .dlg-body { padding: 22px 18px; }
+}
+
 /* Resumo fixo no celular: os resultados ficam abaixo dos campos */
 .mobile-summary { display: none; }
 @media (max-width: 960px) {
@@ -727,7 +795,7 @@ img { max-width: 100%; display: block; }
 /* ========== IMPRESSÃO ========== */
 @media print {
   .header, .footer, .cta-banner, .related-section, .faq-page-section, .how-calc,
-  .calc-tabs, .calc-actions, .inline-cta, .add-pro, .pro-remove, .hero-pills, .breadcrumb { display: none !important; }
+  .calc-tabs, .calc-actions, .inline-cta, .lead-card, .lead-dialog, .add-pro, .pro-remove, .hero-pills, .breadcrumb { display: none !important; }
   body { background: #fff; }
   .subpage-hero { padding: 0 0 16px; background: none; }
   .calc-layout { grid-template-columns: 1fr 1fr; }
@@ -812,7 +880,7 @@ img { max-width: 100%; display: block; }
       "name": "Os dados que eu digito ficam salvos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Os valores ficam salvos apenas no seu navegador, para você não perder a simulação ao recarregar a página. Nada é enviado para a Terapee."
+        "text": "Os valores da simulação ficam salvos apenas no seu navegador, para você não perder nada ao recarregar a página. A Terapee só recebe seus dados se você pedir o relatório por e-mail e WhatsApp, e usa essas informações apenas para enviar o relatório e falar com você."
       }
     }
   ]
@@ -1050,9 +1118,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="alerts" id="reAlerts"></div>
         </div>
 
+        <div class="lead-card">
+          <h3>Receba o relatório completo da sua clínica</h3>
+          <p>Enviamos esta simulação por e-mail e WhatsApp, com recomendações práticas a partir dos seus números.</p>
+          <ul><li>Grátis</li><li>Chega em 1 minuto</li><li>Para compartilhar com sócios e equipe</li></ul>
+          <button type="button" class="btn btn-white" id="btnLead" data-cta="calculadora-relatorio">Quero receber o relatório →</button>
+        </div>
+
         <div class="calc-actions">
           <button type="button" class="btn btn-ghost" id="btnCopy">Copiar resumo</button>
-          <button type="button" class="btn btn-ghost" id="btnPrint">Salvar em PDF</button>
           <button type="button" class="btn btn-ghost" id="btnReset">Restaurar exemplo</button>
         </div>
 
@@ -1064,6 +1138,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
+<dialog class="lead-dialog" id="leadDialog" aria-labelledby="leadTitle">
+  <div class="dlg-body">
+    <div id="leadFormView">
+      <div class="dlg-head">
+        <h2 id="leadTitle">Receba seu relatório por e-mail e WhatsApp</h2>
+        <button type="button" class="dlg-close" data-close aria-label="Fechar">×</button>
+      </div>
+      <p class="dlg-sub">Com os números da sua simulação e o que fazer com eles. Leva 30 segundos.</p>
+      <form class="lead-form" id="leadForm" novalidate>
+        <div class="field full">
+          <label for="lfNome">Seu nome</label>
+          <div class="input-wrap"><input id="lfNome" name="nome" autocomplete="name" required maxlength="120"></div>
+        </div>
+        <div class="field">
+          <label for="lfWhats">WhatsApp</label>
+          <div class="input-wrap"><input id="lfWhats" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(21) 99999-9999" required maxlength="16"></div>
+        </div>
+        <div class="field">
+          <label for="lfEmail">E-mail</label>
+          <div class="input-wrap"><input id="lfEmail" name="email" type="email" autocomplete="email" required maxlength="160"></div>
+        </div>
+        <div class="field full">
+          <label for="lfClinica">Nome da clínica <span class="opt">(opcional)</span></label>
+          <div class="input-wrap"><input id="lfClinica" name="clinica" autocomplete="organization" maxlength="120"></div>
+        </div>
+        <div class="field">
+          <label for="lfProf">Profissionais na clínica</label>
+          <div class="input-wrap"><select id="lfProf" name="profissionais" required>
+            <option value="">Selecione</option>
+            <option value="1">Só eu</option>
+            <option value="2-5">2 a 5</option>
+            <option value="6-10">6 a 10</option>
+            <option value="11+">11 ou mais</option>
+          </select></div>
+        </div>
+        <div class="field">
+          <label for="lfSistema">Hoje você controla em</label>
+          <div class="input-wrap"><select id="lfSistema" name="sistema" required>
+            <option value="">Selecione</option>
+            <option value="planilha">Planilha</option>
+            <option value="papel">Papel ou agenda</option>
+            <option value="outro">Outro sistema</option>
+            <option value="nenhum">Não controlo ainda</option>
+            <option value="cliente">Já uso a Terapee</option>
+          </select></div>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="lfSite">Site</label><input id="lfSite" name="site" tabindex="-1" autocomplete="off"></div>
+        <label class="check full"><input type="checkbox" id="lfConsent" name="consentimento" required> <span>Aceito receber o relatório e contatos da Terapee por e-mail e WhatsApp. Posso cancelar quando quiser. <a href="/politica-de-privacidade" target="_blank">Política de privacidade</a>.</span></label>
+        <div class="form-error full" id="leadError" role="alert" hidden></div>
+        <button type="submit" class="btn btn-primary full" id="leadSubmit">Enviar meu relatório</button>
+        <p class="form-note full">Seus dados não são compartilhados com terceiros.</p>
+      </form>
+    </div>
+    <div id="leadSuccessView" class="dlg-success" hidden>
+      <div class="ok-icon">✓</div>
+      <h2>Relatório a caminho!</h2>
+      <p id="leadSuccessText">Enviamos para o seu e-mail e WhatsApp.</p>
+      <a href="https://web.terapee.com.br/register?utm_source=calculadora&amp;utm_medium=site&amp;utm_campaign=relatorio-precificacao" target="_blank" class="btn btn-primary" data-cta="calculadora-pos-lead">Testar a Terapee grátis por 14 dias →</a>
+      <p style="margin:14px 0 0;"><button type="button" class="btn btn-ghost" data-close>Voltar para a calculadora</button></p>
+    </div>
+  </div>
+</dialog>
 
 <div class="mobile-summary off" id="mobileSummary" aria-hidden="true">
   <div><div class="ms-label" id="msLabel">Lucro da clínica / mês</div><div class="ms-value" id="msValue">—</div></div>
@@ -1139,7 +1276,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <button class="faq-question">Os dados que eu digito ficam salvos?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Os valores ficam salvos apenas no seu navegador, para você não perder a simulação ao recarregar a página. Nada é enviado para a Terapee.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Os valores da simulação ficam salvos apenas no seu navegador, para você não perder nada ao recarregar a página. A Terapee só recebe seus dados se você pedir o relatório por e-mail e WhatsApp, e usa essas informações apenas para enviar o relatório e falar com você.</div></div>
         </div>
       </div>
     </div>
@@ -1689,7 +1826,6 @@ window.addEventListener('scroll', () => {
   document.querySelectorAll('.calc-tab').forEach(b => b.addEventListener('click', () => { setTab(b.dataset.tab); renderAll(); }));
 
   // Ações.
-  $('btnPrint').addEventListener('click', () => window.print());
   $('btnReset').addEventListener('click', () => {
     const tab = state.tab;
     state = JSON.parse(JSON.stringify(DEFAULTS));
@@ -1723,6 +1859,128 @@ window.addEventListener('scroll', () => {
     const done = ok => { btn.textContent = ok ? 'Copiado!' : 'Não foi possível copiar'; setTimeout(() => { btn.textContent = 'Copiar resumo'; }, 2000); };
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(() => done(true), () => done(false));
     else done(false);
+  });
+
+  /* ---------- Relatório por e-mail e WhatsApp (lead) ----------
+     O formulário envia a simulação para o fluxo do n8n, que salva o lead,
+     manda o relatório por e-mail (Brevo) e o resumo por WhatsApp (uazapi). */
+  const LEAD_ENDPOINT = 'https://n8n.terapee.com.br/webhook/calculadora-precificacao-lead';
+  const UTM_KEY = 'terapee-calculadora-utm';
+  const push = obj => { (window.dataLayer = window.dataLayer || []).push(obj); };
+
+  // Guarda a origem da visita para saber de onde vêm os leads.
+  let utm = {};
+  try {
+    const qs = new URLSearchParams(location.search);
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(k => { if (qs.get(k)) utm[k] = qs.get(k).slice(0, 150); });
+    if (Object.keys(utm).length) sessionStorage.setItem(UTM_KEY, JSON.stringify(utm));
+    else utm = JSON.parse(sessionStorage.getItem(UTM_KEY)) || {};
+  } catch (e) {}
+
+  const dialog = $('leadDialog');
+  const form = $('leadForm');
+  const errBox = $('leadError');
+  const submitBtn = $('leadSubmit');
+
+  function openLead() {
+    $('leadFormView').hidden = false;
+    $('leadSuccessView').hidden = true;
+    errBox.hidden = true;
+    if (typeof dialog.showModal === 'function') dialog.showModal(); else dialog.setAttribute('open', '');
+    setTimeout(() => $('lfNome').focus(), 50);
+    push({ event: 'calculadora_lead_form_aberto', simulacao: state.tab });
+  }
+  function closeLead() {
+    if (typeof dialog.close === 'function') dialog.close(); else dialog.removeAttribute('open');
+  }
+  $('btnLead').addEventListener('click', openLead);
+  dialog.addEventListener('click', e => { if (e.target === dialog || e.target.closest('[data-close]')) closeLead(); });
+
+  // Máscara simples de telefone: (21) 99999-9999.
+  $('lfWhats').addEventListener('input', e => {
+    let d = e.target.value.replace(/\D/g, '');
+    if (d.length > 11 && d.startsWith('55')) d = d.slice(2);
+    d = d.slice(0, 11);
+    let out = d;
+    if (d.length > 2) out = '(' + d.slice(0, 2) + ') ' + d.slice(2);
+    if (d.length > 6) out = '(' + d.slice(0, 2) + ') ' + d.slice(2, d.length - 4) + '-' + d.slice(-4);
+    e.target.value = out;
+  });
+
+  function buildPayload(lead) {
+    const tipo = state.tab;
+    let entradas, resultado;
+    if (tipo === 'preco') {
+      const r = calcPreco(state);
+      entradas = { preco: state.preco, sessoes: state.sessoes, margem: state.margem, repasseTipo: state.repasseTipo, repasse: state.repasse,
+        impostos: state.impostos, taxa: state.taxa, variavel: state.variavel, fixos: state.fixos };
+      resultado = { fat: r.fat, lucro: r.lucro, margem: r.margem, precoMin: r.precoMin, precoAlvo: r.precoAlvo,
+        equilibrio: r.equilibrio, repasseMax: r.repasseMax, per: r.per };
+    } else {
+      const r = calcEquipe(state);
+      entradas = { impostos: state.impostos, taxa: state.taxa, variavel: state.variavel, fixos: state.fixos, equipe: state.equipe };
+      resultado = { fat: r.fat, rep: r.rep, imp: r.imp, lucro: r.lucro, margem: r.margem, totalSessoes: r.totalSessoes,
+        rows: r.rows.map(x => ({ nome: x.nome, sessoes: x.N, fat: x.fat, rep: x.rep, resultado: x.resultado })) };
+    }
+    // JSON.stringify transforma Infinity (preço inviável, equilíbrio nunca) em null.
+    return { tipo, lead, entradas, resultado, utm, pagina: location.href, referrer: document.referrer || '' };
+  }
+
+  function validar(lead) {
+    if (lead.nome.length < 2) return ['lfNome', 'Informe seu nome.'];
+    const d = lead.whatsapp.replace(/\D/g, '');
+    if (d.length < 10 || d.length > 11) return ['lfWhats', 'Informe seu WhatsApp com DDD.'];
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(lead.email)) return ['lfEmail', 'Informe um e-mail válido.'];
+    if (!lead.profissionais) return ['lfProf', 'Diga quantos profissionais atendem na clínica.'];
+    if (!lead.sistema) return ['lfSistema', 'Diga como você controla hoje.'];
+    if (!lead.consentimento) return ['lfConsent', 'Marque a caixa para receber o relatório.'];
+    return null;
+  }
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const lead = {
+      nome: $('lfNome').value.trim(),
+      whatsapp: $('lfWhats').value.trim(),
+      email: $('lfEmail').value.trim(),
+      clinica: $('lfClinica').value.trim(),
+      profissionais: $('lfProf').value,
+      sistema: $('lfSistema').value,
+      consentimento: $('lfConsent').checked,
+      site: $('lfSite').value
+    };
+    const invalido = validar(lead);
+    if (invalido) {
+      errBox.textContent = invalido[1];
+      errBox.hidden = false;
+      $(invalido[0]).focus();
+      return;
+    }
+    errBox.hidden = true;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...';
+    try {
+      const resp = await fetch(LEAD_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(buildPayload(lead))
+      });
+      let data = {};
+      try { data = await resp.json(); } catch (err) {}
+      if (!resp.ok || data.ok === false) throw new Error(data.erro || 'Não foi possível enviar agora.');
+      $('leadSuccessText').textContent = 'Enviamos o relatório para ' + lead.email + ' e um resumo para o seu WhatsApp. Confira em alguns instantes.';
+      $('leadFormView').hidden = true;
+      $('leadSuccessView').hidden = false;
+      push({ event: 'generate_lead', lead_source: 'calculadora_precificacao', simulacao: state.tab, profissionais: lead.profissionais, sistema_atual: lead.sistema });
+    } catch (err) {
+      errBox.innerHTML = esc(err.message || 'Não foi possível enviar agora.') +
+        ' Se preferir, <a href="https://api.whatsapp.com/send?phone=552123422477&text=' + encodeURIComponent('Olá! Quero receber o relatório da calculadora de precificação.') + '" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">fale com a gente no WhatsApp</a>.';
+      errBox.hidden = false;
+      push({ event: 'calculadora_lead_erro' });
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Enviar meu relatório';
+    }
   });
 
   syncInputs();
