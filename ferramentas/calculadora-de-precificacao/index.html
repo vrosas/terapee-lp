@@ -491,6 +491,45 @@ img { max-width: 100%; display: block; }
 .table-scroll { overflow-x: auto; margin-top: 4px; }
 .table-note { font-size: 12px; color: var(--gray-400); margin-top: 8px; }
 
+/* Bloqueio parcial: o diagnóstico é livre; preço ideal, cenários e detalhes
+   da equipe aparecem borrados até a pessoa liberar com nome e WhatsApp.
+   Enquanto bloqueado, os números reais nem chegam ao HTML (vão mascarados). */
+.lock-zone { position: relative; margin-top: 8px; }
+.lock-zone.is-locked .lock-content { filter: blur(5px); user-select: none; pointer-events: none; opacity: 0.75; }
+.lock-overlay { display: none; }
+.lock-zone.is-locked .lock-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+  padding: 16px;
+}
+.lock-overlay strong { font-size: 17px; color: var(--dark); max-width: 320px; line-height: 1.35; }
+.lock-overlay span { font-size: 13px; color: var(--gray-500); margin-bottom: 8px; }
+.lock-overlay .btn { padding: 12px 24px; font-size: 15px; }
+.scenarios { margin-top: 20px; }
+.sc-title { font-size: 13px; font-weight: 600; color: var(--gray-700); margin-bottom: 4px; }
+.team-title { margin-top: 18px; }
+.sc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 14px;
+  color: var(--gray-700);
+}
+.sc-row small { display: block; font-size: 12px; color: var(--gray-400); }
+.sc-row b { color: var(--success); font-size: 15px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sc-row.terapee span { color: var(--dark); }
+.sc-row.terapee b { color: var(--primary); }
+.check.revisao { background: var(--primary-50); border-radius: 10px; padding: 12px; color: var(--gray-700); }
+
 .lead-card {
   display: flex;
   align-items: center;
@@ -964,6 +1003,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="input-wrap"><span class="affix pre">R$</span><input id="fixos" data-key="fixos" inputmode="decimal" autocomplete="off"></div>
               <span class="hint">Aluguel, recepção, contador, sistemas, internet.</span>
             </div>
+            <div class="field">
+              <label for="faltas">Faltas não cobradas</label>
+              <div class="input-wrap"><input id="faltas" data-key="faltas" inputmode="decimal" autocomplete="off"><span class="affix suf">%</span></div>
+              <span class="hint">Das sessões marcadas, quantas o paciente falta sem pagar. Usado para estimar o que dá para recuperar.</span>
+            </div>
           </div>
         </div>
       </div>
@@ -978,12 +1022,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="sub" id="rpLucroSub">—</div>
             <div class="status-pill" id="rpStatus">—</div>
           </div>
-          <dl class="res-list">
-            <div class="res-row hl"><dt>Preço para sua margem<small id="rpPrecoAlvoNote"></small></dt><dd id="rpPrecoAlvo">—</dd></div>
-            <div class="res-row"><dt>Preço mínimo<small>sem prejuízo</small></dt><dd id="rpPrecoMin">—</dd></div>
-            <div class="res-row"><dt>Ponto de equilíbrio<small id="rpEquilibrioNote"></small></dt><dd id="rpEquilibrio">—</dd></div>
-            <div class="res-row"><dt>Repasse máximo<small id="rpRepasseMaxNote"></small></dt><dd id="rpRepasseMax">—</dd></div>
-          </dl>
           <div class="res-comp">
             <div class="comp-title" id="rpCompTitle">Para onde vai cada sessão</div>
             <div class="bar" id="rpBar" role="img" aria-label="Composição do valor da sessão"></div>
@@ -992,7 +1030,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="legend" id="rpLegend"></div>
             </details>
           </div>
-          <div class="alerts" id="rpAlerts"></div>
+          <div class="lock-zone" data-lock>
+            <div class="lock-content">
+              <dl class="res-list">
+                <div class="res-row hl"><dt>Preço para sua margem<small id="rpPrecoAlvoNote"></small></dt><dd id="rpPrecoAlvo">—</dd></div>
+                <div class="res-row"><dt>Preço mínimo<small>sem prejuízo</small></dt><dd id="rpPrecoMin">—</dd></div>
+                <div class="res-row"><dt>Ponto de equilíbrio<small id="rpEquilibrioNote"></small></dt><dd id="rpEquilibrio">—</dd></div>
+                <div class="res-row"><dt>Repasse máximo<small id="rpRepasseMaxNote"></small></dt><dd id="rpRepasseMax">—</dd></div>
+              </dl>
+              <div class="scenarios">
+                <div class="sc-title">Como aumentar o lucro do mês</div>
+                <div id="rpScenarios"></div>
+              </div>
+              <div class="alerts" id="rpAlerts"></div>
+            </div>
+            <div class="lock-overlay">
+              <strong>Veja seu preço ideal e 4 formas de aumentar o lucro</strong>
+              <span>Grátis. Os números aparecem na hora.</span>
+              <button type="button" class="btn btn-primary" data-unlock>Ver meus números</button>
+            </div>
+          </div>
         </div>
 
         <div id="res-equipe" class="panel" hidden>
@@ -1008,26 +1065,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="res-row"><dt>Impostos e taxas</dt><dd id="reImp">—</dd></div>
             <div class="res-row"><dt>Custos da clínica<small>fixos e por sessão</small></dt><dd id="reCustos">—</dd></div>
           </dl>
-          <details class="comp-details team-details" open>
-            <summary>Resultado por profissional</summary>
-            <div class="table-scroll">
-              <table class="team-table">
-                <thead><tr><th>Profissional</th><th>Faturamento</th><th>Repasse</th><th>Resultado</th></tr></thead>
-                <tbody id="reTable"></tbody>
-                <tfoot id="reTableFoot"></tfoot>
-              </table>
+          <div class="lock-zone" data-lock>
+            <div class="lock-content">
+              <div class="sc-title team-title">Resultado por profissional</div>
+              <div class="table-scroll">
+                <table class="team-table">
+                  <thead><tr><th>Profissional</th><th>Faturamento</th><th>Repasse</th><th>Resultado</th></tr></thead>
+                  <tbody id="reTable"></tbody>
+                  <tfoot id="reTableFoot"></tfoot>
+                </table>
+              </div>
+              <p class="table-note">Já desconta impostos, taxas e a parte de cada um nos custos fixos.</p>
+              <div class="scenarios">
+                <div id="reScenarios"></div>
+              </div>
+              <div class="alerts" id="reAlerts"></div>
             </div>
-            <p class="table-note">Já desconta impostos, taxas e a parte de cada um nos custos fixos.</p>
-          </details>
-          <div class="alerts" id="reAlerts"></div>
+            <div class="lock-overlay">
+              <strong>Veja quanto cada profissional deixa para a clínica</strong>
+              <span>Grátis. Os números aparecem na hora.</span>
+              <button type="button" class="btn btn-primary" data-unlock>Ver meus números</button>
+            </div>
+          </div>
         </div>
 
-        <div class="lead-card">
+        <div class="lead-card" id="leadCardLocked">
           <div>
-            <strong>Receba este relatório no e-mail e no WhatsApp</strong>
-            <span>Com recomendações a partir dos seus números. Grátis.</span>
+            <strong>Receba o relatório completo no WhatsApp</strong>
+            <span>Com a comparação dos 3 modelos de repasse e os cenários da sua clínica.</span>
           </div>
-          <button type="button" class="btn btn-primary" id="btnLead" data-cta="calculadora-relatorio">Receber relatório</button>
+          <button type="button" class="btn btn-primary" id="btnLead" data-cta="calculadora-relatorio">Liberar grátis</button>
+        </div>
+        <div class="lead-card" id="leadCardUnlocked" hidden>
+          <div>
+            <strong>Quer esse cálculo feito sozinho, todo mês?</strong>
+            <span>Na Terapee o repasse sai das sessões que realmente aconteceram.</span>
+          </div>
+          <a href="https://web.terapee.com.br/register?utm_source=calculadora&amp;utm_medium=site&amp;utm_campaign=pos-desbloqueio" target="_blank" class="btn btn-primary" data-cta="calculadora-pos-desbloqueio">Testar 14 dias grátis</a>
         </div>
 
         <div class="calc-actions">
@@ -1044,10 +1118,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="dlg-body">
     <div id="leadFormView">
       <div class="dlg-head">
-        <h2 id="leadTitle">Receba seu relatório por e-mail e WhatsApp</h2>
+        <h2 id="leadTitle">Libere seus números</h2>
         <button type="button" class="dlg-close" data-close aria-label="Fechar">×</button>
       </div>
-      <p class="dlg-sub">Com os números da sua simulação e o que fazer com eles. Leva 30 segundos.</p>
+      <p class="dlg-sub">Mostramos agora na tela e mandamos o relatório completo no seu WhatsApp, com a comparação dos 3 modelos de repasse.</p>
       <form class="lead-form" id="leadForm" novalidate>
         <div class="field full">
           <label for="lfNome">Seu nome</label>
@@ -1056,14 +1130,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="field">
           <label for="lfWhats">WhatsApp</label>
           <div class="input-wrap"><input id="lfWhats" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(21) 99999-9999" required maxlength="16"></div>
-        </div>
-        <div class="field">
-          <label for="lfEmail">E-mail</label>
-          <div class="input-wrap"><input id="lfEmail" name="email" type="email" autocomplete="email" required maxlength="160"></div>
-        </div>
-        <div class="field full">
-          <label for="lfClinica">Nome da clínica <span class="opt">(opcional)</span></label>
-          <div class="input-wrap"><input id="lfClinica" name="clinica" autocomplete="organization" maxlength="120"></div>
         </div>
         <div class="field">
           <label for="lfProf">Profissionais na clínica</label>
@@ -1075,30 +1141,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <option value="11+">11 ou mais</option>
           </select></div>
         </div>
-        <div class="field">
-          <label for="lfSistema">Hoje você controla em</label>
-          <div class="input-wrap"><select id="lfSistema" name="sistema" required>
-            <option value="">Selecione</option>
-            <option value="planilha">Planilha</option>
-            <option value="papel">Papel ou agenda</option>
-            <option value="outro">Outro sistema</option>
-            <option value="nenhum">Não controlo ainda</option>
-            <option value="cliente">Já uso a Terapee</option>
-          </select></div>
+        <div class="field full">
+          <label for="lfEmail">E-mail <span class="opt">(opcional, para receber também por e-mail)</span></label>
+          <div class="input-wrap"><input id="lfEmail" name="email" type="email" autocomplete="email" maxlength="160"></div>
         </div>
         <div class="hp" aria-hidden="true"><label for="lfSite">Site</label><input id="lfSite" name="site" tabindex="-1" autocomplete="off"></div>
-        <label class="check full"><input type="checkbox" id="lfConsent" name="consentimento" required> <span>Aceito receber o relatório e contatos da Terapee por e-mail e WhatsApp. Posso cancelar quando quiser. <a href="/politica-de-privacidade" target="_blank">Política de privacidade</a>.</span></label>
+        <label class="check full revisao"><input type="checkbox" id="lfRevisao" name="revisao"> <span><strong>Quero que um especialista revise meus números</strong> e me mostre onde a clínica está perdendo dinheiro. Resposta em até 24h úteis, sem custo.</span></label>
+        <label class="check full"><input type="checkbox" id="lfConsent" name="consentimento" required> <span>Aceito receber o relatório e contatos da Terapee por WhatsApp e e-mail. Posso cancelar quando quiser. <a href="/politica-de-privacidade" target="_blank">Política de privacidade</a>.</span></label>
         <div class="form-error full" id="leadError" role="alert" hidden></div>
-        <button type="submit" class="btn btn-primary full" id="leadSubmit">Enviar meu relatório</button>
+        <button type="submit" class="btn btn-primary full" id="leadSubmit">Ver meus números</button>
         <p class="form-note full">Usamos seus dados só para enviar o relatório e falar com você. O envio passa pelos nossos fornecedores de e-mail e WhatsApp; não vendemos nem cedemos seus dados.</p>
       </form>
     </div>
     <div id="leadSuccessView" class="dlg-success" hidden>
       <div class="ok-icon">✓</div>
-      <h2>Relatório a caminho!</h2>
-      <p id="leadSuccessText">Enviamos para o seu e-mail e WhatsApp.</p>
-      <a href="https://web.terapee.com.br/register?utm_source=calculadora&amp;utm_medium=site&amp;utm_campaign=relatorio-precificacao" target="_blank" class="btn btn-primary" data-cta="calculadora-pos-lead">Testar a Terapee grátis por 14 dias →</a>
-      <p style="margin:14px 0 0;"><button type="button" class="btn btn-ghost" data-close>Voltar para a calculadora</button></p>
+      <h2>Números liberados!</h2>
+      <p id="leadSuccessText">O relatório completo está a caminho do seu WhatsApp.</p>
+      <button type="button" class="btn btn-primary" data-close>Ver meus números</button>
     </div>
   </div>
 </dialog>
@@ -1347,7 +1406,8 @@ window.addEventListener('scroll', () => {
     tab: 'preco',
     preco: 180, sessoes: 200, margem: 20,
     repasseTipo: 'pct', repasse: 50,
-    impostos: 6, taxa: 2, variavel: 3, fixos: 9000,
+    impostos: 6, taxa: 2, variavel: 3, fixos: 9000, faltas: 10,
+    unlocked: false,
     equipe: [
       { nome: 'Ana (psicologia)', preco: 180, sessoes: 80, tipo: 'pct', repasse: 50 },
       { nome: 'Bruno (fonoaudiologia)', preco: 200, sessoes: 60, tipo: 'pct', repasse: 55 },
@@ -1461,6 +1521,57 @@ window.addEventListener('scroll', () => {
     return { rows, fat, rep, imp, varc, F, lucro, margem: fat > 0 ? lucro / fat : 0, totalSessoes };
   }
 
+  /* ---------- Cenários e faltas ---------- */
+  const REDUCAO_FALTAS = 0.25; // redução de faltas com lembretes no WhatsApp, número usado no site da Terapee
+
+  // Faltas não cobradas viram horários vazios. Cada horário recuperado rende a
+  // margem de contribuição da sessão (os custos fixos já estão pagos).
+  function ganhoFaltas(sessoes, contribSessao) {
+    const fa = Math.min(0.9, Math.max(0, (state.faltas || 0) / 100));
+    if (!sessoes || fa === 0 || contribSessao <= 0) return 0;
+    const perdidas = sessoes * fa / (1 - fa);
+    return perdidas * REDUCAO_FALTAS * contribSessao;
+  }
+
+  function cenariosPreco(r) {
+    if (!r.N || !r.P) return [];
+    const base = r.lucro;
+    const delta = mod => calcPreco(Object.assign({}, state, mod)).lucro - base;
+    const lista = [{ label: 'Subir o preço em 10%', nota: 'de ' + money(r.P) + ' para ' + money(r.P * 1.1), ganho: delta({ preco: r.P * 1.1 }) }];
+    if (r.isPct) {
+      const novo = Math.max(0, state.repasse - 5);
+      lista.push({ label: 'Reduzir o repasse em 5 pontos', nota: 'de ' + num1.format(state.repasse) + '% para ' + num1.format(novo) + '%', ganho: delta({ repasse: novo }) });
+    } else {
+      lista.push({ label: 'Reduzir o repasse fixo em 10%', nota: 'de ' + money(state.repasse) + ' para ' + money(state.repasse * 0.9), ganho: delta({ repasse: state.repasse * 0.9 }) });
+    }
+    const mais = Math.max(1, Math.round(r.N * 0.1));
+    lista.push({ label: 'Atender 10% mais sessões', nota: '+' + num1.format(mais) + ' sessões por mês', ganho: delta({ sessoes: r.N + mais }) });
+    lista.push({ label: 'Reduzir as faltas em 25%', nota: 'com lembretes automáticos no WhatsApp', ganho: ganhoFaltas(r.N, r.contrib), terapee: true });
+    return lista;
+  }
+
+  // Três formas comuns de repasse, com a regra atual convertida em percentual equivalente.
+  function modelosRepasse(r) {
+    if (!r.N || !r.P) return [];
+    const t = state.impostos / 100, f = state.taxa / 100, v = state.variavel, F = state.fixos;
+    const pr = r.isPct ? state.repasse / 100 : state.repasse / r.P;
+    const fixo = r.isPct ? r.P * pr : state.repasse;
+    const lucro = (P, prof) => P * r.N * (1 - t - f) - prof - v * r.N - F;
+    const m = [
+      { nome: '% do valor da sessão', prof: P => pr * P * r.N },
+      { nome: '% do valor líquido (após impostos e taxas)', prof: P => pr * P * r.N * (1 - t - f) },
+      { nome: 'Valor fixo por sessão', prof: () => fixo * r.N }
+    ];
+    return m.map(x => ({ nome: x.nome, profissional: x.prof(r.P), clinica: lucro(r.P, x.prof(r.P)), clinicaPreco10: lucro(r.P * 1.1, x.prof(r.P * 1.1)) }));
+  }
+
+  const MASK = 'R$ ●●●,●●';
+  const locked = () => !state.unlocked;
+  function cenariosHtml(lista) {
+    return lista.map(c => '<div class="sc-row' + (c.terapee ? ' terapee' : '') + '"><span>' + esc(c.label) + '<small>' + esc(locked() ? '●●●●●●●●●●' : c.nota) + '</small></span><b>' +
+      (locked() ? '+' + MASK : (c.ganho >= 0 ? '+' : '') + money0(c.ganho) + '/mês') + '</b></div>').join('');
+  }
+
   /* ---------- Render: aba preço ---------- */
   const PARTS = [
     { k: 'repasse', label: 'Repasse ao profissional', color: 'var(--c-repasse)' },
@@ -1518,6 +1629,13 @@ window.addEventListener('scroll', () => {
       rmNote.textContent = '≈ ' + pct(r.P > 0 ? r.repasseMax / r.P : 0) + ' da sessão';
     }
 
+    $('rpScenarios').innerHTML = cenariosHtml(cenariosPreco(r));
+    if (locked()) {
+      ['rpPrecoAlvo', 'rpPrecoMin', 'rpRepasseMax'].forEach(id => { $(id).textContent = MASK; });
+      $('rpEquilibrio').textContent = '●●●';
+      ['rpPrecoAlvoNote', 'rpEquilibrioNote', 'rpRepasseMaxNote'].forEach(id => { $(id).textContent = '●●●●●●●●●●'; });
+    }
+
     // Composição por sessão. Com prejuízo, a barra mostra os custos sobre o total gasto.
     $('rpCompTitle').textContent = 'Para onde vão os ' + money(r.P) + ' de cada sessão';
     const lucroPos = Math.max(0, r.per.lucro);
@@ -1556,6 +1674,7 @@ window.addEventListener('scroll', () => {
         alerts.push(['info', 'Os custos fixos pesam ' + pct(r.per.fixo / r.P) + ' de cada sessão. Aumentar a ocupação da agenda tende a melhorar a margem mais do que subir o preço.']);
       }
     }
+    if (locked()) alerts.splice(0, alerts.length, ['info', 'Recomendação personalizada para a sua clínica.']);
     $('rpAlerts').innerHTML = alerts.slice(0, 1).map(a => '<div class="alert ' + a[0] + '">' + a[1] + '</div>').join('');
     return r;
   }
@@ -1601,11 +1720,15 @@ window.addEventListener('scroll', () => {
     $('reImp').textContent = money0(r.imp);
     $('reCustos').textContent = money0(r.F + r.varc);
 
+    const mk = v => locked() ? 'R$ ●●●' : money0(v);
     $('reTable').innerHTML = r.rows.map(row =>
-      '<tr><td title="' + esc(row.nome) + '">' + esc(row.nome || 'Sem nome') + '</td><td>' + money0(row.fat) + '</td><td>' + money0(row.rep) + '</td>' +
-      '<td class="' + (row.resultado < 0 ? 'neg' : '') + '">' + money0(row.resultado) + '</td></tr>'
+      '<tr><td title="' + esc(row.nome) + '">' + esc(row.nome || 'Sem nome') + '</td><td>' + mk(row.fat) + '</td><td>' + mk(row.rep) + '</td>' +
+      '<td class="' + (!locked() && row.resultado < 0 ? 'neg' : '') + '">' + mk(row.resultado) + '</td></tr>'
     ).join('');
-    $('reTableFoot').innerHTML = '<tr><td>Total</td><td>' + money0(r.fat) + '</td><td>' + money0(r.rep) + '</td><td class="' + (r.lucro < 0 ? 'neg' : '') + '">' + money0(r.lucro) + '</td></tr>';
+    $('reTableFoot').innerHTML = '<tr><td>Total</td><td>' + mk(r.fat) + '</td><td>' + mk(r.rep) + '</td><td class="' + (!locked() && r.lucro < 0 ? 'neg' : '') + '">' + mk(r.lucro) + '</td></tr>';
+    const ganhoEq = r.rows.reduce((a, row) => a + (row.N ? ganhoFaltas(row.N, row.contrib / row.N) : 0), 0);
+    $('reScenarios').innerHTML = r.rows.length ? cenariosHtml([{ label: 'Reduzir as faltas em 25%', nota: 'com lembretes automáticos no WhatsApp', ganho: ganhoEq, terapee: true }]) : '';
+    r.ganhoFaltas = ganhoEq;
 
     // Resumo embaixo de cada profissional.
     document.querySelectorAll('#proList .pro').forEach((el, i) => {
@@ -1629,6 +1752,7 @@ window.addEventListener('scroll', () => {
     } else if (r.rows.length && !negativos.length) {
       alerts.push(['ok', '<strong>Todos os profissionais pagam a própria parte dos custos</strong> e ainda deixam resultado para a clínica.']);
     }
+    if (locked() && r.rows.length) alerts.splice(0, alerts.length, ['info', 'Quem dá lucro e quem não cobre a própria parte dos custos.']);
     $('reAlerts').innerHTML = alerts.slice(0, 1).map(a => '<div class="alert ' + a[0] + '">' + a[1] + '</div>').join('');
     return r;
   }
@@ -1664,6 +1788,9 @@ window.addEventListener('scroll', () => {
     const ms = $('msValue');
     ms.textContent = money0(r.lucro) + ' · ' + pct(r.margem);
     ms.classList.toggle('neg', r.lucro < 0);
+    document.querySelectorAll('[data-lock]').forEach(z => z.classList.toggle('is-locked', locked()));
+    $('leadCardLocked').hidden = !locked();
+    $('leadCardUnlocked').hidden = locked();
     save();
   }
 
@@ -1745,9 +1872,10 @@ window.addEventListener('scroll', () => {
 
   // Ações.
   $('btnReset').addEventListener('click', () => {
-    const tab = state.tab;
+    const tab = state.tab, unlocked = state.unlocked;
     state = JSON.parse(JSON.stringify(DEFAULTS));
     state.tab = tab;
+    state.unlocked = unlocked;
     syncInputs();
     renderProList();
     renderAll();
@@ -1761,13 +1889,15 @@ window.addEventListener('scroll', () => {
       lines.push('Repasse: ' + (r.isPct ? num1.format(state.repasse) + '%' : money(state.repasse)) + ' por sessão');
       lines.push('Faturamento: ' + money(r.fat));
       lines.push('Lucro líquido: ' + money(r.lucro) + ' (margem ' + pct(r.margem) + ')');
-      lines.push('Preço mínimo: ' + (isFinite(r.precoMin) ? money(r.precoMin) : 'inviável'));
-      lines.push('Preço para ' + pct(r.m) + ' de margem: ' + (isFinite(r.precoAlvo) ? money(r.precoAlvo) : 'inviável'));
-      lines.push('Ponto de equilíbrio: ' + (isFinite(r.equilibrio) ? num1.format(r.equilibrio) + ' sessões/mês' : 'não atingível'));
+      if (!locked()) {
+        lines.push('Preço mínimo: ' + (isFinite(r.precoMin) ? money(r.precoMin) : 'inviável'));
+        lines.push('Preço para ' + pct(r.m) + ' de margem: ' + (isFinite(r.precoAlvo) ? money(r.precoAlvo) : 'inviável'));
+        lines.push('Ponto de equilíbrio: ' + (isFinite(r.equilibrio) ? num1.format(r.equilibrio) + ' sessões/mês' : 'não atingível'));
+      }
     } else {
       const r = calcEquipe(state);
       lines.push('Simulação de repasse da equipe — Terapee');
-      r.rows.forEach(row => lines.push('• ' + (row.nome || 'Sem nome') + ': fatura ' + money(row.fat) + ', recebe ' + money(row.rep) + ', resultado p/ clínica ' + money(row.resultado)));
+      if (!locked()) r.rows.forEach(row => lines.push('• ' + (row.nome || 'Sem nome') + ': fatura ' + money(row.fat) + ', recebe ' + money(row.rep) + ', resultado p/ clínica ' + money(row.resultado)));
       lines.push('Total repassado: ' + money(r.rep));
       lines.push('Lucro da clínica: ' + money(r.lucro) + ' (margem ' + pct(r.margem) + ')');
     }
@@ -1812,6 +1942,7 @@ window.addEventListener('scroll', () => {
     if (typeof dialog.close === 'function') dialog.close(); else dialog.removeAttribute('open');
   }
   $('btnLead').addEventListener('click', openLead);
+  document.querySelectorAll('[data-unlock]').forEach(b => b.addEventListener('click', openLead));
   dialog.addEventListener('click', e => { if (e.target === dialog || e.target.closest('[data-close]')) closeLead(); });
 
   // Máscara simples de telefone: (21) 99999-9999.
@@ -1840,6 +1971,15 @@ window.addEventListener('scroll', () => {
       resultado = { fat: r.fat, rep: r.rep, imp: r.imp, lucro: r.lucro, margem: r.margem, totalSessoes: r.totalSessoes,
         rows: r.rows.map(x => ({ nome: x.nome, sessoes: x.N, fat: x.fat, rep: x.rep, resultado: x.resultado })) };
     }
+    if (tipo === 'preco') {
+      const r = calcPreco(state);
+      resultado.cenarios = cenariosPreco(r).map(c => ({ label: c.label, nota: c.nota, ganho: c.ganho }));
+      resultado.modelos = modelosRepasse(r);
+      resultado.ganhoFaltas = ganhoFaltas(r.N, r.contrib);
+    } else {
+      resultado.ganhoFaltas = calcEquipe(state).rows.reduce((a, row) => a + (row.N ? ganhoFaltas(row.N, row.contrib / row.N) : 0), 0);
+    }
+    entradas.faltas = state.faltas;
     // JSON.stringify transforma Infinity (preço inviável, equilíbrio nunca) em null.
     return { tipo, lead, entradas, resultado, utm, pagina: location.href, referrer: document.referrer || '' };
   }
@@ -1848,9 +1988,8 @@ window.addEventListener('scroll', () => {
     if (lead.nome.length < 2) return ['lfNome', 'Informe seu nome.'];
     const d = lead.whatsapp.replace(/\D/g, '');
     if (d.length < 10 || d.length > 11) return ['lfWhats', 'Informe seu WhatsApp com DDD.'];
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(lead.email)) return ['lfEmail', 'Informe um e-mail válido.'];
     if (!lead.profissionais) return ['lfProf', 'Diga quantos profissionais atendem na clínica.'];
-    if (!lead.sistema) return ['lfSistema', 'Diga como você controla hoje.'];
+    if (lead.email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(lead.email)) return ['lfEmail', 'Confira o e-mail ou deixe em branco.'];
     if (!lead.consentimento) return ['lfConsent', 'Marque a caixa para receber o relatório.'];
     return null;
   }
@@ -1861,9 +2000,8 @@ window.addEventListener('scroll', () => {
       nome: $('lfNome').value.trim(),
       whatsapp: $('lfWhats').value.trim(),
       email: $('lfEmail').value.trim(),
-      clinica: $('lfClinica').value.trim(),
       profissionais: $('lfProf').value,
-      sistema: $('lfSistema').value,
+      revisao: $('lfRevisao').checked,
       consentimento: $('lfConsent').checked,
       site: $('lfSite').value
     };
@@ -1886,11 +2024,14 @@ window.addEventListener('scroll', () => {
       let data = {};
       try { data = await resp.json(); } catch (err) {}
       if (!resp.ok || data.ok === false) throw new Error(data.erro || 'Não foi possível enviar agora.');
-      $('leadSuccessText').textContent = 'Enviamos o relatório para ' + lead.email + ' e um resumo para o seu WhatsApp. Confira em alguns instantes.';
+      $('leadSuccessText').textContent = 'O relatório completo está a caminho do seu WhatsApp' + (lead.email ? ' e de ' + lead.email : '') + '.' +
+        (lead.revisao ? ' Um especialista vai revisar seus números e falar com você em até 24h úteis.' : '');
+      state.unlocked = true;
+      renderAll();
       $('leadFormView').hidden = true;
       $('leadSuccessView').hidden = false;
       form.reset();
-      push({ event: 'generate_lead', lead_source: 'calculadora_precificacao', simulacao: state.tab, profissionais: lead.profissionais, sistema_atual: lead.sistema });
+      push({ event: 'generate_lead', lead_source: 'calculadora_precificacao', simulacao: state.tab, profissionais: lead.profissionais, pediu_revisao: lead.revisao });
     } catch (err) {
       errBox.innerHTML = esc(err.message || 'Não foi possível enviar agora.') +
         ' Se preferir, <a href="https://api.whatsapp.com/send?phone=552123422477&text=' + encodeURIComponent('Olá! Quero receber o relatório da calculadora de precificação.') + '" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">fale com a gente no WhatsApp</a>.';
