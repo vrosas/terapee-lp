@@ -199,20 +199,6 @@ img { max-width: 100%; display: block; }
 .breadcrumb a { color: var(--primary); transition: opacity 0.2s; }
 .breadcrumb a:hover { opacity: 0.75; }
 .breadcrumb svg { width: 14px; height: 14px; flex-shrink: 0; color: var(--gray-300); }
-.subpage-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--primary-100);
-  color: var(--primary);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 6px 14px;
-  border-radius: 100px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
 .subpage-hero h1 {
   font-size: clamp(32px, 4.5vw, 50px);
   font-weight: 800;
@@ -228,116 +214,83 @@ img { max-width: 100%; display: block; }
   max-width: 640px;
   line-height: 1.7;
 }
-.hero-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-.hero-pills span {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--gray-700);
-  background: var(--white);
-  border: 1px solid var(--gray-200);
-  padding: 6px 14px;
-  border-radius: 100px;
-}
-.hero-pills span::before { content: "✓ "; color: var(--success); font-weight: 800; }
 
 /* ========== CALCULADORA ========== */
-.calc-section { padding: 16px 0 80px; }
+.hero-note { font-size: 13px; color: var(--gray-500); margin-top: 16px; }
+.calc-section { padding: 8px 0 80px; }
 .calc-tabs {
   display: inline-flex;
-  background: var(--white);
-  border: 1px solid var(--gray-200);
+  background: var(--gray-100);
   border-radius: 100px;
   padding: 4px;
-  gap: 4px;
-  margin-bottom: 24px;
-  box-shadow: var(--shadow-sm);
+  gap: 2px;
+  margin-bottom: 20px;
   max-width: 100%;
 }
 .calc-tab {
   font-family: inherit;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--gray-600);
   background: transparent;
   border: none;
   border-radius: 100px;
-  padding: 10px 20px;
+  padding: 9px 18px;
   cursor: pointer;
   transition: all 0.2s;
 }
-.calc-tab:hover { color: var(--primary); }
-.calc-tab[aria-selected="true"] { background: var(--primary); color: var(--white); }
+.calc-tab:hover { color: var(--dark); }
+.calc-tab[aria-selected="true"] { background: var(--white); color: var(--dark); box-shadow: var(--shadow-sm); }
 .calc-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 24px;
   align-items: start;
 }
-.calc-inputs { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
-.card {
+.panel {
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius-lg);
   padding: 28px;
-  box-shadow: var(--shadow-sm);
+  min-width: 0;
 }
-.card-title {
-  font-size: 17px;
-  font-weight: 800;
-  color: var(--dark);
-  margin-bottom: 4px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.calc-inputs > .group {
+  border-top: 1px solid var(--gray-100);
+  margin-top: 24px;
+  padding-top: 24px;
 }
-.card-title .step {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: var(--primary-light);
-  color: var(--primary);
-  font-size: 13px;
-  font-weight: 800;
-  flex-shrink: 0;
+.group-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gray-500);
+  margin-bottom: 16px;
 }
-.card-desc { font-size: 14px; color: var(--gray-500); margin-bottom: 20px; }
 .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 20px; }
 .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .field.full { grid-column: 1 / -1; }
-.field label {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--gray-700);
-}
-.field .hint { font-size: 12px; color: var(--gray-400); line-height: 1.5; }
+.field label { font-size: 13px; font-weight: 600; color: var(--gray-700); }
+/* A dica só aparece quando o campo está em foco, para a tela ficar limpa. */
+.field .hint { display: none; font-size: 12px; color: var(--gray-500); line-height: 1.5; }
+.field:focus-within .hint { display: block; }
 .input-wrap {
   display: flex;
   align-items: center;
-  border: 1.5px solid var(--gray-300);
+  border: 1px solid var(--gray-200);
   border-radius: 10px;
-  background: var(--white);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  background: var(--gray-50);
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
   overflow: hidden;
 }
+.input-wrap:hover { border-color: var(--gray-300); }
 .input-wrap:focus-within {
   border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(68,76,231,0.12);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(68,76,231,0.12);
 }
-.input-wrap .affix {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--gray-500);
-  padding: 0 12px;
-  background: var(--gray-50);
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-}
-.input-wrap .affix.pre { border-right: 1px solid var(--gray-200); }
-.input-wrap .affix.suf { border-left: 1px solid var(--gray-200); }
+.input-wrap .affix { font-size: 14px; font-weight: 500; color: var(--gray-400); padding: 0 0 0 12px; }
+.input-wrap .affix.suf { padding: 0 12px 0 0; }
 .input-wrap input, .input-wrap select {
   flex: 1;
   min-width: 0;
@@ -349,222 +302,211 @@ img { max-width: 100%; display: block; }
   color: var(--dark);
   padding: 11px 12px;
   background: transparent;
+  font-variant-numeric: tabular-nums;
 }
-.seg {
-  display: inline-flex;
-  background: var(--gray-100);
-  border-radius: 10px;
-  padding: 3px;
-  gap: 3px;
-}
+.input-wrap .affix.pre + input { padding-left: 6px; }
+.seg { display: inline-flex; background: var(--gray-100); border-radius: 10px; padding: 3px; gap: 2px; flex-shrink: 0; }
 .seg button {
   font-family: inherit;
   font-size: 13px;
-  font-weight: 700;
-  color: var(--gray-600);
+  font-weight: 600;
+  color: var(--gray-500);
   background: transparent;
   border: none;
   border-radius: 8px;
-  padding: 7px 12px;
+  padding: 7px 11px;
   cursor: pointer;
-  white-space: nowrap;
 }
-.seg button[aria-pressed="true"] { background: var(--white); color: var(--primary); box-shadow: var(--shadow-sm); }
-.field-row { display: flex; gap: 10px; align-items: center; }
+.seg button[aria-pressed="true"] { background: var(--white); color: var(--dark); box-shadow: var(--shadow-sm); }
+.field-row { display: flex; gap: 8px; align-items: center; }
 .field-row .input-wrap { flex: 1; }
 
 /* Resultados */
 #resultados { scroll-margin-top: 88px; }
 .calc-results { position: sticky; top: 96px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
-.result-hero {
-  background: linear-gradient(135deg, var(--dark) 0%, #1e1b4b 100%);
-  color: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  box-shadow: var(--shadow-lg);
-}
-.result-hero .label { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.65); }
-.result-hero .big {
-  font-size: clamp(32px, 4vw, 44px);
+.res-head .label { font-size: 13px; font-weight: 600; color: var(--gray-500); }
+.res-head .big {
+  font-size: clamp(34px, 4vw, 46px);
   font-weight: 800;
-  line-height: 1.15;
-  margin: 4px 0 6px;
+  line-height: 1.1;
+  color: var(--dark);
+  margin: 6px 0;
   font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
 }
-.result-hero .big.neg { color: #FDA29B; }
-.result-hero .sub { font-size: 14px; color: rgba(255,255,255,0.75); }
+.res-head .big.neg { color: var(--danger); }
+.res-head .sub { font-size: 14px; color: var(--gray-500); }
 .status-pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  font-weight: 700;
-  padding: 5px 12px;
+  font-weight: 600;
+  padding: 4px 10px;
   border-radius: 100px;
-  margin-top: 14px;
+  margin-top: 12px;
 }
-.status-pill.ok { background: rgba(18,183,106,0.18); color: #6CE9A6; }
-.status-pill.warn { background: rgba(247,144,9,0.18); color: #FEC84B; }
-.status-pill.bad { background: rgba(240,68,56,0.2); color: #FDA29B; }
-.kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.kpi {
-  background: var(--white);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius);
-  padding: 16px 18px;
-  min-width: 0;
-}
-.kpi .k-label { font-size: 12px; font-weight: 600; color: var(--gray-500); }
-.kpi .k-value {
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--dark);
-  font-variant-numeric: tabular-nums;
-  margin-top: 2px;
-  overflow-wrap: anywhere;
-}
-.kpi .k-note { font-size: 12px; color: var(--gray-400); margin-top: 2px; }
-.kpi.highlight { border-color: var(--primary-200); background: var(--primary-50); }
-.kpi.highlight .k-value { color: var(--primary-dark); }
-
-.composition .bar {
+.status-pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.status-pill.ok { background: var(--success-bg); color: var(--success); }
+.status-pill.warn { background: var(--warning-bg); color: var(--warning); }
+.status-pill.bad { background: var(--danger-bg); color: var(--danger); }
+.res-list { margin: 22px 0 0; border-top: 1px solid var(--gray-100); }
+.res-row {
   display: flex;
-  height: 28px;
-  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+.res-row dt { font-size: 14px; color: var(--gray-700); display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.res-row dt small { font-size: 12px; color: var(--gray-400); font-weight: 400; }
+.res-row dt small:empty { display: none; }
+.res-row dd { font-size: 17px; font-weight: 700; color: var(--dark); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.res-row.hl dd { color: var(--primary); font-size: 19px; }
+
+.res-comp { margin-top: 20px; }
+.comp-title { font-size: 13px; font-weight: 600; color: var(--gray-700); }
+.res-comp .bar {
+  display: flex;
+  height: 10px;
+  border-radius: 100px;
   overflow: hidden;
   background: var(--gray-100);
-  margin: 14px 0 16px;
+  margin: 10px 0 4px;
+  gap: 2px;
 }
-.composition .bar span { height: 100%; transition: width 0.35s ease; min-width: 0; }
-.legend { display: flex; flex-direction: column; gap: 8px; }
+.res-comp .bar span { height: 100%; transition: width 0.35s ease; min-width: 0; }
+.comp-details summary {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 8px 0;
+  list-style: none;
+}
+.comp-details summary::-webkit-details-marker { display: none; }
+.comp-details summary::after { content: " ↓"; }
+.comp-details[open] summary::after { content: " ↑"; }
+.legend { display: flex; flex-direction: column; gap: 8px; padding: 6px 0 2px; }
 .legend-row {
   display: grid;
-  grid-template-columns: 12px 1fr auto auto;
+  grid-template-columns: 8px 1fr auto auto;
   align-items: center;
   gap: 10px;
-  font-size: 14px;
-  color: var(--gray-700);
+  font-size: 13px;
+  color: var(--gray-600);
 }
-.legend-row .dot { width: 12px; height: 12px; border-radius: 3px; }
-.legend-row .val { font-weight: 700; color: var(--dark); font-variant-numeric: tabular-nums; text-align: right; }
-.legend-row .pct { font-size: 12px; color: var(--gray-400); font-variant-numeric: tabular-nums; min-width: 48px; text-align: right; }
-.legend-row.total { border-top: 1px solid var(--gray-200); padding-top: 8px; margin-top: 2px; font-weight: 700; }
+.legend-row .dot { width: 8px; height: 8px; border-radius: 50%; }
+.legend-row .val { font-weight: 600; color: var(--dark); font-variant-numeric: tabular-nums; text-align: right; }
+.legend-row .pct { font-size: 12px; color: var(--gray-400); font-variant-numeric: tabular-nums; min-width: 44px; text-align: right; }
+.legend-row.total { border-top: 1px solid var(--gray-100); padding-top: 8px; font-weight: 600; }
 
+.alerts { display: flex; flex-direction: column; gap: 10px; margin-top: 18px; }
+.alerts:empty { display: none; }
 .alert {
-  border-radius: var(--radius);
-  padding: 14px 16px;
-  font-size: 14px;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 13.5px;
   line-height: 1.6;
+  border-left: 3px solid currentColor;
 }
-.alert strong { font-weight: 800; }
+.alert strong { font-weight: 700; }
 .alert.info { background: var(--primary-50); color: var(--primary-dark); }
 .alert.warn { background: var(--warning-bg); color: var(--warning); }
 .alert.bad { background: var(--danger-bg); color: var(--danger); }
 .alert.ok { background: var(--success-bg); color: var(--success); }
-.alerts { display: flex; flex-direction: column; gap: 10px; }
 
-.calc-actions { display: flex; flex-wrap: wrap; gap: 10px; }
-.btn-ghost {
-  background: var(--white);
-  color: var(--gray-700);
-  border: 1px solid var(--gray-300);
-  padding: 10px 18px;
-  font-size: 14px;
+.calc-actions { display: flex; justify-content: center; align-items: center; gap: 10px; color: var(--gray-300); font-size: 13px; }
+.link-btn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-500);
+  cursor: pointer;
+  padding: 4px 2px;
 }
-.btn-ghost:hover { border-color: var(--primary); color: var(--primary); }
+.link-btn:hover { color: var(--primary); }
 
 /* Equipe */
-.pro-list { display: flex; flex-direction: column; gap: 14px; }
-.pro {
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius);
-  padding: 16px;
-  background: var(--gray-50);
-}
-.pro-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-.pro-head .input-wrap { flex: 1; background: var(--white); }
+.pro-list { display: flex; flex-direction: column; }
+.pro { padding: 16px 0; border-bottom: 1px solid var(--gray-100); }
+.pro:first-child { padding-top: 0; }
+.pro-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.pro-head .input-wrap { flex: 1; background: transparent; border-color: transparent; }
+.pro-head .input-wrap:hover { border-color: var(--gray-200); }
+.pro-head .input-wrap input { font-weight: 700; padding-left: 0; }
+.pro-head .input-wrap:focus-within input { padding-left: 12px; }
 .pro-remove {
   background: none;
   border: none;
-  color: var(--gray-400);
+  color: var(--gray-300);
   cursor: pointer;
   font-size: 20px;
   line-height: 1;
-  padding: 6px 8px;
+  padding: 4px 8px;
   border-radius: 8px;
 }
 .pro-remove:hover { color: var(--danger); background: var(--danger-bg); }
-.pro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.pro-grid .field.rule { grid-column: 1 / -1; }
-.pro-grid .input-wrap { background: var(--white); }
-.pro-out {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 18px;
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px dashed var(--gray-300);
-  font-size: 13px;
-  color: var(--gray-600);
-}
-.pro-out b { color: var(--dark); font-variant-numeric: tabular-nums; }
+.pro-grid { display: grid; grid-template-columns: 1fr 0.8fr 1.5fr; gap: 12px; }
+.pro-grid .field label { font-size: 12px; color: var(--gray-500); }
+/* O resultado de cada profissional já aparece na tabela ao lado. */
+.pro-out { display: none; flex-wrap: wrap; gap: 4px 16px; margin-top: 10px; font-size: 12.5px; color: var(--gray-500); }
+.pro-out b { color: var(--gray-700); font-weight: 600; font-variant-numeric: tabular-nums; }
 .pro-out .neg { color: var(--danger); }
 .pro-out .pos { color: var(--success); }
 .add-pro {
-  margin-top: 14px;
-  width: 100%;
-  justify-content: center;
-  border: 1.5px dashed var(--primary-300);
-  background: var(--white);
-  color: var(--primary);
-  padding: 12px;
+  margin-top: 12px;
+  background: none;
+  border: none;
+  font-family: inherit;
   font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 6px 0;
 }
-.add-pro:hover { background: var(--primary-50); }
+.add-pro:hover { color: var(--primary-dark); }
 
+.team-details { margin-top: 16px; }
 .team-table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
 .team-table th {
   text-align: right;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--gray-500);
-  font-weight: 700;
+  color: var(--gray-400);
+  font-weight: 600;
   padding: 0 6px 8px;
-  border-bottom: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-100);
 }
-.team-table td { text-align: right; padding: 9px 6px; border-bottom: 1px solid var(--gray-100); color: var(--gray-700); }
+.team-table td { text-align: right; padding: 9px 6px; border-bottom: 1px solid var(--gray-100); color: var(--gray-600); }
 .team-table th:first-child, .team-table td:first-child { text-align: left; padding-left: 0; }
-.team-table td:first-child { font-weight: 700; color: var(--dark); max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.team-table tfoot td { font-weight: 800; color: var(--dark); border-bottom: none; border-top: 1px solid var(--gray-200); }
+.team-table th:last-child, .team-table td:last-child { padding-right: 0; }
+.team-table td:first-child { font-weight: 600; color: var(--dark); max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.team-table tfoot td { font-weight: 700; color: var(--dark); border-bottom: none; }
 .team-table .neg { color: var(--danger); }
-.table-scroll { overflow-x: auto; margin-top: 12px; }
+.table-scroll { overflow-x: auto; margin-top: 4px; }
+.table-note { font-size: 12px; color: var(--gray-400); margin-top: 8px; }
 
-.inline-cta {
+.lead-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   background: var(--primary-50);
-  border: 1px solid var(--primary-200);
   border-radius: var(--radius-lg);
-  padding: 20px 22px;
+  padding: 18px 20px;
 }
-.inline-cta p { font-size: 14px; color: var(--gray-700); margin-bottom: 12px; line-height: 1.6; }
-.inline-cta p strong { color: var(--dark); }
-.inline-cta .btn { padding: 11px 20px; font-size: 14px; }
+.lead-card strong { display: block; font-size: 14.5px; color: var(--dark); margin-bottom: 2px; }
+.lead-card span { font-size: 13px; color: var(--gray-600); }
+.lead-card .btn { padding: 11px 20px; font-size: 14px; white-space: nowrap; flex-shrink: 0; }
 
 [hidden] { display: none !important; }
 
 /* Captura de lead: cartão nos resultados + modal com formulário */
-.lead-card {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-  color: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 22px 24px;
-  box-shadow: 0 10px 30px rgba(68,76,231,0.3);
-}
-.lead-card h3 { font-size: 17px; font-weight: 800; margin-bottom: 6px; }
-.lead-card p { font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 14px; }
-.lead-card ul { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 16px; font-size: 13px; color: rgba(255,255,255,0.9); }
-.lead-card li::before { content: "✓ "; font-weight: 800; }
-.lead-card .btn { padding: 12px 22px; font-size: 15px; }
 .lead-dialog {
   border: none;
   border-radius: var(--radius-lg);
@@ -776,33 +718,35 @@ img { max-width: 100%; display: block; }
   .container { padding: 0 16px; }
   .subpage-hero { padding: 110px 0 36px; }
   .subpage-hero p.lead { font-size: 16px; }
-  .card, .result-hero { padding: 20px; }
+  .panel { padding: 20px; }
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-links { justify-content: center; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .footer-legal { justify-content: center; }
 }
 @media (max-width: 560px) {
-  .field-grid { grid-template-columns: 1fr; }
+  .field-grid { grid-template-columns: 1fr 1fr; }
+  .pro-grid { grid-template-columns: 1fr 1fr; }
+  .pro-grid .field.rule { grid-column: 1 / -1; }
   .calc-tabs { display: flex; }
   .calc-tab { flex: 1; padding: 10px 8px; font-size: 13px; }
-  .kpi .k-value { font-size: 19px; }
+  .lead-card { flex-direction: column; align-items: stretch; text-align: center; }
 }
 @media (max-width: 359px) {
   .header-actions .btn-primary { display: none; }
-  .kpis { grid-template-columns: 1fr; }
 }
 
 /* ========== IMPRESSÃO ========== */
 @media print {
   .header, .footer, .cta-banner, .related-section, .faq-page-section, .how-calc,
-  .calc-tabs, .calc-actions, .inline-cta, .lead-card, .lead-dialog, .add-pro, .pro-remove, .hero-pills, .breadcrumb { display: none !important; }
+  .calc-tabs, .calc-actions, .lead-card, .lead-dialog, .add-pro, .pro-remove, .breadcrumb, .comp-details summary { display: none !important; }
+  .comp-details > * { display: block !important; }
   body { background: #fff; }
   .subpage-hero { padding: 0 0 16px; background: none; }
   .calc-layout { grid-template-columns: 1fr 1fr; }
   .calc-results { position: static; }
-  .card, .kpi, .result-hero { box-shadow: none; break-inside: avoid; }
-  .result-hero, .composition .bar span, .legend-row .dot { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .panel { break-inside: avoid; }
+  .res-comp .bar span, .legend-row .dot { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
 </style>
 <script type="application/ld+json">
@@ -933,14 +877,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
       <span aria-current="page">Calculadora de precificação</span>
     </nav>
-    <div class="subpage-badge">Ferramenta grátis</div>
     <h1>Calculadora de <span class="highlight">preço, margem e repasse</span> para clínicas</h1>
-    <p class="lead">Descubra quanto cobrar por sessão, quanto realmente sobra para a clínica e até quanto dá para repassar a cada profissional parceiro, já descontando impostos, taxas e custos fixos.</p>
-    <div class="hero-pills">
-      <span>100% grátis</span>
-      <span>Sem cadastro</span>
-      <span>Resultado na hora</span>
-    </div>
+    <p class="lead">Quanto cobrar por sessão, quanto sobra para a clínica e quanto repassar a cada profissional, já com impostos, taxas e custos fixos.</p>
+    <p class="hero-note">Grátis · sem cadastro · resultado na hora</p>
   </div>
 </section>
 
@@ -952,13 +891,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="calc-layout">
-      <div class="calc-inputs">
+      <div class="panel calc-inputs">
 
         <!-- ===== Aba 1: preço da sessão ===== -->
-        <div id="panel-preco" role="tabpanel" aria-labelledby="tab-preco" class="calc-inputs">
-          <div class="card">
-            <h2 class="card-title"><span class="step">1</span>Sua sessão</h2>
-            <p class="card-desc">O preço que você cobra hoje (ou pensa em cobrar) e o volume da clínica.</p>
+        <div id="panel-preco" role="tabpanel" aria-labelledby="tab-preco">
+          <div class="group">
+            <h2 class="group-title">Sua sessão</h2>
             <div class="field-grid">
               <div class="field">
                 <label for="preco">Valor da sessão</label>
@@ -966,56 +904,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <div class="field">
                 <label for="sessoes">Sessões por mês</label>
-                <div class="input-wrap"><input id="sessoes" data-key="sessoes" inputmode="numeric" autocomplete="off"><span class="affix suf">sessões</span></div>
+                <div class="input-wrap"><input id="sessoes" data-key="sessoes" inputmode="numeric" autocomplete="off"></div>
                 <span class="hint">Total da clínica, somando todos os profissionais.</span>
               </div>
-              <div class="field full">
-                <label for="margem">Margem de lucro desejada</label>
+              <div class="field">
+                <label for="margem">Margem desejada</label>
                 <div class="input-wrap"><input id="margem" data-key="margem" inputmode="decimal" autocomplete="off"><span class="affix suf">%</span></div>
-                <span class="hint">Quanto do faturamento você quer que vire lucro da clínica depois de pagar tudo.</span>
+                <span class="hint">Quanto do faturamento deve virar lucro depois de pagar tudo.</span>
               </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <h2 class="card-title"><span class="step">2</span>Repasse ao profissional</h2>
-            <p class="card-desc">Quanto o terapeuta parceiro recebe por sessão atendida.</p>
-            <div class="field">
-              <label for="repasse">Regra de repasse</label>
-              <div class="field-row">
-                <div class="seg" role="group" aria-label="Tipo de repasse" data-seg="repasseTipo">
-                  <button type="button" data-val="pct">% da sessão</button>
-                  <button type="button" data-val="fixo">Valor fixo</button>
+              <div class="field">
+                <label for="repasse">Repasse ao profissional</label>
+                <div class="field-row">
+                  <div class="seg" role="group" aria-label="Tipo de repasse" data-seg="repasseTipo">
+                    <button type="button" data-val="pct">%</button>
+                    <button type="button" data-val="fixo">R$</button>
+                  </div>
+                  <div class="input-wrap">
+                    <span class="affix pre" data-show="repasseTipo:fixo">R$</span>
+                    <input id="repasse" data-key="repasse" inputmode="decimal" autocomplete="off" aria-label="Valor do repasse">
+                    <span class="affix suf" data-show="repasseTipo:pct">%</span>
+                  </div>
                 </div>
-                <div class="input-wrap">
-                  <span class="affix pre" data-show="repasseTipo:fixo">R$</span>
-                  <input id="repasse" data-key="repasse" inputmode="decimal" autocomplete="off" aria-label="Valor do repasse">
-                  <span class="affix suf" data-show="repasseTipo:pct">%</span>
-                </div>
+                <span class="hint">Percentual da sessão ou valor fixo por atendimento.</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- ===== Aba 2: repasse da equipe ===== -->
-        <div id="panel-equipe" role="tabpanel" aria-labelledby="tab-equipe" class="calc-inputs" hidden>
-          <div class="card">
-            <h2 class="card-title"><span class="step">1</span>Profissionais da clínica</h2>
-            <p class="card-desc">Cada profissional pode ter um valor de sessão e uma regra de repasse diferentes.</p>
+        <div id="panel-equipe" role="tabpanel" aria-labelledby="tab-equipe" hidden>
+          <div class="group">
+            <h2 class="group-title">Profissionais</h2>
             <div class="pro-list" id="proList"></div>
-            <button type="button" class="btn add-pro" id="addPro">+ Adicionar profissional</button>
+            <button type="button" class="add-pro" id="addPro">+ Adicionar profissional</button>
           </div>
         </div>
 
         <!-- ===== Custos (compartilhado) ===== -->
-        <div class="card">
-          <h2 class="card-title"><span class="step" id="custosStep">3</span>Custos da clínica</h2>
-          <p class="card-desc">Usados nas duas simulações. Não sabe o valor exato? Use uma estimativa.</p>
+        <div class="group">
+          <h2 class="group-title">Custos da clínica</h2>
           <div class="field-grid">
             <div class="field">
-              <label for="impostos">Impostos sobre o faturamento</label>
+              <label for="impostos">Impostos</label>
               <div class="input-wrap"><input id="impostos" data-key="impostos" inputmode="decimal" autocomplete="off"><span class="affix suf">%</span></div>
-              <span class="hint">Ex.: Simples Nacional costuma ficar entre 6% e 15,5%. Confirme com seu contador.</span>
+              <span class="hint">Simples Nacional costuma ficar entre 6% e 15,5%. Confirme com seu contador.</span>
             </div>
             <div class="field">
               <label for="taxa">Taxa de recebimento</label>
@@ -1023,14 +955,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span class="hint">Média de maquininha, cartão, boleto e Pix.</span>
             </div>
             <div class="field">
-              <label for="variavel">Custo variável por sessão</label>
+              <label for="variavel">Custo por sessão</label>
               <div class="input-wrap"><span class="affix pre">R$</span><input id="variavel" data-key="variavel" inputmode="decimal" autocomplete="off"></div>
               <span class="hint">Materiais, testes, itens descartáveis.</span>
             </div>
             <div class="field">
-              <label for="fixos">Custos fixos mensais</label>
+              <label for="fixos">Custos fixos por mês</label>
               <div class="input-wrap"><span class="affix pre">R$</span><input id="fixos" data-key="fixos" inputmode="decimal" autocomplete="off"></div>
-              <span class="hint">Aluguel, recepção, contador, sistemas, internet, limpeza.</span>
+              <span class="hint">Aluguel, recepção, contador, sistemas, internet.</span>
             </div>
           </div>
         </div>
@@ -1039,75 +971,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- ===== Resultados ===== -->
       <div class="calc-results" id="resultados" aria-live="polite">
 
-        <div id="res-preco" class="calc-results" style="position:static;">
-          <div class="result-hero">
-            <div class="label">Lucro líquido da clínica por mês</div>
+        <div id="res-preco" class="panel">
+          <div class="res-head">
+            <div class="label">Lucro líquido por mês</div>
             <div class="big" id="rpLucro">—</div>
             <div class="sub" id="rpLucroSub">—</div>
             <div class="status-pill" id="rpStatus">—</div>
           </div>
-          <div class="kpis">
-            <div class="kpi highlight">
-              <div class="k-label">Preço para sua margem</div>
-              <div class="k-value" id="rpPrecoAlvo">—</div>
-              <div class="k-note" id="rpPrecoAlvoNote">—</div>
-            </div>
-            <div class="kpi">
-              <div class="k-label">Preço mínimo (sem prejuízo)</div>
-              <div class="k-value" id="rpPrecoMin">—</div>
-              <div class="k-note">lucro zero</div>
-            </div>
-            <div class="kpi">
-              <div class="k-label">Ponto de equilíbrio</div>
-              <div class="k-value" id="rpEquilibrio">—</div>
-              <div class="k-note" id="rpEquilibrioNote">sessões por mês</div>
-            </div>
-            <div class="kpi">
-              <div class="k-label">Repasse máximo p/ sua margem</div>
-              <div class="k-value" id="rpRepasseMax">—</div>
-              <div class="k-note" id="rpRepasseMaxNote">no preço atual</div>
-            </div>
-          </div>
-          <div class="card composition">
-            <h3 class="card-title" id="rpCompTitle">Para onde vai cada sessão</h3>
+          <dl class="res-list">
+            <div class="res-row hl"><dt>Preço para sua margem<small id="rpPrecoAlvoNote"></small></dt><dd id="rpPrecoAlvo">—</dd></div>
+            <div class="res-row"><dt>Preço mínimo<small>sem prejuízo</small></dt><dd id="rpPrecoMin">—</dd></div>
+            <div class="res-row"><dt>Ponto de equilíbrio<small id="rpEquilibrioNote"></small></dt><dd id="rpEquilibrio">—</dd></div>
+            <div class="res-row"><dt>Repasse máximo<small id="rpRepasseMaxNote"></small></dt><dd id="rpRepasseMax">—</dd></div>
+          </dl>
+          <div class="res-comp">
+            <div class="comp-title" id="rpCompTitle">Para onde vai cada sessão</div>
             <div class="bar" id="rpBar" role="img" aria-label="Composição do valor da sessão"></div>
-            <div class="legend" id="rpLegend"></div>
+            <details class="comp-details">
+              <summary>Ver detalhamento</summary>
+              <div class="legend" id="rpLegend"></div>
+            </details>
           </div>
           <div class="alerts" id="rpAlerts"></div>
         </div>
 
-        <div id="res-equipe" class="calc-results" style="position:static;" hidden>
-          <div class="result-hero">
-            <div class="label">Lucro líquido da clínica por mês</div>
+        <div id="res-equipe" class="panel" hidden>
+          <div class="res-head">
+            <div class="label">Lucro líquido por mês</div>
             <div class="big" id="reLucro">—</div>
             <div class="sub" id="reLucroSub">—</div>
             <div class="status-pill" id="reStatus">—</div>
           </div>
-          <div class="kpis">
-            <div class="kpi">
-              <div class="k-label">Faturamento total</div>
-              <div class="k-value" id="reFat">—</div>
-              <div class="k-note" id="reFatNote">—</div>
-            </div>
-            <div class="kpi highlight">
-              <div class="k-label">Total a repassar</div>
-              <div class="k-value" id="reRep">—</div>
-              <div class="k-note" id="reRepNote">—</div>
-            </div>
-            <div class="kpi">
-              <div class="k-label">Impostos e taxas</div>
-              <div class="k-value" id="reImp">—</div>
-              <div class="k-note">sobre o faturamento</div>
-            </div>
-            <div class="kpi">
-              <div class="k-label">Custos da clínica</div>
-              <div class="k-value" id="reCustos">—</div>
-              <div class="k-note">fixos + variáveis</div>
-            </div>
-          </div>
-          <div class="card">
-            <h3 class="card-title">Resultado por profissional</h3>
-            <p class="card-desc" style="margin-bottom:0;">O resultado já desconta impostos, taxas e a parte de cada um nos custos fixos (rateada pelo número de sessões).</p>
+          <dl class="res-list">
+            <div class="res-row"><dt>Faturamento<small id="reFatNote"></small></dt><dd id="reFat">—</dd></div>
+            <div class="res-row hl"><dt>Total a repassar<small id="reRepNote"></small></dt><dd id="reRep">—</dd></div>
+            <div class="res-row"><dt>Impostos e taxas</dt><dd id="reImp">—</dd></div>
+            <div class="res-row"><dt>Custos da clínica<small>fixos e por sessão</small></dt><dd id="reCustos">—</dd></div>
+          </dl>
+          <details class="comp-details team-details" open>
+            <summary>Resultado por profissional</summary>
             <div class="table-scroll">
               <table class="team-table">
                 <thead><tr><th>Profissional</th><th>Faturamento</th><th>Repasse</th><th>Resultado</th></tr></thead>
@@ -1115,25 +1017,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <tfoot id="reTableFoot"></tfoot>
               </table>
             </div>
-          </div>
+            <p class="table-note">Já desconta impostos, taxas e a parte de cada um nos custos fixos.</p>
+          </details>
           <div class="alerts" id="reAlerts"></div>
         </div>
 
         <div class="lead-card">
-          <h3>Receba o relatório completo da sua clínica</h3>
-          <p>Enviamos esta simulação por e-mail e WhatsApp, com recomendações práticas a partir dos seus números.</p>
-          <ul><li>Grátis</li><li>Chega em 1 minuto</li><li>Para compartilhar com sócios e equipe</li></ul>
-          <button type="button" class="btn btn-white" id="btnLead" data-cta="calculadora-relatorio">Quero receber o relatório →</button>
+          <div>
+            <strong>Receba este relatório no e-mail e no WhatsApp</strong>
+            <span>Com recomendações a partir dos seus números. Grátis.</span>
+          </div>
+          <button type="button" class="btn btn-primary" id="btnLead" data-cta="calculadora-relatorio">Receber relatório</button>
         </div>
 
         <div class="calc-actions">
-          <button type="button" class="btn btn-ghost" id="btnCopy">Copiar resumo</button>
-          <button type="button" class="btn btn-ghost" id="btnReset">Restaurar exemplo</button>
-        </div>
-
-        <div class="inline-cta">
-          <p><strong>Quer esse cálculo feito sozinho, todo mês?</strong> Na Terapee o repasse de cada profissional sai das sessões que realmente aconteceram, com o detalhe por paciente e quanto ficou com a clínica.</p>
-          <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary" data-cta="calculadora-inline">Testar grátis por 14 dias →</a>
+          <button type="button" class="link-btn" id="btnCopy">Copiar resumo</button>
+          <span aria-hidden="true">·</span>
+          <button type="button" class="link-btn" id="btnReset">Restaurar exemplo</button>
         </div>
       </div>
     </div>
@@ -1656,7 +1556,7 @@ window.addEventListener('scroll', () => {
         alerts.push(['info', 'Os custos fixos pesam ' + pct(r.per.fixo / r.P) + ' de cada sessão. Aumentar a ocupação da agenda tende a melhorar a margem mais do que subir o preço.']);
       }
     }
-    $('rpAlerts').innerHTML = alerts.map(a => '<div class="alert ' + a[0] + '">' + a[1] + '</div>').join('');
+    $('rpAlerts').innerHTML = alerts.slice(0, 1).map(a => '<div class="alert ' + a[0] + '">' + a[1] + '</div>').join('');
     return r;
   }
 
@@ -1729,7 +1629,7 @@ window.addEventListener('scroll', () => {
     } else if (r.rows.length && !negativos.length) {
       alerts.push(['ok', '<strong>Todos os profissionais pagam a própria parte dos custos</strong> e ainda deixam resultado para a clínica.']);
     }
-    $('reAlerts').innerHTML = alerts.map(a => '<div class="alert ' + a[0] + '">' + a[1] + '</div>').join('');
+    $('reAlerts').innerHTML = alerts.slice(0, 1).map(a => '<div class="alert ' + a[0] + '">' + a[1] + '</div>').join('');
     return r;
   }
 
@@ -1755,7 +1655,6 @@ window.addEventListener('scroll', () => {
     $('panel-equipe').hidden = tab !== 'equipe';
     $('res-preco').hidden = tab !== 'preco';
     $('res-equipe').hidden = tab !== 'equipe';
-    $('custosStep').textContent = tab === 'preco' ? '3' : '2';
   }
 
   function renderAll() {
