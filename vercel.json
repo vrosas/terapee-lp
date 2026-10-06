@@ -4,6 +4,16 @@
       "source": "/terapee-vs-psicoplanner",
       "destination": "/alternativas/psicoplanner",
       "permanent": true
+    },
+    {
+      "source": "/ferramentas",
+      "destination": "/ferramentas/calculadora-de-precificacao",
+      "permanent": false
+    },
+    {
+      "source": "/ferramentas/",
+      "destination": "/ferramentas/calculadora-de-precificacao",
+      "permanent": false
     }
   ]
 }

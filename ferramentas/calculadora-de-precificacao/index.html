@@ -374,6 +374,7 @@ img { max-width: 100%; display: block; }
 .field-row .input-wrap { flex: 1; }
 
 /* Resultados */
+#resultados { scroll-margin-top: 88px; }
 .calc-results { position: sticky; top: 96px; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
 .result-hero {
   background: linear-gradient(135deg, var(--dark) 0%, #1e1b4b 100%);
@@ -1189,7 +1190,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <label class="check full"><input type="checkbox" id="lfConsent" name="consentimento" required> <span>Aceito receber o relatório e contatos da Terapee por e-mail e WhatsApp. Posso cancelar quando quiser. <a href="/politica-de-privacidade" target="_blank">Política de privacidade</a>.</span></label>
         <div class="form-error full" id="leadError" role="alert" hidden></div>
         <button type="submit" class="btn btn-primary full" id="leadSubmit">Enviar meu relatório</button>
-        <p class="form-note full">Seus dados não são compartilhados com terceiros.</p>
+        <p class="form-note full">Usamos seus dados só para enviar o relatório e falar com você. O envio passa pelos nossos fornecedores de e-mail e WhatsApp; não vendemos nem cedemos seus dados.</p>
       </form>
     </div>
     <div id="leadSuccessView" class="dlg-success" hidden>
@@ -1437,8 +1438,9 @@ window.addEventListener('scroll', () => {
 
 <script>
 /* ========== CALCULADORA DE PRECIFICAÇÃO ==========
-   Tudo roda no navegador. O estado fica no localStorage (chave STORAGE_KEY)
-   so para a simulacao sobreviver a um reload; nada e enviado ao servidor. */
+   Os calculos rodam no navegador. O estado fica no localStorage (chave
+   STORAGE_KEY) so para a simulacao sobreviver a um reload. Dados so saem da
+   pagina quando a pessoa pede o relatorio (ver LEAD_ENDPOINT, mais abaixo). */
 (function () {
   const STORAGE_KEY = 'terapee-calculadora-v1';
   const DEFAULTS = {
@@ -1463,11 +1465,14 @@ window.addEventListener('scroll', () => {
   const $ = id => document.getElementById(id);
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-  // Aceita "1.234,56", "1234,56", "1234.56" e "R$ 180".
+  // Formato brasileiro: aceita "9.000", "1.234,56", "1234,56", "R$ 180" e "1234.5".
+  // O ponto só vira decimal quando não forma grupos de milhar (ex.: "2.5").
+  // Nenhum campo aceita negativo, então o sinal é descartado.
   function parseNum(str) {
-    if (typeof str === 'number') return str;
-    let s = String(str || '').replace(/[^\d,.\-]/g, '');
+    if (typeof str === 'number') return Math.max(0, str);
+    let s = String(str || '').replace(/[^\d,.]/g, '');
     if (s.includes(',')) s = s.replace(/\./g, '').replace(',', '.');
+    else if (/^\d{1,3}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, '');
     const n = parseFloat(s);
     return isFinite(n) ? n : 0;
   }
@@ -1476,7 +1481,14 @@ window.addEventListener('scroll', () => {
   function load() {
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
-      if (saved && typeof saved === 'object') return Object.assign({}, DEFAULTS, saved);
+      if (saved && typeof saved === 'object') {
+        const st = Object.assign(JSON.parse(JSON.stringify(DEFAULTS)), saved);
+        const okPro = p => p && typeof p === 'object' && typeof p.nome === 'string';
+        st.equipe = Array.isArray(saved.equipe) && saved.equipe.every(okPro)
+          ? saved.equipe
+          : JSON.parse(JSON.stringify(DEFAULTS.equipe));
+        return st;
+      }
     } catch (e) {}
     return JSON.parse(JSON.stringify(DEFAULTS));
   }
@@ -1576,13 +1588,15 @@ window.addEventListener('scroll', () => {
     $('rpLucroSub').textContent = 'Margem de ' + pct(r.margem) + ' sobre ' + money0(r.fat) + ' de faturamento';
     setStatus($('rpStatus'), r.margem, r.m);
 
-    $('rpPrecoAlvo').textContent = isFinite(r.precoAlvo) ? money(r.precoAlvo) : 'Inviável';
+    // Sem preço ou volume os preços sugeridos ignorariam os custos fixos; melhor não mostrar.
+    const semBase = r.N === 0 || r.P === 0;
+    $('rpPrecoAlvo').textContent = semBase ? '—' : isFinite(r.precoAlvo) ? money(r.precoAlvo) : 'Inviável';
     const diff = r.precoAlvo - r.P;
-    $('rpPrecoAlvoNote').textContent = !isFinite(r.precoAlvo)
+    $('rpPrecoAlvoNote').textContent = semBase ? 'preencha preço e sessões' : !isFinite(r.precoAlvo)
       ? 'reduza repasse ou margem'
       : Math.abs(diff) < 0.005 ? 'igual ao preço atual'
       : (diff > 0 ? '+' : '−') + money(Math.abs(diff)) + ' que o atual';
-    $('rpPrecoMin').textContent = isFinite(r.precoMin) ? money(r.precoMin) : 'Inviável';
+    $('rpPrecoMin').textContent = semBase ? '—' : isFinite(r.precoMin) ? money(r.precoMin) : 'Inviável';
 
     $('rpEquilibrio').textContent = isFinite(r.equilibrio) ? num1.format(r.equilibrio) : 'Nunca';
     $('rpEquilibrioNote').textContent = isFinite(r.equilibrio)
@@ -1590,7 +1604,10 @@ window.addEventListener('scroll', () => {
       : 'cada sessão dá prejuízo';
 
     const rm = $('rpRepasseMax'), rmNote = $('rpRepasseMaxNote');
-    if (r.repasseMax <= 0 || !isFinite(r.repasseMax)) {
+    if (semBase) {
+      rm.textContent = '—';
+      rmNote.textContent = 'preencha preço e sessões';
+    } else if (r.repasseMax <= 0 || !isFinite(r.repasseMax)) {
       rm.textContent = 'Nenhum';
       rmNote.textContent = 'o preço não cobre a margem';
     } else if (r.isPct) {
@@ -1630,7 +1647,9 @@ window.addEventListener('scroll', () => {
       } else if (r.margem + 1e-9 < r.m && isFinite(r.precoAlvo)) {
         alerts.push(['warn', '<strong>Para chegar a ' + pct(r.m) + ' de margem</strong>, cobre ' + money(r.precoAlvo) + ' por sessão' +
           (r.repasseMax > 0 ? ' ou ajuste o repasse para no máximo ' + (r.isPct ? pct(r.repasseMax) : money(r.repasseMax)) + '.' : '.')]);
-      } else if (r.margem >= r.m) {
+      } else if (r.margem + 1e-9 < r.m) {
+        alerts.push(['warn', '<strong>Nenhum preço chega a ' + pct(r.m) + ' de margem com essas regras.</strong> Repasse, impostos, taxa e margem desejada somam 100% ou mais do valor da sessão. Reduza o repasse ou a margem desejada.']);
+      } else {
         alerts.push(['ok', '<strong>Seu preço cobre a margem desejada.</strong> Sobram ' + money(r.per.lucro) + ' de lucro em cada sessão.']);
       }
       if (r.N > 0 && r.per.fixo > r.P * 0.35) {
@@ -1971,6 +1990,7 @@ window.addEventListener('scroll', () => {
       $('leadSuccessText').textContent = 'Enviamos o relatório para ' + lead.email + ' e um resumo para o seu WhatsApp. Confira em alguns instantes.';
       $('leadFormView').hidden = true;
       $('leadSuccessView').hidden = false;
+      form.reset();
       push({ event: 'generate_lead', lead_source: 'calculadora_precificacao', simulacao: state.tab, profissionais: lead.profissionais, sistema_atual: lead.sistema });
     } catch (err) {
       errBox.innerHTML = esc(err.message || 'Não foi possível enviar agora.') +
