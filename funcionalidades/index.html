@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Funcionalidades do Terapee | Gestão completa para clínicas de terapia</title>
-<meta name="description" content="Conheça todas as funcionalidades do Terapee: agenda online, prontuário eletrônico, gestão financeira, lembretes via WhatsApp, emissão de recibos e de NFS-e e muito mais.">
+<meta name="description" content="Agenda com confirmação no WhatsApp, prontuário eletrônico, cobrança automática, pacotes de sessões e NFS-e em dois cliques: todas as funcionalidades da Terapee para clínicas de terapia.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.terapee.com.br/funcionalidades/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.terapee.com.br/funcionalidades/">
 <meta property="og:title" content="Funcionalidades do Terapee | Gestão completa para clínicas de terapia">
-<meta property="og:description" content="Conheça todas as funcionalidades do Terapee: agenda online, prontuário eletrônico, gestão financeira, lembretes via WhatsApp, emissão de recibos e de NFS-e e muito mais.">
+<meta property="og:description" content="Agenda com confirmação no WhatsApp, prontuário eletrônico, cobrança automática, pacotes de sessões e NFS-e em dois cliques: todas as funcionalidades da Terapee para clínicas de terapia.">
 <meta property="og:image" content="https://www.terapee.com.br/og-image.png">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="preload" href="/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -1791,6 +1791,86 @@ img { max-width: 100%; display: block; }
 .footer-contact-item { display: inline-flex; align-items: center; gap: 7px; }
 
 .nav a { white-space: nowrap; }
+
+/* ==== página de funcionalidades ==== */
+.fx-hero{padding-bottom:72px}
+.fx-hero h1,.fx-group-intro h2,.fx-cta-box h2{text-wrap:balance}
+.fx-av svg{width:18px;height:18px}
+.fx-flow .sp-row{position:relative}
+.fx-flow .sp-row:not(:last-child)::after{content:"";position:absolute;left:17px;top:50px;bottom:-12px;width:2px;background:#E7EAF2}
+.fx-flow .sp-av{position:relative;z-index:1}
+
+.fx-jump{position:sticky;top:72px;z-index:50;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid #F0F2F7;border-bottom:1px solid #F0F2F7}
+.fx-jump .container{display:flex;gap:8px;overflow-x:auto;padding-top:12px;padding-bottom:12px;scrollbar-width:none}
+.fx-jump .container::-webkit-scrollbar{display:none}
+.fx-jump a{display:inline-flex;align-items:center;gap:8px;flex:none;padding:8px 16px;border-radius:999px;border:1px solid #E7EAF2;background:#fff;font-size:14px;font-weight:600;color:var(--gray-700);transition:border-color .2s,color .2s,background .2s}
+.fx-jump a:hover{border-color:var(--primary-300);color:var(--primary);background:var(--primary-50)}
+.fx-jump svg{width:16px;height:16px;color:var(--primary)}
+
+.fx-group{padding:96px 0;background:#fff;scroll-margin-top:72px}
+.fx-group-alt{background:#F8F9FE}
+.fx-group-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:64px;align-items:start}
+.fx-group-intro{position:sticky;top:160px}
+.fx-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:700;color:var(--primary);margin-bottom:16px}
+.fx-eyebrow span{display:grid;place-items:center;width:30px;height:30px;border-radius:10px;background:var(--primary-100);font-size:12px;font-weight:800}
+.fx-group-intro h2{font-size:clamp(28px,3.2vw,38px);line-height:1.12;font-weight:800;color:var(--dark);margin-bottom:16px;letter-spacing:-.005em}
+.fx-group-intro p{font-size:17px;line-height:1.65;color:var(--gray-600)}
+.fx-proof{display:flex;align-items:center;gap:16px;margin-top:28px;padding:18px 20px;border-radius:16px;background:#fff;border:1px solid #E7EAF2;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.fx-group-alt .fx-proof{background:#fff}
+.fx-proof strong{flex:none;font-size:30px;line-height:1;font-weight:800;background:linear-gradient(120deg,#444CE7,#7A5AF8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.fx-proof span{font-size:14px;line-height:1.45;font-weight:600;color:var(--gray-700)}
+
+.fx-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.fx-card{display:flex;flex-direction:column;padding:24px;border-radius:18px;background:#fff;border:1px solid #E7EAF2;box-shadow:0 1px 2px rgba(16,24,40,.04);transition:border-color .2s,box-shadow .2s,transform .2s}
+.fx-group:not(.fx-group-alt) .fx-card{background:#FBFBFE}
+.fx-cards>.fx-card:first-child:nth-last-child(odd){grid-column:1/-1;display:grid;grid-template-columns:44px 1fr;column-gap:18px}
+.fx-cards>.fx-card:first-child:nth-last-child(odd)>*:not(.fx-ico){grid-column:2}
+.fx-cards>.fx-card:first-child:nth-last-child(odd) .fx-ico{grid-row:1/span 3}
+.fx-card:hover{border-color:var(--primary-300);box-shadow:0 2px 4px rgba(16,24,40,.04),0 24px 48px -24px rgba(30,36,90,.25);transform:translateY(-2px)}
+.fx-card:focus-visible,.fx-jump a:focus-visible{outline:3px solid var(--primary-300);outline-offset:2px}
+.fx-ico{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--primary-50);color:var(--primary);margin-bottom:16px;flex:none}
+.fx-ico svg{width:22px;height:22px}
+.fx-card h3{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:17px;font-weight:800;color:var(--dark);margin-bottom:8px;line-height:1.3}
+.fx-card p{font-size:14.5px;line-height:1.6;color:var(--gray-600);margin-bottom:18px}
+.fx-tag{font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;background:#F2F4F7;color:#475467;letter-spacing:.01em}
+.fx-more{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--primary)}
+.fx-more svg{width:16px;height:16px;transition:transform .2s}
+.fx-card:hover .fx-more svg{transform:translateX(3px)}
+
+.fx-included{padding:96px 0;background:#fff;border-top:1px solid #F0F2F7}
+.fx-included-head{text-align:center;max-width:640px;margin:0 auto 48px}
+.fx-included-head h2{font-size:clamp(28px,3.2vw,38px);line-height:1.15;font-weight:800;color:var(--dark);margin-bottom:12px}
+.fx-included-head p{font-size:17px;line-height:1.65;color:var(--gray-600)}
+.fx-inc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.fx-inc{padding:24px;border-radius:18px;background:#F8F9FE;border:1px solid #EEF0F6}
+.fx-inc .fx-ico{background:#fff;border:1px solid #E7EAF2}
+.fx-inc h3{font-size:16px;font-weight:800;color:var(--dark);margin-bottom:6px}
+.fx-inc p{font-size:14px;line-height:1.6;color:var(--gray-600)}
+
+.fx-cta{padding:0 0 96px;background:#fff}
+.fx-cta-box{position:relative;overflow:hidden;text-align:center;padding:72px 32px;border-radius:28px;background:radial-gradient(600px 300px at 90% 0%,rgba(122,90,248,.45),transparent 60%),linear-gradient(135deg,#2D31A6 0%,#444CE7 100%)}
+.fx-cta-box h2{font-size:clamp(26px,3.4vw,40px);line-height:1.15;font-weight:800;color:#fff;max-width:720px;margin:0 auto 14px}
+.fx-cta-box p{font-size:17px;line-height:1.6;color:rgba(255,255,255,.85);max-width:600px;margin:0 auto 32px}
+.fx-cta-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.fx-btn-ghost{color:#fff;border:1.5px solid rgba(255,255,255,.45);background:transparent}
+.fx-btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+.fx-cta-box small{display:block;margin-top:18px;font-size:13px;color:rgba(255,255,255,.7)}
+
+@media (max-width:1024px){
+  .fx-group-grid{grid-template-columns:1fr;gap:36px}
+  .fx-group-intro{position:static;max-width:640px}
+  .fx-inc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:768px){
+  .fx-jump{top:72px}
+  .fx-cards>.fx-card:first-child:nth-last-child(odd){display:flex}
+  .fx-group,.fx-included{padding:64px 0}
+  .fx-cards,.fx-inc-grid{grid-template-columns:1fr}
+  .fx-cta{padding-bottom:64px}
+  .fx-cta-box{padding:52px 22px;border-radius:22px}
+  .fx-cta-btns .btn{width:100%;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){.fx-card,.fx-more svg{transition:none}.fx-card:hover{transform:none}}
 </style>
 <link rel="stylesheet" href="/assets/visual.css">
 </head>
@@ -1818,147 +1898,235 @@ img { max-width: 100%; display: block; }
 </header>
 
 
-<section class="subpage-hero">
+<section class="subpage-hero fx-hero">
   <div class="container">
     <nav class="breadcrumb" aria-label="Trilha de navegação">
       <a href="/">Início</a>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
       <span aria-current="page">Funcionalidades</span>
     </nav>
-    <h1>Tudo o que sua clínica precisa em um só lugar</h1>
-    <p class="lead">O Terapee reúne todas as ferramentas essenciais para profissionais e clínicas de terapia — sem complexidade, sem planilhas, sem papelada.</p>
+    <div class="subpage-hero-grid">
+      <div class="subpage-hero-copy">
+        <div class="subpage-badge">Funcionalidades</div>
+        <h1>Da sessão marcada à nota fiscal, <span class="highlight">num sistema só</span></h1>
+        <p class="lead">Agenda, WhatsApp, prontuário, cobrança e NFS-e conversam entre si. O agendamento vira lembrete, o atendimento vira evolução, a cobrança paga vira nota — sem planilha e sem redigitar nada no caminho.</p>
+        <div class="subpage-cta-group">
+          <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary">Testar grátis por 14 dias →</a>
+          <a href="/planos/" class="btn btn-outline">Ver planos e preços</a>
+        </div>
+        <div class="sp-assure"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Sem cartão de crédito</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Migração feita pelo nosso time</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Cancele quando quiser</span></div>
+      </div>
+      <div class="sp-stage" role="img" aria-label="Tela da Terapee: uma sessão de fonoaudiologia passando por agendamento, lembrete no WhatsApp, confirmação, evolução no prontuário, cobrança paga e nota fiscal emitida"><div class="hx-app" aria-hidden="true"><div class="hx-app-top"><div class="hx-dots"><i></i><i></i><i></i></div><div class="hx-app-title">Leo M. · Fonoaudiologia<small>O caminho de uma sessão na Terapee</small></div></div><div class="sp-list fx-flow"><div class="sp-row"><span class="sp-av fx-av" style="background:#444CE7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><div><b>Sessão agendada</b><small>Qua 15/10 · 09h · pacote 4 de 8</small></div><span class="sp-chip b">Você faz</span></div><div class="sp-row"><span class="sp-av fx-av" style="background:#12B76A"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg></span><div><b>Lembrete no WhatsApp</b><small>Enviado 24h antes</small></div><span class="sp-chip g">Automático</span></div><div class="sp-row"><span class="sp-av fx-av" style="background:#12B76A"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span><div><b>Presença confirmada</b><small>Pelo paciente, no WhatsApp</small></div><span class="sp-chip g">Automático</span></div><div class="sp-row"><span class="sp-av fx-av" style="background:#7A5AF8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span><div><b>Evolução no prontuário</b><small>15/10 · 09:52, data e hora automáticas</small></div><span class="sp-chip b">Você faz</span></div><div class="sp-row"><span class="sp-av fx-av" style="background:#F79009"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></span><div><b>Cobrança do pacote</b><small>Pix · R$ 1.040</small></div><span class="sp-chip g">Paga</span></div></div></div><div class="sp-toast" aria-hidden="true"><div class="hx-ico g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-7 10 7z"/></svg></div><div><b>NFS-e emitida</b><small>Emissor Nacional · 2 cliques</small></div></div></div>
+    </div>
   </div>
 </section>
-<section class="features-grid-section" style="background:var(--white)">
+
+<nav class="fx-jump" aria-label="Grupos de funcionalidades">
+  <div class="container"><a href="#agenda-e-atendimento"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Agenda e atendimento</a><a href="#prontuario-e-documentos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>Prontuário e documentos</a><a href="#financeiro-e-nota-fiscal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg>Financeiro e nota fiscal</a><a href="#clinica-e-equipe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M9 9v12M15 9v12"/></svg>Clínica e equipe</a></div>
+</nav>
+
+<section class="fx-group" id="agenda-e-atendimento">
+  <div class="container fx-group-grid">
+    <div class="fx-group-intro">
+      <span class="fx-eyebrow"><span>01</span>Agenda e atendimento</span>
+      <h2>Menos cadeira vazia, menos telefone tocando</h2>
+      <p>A agenda confirma as sessões sozinha pelo WhatsApp, o paciente marca pelo link da clínica e a falta aparece antes do horário, não depois.</p>
+      <div class="fx-proof"><strong>25%</strong><span>menos faltas com lembrete e confirmação no WhatsApp</span></div>
+    </div>
+    <div class="fx-cards">
+        <a href="/funcionalidades/agenda" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+          <h3>Agenda</h3>
+          <p>Sessões avulsas e recorrentes, com visão de dia, semana e mês. Marque a série inteira de uma vez.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="/funcionalidades/lembretes-whatsapp" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg></span>
+          <h3>Lembretes no WhatsApp</h3>
+          <p>O paciente recebe o lembrete 24h antes e confirma com um toque. A resposta cai na agenda sozinha.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="/funcionalidades/agendamento-online" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span>
+          <h3>Agendamento online<span class="fx-tag">Plano Clínica Max</span></h3>
+          <p>Um link da clínica com os horários realmente livres. O paciente pede a sessão e você aprova, ou ela entra direto.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="/funcionalidades/check-in" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span>
+          <h3>Check-in</h3>
+          <p>Realizado, falta ou cancelamento em um clique. A Terapee aponta toda sessão que passou sem baixa.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="/funcionalidades/telemedicina" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-4v12l-6-4z"/></svg></span>
+          <h3>Teleconsulta</h3>
+          <p>Sessão por vídeo no navegador, sem instalar nada, ligada à agenda e ao prontuário.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+    </div>
+  </div>
+</section>
+<section class="fx-group fx-group-alt" id="prontuario-e-documentos">
+  <div class="container fx-group-grid">
+    <div class="fx-group-intro">
+      <span class="fx-eyebrow"><span>02</span>Prontuário e documentos</span>
+      <h2>O registro clínico sem papel e sem pasta perdida</h2>
+      <p>Evolução, anamnese, laudos e contratos ficam na ficha do paciente, com data e hora automáticas. Você encontra tudo em segundos e assina sem imprimir.</p>
+      <div class="fx-proof"><strong>LGPD</strong><span>dados criptografados, acesso por perfil e backup diário</span></div>
+    </div>
+    <div class="fx-cards">
+        <a href="/funcionalidades/prontuario-eletronico" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span>
+          <h3>Prontuário eletrônico</h3>
+          <p>Evoluções registradas com data e hora automáticas, acessíveis do computador, do tablet ou do celular.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="/funcionalidades/gestao-de-pacientes" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span>
+          <h3>Ficha do paciente</h3>
+          <p>Cadastro, histórico de atendimentos e arquivos de cada paciente reunidos no mesmo lugar.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="/funcionalidades/formularios-personalizaveis" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1M9 11h6M9 15h6"/></svg></span>
+          <h3>Formulários</h3>
+          <p>Anamnese, avaliação e termo de consentimento no formato da sua especialidade, preenchidos no digital.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="/funcionalidades/documentos-personalizaveis" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15h6"/></svg></span>
+          <h3>Documentos</h3>
+          <p>Atestados, declarações, relatórios e contratos com a identidade da clínica, gerados com um clique.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="/funcionalidades/assinatura-digital" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span>
+          <h3>Assinatura digital</h3>
+          <p>Assine laudos com certificado A1 ou envie para assinatura eletrônica, com página pública de verificação.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+    </div>
+  </div>
+</section>
+<section class="fx-group" id="financeiro-e-nota-fiscal">
+  <div class="container fx-group-grid">
+    <div class="fx-group-intro">
+      <span class="fx-eyebrow"><span>03</span>Financeiro e nota fiscal</span>
+      <h2>A cobrança sai sozinha e a nota, em dois cliques</h2>
+      <p>Mensalidades e pacotes são cobrados no dia certo. Você dá baixa no que entrou, emite a NFS-e da cobrança paga e fecha o mês sem planilha.</p>
+      <div class="fx-proof"><strong>R$ 0</strong><span>por nota fiscal: a NFS-e vem incluída em todos os planos</span></div>
+    </div>
+    <div class="fx-cards">
+        <a href="/funcionalidades/cobranca-automatica" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></span>
+          <h3>Cobrança automática</h3>
+          <p>Mensalidades e pacotes cobrados pelo WhatsApp e por e-mail, por Pix ou cartão, na data combinada.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="/funcionalidades/pacotes-de-sessoes" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg></span>
+          <h3>Pacotes de sessões</h3>
+          <p>Agende o pacote inteiro e deixe o saldo se controlar: falta justificada devolve a sessão, falta sem aviso desconta.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="/funcionalidades/nota-fiscal-nfse" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-7 10 7z"/></svg></span>
+          <h3>Emissão de NFS-e</h3>
+          <p>A nota sai da cobrança já paga, pelo Emissor Nacional do gov.br. Sem portal da prefeitura, sem redigitar CPF.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="/funcionalidades/emissao-de-recibos" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2h14v20l-3-2-2 2-2-2-2 2-2-2-3 2z"/><path d="M9 7h6M9 11h6M9 15h4"/></svg></span>
+          <h3>Recibos</h3>
+          <p>Recibo em PDF com os dados da sessão já preenchidos, pronto para enviar ao paciente.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="/funcionalidades/gestao-financeira" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/></svg></span>
+          <h3>Gestão financeira</h3>
+          <p>O que entrou e o que falta receber, mês a mês, num painel que se atualiza a cada baixa.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+    </div>
+  </div>
+</section>
+<section class="fx-group fx-group-alt" id="clinica-e-equipe">
+  <div class="container fx-group-grid">
+    <div class="fx-group-intro">
+      <span class="fx-eyebrow"><span>04</span>Clínica e equipe</span>
+      <h2>Feito para clínica com vários profissionais</h2>
+      <p>A secretária enxerga a agenda de todo mundo, cada terapeuta vê só o que precisa, e o repasse do mês sai calculado.</p>
+      <div class="fx-proof"><strong>15+</strong><span>profissionais: até 15 no plano Clínica, ilimitados no Clínica Max</span></div>
+    </div>
+    <div class="fx-cards">
+        <a href="/funcionalidades/multi-agenda" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M9 9v12M15 9v12"/></svg></span>
+          <h3>Multi-agenda<span class="fx-tag">A partir do plano Clínica</span></h3>
+          <p>A agenda de todos os profissionais em um só painel. A recepção marca, remarca e confirma por qualquer um.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="/funcionalidades/repasse-profissionais" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6.4 6.4"/></svg></span>
+          <h3>Repasse para profissionais<span class="fx-tag">A partir do plano Clínica</span></h3>
+          <p>Quanto cada terapeuta recebeu e quanto ficou com a clínica, por percentual ou valor fixo. Exporta em PDF e Excel.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="/ferramentas/calculadora-de-precificacao" class="fx-card">
+          <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h8"/></svg></span>
+          <h3>Calculadora de precificação<span class="fx-tag">Ferramenta grátis</span></h3>
+          <p>Simule o preço da sessão, a margem e o repasse da equipe antes de fechar a tabela.</p>
+          <span class="fx-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+    </div>
+  </div>
+</section>
+
+<section class="fx-included">
   <div class="container">
-    <div class="features-grid">
-<a href="/funcionalidades/agenda" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">📅</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Gestão de agenda</h2>
-  <p>Agendamentos avulsos e recorrentes, visualização diária e mensal.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a>
-
-<a href="/funcionalidades/prontuario-eletronico" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">📋</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Prontuário eletrônico</h2>
-  <p>Registros clínicos seguros, acessíveis de qualquer dispositivo.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a>
-
-<a href="/funcionalidades/lembretes-whatsapp" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">💬</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Lembretes via WhatsApp</h2>
-  <p>Envio automático de lembretes para reduzir faltas em 25%.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a>
-
-<a href="/funcionalidades/telemedicina" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">🎥</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Telemedicina</h2>
-  <p>Atendimento por vídeo no navegador, seguro e integrado à agenda.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a>
-
-<a href="/funcionalidades/gestao-financeira" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">💰</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Gestão financeira</h2>
-  <p>Controle de recebimentos, pendências e relatórios mensais.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a>
-
-<a href="/funcionalidades/gestao-de-pacientes" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">👥</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Gestão de pacientes</h2>
-  <p>Cadastro completo, histórico e dados sempre acessíveis.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a>
-
-<a href="/funcionalidades/emissao-de-recibos" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">🧾</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Emissão de recibos</h2>
-  <p>Recibos em PDF a partir dos seus modelos, com os dados já preenchidos.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a>
-
-<a href="/funcionalidades/nota-fiscal-nfse" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">📑</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Emissão de NFS-e</h2>
-  <p>Nota fiscal direto da cobrança paga, pelo Emissor Nacional do gov.br.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a>
-
-<a href="/funcionalidades/cobranca-automatica" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">📲</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Cobrança automática</h2>
-  <p>Envie cobranças e acompanhe pagamentos sem esforço.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a>
-
-<a href="/funcionalidades/formularios-personalizaveis" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">📝</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Formulários personalizáveis</h2>
-  <p>Anamnese, consentimento e avaliações em formato digital.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a>
-
-<a href="/funcionalidades/multi-agenda" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">🗓️</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Multi-agenda</h2>
-  <p>Gerencie a agenda de toda a equipe em um só painel.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a>
-
-<a href="/funcionalidades/check-in" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">✅</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Check-in de pacientes</h2>
-  <p>Marque realizado, falta ou cancelamento e veja o que ficou sem baixa.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a>
-
-<a href="/funcionalidades/agendamento-online" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">🔗</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Agendamento online</h2>
-  <p>O paciente marca sozinho, no horário que está livre.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a>
-
-<a href="/funcionalidades/pacotes-de-sessoes" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">📦</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Pacotes de sessões</h2>
-  <p>Agende o pacote inteiro e acompanhe o saldo de sessões.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a>
-
-<a href="/funcionalidades/repasse-profissionais" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">💸</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Repasse de profissionais</h2>
-  <p>Quanto cada terapeuta recebeu e quanto ficou com a clínica.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a>
-
-<a href="/funcionalidades/assinatura-digital" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">🔏</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Assinatura digital</h2>
-  <p>Assine laudos e documentos com certificado ou assinatura eletrônica.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a>
-
-<a href="/funcionalidades/documentos-personalizaveis" class="feature-card animate-on-scroll" style="text-decoration:none;display:block;">
-  <div class="feature-icon">📄</div>
-  <h2 style="font-size:16px;font-weight:700;color:var(--dark);margin-bottom:8px;">Documentos personalizáveis</h2>
-  <p>Atestados, declarações, relatórios e contratos gerados automaticamente.</p>
-  <div style="margin-top:16px;font-size:13px;color:var(--primary);font-weight:700;">Saiba mais →</div>
-</a></div>
+    <div class="fx-included-head">
+      <h2>Em todos os planos, sem custo extra</h2>
+      <p>Você começa com 14 dias grátis e todas as funcionalidades liberadas. Depois escolhe o plano pelo tamanho da equipe.</p>
+    </div>
+    <div class="fx-inc-grid">
+      <div class="fx-inc">
+        <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h13l-3-3M20 17H7l3 3"/></svg></span>
+        <h3>Migração feita pelo nosso time</h3>
+        <p>Pacientes, agendamentos e prontuários vêm do seu sistema atual. Já são +28 mil pacientes migrados.</p>
+      </div>
+      <div class="fx-inc">
+        <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="15" height="11" rx="2"/><path d="M6 19h7M9.5 15v4"/><rect x="17" y="9" width="5" height="11" rx="1.5"/></svg></span>
+        <h3>Computador, tablet e celular</h3>
+        <p>Funciona no navegador, sem instalar nada. A agenda vai com você.</p>
+      </div>
+      <div class="fx-inc">
+        <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <h3>Dados protegidos</h3>
+        <p>LGPD, criptografia TLS 1.3 e AES-256, acesso por perfil de função e backup automático diário.</p>
+      </div>
+      <div class="fx-inc">
+        <span class="fx-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-7 10 7z"/></svg></span>
+        <h3>NFS-e sem custo por nota</h3>
+        <p>Emissão de nota fiscal incluída em todos os planos, do Individual ao Clínica Max.</p>
+      </div>
+    </div>
   </div>
 </section>
-<section class="cta-banner">
+
+<section class="fx-cta">
   <div class="container">
-    <h2>Pronto para experimentar?</h2>
-    <p>Teste todas as funcionalidades gratuitamente por 14 dias.</p>
-    <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-white">Criar conta gratuita →</a>
+    <div class="fx-cta-box">
+      <h2>Veja a agenda da sua clínica rodando na Terapee esta semana</h2>
+      <p>Crie a conta e teste todas as funcionalidades por 14 dias. Se você vem de outro sistema, nosso time traz seus pacientes e agendamentos.</p>
+      <div class="fx-cta-btns">
+        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-white">Testar grátis por 14 dias →</a>
+        <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20o%20Terapee" target="_blank" rel="noopener" class="btn fx-btn-ghost">Falar com a gente no WhatsApp</a>
+      </div>
+      <small>Sem cartão de crédito · Cancele quando quiser</small>
+    </div>
   </div>
 </section>
+
 
 
 <footer class="footer">
