@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Planos e preços | Terapee, sistema para clínicas de terapia</title>
-<meta name="description" content="Compare os planos Individual, Clínica e Clínica Max da Terapee. A partir de R$ 55,90/mês, com NFS-e sem custo por nota e 14 dias grátis, sem cartão.">
+<meta name="description" content="Compare os planos Individual, Clínica e Clínica Max da Terapee. A partir de R$ 79/mês por clínica, com NFS-e sem custo por nota e 14 dias grátis, sem cartão.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.terapee.com.br/planos/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.terapee.com.br/planos/">
 <meta property="og:title" content="Planos e preços | Terapee, sistema para clínicas de terapia">
-<meta property="og:description" content="Compare os planos Individual, Clínica e Clínica Max da Terapee. A partir de R$ 55,90/mês, com NFS-e sem custo por nota e 14 dias grátis, sem cartão.">
+<meta property="og:description" content="Compare os planos Individual, Clínica e Clínica Max da Terapee. A partir de R$ 79/mês por clínica, com NFS-e sem custo por nota e 14 dias grátis, sem cartão.">
 <meta property="og:image" content="https://www.terapee.com.br/og-image.png">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="preload" href="/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -1766,7 +1766,7 @@ img { max-width: 100%; display: block; }
           "name": "Como é feito o pagamento?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pelo cartão de crédito, no mensal ou no anual. No anual, o valor do ano é cobrado de uma vez, com 20% de desconto."
+            "text": "Pelo cartão de crédito, no mensal ou no anual. No anual, o valor do ano inteiro é cobrado em parcela única, com 20% de desconto."
           }
         },
         {
@@ -1774,7 +1774,7 @@ img { max-width: 100%; display: block; }
           "name": "Quanto economizo no plano anual?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "20% sobre o mensal. No plano Clínica, por exemplo, a mensalidade cai de R$ 89,90 para R$ 71,92."
+            "text": "20% sobre o mensal. No plano Clínica, por exemplo, o valor equivale a R$ 183,20 por mês em vez de R$ 229: são R$ 2.198,40 pagos em parcela única, uma economia de R$ 549,60 no ano."
           }
         },
         {
@@ -1905,6 +1905,7 @@ img { max-width: 100%; display: block; }
 .pl-table thead th:first-child{border-top-left-radius:20px}.pl-table thead th:last-child{border-top-right-radius:20px}
 .pl-hname{display:block}
 .pl-hprice{display:block;font-size:13px;font-weight:600;color:var(--gray-500);margin-top:2px}
+.pl-hnote{display:block;font-size:12px;font-weight:500;line-height:16px;min-height:16px}
 .pl-hbtn{margin-top:10px;padding:8px 16px!important;font-size:13px!important}
 .pl-inc{font-size:13px;font-weight:700;color:#05603A}
 .pl-table thead th small{display:block;font-size:13px;font-weight:600;color:var(--gray-500);margin-top:4px}
@@ -1980,7 +1981,7 @@ img { max-width: 100%; display: block; }
       <span aria-current="page">Planos</span>
     </nav>
     <h1>Planos e preços da Terapee</h1>
-    <p class="lead">Teste qualquer plano por 14 dias, sem cartão de crédito. A emissão de NFS-e está incluída em todos, sem custo por nota.</p>
+    <p class="lead">Teste qualquer plano por 14 dias, sem cartão de crédito. O preço é fixo por clínica, não por profissional. A emissão de NFS-e está incluída em todos, sem custo por nota.</p>
     <div class="pl-toggle" role="group" aria-label="Período de cobrança">
       <button type="button" class="pl-tbtn active" data-period="mensal" aria-pressed="true">Mensal</button>
       <button type="button" class="pl-tbtn" data-period="anual" aria-pressed="false">Anual <span class="pl-off">−20%</span></button>
@@ -1994,8 +1995,8 @@ img { max-width: 100%; display: block; }
       <div class="pl-card">
         <h2>Individual</h2>
         <p class="pl-for">Para quem atende sozinho, com ou sem CNPJ.</p>
-        <div class="pl-price"><small>R$</small><b class="pl-amt" data-monthly="55,90" data-yearly="44,72">55,90</b><span>/mês</span></div>
-        <p class="pl-bill" data-monthly="Cobrado mensalmente" data-yearly="R$ 536,64 cobrados uma vez por ano">Cobrado mensalmente</p>
+        <div class="pl-price"><small>R$</small><b class="pl-amt" data-monthly="79" data-yearly="63,20">79</b><span>/mês</span></div>
+        <p class="pl-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 758,40 por ano (economia de R$ 189,60)">Cobrado mensalmente</p>
         <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline pl-cta">Testar o Individual</a>
         <ul>
           <li><b>1 usuário</b></li>
@@ -2008,8 +2009,8 @@ img { max-width: 100%; display: block; }
         <span class="pl-badge">Recomendado para clínicas</span>
         <h2>Clínica</h2>
         <p class="pl-for">Para clínicas com mais de um profissional e recepção.</p>
-        <div class="pl-price"><small>R$</small><b class="pl-amt" data-monthly="89,90" data-yearly="71,92">89,90</b><span>/mês</span></div>
-        <p class="pl-bill" data-monthly="Cobrado mensalmente" data-yearly="R$ 863,04 cobrados uma vez por ano">Cobrado mensalmente</p>
+        <div class="pl-price"><small>R$</small><b class="pl-amt" data-monthly="229" data-yearly="183,20">229</b><span>/mês</span></div>
+        <p class="pl-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 2.198,40 por ano (economia de R$ 549,60)">Cobrado mensalmente</p>
         <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary pl-cta">Testar o Clínica</a>
         <ul>
           <li><b>Até 15 usuários</b></li>
@@ -2021,8 +2022,8 @@ img { max-width: 100%; display: block; }
       <div class="pl-card">
         <h2>Clínica Max</h2>
         <p class="pl-for">Para clínicas que querem as mensagens saindo do número próprio.</p>
-        <div class="pl-price"><small>R$</small><b class="pl-amt" data-monthly="175,00" data-yearly="140,00">175,00</b><span>/mês</span></div>
-        <p class="pl-bill" data-monthly="Cobrado mensalmente" data-yearly="R$ 1.680,00 cobrados uma vez por ano">Cobrado mensalmente</p>
+        <div class="pl-price"><small>R$</small><b class="pl-amt" data-monthly="349" data-yearly="279,20">349</b><span>/mês</span></div>
+        <p class="pl-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 3.350,40 por ano (economia de R$ 837,60)">Cobrado mensalmente</p>
         <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline pl-cta">Testar o Clínica Max</a>
         <ul>
           <li><b>Usuários ilimitados</b></li>
@@ -2045,9 +2046,9 @@ img { max-width: 100%; display: block; }
         <thead>
           <tr>
             <th scope="col"><span class="pl-sr">Recurso</span></th>
-            <th scope="col"><span class="pl-hname"><span class="pl-long">Individual</span><span class="pl-short">Indiv.</span></span><span class="pl-hprice"><span data-monthly="R$ 55,90" data-yearly="R$ 44,72">R$ 55,90</span>/mês</span><a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline pl-hbtn">Testar grátis</a></th>
-            <th scope="col" class="pl-col-hot"><span class="pl-hname">Clínica</span><span class="pl-hprice"><span data-monthly="R$ 89,90" data-yearly="R$ 71,92">R$ 89,90</span>/mês</span><a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary pl-hbtn">Testar grátis</a></th>
-            <th scope="col"><span class="pl-hname"><span class="pl-long">Clínica Max</span><span class="pl-short">Max</span></span><span class="pl-hprice"><span data-monthly="R$ 175,00" data-yearly="R$ 140,00">R$ 175,00</span>/mês</span><a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline pl-hbtn">Testar grátis</a></th>
+            <th scope="col"><span class="pl-hname"><span class="pl-long">Individual</span><span class="pl-short">Indiv.</span></span><span class="pl-hprice"><span data-monthly="R$ 79" data-yearly="R$ 63,20">R$ 79</span>/mês<span class="pl-hnote" data-monthly="" data-yearly="pago 1x/ano"></span></span><a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline pl-hbtn">Testar grátis</a></th>
+            <th scope="col" class="pl-col-hot"><span class="pl-hname">Clínica</span><span class="pl-hprice"><span data-monthly="R$ 229" data-yearly="R$ 183,20">R$ 229</span>/mês<span class="pl-hnote" data-monthly="" data-yearly="pago 1x/ano"></span></span><a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary pl-hbtn">Testar grátis</a></th>
+            <th scope="col"><span class="pl-hname"><span class="pl-long">Clínica Max</span><span class="pl-short">Max</span></span><span class="pl-hprice"><span data-monthly="R$ 349" data-yearly="R$ 279,20">R$ 349</span>/mês<span class="pl-hnote" data-monthly="" data-yearly="pago 1x/ano"></span></span><a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline pl-hbtn">Testar grátis</a></th>
           </tr>
         </thead>
         <tbody>
@@ -2117,7 +2118,7 @@ img { max-width: 100%; display: block; }
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Pelo cartão de crédito, no mensal ou no anual. No anual, o valor do ano é cobrado de uma vez, com 20% de desconto.</div>
+            <div class="faq-answer-inner">Pelo cartão de crédito, no mensal ou no anual. No anual, o valor do ano inteiro é cobrado em parcela única, com 20% de desconto.</div>
           </div>
         </div>
         <div class="faq-item">
@@ -2126,7 +2127,7 @@ img { max-width: 100%; display: block; }
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">20% sobre o mensal. No plano Clínica, por exemplo, a mensalidade cai de R$ 89,90 para R$ 71,92.</div>
+            <div class="faq-answer-inner">20% sobre o mensal. No plano Clínica, por exemplo, o valor equivale a R$ 183,20 por mês em vez de R$ 229: são R$ 2.198,40 pagos em parcela única, uma economia de R$ 549,60 no ano.</div>
           </div>
         </div>
         <div class="faq-item">
