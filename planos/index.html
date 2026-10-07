@@ -1779,6 +1779,14 @@ img { max-width: 100%; display: block; }
         },
         {
           "@type": "Question",
+          "name": "O preço muda se eu contratar mais profissionais?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O preço é por clínica, não por profissional. O Clínica cobre até 15 usuários pelo mesmo valor, e o Clínica Max não tem limite de usuários."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Posso mudar de plano depois?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -1947,6 +1955,51 @@ img { max-width: 100%; display: block; }
   .pl-table tfoot{display:none}
 }
 @media (max-width:900px){.pl-cards,.pl-which-grid{grid-template-columns:1fr}.pl-hot{order:-1}.pl-for{min-height:0}}
+/* ==== refresh visual dos planos ==== */
+.pl-hero{padding-bottom:64px}
+.pl-hero h1,.pl-final-box h2{text-wrap:balance}
+.pl-hero h1{max-width:820px}
+.pl-cards-section{padding:0 0 72px;background:linear-gradient(#F8F9FE,#fff)}
+.pl-cards{margin-top:-8px}
+.pl-card{border-color:#E7EAF2;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.pl-hot{border:2px solid var(--primary);box-shadow:0 2px 4px rgba(16,24,40,.04),0 32px 64px -24px rgba(68,76,231,.4)}
+.pl-head{display:flex;align-items:center;gap:12px}
+.pl-ico{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--primary-50);color:var(--primary);flex:none}
+.pl-ico svg{width:20px;height:20px}
+.pl-hot .pl-ico{background:var(--primary);color:#fff}
+.pl-per{display:inline-flex;align-self:flex-start;margin-top:12px;font-size:13px;font-weight:700;color:#05603A;background:#E7F8EF;padding:4px 10px;border-radius:999px}
+.pl-per-empty{visibility:hidden}
+.pl-ul-title{margin-top:24px;padding-top:20px;border-top:1px solid var(--gray-100);font-size:14px;color:var(--gray-600)}
+.pl-ul-title b{color:var(--dark)}
+.pl-card ul{margin-top:12px;padding-top:0;border-top:0}
+.pl-card li::before{content:none}
+.pl-card li svg{width:18px;height:18px;color:var(--primary);flex:none;margin-top:3px}
+.pl-all{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:36px;font-size:14px;font-weight:600;color:var(--gray-700)}
+.pl-all li{display:inline-flex;align-items:center;gap:8px}
+.pl-all svg{width:18px;height:18px;color:#12B76A;flex:none}
+.pl-which{padding:88px 0 80px;background:#fff;border-top:1px solid var(--gray-100)}
+.pl-which-grid>div{display:flex;flex-direction:column;border-color:#E7EAF2;border-radius:20px;padding:28px;background:#F8F9FE}
+.pl-which-grid .pl-ico{margin-bottom:16px;background:#fff;border:1px solid #E7EAF2}
+.pl-which-grid .pl-which-hot{background:#fff;border:2px solid var(--primary-200)}
+.pl-which-grid .pl-which-hot .pl-ico{background:var(--primary);color:#fff;border-color:var(--primary)}
+.pl-which-grid a{margin-top:auto;padding-top:16px;font-size:14px;font-weight:700;color:var(--primary)}
+.pl-final{padding:24px 0 96px;background:#fff}
+.pl-final-box{padding:72px 32px;background:radial-gradient(600px 300px at 90% 0%,rgba(122,90,248,.45),transparent 60%),linear-gradient(135deg,#2D31A6 0%,#444CE7 100%)}
+.pl-final-box h2{max-width:720px;margin:0 auto;line-height:1.15}
+.pl-final-box p{color:rgba(255,255,255,.85);font-size:17px;line-height:1.6;max-width:600px;margin:14px auto 32px}
+.pl-final-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.pl-btn-ghost{color:#fff;border:1.5px solid rgba(255,255,255,.45);background:transparent}
+.pl-btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+.pl-final-box small{display:block;margin-top:18px;font-size:13px;color:rgba(255,255,255,.7)}
+@media (max-width:900px){.pl-per-empty{display:none}}
+@media (max-width:640px){
+  .pl-card{padding:26px 22px}
+  .pl-all{justify-content:flex-start;flex-direction:column;align-items:flex-start;gap:10px}
+  .pl-which{padding:64px 0 56px}
+  .pl-final{padding-bottom:64px}
+  .pl-final-box{padding:52px 22px;border-radius:22px}
+  .pl-final-btns .btn{width:100%;justify-content:center}
+}
 </style>
 <link rel="stylesheet" href="/assets/visual.css">
 </head>
@@ -1980,8 +2033,9 @@ img { max-width: 100%; display: block; }
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
       <span aria-current="page">Planos</span>
     </nav>
-    <h1>Planos e preços da Terapee</h1>
-    <p class="lead">Teste qualquer plano por 14 dias, sem cartão de crédito. O preço é fixo por clínica, não por profissional. A emissão de NFS-e está incluída em todos, sem custo por nota.</p>
+    <div class="subpage-badge">Planos e preços</div>
+    <h1>Um preço para a clínica inteira, <span class="highlight">não por profissional</span></h1>
+    <p class="lead">Escolha o plano pelo tamanho da equipe. Agenda, WhatsApp, prontuário, cobrança e NFS-e vêm em todos, e você testa qualquer um por 14 dias antes de pagar.</p>
     <div class="pl-toggle" role="group" aria-label="Período de cobrança">
       <button type="button" class="pl-tbtn active" data-period="mensal" aria-pressed="true">Mensal</button>
       <button type="button" class="pl-tbtn" data-period="anual" aria-pressed="false">Anual <span class="pl-off">−20%</span></button>
@@ -1993,47 +2047,57 @@ img { max-width: 100%; display: block; }
   <div class="container">
     <div class="pl-cards">
       <div class="pl-card">
-        <h2>Individual</h2>
+        <div class="pl-head"><span class="pl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span><h2>Individual</h2></div>
         <p class="pl-for">Para quem atende sozinho, com ou sem CNPJ.</p>
         <div class="pl-price"><small>R$</small><b class="pl-amt" data-monthly="79" data-yearly="63,20">79</b><span>/mês</span></div>
         <p class="pl-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 758,40 por ano (economia de R$ 189,60)">Cobrado mensalmente</p>
-        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline pl-cta">Testar o Individual</a>
-        <ul>
-          <li><b>1 usuário</b></li>
-          <li>Agenda, prontuário e teleconsulta</li>
-          <li>Lembretes e cobranças pelo WhatsApp</li>
-          <li>NFS-e sem custo por nota</li>
-        </ul>
+        <p class="pl-per pl-per-empty" aria-hidden="true">&nbsp;</p>
+        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline pl-cta">Testar o Individual grátis</a>
+        <p class="pl-ul-title"><b>1 usuário</b>, com:</p>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Agenda com sessões recorrentes e pacotes</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Lembretes e confirmação pelo WhatsApp</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Prontuário, formulários e teleconsulta</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Cobrança pelo WhatsApp, recibos e documentos</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>NFS-e sem custo por nota</span></li></ul>
       </div>
       <div class="pl-card pl-hot">
         <span class="pl-badge">Recomendado para clínicas</span>
-        <h2>Clínica</h2>
+        <div class="pl-head"><span class="pl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span><h2>Clínica</h2></div>
         <p class="pl-for">Para clínicas com mais de um profissional e recepção.</p>
         <div class="pl-price"><small>R$</small><b class="pl-amt" data-monthly="229" data-yearly="183,20">229</b><span>/mês</span></div>
         <p class="pl-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 2.198,40 por ano (economia de R$ 549,60)">Cobrado mensalmente</p>
-        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary pl-cta">Testar o Clínica</a>
-        <ul>
-          <li><b>Até 15 usuários</b></li>
-          <li>Multi-agenda: a equipe toda numa tela</li>
-          <li>Cadastro de secretária</li>
-          <li>Tudo do Individual</li>
-        </ul>
+        <p class="pl-per" data-monthly="R$ 15,27 por profissional, com a equipe de 15" data-yearly="R$ 12,21 por profissional, com a equipe de 15">R$ 15,27 por profissional, com a equipe de 15</p>
+        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary pl-cta">Testar o Clínica grátis</a>
+        <p class="pl-ul-title">Tudo do Individual, com <b>até 15 usuários</b> e:</p>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Multi-agenda: a equipe toda numa tela</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Acesso para a secretária marcar e confirmar</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Repasse calculado para cada profissional</span></li></ul>
       </div>
       <div class="pl-card">
-        <h2>Clínica Max</h2>
+        <div class="pl-head"><span class="pl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg></span><h2>Clínica Max</h2></div>
         <p class="pl-for">Para clínicas que querem as mensagens saindo do número próprio.</p>
         <div class="pl-price"><small>R$</small><b class="pl-amt" data-monthly="349" data-yearly="279,20">349</b><span>/mês</span></div>
         <p class="pl-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 3.350,40 por ano (economia de R$ 837,60)">Cobrado mensalmente</p>
-        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline pl-cta">Testar o Clínica Max</a>
-        <ul>
-          <li><b>Usuários ilimitados</b></li>
-          <li>WhatsApp próprio da clínica, incluído</li>
-          <li>Página de agendamento online</li>
-          <li>Seu logo na plataforma</li>
-          <li>Lembrete de aniversariantes</li>
-        </ul>
+        <p class="pl-per">Sem limite de profissionais</p>
+        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline pl-cta">Testar o Clínica Max grátis</a>
+        <p class="pl-ul-title">Tudo do Clínica, com <b>usuários ilimitados</b> e:</p>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>WhatsApp próprio da clínica, já incluído</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Página de agendamento online</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Seu logo na plataforma</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Lembrete de aniversariantes</span></li></ul>
       </div>
     </div>
+    <ul class="pl-all" aria-label="Em todos os planos">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>14 dias grátis, sem cartão</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Agendamentos ilimitados</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>NFS-e sem custo por nota</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Migração feita pelo nosso time</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Cancele quando quiser</li>
+    </ul>
+  </div>
+</section>
+
+<section class="pl-which">
+  <div class="container">
+    <h2 class="section-title">Qual plano é o meu?</h2>
+    <p class="section-subtitle" style="margin:0 auto;text-align:center;">A conta é simples: quantas pessoas vão usar a Terapee e de qual número as mensagens devem sair.</p>
+    <div class="pl-which-grid">
+      <div><span class="pl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span><b>Atende sozinho</b><p>Você é a agenda, a recepção e o financeiro. O <strong>Individual</strong> tem tudo isso para um profissional, inclusive NFS-e.</p><a href="https://web.terapee.com.br/register" target="_blank">Testar o Individual →</a></div>
+      <div class="pl-which-hot"><span class="pl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span><b>Tem equipe ou recepção</b><p>De 2 a 15 pessoas. O <strong>Clínica</strong> põe a agenda de todos numa tela, dá acesso à secretária e calcula o repasse.</p><a href="https://web.terapee.com.br/register" target="_blank">Testar o Clínica →</a></div>
+      <div><span class="pl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg></span><b>Equipe grande ou marca própria</b><p>Mais de 15 pessoas, ou mensagens saindo do número da clínica. O <strong>Clínica Max</strong> libera isso e a página de agendamento online.</p><a href="https://web.terapee.com.br/register" target="_blank">Testar o Clínica Max →</a></div>
+    </div>
+    <p class="pl-note">Ainda em dúvida? <a href="/ferramentas/calculadora-de-precificacao">Use a calculadora grátis</a> para ver quanto sua clínica lucra por sessão, ou <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20quero%20ajuda%20para%20escolher%20o%20plano%20da%20Terapee" target="_blank" rel="noopener">fale com o nosso time pelo WhatsApp</a>.</p>
   </div>
 </section>
 
@@ -2086,18 +2150,6 @@ img { max-width: 100%; display: block; }
   </div>
 </section>
 
-<section class="pl-which">
-  <div class="container">
-    <h2 class="section-title">Qual plano é o meu?</h2>
-    <div class="pl-which-grid">
-      <div><b>Atende sozinho?</b><p>O <strong>Individual</strong> tem agenda, prontuário, lembretes, cobrança e NFS-e para um profissional.</p></div>
-      <div><b>Tem equipe ou recepção?</b><p>O <strong>Clínica</strong> coloca a agenda de até 15 pessoas numa tela só e dá acesso à secretária.</p></div>
-      <div><b>Clínica grande ou com marca própria?</b><p>O <strong>Clínica Max</strong> libera usuários ilimitados, o WhatsApp da clínica, a página de agendamento online e o lembrete de aniversariantes.</p></div>
-    </div>
-    <p class="pl-note">Ainda em dúvida? <a href="/ferramentas/calculadora-de-precificacao">Use a calculadora grátis</a> para ver quanto sua clínica lucra por sessão, ou <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20quero%20ajuda%20para%20escolher%20o%20plano%20da%20Terapee" target="_blank" rel="noopener">fale com o nosso time pelo WhatsApp</a>.</p>
-  </div>
-</section>
-
 <section class="faq section" id="faq">
   <div class="container">
     <h2 class="section-title" style="text-align:center;">Dúvidas sobre os planos</h2>
@@ -2128,6 +2180,15 @@ img { max-width: 100%; display: block; }
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">20% sobre o mensal. No plano Clínica, por exemplo, o valor equivale a R$ 183,20 por mês em vez de R$ 229: são R$ 2.198,40 pagos em parcela única, uma economia de R$ 549,60 no ano.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            O preço muda se eu contratar mais profissionais?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Não. O preço é por clínica, não por profissional. O Clínica cobre até 15 usuários pelo mesmo valor, e o Clínica Max não tem limite de usuários.</div>
           </div>
         </div>
         <div class="faq-item">
@@ -2183,9 +2244,13 @@ img { max-width: 100%; display: block; }
 <section class="pl-final">
   <div class="container">
     <div class="pl-final-box">
-      <h2>Comece hoje, sem cartão de crédito.</h2>
-      <p>14 dias grátis em qualquer plano. Se vier de outro sistema, nosso time faz a migração.</p>
-      <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary">Testar grátis por 14 dias →</a>
+      <h2>Teste com a agenda de verdade da sua clínica</h2>
+      <p>14 dias grátis em qualquer plano, sem cartão de crédito. Se você vem de outro sistema, nosso time traz seus pacientes e agendamentos.</p>
+      <div class="pl-final-btns">
+        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-white">Testar grátis por 14 dias →</a>
+        <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20quero%20ajuda%20para%20escolher%20o%20plano%20da%20Terapee" target="_blank" rel="noopener" class="btn pl-btn-ghost">Falar com a gente no WhatsApp</a>
+      </div>
+      <small>Cancele quando quiser · Seus dados são seus</small>
     </div>
   </div>
 </section>
