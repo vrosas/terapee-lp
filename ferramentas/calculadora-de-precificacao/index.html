@@ -2045,6 +2045,11 @@ window.addEventListener('scroll', () => {
 
   syncInputs();
   renderProList();
+  // Links externos podem abrir direto numa aba (?aba=equipe ou ?aba=preco).
+  try {
+    const aba = new URLSearchParams(location.search).get('aba');
+    if (aba === 'equipe' || aba === 'preco') state.tab = aba;
+  } catch (e) {}
   setTab(state.tab === 'equipe' ? 'equipe' : 'preco');
   renderAll();
 })();
