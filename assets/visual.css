@@ -1,0 +1,114 @@
+/* Terapee: visual compartilhado das páginas internas.
+   Mesmo topo da home (fundo em gradiente com grade, selo em pílula, título
+   com destaque em gradiente, botões e checks) e a tela do sistema ao lado. */
+
+/* ---------- Topo das páginas internas ---------- */
+.subpage-hero{position:relative;padding:136px 0 88px;overflow:hidden;background:radial-gradient(900px 500px at 85% 10%,rgba(68,76,231,.12),transparent 60%),radial-gradient(700px 400px at 0% 100%,rgba(18,183,106,.07),transparent 60%),linear-gradient(#fff,#F8F9FE)}
+.subpage-hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#F0F2F7 1px,transparent 1px),linear-gradient(90deg,#F0F2F7 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 20%,transparent 75%);opacity:.7;pointer-events:none}
+.subpage-hero>.container{position:relative}
+.subpage-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#2A3142;border:1px solid #E7EAF2;font-size:13px;font-weight:600;letter-spacing:0;text-transform:none;padding:6px 14px;border-radius:999px;margin-bottom:22px}
+.subpage-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 4px var(--primary-100)}
+.subpage-hero h1{font-size:clamp(34px,4.2vw,52px);line-height:1.08;letter-spacing:-.005em;font-weight:800}
+.subpage-hero h1 .highlight{background:linear-gradient(120deg,#444CE7,#7A5AF8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.subpage-hero p.lead{font-size:18px;line-height:1.65;margin-bottom:32px}
+.subpage-cta-group{margin-bottom:22px}
+.sp-assure{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px;font-weight:600;color:var(--gray-700)}
+.sp-assure span{display:inline-flex;align-items:center;gap:8px}
+.sp-assure svg{width:18px;height:18px;color:#12B76A;flex:none}
+.subpage-hero-art{border:1px solid #E7EAF2;box-shadow:0 2px 4px rgba(16,24,40,.04),0 32px 64px -24px rgba(30,36,90,.28)!important}
+
+/* ---------- Tela do sistema (páginas sem ilustração) ---------- */
+.subpage-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.subpage-hero-copy h1,.subpage-hero-copy p.lead{max-width:none}
+@media (max-width:900px){.subpage-hero-grid{grid-template-columns:1fr;gap:36px}}
+.sp-stage{position:relative;display:block;padding-bottom:28px}
+.sp-stage .hx-app{position:relative;inset:auto;width:100%}
+.sp-stage .hx-stage{height:auto;width:100%}
+.sp-list{padding:6px 18px 10px}
+.sp-row{display:grid;grid-template-columns:36px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #F0F2F7;font-size:13px}
+.sp-row:last-child{border-bottom:0}
+.sp-av{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:12px}
+.sp-row b{display:block;font-size:14px;color:var(--dark)}
+.sp-row small{color:#8A93A6;font-size:12px}
+.sp-chip{font-size:11.5px;font-weight:700;padding:5px 10px;border-radius:999px;white-space:nowrap}
+.sp-chip.g{background:#E7F8EF;color:#05603A}.sp-chip.a{background:#FEF4E6;color:#93370D}.sp-chip.r{background:#FEECEB;color:#B42318}.sp-chip.b{background:#EEF0FF;color:#2D31A6}.sp-chip.n{background:#F2F4F7;color:#475467}
+.sp-toast{position:absolute;right:-14px;bottom:-22px;width:270px;padding:14px 16px;background:#fff;border-radius:18px;border:1px solid #E7EAF2;box-shadow:0 2px 4px rgba(16,24,40,.04),0 32px 64px -24px rgba(30,36,90,.28);display:flex;gap:12px;align-items:center;animation:hxbob 6s ease-in-out infinite}
+.sp-toast b{display:block;font-size:14px;color:var(--dark)}
+.sp-toast small{color:#5B6476;font-size:12px}
+.sp-stage .hx-wa{left:-24px;bottom:-30px}
+.sp-stage .hx-toast{top:auto;bottom:40px}
+@media (max-width:900px){.sp-stage{min-height:0;margin-top:8px}}
+@media (max-width:640px){
+  .subpage-hero{padding:104px 0 56px}
+  .subpage-cta-group .btn{width:100%;justify-content:center}
+  .sp-toast{position:relative;right:auto;bottom:auto;width:auto;margin:-18px 12px 0;animation:none}
+}
+
+/* ---------- Rodapé ---------- */
+.made-in{max-width:1200px;margin:0 auto;padding:22px 24px 30px;border-top:1px solid var(--gray-200);text-align:center;font-size:14px;font-weight:500;color:var(--gray-500);display:flex;align-items:center;justify-content:center;gap:6px}
+.made-in svg{width:16px;height:16px;color:#E5484D}
+
+/* ========== HERO COM TELA DO SISTEMA ========== */
+.hx{position:relative;padding:136px 0 96px;overflow:hidden;background:radial-gradient(900px 500px at 85% 10%,rgba(68,76,231,.12),transparent 60%),radial-gradient(700px 400px at 0% 100%,rgba(18,183,106,.07),transparent 60%),linear-gradient(#fff,#F8F9FE)}
+.hx::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#F0F2F7 1px,transparent 1px),linear-gradient(90deg,#F0F2F7 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 20%,transparent 75%);opacity:.7;pointer-events:none}
+.hx-grid{position:relative;display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center}
+.hx-pill{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border-radius:999px;background:#fff;border:1px solid #E7EAF2;font-size:14px;font-weight:600;color:#2A3142}
+.hx-pill b{background:var(--primary-bg);color:var(--primary);padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700}
+.hx h1{font-size:clamp(38px,4.6vw,58px);line-height:1.06;letter-spacing:-.005em;font-weight:800;color:var(--dark);margin-top:24px}
+.hx-hl{background:linear-gradient(120deg,#444CE7,#7A5AF8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hx-lead{font-size:19px;line-height:1.6;color:var(--gray-600);margin-top:24px;max-width:560px}
+.hx-ctas{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
+.hx-assure{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;font-size:14px;font-weight:600;color:var(--gray-700)}
+.hx-assure span{display:inline-flex;align-items:center;gap:8px}
+.hx-assure svg{width:18px;height:18px;color:#12B76A;flex:none}
+.hx-stage{position:relative;height:560px}
+.hx-app{position:absolute;inset:0 0 auto 24px;background:#fff;border-radius:22px;border:1px solid #E7EAF2;box-shadow:0 2px 4px rgba(16,24,40,.04),0 32px 64px -24px rgba(30,36,90,.28);overflow:hidden}
+.hx-app-top{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid #F0F2F7}
+.hx-dots{display:flex;gap:6px}.hx-dots i{width:10px;height:10px;border-radius:50%;background:#E4E7EF;display:block}
+.hx-app-title{font-weight:700;font-size:14px;color:var(--dark)}
+.hx-app-title small{display:block;font-weight:500;font-size:12px;color:#8A93A6}
+.hx-seg{margin-left:auto;display:flex;background:#F7F8FC;border-radius:10px;padding:3px;font-size:12px;font-weight:600;color:#5B6476}
+.hx-seg span{padding:5px 10px;border-radius:8px}.hx-seg .on{background:#fff;color:var(--dark);box-shadow:0 1px 2px rgba(16,24,40,.08)}
+.hx-week{display:grid;grid-template-columns:44px repeat(5,1fr);font-size:11px}
+.hx-hd{padding:10px 8px;font-weight:700;color:#5B6476;border-bottom:1px solid #F0F2F7;text-align:center}
+.hx-hd b{display:block;font-size:16px;color:var(--dark)}
+.hx-hd.today b{color:var(--primary)}
+.hx-t{color:#8A93A6;padding:6px 6px 0;height:58px;border-right:1px solid #F0F2F7;font-weight:600}
+.hx-c{height:58px;border-bottom:1px dashed #F0F2F7;border-right:1px solid #F0F2F7;padding:4px}
+.hx-ev{border-radius:9px;padding:6px 8px;height:50px;font-weight:600;line-height:1.25;overflow:hidden;border-left:3px solid}
+.hx-ev small{display:block;font-weight:500;opacity:.8;font-size:10px;margin-top:2px}
+.hx-ev.ok{background:#E7F8EF;border-color:#12B76A;color:#05603A}
+.hx-ev.wait{background:#FEF4E6;border-color:#F79009;color:#93370D}
+.hx-ev.p{background:#EEF0FF;border-color:var(--primary);color:#2D31A6}
+.hx-ev.no{background:#F2F4F7;border-color:#98A2B3;color:#475467;text-decoration:line-through}
+.hx-float{position:absolute;background:#fff;border-radius:18px;border:1px solid #E7EAF2;box-shadow:0 2px 4px rgba(16,24,40,.04),0 32px 64px -24px rgba(30,36,90,.28);animation:hxbob 6s ease-in-out infinite}
+@keyframes hxbob{50%{transform:translateY(-8px)}}
+.hx-wa{left:-28px;bottom:6px;width:280px;overflow:hidden;animation-delay:-2s}
+.hx-wa-hd{background:#075E54;color:#fff;padding:10px 14px;display:flex;gap:10px;align-items:center;font-size:13px;font-weight:700}
+.hx-wa-hd i{width:28px;height:28px;border-radius:50%;background:#fff url("/logo-terapee.svg") center/70% no-repeat;display:block}
+.hx-wa-hd small{display:block;font-weight:500;opacity:.8;font-size:11px}
+.hx-wa-body{background:#EFE7DD;padding:12px;display:flex;flex-direction:column;gap:8px;font-size:12.5px;line-height:1.4;color:#111}
+.hx-bub{background:#fff;padding:8px 10px;border-radius:10px 10px 10px 2px;max-width:92%;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+.hx-act{margin-top:8px;border-top:1px solid #EEE;padding-top:7px;color:#027EB5;font-weight:700;text-align:center}
+.hx-bub.me{align-self:flex-end;background:#D9FDD3;border-radius:10px 10px 2px 10px}
+.hx-bub time{display:block;text-align:right;font-size:10px;color:#667781;margin-top:2px}
+.hx-toast{right:-14px;top:300px;width:290px;padding:16px;animation-delay:-4s}
+.hx-row{display:flex;align-items:center;gap:12px}
+.hx-ico{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;flex:none}
+.hx-ico svg{width:20px;height:20px}
+.hx-ico.g{background:#E7F8EF;color:#12B76A}.hx-ico.b{background:#EEF0FF;color:var(--primary)}
+.hx-toast b{font-size:14px;display:block;color:var(--dark)}
+.hx-toast small{color:#5B6476;font-size:12px}
+.hx-sep{height:1px;background:#F0F2F7;margin:12px 0}
+@media (max-width:1080px){.hx-grid{grid-template-columns:1fr}.hx-stage{max-width:620px;width:100%;margin:8px auto 0}}
+@media (max-width:640px){
+  .hx{padding:104px 0 56px}.hx-pill{font-size:13px;gap:8px}.hx-pill b{white-space:nowrap}.hx h1{font-size:38px}.hx-lead{font-size:17px}
+  .hx-ctas .btn{width:100%;justify-content:center}
+  .hx-stage{height:auto;padding-bottom:12px}
+  .hx-app{position:relative;inset:auto}
+  .hx-seg{display:none}
+  .hx-week{grid-template-columns:34px repeat(3,1fr)}.hx-week .d4,.hx-week .d5{display:none}
+  .hx-wa{position:relative;left:auto;bottom:auto;width:auto;margin:-40px 12px 0;animation:none}
+  .hx-toast{position:relative;right:auto;top:auto;width:auto;margin:12px 12px 0;animation:none}
+}
+@media (prefers-reduced-motion:reduce){.hx-float{animation:none}}
