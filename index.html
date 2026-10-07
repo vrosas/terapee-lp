@@ -2070,6 +2070,57 @@ a.target-item:hover .target-arrow { color: var(--primary); transform: translateX
 .breadcrumb svg { width: 14px; height: 14px; flex-shrink: 0; color: var(--gray-300); }
 
 .nav a { white-space: nowrap; }
+
+/* ========== CTAs DA CALCULADORA ========== */
+.calc-strip {
+  margin: 48px auto 0;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  text-align: left;
+}
+.calc-strip-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.calc-strip-icon svg { width: 22px; height: 22px; }
+.calc-strip-text { flex: 1; min-width: 0; }
+.calc-strip-text strong { display: block; font-size: 16px; color: var(--dark); margin-bottom: 2px; }
+.calc-strip-text span { font-size: 14px; color: var(--gray-600); }
+.calc-strip .btn { padding: 12px 22px; font-size: 14px; white-space: nowrap; flex-shrink: 0; }
+.target-calc {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  background: var(--primary-bg);
+  border: 1px dashed var(--primary-300, #A4BCFD);
+  transition: background 0.2s, border-color 0.2s;
+}
+.target-calc:hover { background: var(--primary-light); border-color: var(--primary); }
+.target-calc .calc-strip-icon { width: 38px; height: 38px; border-radius: 10px; background: var(--white); }
+.target-calc strong { display: block; font-size: 15px; color: var(--dark); }
+.target-calc span { font-size: 13px; color: var(--gray-600); }
+.target-calc .target-arrow { margin-left: auto; color: var(--primary); font-weight: 700; }
+@media (max-width: 640px) {
+  .calc-strip { flex-direction: column; align-items: flex-start; }
+  .calc-strip .btn { width: 100%; justify-content: center; }
+}
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -2078,6 +2129,12 @@ a.target-item:hover .target-arrow { color: var(--primary); transform: translateX
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "h8iifiakrd");
+</script>
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('[data-calc-cta]');
+  if (a) (window.dataLayer = window.dataLayer || []).push({ event: 'calculadora_cta_home', posicao: a.getAttribute('data-calc-cta') });
+});
 </script>
 </head>
 <body>
@@ -2792,6 +2849,14 @@ a.target-item:hover .target-arrow { color: var(--primary); transform: translateX
             <span class="target-arrow" aria-hidden="true">→</span>
           </a>
         </div>
+        <a class="target-calc" href="/ferramentas/calculadora-de-precificacao?aba=equipe&amp;utm_source=home&amp;utm_medium=site&amp;utm_campaign=cta-para-quem" data-calc-cta="para-quem">
+          <div class="calc-strip-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="11" x2="8" y2="11.01"/><line x1="12" y1="11" x2="12" y2="11.01"/><line x1="16" y1="11" x2="16" y2="11.01"/><line x1="8" y1="15" x2="8" y2="15.01"/><line x1="12" y1="15" x2="12" y2="15.01"/><line x1="16" y1="15" x2="16" y2="18"/><line x1="8" y1="18" x2="12" y2="18"/></svg></div>
+          <div>
+            <strong>Tem profissionais parceiros?</strong>
+            <span>Simule o repasse da sua equipe e veja quanto fica com a clínica.</span>
+          </div>
+          <span class="target-arrow" aria-hidden="true">→</span>
+        </a>
       </div>
       <div class="target-visual">
         <div class="target-visual-card">
@@ -3175,6 +3240,14 @@ a.target-item:hover .target-arrow { color: var(--primary); transform: translateX
         <div class="pricing-note">Não é necessário cartão de crédito</div>
       </div>
     </div>
+    <div class="calc-strip">
+      <div class="calc-strip-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="11" x2="8" y2="11.01"/><line x1="12" y1="11" x2="12" y2="11.01"/><line x1="16" y1="11" x2="16" y2="11.01"/><line x1="8" y1="15" x2="8" y2="15.01"/><line x1="12" y1="15" x2="12" y2="15.01"/><line x1="16" y1="15" x2="16" y2="18"/><line x1="8" y1="18" x2="12" y2="18"/></svg></div>
+      <div class="calc-strip-text">
+        <strong>Ainda decidindo? Descubra quanto sua clínica lucra por sessão.</strong>
+        <span>Calculadora grátis de preço, margem e repasse, com resultado na hora.</span>
+      </div>
+      <a href="/ferramentas/calculadora-de-precificacao?utm_source=home&amp;utm_medium=site&amp;utm_campaign=cta-planos" class="btn btn-outline" data-calc-cta="planos">Abrir calculadora →</a>
+    </div>
   </div>
 </section>
 
@@ -3439,6 +3512,13 @@ a.target-item:hover .target-arrow { color: var(--primary); transform: translateX
           <a href="/alternativas/psicoplanner">Alternativa ao PsicoPlanner</a>
           <a href="/alternativas/ninsaude">Alternativa ao Ninsaúde</a>
           <a href="/alternativas/clinica-agil">Alternativa ao Clínica Ágil</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Ferramentas grátis</p>
+        <div class="footer-col-links">
+          <a href="/ferramentas/calculadora-de-precificacao">Calculadora de precificação</a>
         </div>
       </div>
 

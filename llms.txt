@@ -51,6 +51,10 @@ vários terapeutas.
 - [Clínicas multidisciplinares](https://www.terapee.com.br/para-clinicas-multidisciplinares)
 - [Clínicas de terapia infantil](https://www.terapee.com.br/para-terapia-infantil)
 
+## Ferramentas grátis
+
+- [Calculadora de precificação](https://www.terapee.com.br/ferramentas/calculadora-de-precificacao): preço mínimo da sessão, margem de lucro e repasse para profissionais parceiros, considerando impostos, taxas e custos fixos. Grátis e sem cadastro.
+
 ## Comparativos
 
 - [Alternativa ao PsicoPlanner](https://www.terapee.com.br/alternativas/psicoplanner)
