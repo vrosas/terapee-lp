@@ -1895,17 +1895,22 @@ img { max-width: 100%; display: block; }
 .pl-compare{padding:72px 0;background:var(--gray-50);border-top:1px solid var(--gray-100);border-bottom:1px solid var(--gray-100)}
 .pl-compare .section-title,.pl-which .section-title{text-align:center}
 .pl-compare .section-subtitle{text-align:center}
-.pl-table-wrap{margin-top:40px;overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:20px;border:1px solid var(--gray-200);background:#fff}
+.pl-table-wrap{margin-top:40px;border-radius:20px;border:1px solid var(--gray-200);background:#fff}
 .pl-table{width:100%;min-width:640px;border-collapse:collapse;font-size:15px}
 .pl-table th,.pl-table td{padding:14px 18px;border-bottom:1px solid var(--gray-100);text-align:center;vertical-align:middle}
 .pl-table tbody th[scope=row]{text-align:left;font-weight:500;color:var(--gray-700);position:sticky;left:0;background:#fff;min-width:220px}
 .pl-table tbody th[scope=row] a{color:inherit;text-decoration:underline;text-decoration-color:var(--gray-300);text-underline-offset:3px}
 .pl-table tbody th[scope=row] a:hover{color:var(--primary)}
-.pl-table thead th{position:sticky;top:0;background:#fff;font-size:17px;font-weight:800;color:var(--dark);padding-top:22px;z-index:1}
+.pl-table thead th{position:sticky;top:73px;background:#fff;font-size:17px;font-weight:800;color:var(--dark);padding:18px 12px 16px;z-index:2;box-shadow:0 1px 0 var(--gray-200)}
+.pl-table thead th:first-child{border-top-left-radius:20px}.pl-table thead th:last-child{border-top-right-radius:20px}
+.pl-hname{display:block}
+.pl-hprice{display:block;font-size:13px;font-weight:600;color:var(--gray-500);margin-top:2px}
+.pl-hbtn{margin-top:10px;padding:8px 16px!important;font-size:13px!important}
+.pl-inc{font-size:13px;font-weight:700;color:#05603A}
 .pl-table thead th small{display:block;font-size:13px;font-weight:600;color:var(--gray-500);margin-top:4px}
 .pl-table .pl-col-hot{background:#F5F6FF}
 .pl-table thead th.pl-col-hot{background:#EEF0FF;color:var(--primary)}
-.pl-group th{background:var(--gray-50)!important;text-align:left!important;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-500);padding:12px 18px}
+.pl-group th{background:var(--gray-50)!important;text-align:left!important;font-size:17px;font-weight:800;color:var(--primary);padding:22px 18px 12px}
 .pl-yes{color:var(--primary);font-weight:800;font-size:17px}
 .pl-no{color:var(--gray-300)}
 .pl-extra{font-size:13px;color:var(--gray-500)}
@@ -1931,7 +1936,10 @@ img { max-width: 100%; display: block; }
   .pl-table th,.pl-table td{padding:10px 4px}
   .pl-table tbody th[scope=row]{min-width:0;width:44%;padding-left:12px;position:static}
   .pl-table thead th{font-size:14px;padding-top:14px}
-  .pl-table thead th small{display:none}
+  .pl-hprice,.pl-hbtn{display:none}
+  .pl-table thead th{top:73px}
+  .pl-inc{font-size:11px;line-height:1.3}
+  .pl-group th{font-size:14px;padding:16px 12px 8px}
   .pl-long{display:none}.pl-short{display:inline}
   .pl-extra{font-size:11px;line-height:1.3}
   .pl-group th{padding:10px 12px;font-size:11px}
@@ -2038,54 +2046,40 @@ img { max-width: 100%; display: block; }
         <thead>
           <tr>
             <th scope="col"><span class="pl-sr">Recurso</span></th>
-            <th scope="col"><span class="pl-long">Individual</span><span class="pl-short">Indiv.</span><small><span class="pl-amt-t" data-monthly="R$ 55,90/mês" data-yearly="R$ 44,72/mês">R$ 55,90/mês</span></small></th>
-            <th scope="col" class="pl-col-hot">Clínica<small><span class="pl-amt-t" data-monthly="R$ 89,90/mês" data-yearly="R$ 71,92/mês">R$ 89,90/mês</span></small></th>
-            <th scope="col"><span class="pl-long">Clínica Max</span><span class="pl-short">Max</span><small><span class="pl-amt-t" data-monthly="R$ 175,00/mês" data-yearly="R$ 140,00/mês">R$ 175,00/mês</span></small></th>
+            <th scope="col"><span class="pl-hname"><span class="pl-long">Individual</span><span class="pl-short">Indiv.</span></span><span class="pl-hprice"><span data-monthly="R$ 55,90" data-yearly="R$ 44,72">R$ 55,90</span>/mês</span><a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline pl-hbtn">Testar grátis</a></th>
+            <th scope="col" class="pl-col-hot"><span class="pl-hname">Clínica</span><span class="pl-hprice"><span data-monthly="R$ 89,90" data-yearly="R$ 71,92">R$ 89,90</span>/mês</span><a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary pl-hbtn">Testar grátis</a></th>
+            <th scope="col"><span class="pl-hname"><span class="pl-long">Clínica Max</span><span class="pl-short">Max</span></span><span class="pl-hprice"><span data-monthly="R$ 175,00" data-yearly="R$ 140,00">R$ 175,00</span>/mês</span><a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline pl-hbtn">Testar grátis</a></th>
           </tr>
         </thead>
         <tbody>
-          <tr class="pl-group"><th colspan="4" scope="colgroup">Equipe e acesso</th></tr>
+          <tr class="pl-group"><th colspan="4" scope="colgroup">O que muda entre os planos</th></tr>
           <tr><th scope="row">Usuários</th><td>1</td><td class="pl-col-hot"><b>Até 15</b></td><td><b>Ilimitados</b></td></tr>
-          <tr><th scope="row"><a href="/funcionalidades/multi-agenda">Multi-agenda</a> (agenda de toda a equipe)</th><td class="pl-no">—</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
+          <tr><th scope="row"><a href="/funcionalidades/lembretes-whatsapp">Lembretes e confirmação via WhatsApp</a></th><td class="pl-inc">Incluídos</td><td class="pl-col-hot pl-inc">Incluídos</td><td class="pl-inc">Incluídos</td></tr>
+          <tr><th scope="row"><a href="/funcionalidades/nota-fiscal-nfse">Emissão de NFS-e</a></th><td class="pl-inc">Incluída, sem custo por nota</td><td class="pl-col-hot pl-inc">Incluída, sem custo por nota</td><td class="pl-inc">Incluída, sem custo por nota</td></tr>
+          <tr><th scope="row">Mensagens saindo do WhatsApp da clínica</th><td class="pl-extra">Contratado à parte</td><td class="pl-col-hot pl-extra">Contratado à parte</td><td class="pl-inc">Incluído</td></tr>
+          <tr><th scope="row"><a href="/funcionalidades/agendamento-online">Página de agendamento online</a></th><td class="pl-no">—</td><td class="pl-col-hot pl-no">—</td><td class="pl-inc">Incluída</td></tr>
+          <tr class="pl-group"><th colspan="4" scope="colgroup">Clínica e equipe</th></tr>
+          <tr><th scope="row"><a href="/funcionalidades/multi-agenda">Multi-agenda (agenda de toda a equipe)</a></th><td class="pl-no">—</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
           <tr><th scope="row">Cadastro de secretária</th><td class="pl-no">—</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
+          <tr><th scope="row">Seu logo na plataforma</th><td class="pl-no">—</td><td class="pl-col-hot pl-no">—</td><td class="pl-yes">✓</td></tr>
           <tr><th scope="row">Acesso pelo computador, tablet e celular</th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
-
           <tr class="pl-group"><th colspan="4" scope="colgroup">Agenda e atendimento</th></tr>
-          <tr><th scope="row"><a href="/funcionalidades/agenda">Agendamentos ilimitados</a>, com recorrência</th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
+          <tr><th scope="row"><a href="/funcionalidades/agenda">Agendamentos ilimitados, com recorrência</a></th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
           <tr><th scope="row"><a href="/funcionalidades/pacotes-de-sessoes">Pacotes de sessões</a></th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
           <tr><th scope="row"><a href="/funcionalidades/check-in">Check-in</a></th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
           <tr><th scope="row"><a href="/funcionalidades/prontuario-eletronico">Prontuário eletrônico</a></th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
-          <tr><th scope="row"><a href="/funcionalidades/telemedicina">Teleconsulta</a> (atendimento por vídeo)</th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
+          <tr><th scope="row"><a href="/funcionalidades/telemedicina">Teleconsulta (atendimento por vídeo)</a></th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
           <tr><th scope="row"><a href="/funcionalidades/formularios-personalizaveis">Formulários personalizáveis</a></th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
           <tr><th scope="row"><a href="/funcionalidades/gestao-de-pacientes">Cadastro de pacientes</a></th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
-          <tr><th scope="row"><a href="/funcionalidades/agendamento-online">Página de agendamento online</a></th><td class="pl-no">—</td><td class="pl-col-hot pl-no">—</td><td class="pl-yes">✓</td></tr>
-
           <tr class="pl-group"><th colspan="4" scope="colgroup">Comunicação com o paciente</th></tr>
-          <tr><th scope="row"><a href="/funcionalidades/lembretes-whatsapp">Lembretes via WhatsApp</a></th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
-          <tr><th scope="row">Lembrete de aniversariantes</th><td class="pl-no">—</td><td class="pl-col-hot pl-no">—</td><td class="pl-yes">✓</td></tr>
-          <tr><th scope="row">Mensagens saindo do WhatsApp da clínica</th><td class="pl-extra">Contratado à parte</td><td class="pl-col-hot pl-extra">Contratado à parte</td><td><b>Incluído</b></td></tr>
-
-          <tr class="pl-group"><th colspan="4" scope="colgroup">Financeiro e nota fiscal</th></tr>
           <tr><th scope="row"><a href="/funcionalidades/cobranca-automatica">Envio de cobranças via WhatsApp</a></th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
-          <tr><th scope="row"><a href="/funcionalidades/nota-fiscal-nfse">Emissão de NFS-e</a>, sem custo por nota</th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
+          <tr><th scope="row">Lembrete de aniversariantes</th><td class="pl-no">—</td><td class="pl-col-hot pl-no">—</td><td class="pl-yes">✓</td></tr>
+          <tr class="pl-group"><th colspan="4" scope="colgroup">Financeiro e documentos</th></tr>
           <tr><th scope="row"><a href="/funcionalidades/emissao-de-recibos">Emissão de recibos</a></th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
           <tr><th scope="row"><a href="/funcionalidades/repasse-profissionais">Repasse para profissionais</a></th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
-
-          <tr class="pl-group"><th colspan="4" scope="colgroup">Documentos</th></tr>
           <tr><th scope="row"><a href="/funcionalidades/documentos-personalizaveis">Documentos personalizáveis</a></th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
           <tr><th scope="row"><a href="/funcionalidades/assinatura-digital">Assinatura digital</a></th><td class="pl-yes">✓</td><td class="pl-col-hot pl-yes">✓</td><td class="pl-yes">✓</td></tr>
-
-          <tr class="pl-group"><th colspan="4" scope="colgroup">Marca da clínica</th></tr>
-          <tr><th scope="row">Seu logo na plataforma</th><td class="pl-no">—</td><td class="pl-col-hot pl-no">—</td><td class="pl-yes">✓</td></tr>
         </tbody>
-        <tfoot>
-          <tr>
-            <th scope="row"></th>
-            <td><a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline">Testar grátis</a></td>
-            <td class="pl-col-hot"><a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary">Testar grátis</a></td>
-            <td><a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline">Testar grátis</a></td>
-          </tr>
-        </tfoot>
       </table>
     </div>
     <p class="pl-note">Quer ver tudo o que a Terapee faz? <a href="/funcionalidades/">Conheça todas as funcionalidades →</a></p>
