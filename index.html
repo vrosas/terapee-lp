@@ -133,7 +133,7 @@
         },
         {
           "@type": "Question",
-          "name": "Os dados estão seguros? O Terapee está em conformidade com a LGPD?",
+          "name": "Os dados estão seguros? A Terapee está em conformidade com a LGPD?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Sim. Os dados são criptografados em repouso (AES-256) e em trânsito (TLS 1.3), com controle de acesso por perfil — apenas profissionais autorizados acessam os dados clínicos de cada paciente. A plataforma é construída em conformidade com a LGPD."
@@ -144,12 +144,12 @@
           "name": "Como funcionam os lembretes via WhatsApp?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "O Terapee envia lembretes automáticos das sessões pelo WhatsApp e o paciente confirma a presença em um clique. Nas clínicas que usam, as faltas caem 25%. Os lembretes já estão inclusos nos planos. Você também pode conectar o seu próprio número de WhatsApp (recurso disponível com custo adicional)."
+            "text": "A Terapee envia lembretes automáticos das sessões pelo WhatsApp e o paciente confirma a presença em um clique. Nas clínicas que usam, as faltas caem 25%. Os lembretes já estão inclusos nos planos. Você também pode conectar o seu próprio número de WhatsApp (recurso disponível com custo adicional)."
           }
         },
         {
           "@type": "Question",
-          "name": "O Terapee emite recibos e nota fiscal?",
+          "name": "A Terapee emite recibos e nota fiscal?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Sim, os dois. Você gera recibos em PDF a partir dos seus modelos, em poucos cliques. E emite a NFS-e (nota fiscal de serviço) direto da cobrança já paga, pelo Emissor Nacional do gov.br — sem abrir o portal da prefeitura. A emissão de nota fiscal está incluída em todos os planos, sem custo por nota."
@@ -157,7 +157,7 @@
         },
         {
           "@type": "Question",
-          "name": "O Terapee funciona para clínicas com vários profissionais?",
+          "name": "A Terapee funciona para clínicas com vários profissionais?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Sim. Nos planos Clínica e Clínica Max você gerencia a agenda de toda a equipe em um só painel (multi-agenda), cadastra secretárias e controla os acessos de cada profissional — ideal para clínicas multidisciplinares."
@@ -2169,6 +2169,94 @@ document.addEventListener('click', function (e) {
 .sec-strip ul{display:flex;flex-wrap:wrap;gap:10px}
 .sec-strip li{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--gray-700);background:var(--gray-50);border:1px solid var(--gray-200);padding:9px 14px;border-radius:999px}
 .sec-strip li svg{width:16px;height:16px;color:var(--primary);flex:none}
+/* ==== home: blocos revistos ==== */
+.hm-head{text-align:center;max-width:720px;margin:0 auto 44px}
+.hm-head .section-subtitle{margin:0 auto}
+.hm-head .section-title{text-wrap:balance}
+.hm-more{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--primary)}
+.hm-more svg{width:16px;height:16px;transition:transform .2s}
+.hm-pain:hover .hm-more svg,.hm-spec:hover .hm-more svg{transform:translateX(3px)}
+.hm-pain:focus-visible,.hm-spec:focus-visible{outline:3px solid var(--primary-300);outline-offset:2px}
+
+.hm-problem{background:#fff}
+.hm-pains{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.hm-pain{display:flex;flex-direction:column;padding:24px;border-radius:18px;background:#F8F9FE;border:1px solid #EEF0F6;transition:border-color .2s,box-shadow .2s,transform .2s}
+.hm-pain:hover{border-color:var(--primary-300);background:#fff;box-shadow:0 24px 48px -24px rgba(30,36,90,.25);transform:translateY(-2px)}
+.hm-pain-ico{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#FEECEB;color:#D92D20;margin-bottom:16px}
+.hm-pain-ico svg{width:21px;height:21px}
+.hm-pain h3{font-size:17px;line-height:1.3;font-weight:800;color:var(--dark);margin-bottom:10px}
+.hm-pain p{font-size:14.5px;line-height:1.6;color:var(--gray-600);margin-bottom:18px}
+.hm-pain p b{color:#05603A}
+
+.hm-for{background:#F8F9FE}
+.hm-specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.hm-spec{display:flex;flex-direction:column;padding:24px;border-radius:18px;background:#fff;border:1px solid #E7EAF2;box-shadow:0 1px 2px rgba(16,24,40,.04);transition:border-color .2s,box-shadow .2s,transform .2s}
+.hm-spec:hover{border-color:var(--primary-300);box-shadow:0 24px 48px -24px rgba(30,36,90,.25);transform:translateY(-2px)}
+.hm-spec-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.hm-spec-ico{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--primary-50);color:var(--primary);flex:none}
+.hm-spec-ico svg{width:21px;height:21px}
+.hm-spec h3{font-size:18px;font-weight:800;color:var(--dark)}
+.hm-spec-pain{font-size:14px;font-weight:600;color:var(--gray-500);margin-bottom:8px}
+.hm-spec-fix{font-size:15px;line-height:1.6;color:var(--gray-700);margin-bottom:18px}
+.hm-specs .target-calc{margin:0;height:100%;align-self:stretch}
+
+.hm-pricing{background:#fff}
+.hm-pricing .hm-head{margin-bottom:36px}
+.pl-toggle{display:inline-flex;margin-top:24px;background:#fff;border:1px solid var(--gray-200);border-radius:14px;padding:5px;gap:4px}
+.pl-tbtn{border:0;background:transparent;font:inherit;font-weight:700;font-size:15px;padding:10px 20px;border-radius:10px;cursor:pointer;color:var(--gray-600);display:inline-flex;gap:8px;align-items:center}
+.pl-tbtn.active{background:var(--primary);color:#fff}
+.pl-off{font-size:11px;background:#E7F8EF;color:#05603A;padding:2px 7px;border-radius:6px}
+.pl-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch;text-align:left}
+.pl-card{position:relative;background:#fff;border:1px solid #E7EAF2;border-radius:24px;padding:32px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.pl-card h3{font-size:22px;font-weight:800;color:var(--dark)}
+.pl-for{color:var(--gray-600);font-size:15px;margin-top:6px;min-height:46px}
+.pl-hot{border:2px solid var(--primary);box-shadow:0 2px 4px rgba(16,24,40,.04),0 32px 64px -24px rgba(68,76,231,.4)}
+.pl-badge{position:absolute;top:-13px;left:32px;background:var(--primary);color:#fff;font-size:12px;font-weight:800;padding:5px 12px;border-radius:999px}
+.pl-head{display:flex;align-items:center;gap:12px}
+.pl-ico{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--primary-50);color:var(--primary);flex:none}
+.pl-ico svg{width:20px;height:20px}
+.pl-hot .pl-ico{background:var(--primary);color:#fff}
+.pl-price{display:flex;align-items:baseline;gap:4px;margin-top:20px;color:var(--dark)}
+.pl-price small{font-size:16px;font-weight:700;color:var(--gray-500)}
+.pl-price b{font-size:46px;font-weight:800;line-height:1;letter-spacing:-.02em}
+.pl-price span{color:var(--gray-500);font-weight:600}
+.pl-bill{font-size:13px;color:var(--gray-500);margin-top:6px;min-height:20px}
+.pl-per{display:inline-flex;align-self:flex-start;margin-top:12px;font-size:13px;font-weight:700;color:#05603A;background:#E7F8EF;padding:4px 10px;border-radius:999px}
+.pl-per-empty{visibility:hidden}
+.pl-cta{margin-top:20px;width:100%;justify-content:center}
+.pl-ul-title{margin-top:24px;padding-top:20px;border-top:1px solid var(--gray-100);font-size:14px;color:var(--gray-600)}
+.pl-ul-title b{color:var(--dark)}
+.pl-card ul{list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:10px;font-size:15px;color:var(--gray-700)}
+.pl-card li{display:flex;gap:10px}
+.pl-card li svg{width:18px;height:18px;color:var(--primary);flex:none;margin-top:3px}
+.pl-all{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:36px;font-size:14px;font-weight:600;color:var(--gray-700)}
+.pl-all li{display:inline-flex;align-items:center;gap:8px}
+.pl-all svg{width:18px;height:18px;color:#12B76A;flex:none}
+.hm-compare{text-align:center;margin:24px 0 32px}
+.hm-compare a{color:var(--primary);font-weight:700;font-size:15px}
+
+.hm-cta{padding:24px 0 96px;background:#fff}
+.hm-cta-box{text-align:center;padding:72px 32px;border-radius:28px;background:radial-gradient(600px 300px at 90% 0%,rgba(122,90,248,.45),transparent 60%),linear-gradient(135deg,#2D31A6 0%,#444CE7 100%)}
+.hm-cta-box h2{font-size:clamp(26px,3.4vw,40px);line-height:1.15;font-weight:800;color:#fff;max-width:720px;margin:0 auto 14px;text-wrap:balance}
+.hm-cta-box p{font-size:17px;line-height:1.6;color:rgba(255,255,255,.88);max-width:600px;margin:0 auto 32px}
+.hm-cta-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.hm-cta-box .btn-white{background:#fff;color:var(--primary)}
+.hm-cta-box .btn-white:hover{background:var(--primary-50);transform:translateY(-2px)}
+.hm-btn-ghost{color:#fff;border:1.5px solid rgba(255,255,255,.5);background:transparent}
+.hm-btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+.hm-cta-box small{display:block;margin-top:18px;font-size:13px;color:rgba(255,255,255,.75)}
+
+@media (max-width:1024px){.hm-pains{grid-template-columns:repeat(2,minmax(0,1fr))}.hm-specs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.pl-cards{grid-template-columns:1fr}.pl-hot{order:-1}.pl-for{min-height:0}.pl-per-empty{display:none}}
+@media (max-width:640px){
+  .hm-pains,.hm-specs{grid-template-columns:1fr}
+  .pl-card{padding:26px 22px}
+  .pl-all{justify-content:flex-start;flex-direction:column;align-items:flex-start;gap:10px}
+  .hm-cta{padding-bottom:64px}
+  .hm-cta-box{padding:52px 22px;border-radius:22px}
+  .hm-cta-btns .btn{width:100%;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){.hm-pain,.hm-spec{transition:none}.hm-pain:hover,.hm-spec:hover{transform:none}}
 </style>
 <link rel="stylesheet" href="/assets/visual.css">
 </head>
@@ -2318,11 +2406,38 @@ document.addEventListener('click', function (e) {
 </section>
 
 <!-- ============ PROBLEMA / DOR ============ -->
-<section class="problem section">
-  <div class="container animate-on-scroll" style="text-align:center;max-width:760px;">
-    <h2 class="section-title">A rotina de uma clínica de terapia não é só atender.</h2>
-    <p class="section-subtitle" style="margin:0 auto;">É paciente que falta e ninguém avisou. É secretária no telefone o dia inteiro remarcando. É pacote de sessões que ninguém sabe quantas faltam. É fim do mês chegando e a cobrança ainda na planilha.</p>
-    <p class="section-subtitle" style="margin:20px auto 0;font-weight:600;color:#1f2733;">Software de clínica médica não foi feito pra isso. A Terapee foi.</p>
+<section class="problem section hm-problem">
+  <div class="container animate-on-scroll">
+    <div class="hm-head">
+      <h2 class="section-title">A rotina de uma clínica de terapia não é só atender.</h2>
+      <p class="section-subtitle">Software de clínica médica não foi feito para isso. A Terapee foi.</p>
+    </div>
+    <div class="hm-pains">
+      <a class="hm-pain" href="/funcionalidades/lembretes-whatsapp">
+        <span class="hm-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg></span>
+        <h3>Paciente falta e ninguém avisou</h3>
+        <p><b>Na Terapee:</b> o lembrete sai 24h antes e o paciente confirma no WhatsApp. A cadeira vazia aparece na agenda antes do horário.</p>
+        <span class="hm-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="hm-pain" href="/funcionalidades/agendamento-online">
+        <span class="hm-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+        <h3>Secretária o dia inteiro no telefone</h3>
+        <p><b>Na Terapee:</b> A confirmação cai sozinha na agenda. E, com a página de agendamento, o próprio paciente marca no horário livre.</p>
+        <span class="hm-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="hm-pain" href="/funcionalidades/pacotes-de-sessoes">
+        <span class="hm-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg></span>
+        <h3>Pacote que ninguém sabe quantas faltam</h3>
+        <p><b>Na Terapee:</b> O pacote é agendado inteiro e o saldo se controla: falta justificada devolve a sessão, falta sem aviso desconta.</p>
+        <span class="hm-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="hm-pain" href="/funcionalidades/cobranca-automatica">
+        <span class="hm-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></span>
+        <h3>Fim do mês com a cobrança na planilha</h3>
+        <p><b>Na Terapee:</b> Mensalidades e pacotes são cobrados sozinhos por Pix ou cartão, e a NFS-e sai da cobrança paga em dois cliques.</p>
+        <span class="hm-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -2419,63 +2534,51 @@ document.addEventListener('click', function (e) {
   </div>
 </section>
 
-<!-- ============ PÚBLICO ALVO ============ -->
-<section class="target-audience section" id="para-quem">
+<!-- ============ MIGRACAO ============ -->
+<section class="migration-section section" id="migracao">
   <div class="container animate-on-scroll">
     <div style="text-align:center;">
-      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span> Público Alvo</span>
-      <h2 class="section-title">Pra quem o Terapee foi feito?</h2>
+      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h12"/><path d="M12 6l6 6-6 6"/><path d="M20 4v16"/></svg></span> Migração</span>
+      <h2 class="section-title">Já usa outro sistema? A gente traz sua clínica inteira.</h2>
+      <p class="section-subtitle" style="margin:0 auto;">Trocar de sistema não pode custar anos de histórico redigitado — e não custa. A migração é feita pelo nosso time, e já fizemos isso em escala.</p>
     </div>
-    <div class="target-content">
-      <div class="target-text">
-        <p>A plataforma foi criada pensando nas(os) profissionais que precisam facilitar o controle de suas atividades, como gestão de agendamentos recorrentes ou avulsos, organização financeira, comunicação com pacientes e muito mais.</p>
-        <div class="target-list">
-          <a class="target-item" href="/para-psicologos">
-            <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-            Clínicas de Psicologia
-            <span class="target-arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="target-item" href="/para-fonoaudiologos">
-            <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-            Clínicas de Fonoaudiologia
-            <span class="target-arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="target-item" href="/para-terapeutas-ocupacionais">
-            <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-            Clínicas de Terapia Ocupacional
-            <span class="target-arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="target-item" href="/para-clinicas-multidisciplinares">
-            <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-            Clínicas de Terapia Multidisciplinar
-            <span class="target-arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="target-item" href="/para-terapia-infantil">
-            <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-            Clínicas de Terapia Infantil
-            <span class="target-arrow" aria-hidden="true">→</span>
-          </a>
-        </div>
-        <a class="target-calc" href="/ferramentas/calculadora-de-precificacao?aba=equipe&amp;utm_source=home&amp;utm_medium=site&amp;utm_campaign=cta-para-quem" data-calc-cta="para-quem">
-          <div class="calc-strip-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="11" x2="8" y2="11.01"/><line x1="12" y1="11" x2="12" y2="11.01"/><line x1="16" y1="11" x2="16" y2="11.01"/><line x1="8" y1="15" x2="8" y2="15.01"/><line x1="12" y1="15" x2="12" y2="15.01"/><line x1="16" y1="15" x2="16" y2="18"/><line x1="8" y1="18" x2="12" y2="18"/></svg></div>
-          <div>
-            <strong>Tem profissionais parceiros?</strong>
-            <span>Simule o repasse da sua equipe e veja quanto fica com a clínica.</span>
-          </div>
-          <span class="target-arrow" aria-hidden="true">→</span>
-        </a>
+
+    <div class="migration-stats">
+      <div class="migration-stat">
+        <div class="migration-stat-num">+28 mil</div>
+        <div class="migration-stat-label">pacientes já migrados de outros sistemas para a Terapee</div>
       </div>
-      <div class="target-visual">
-        <div class="target-visual-card">
-          <div class="rating">4.9</div>
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-          <div class="rating-text">Avaliado por profissionais</div>
-          <div class="target-tags">
-            <span class="target-tag">Gestão Simplificada</span>
-            <span class="target-tag">Organização Total</span>
-          </div>
-        </div>
+      <div class="migration-stat">
+        <div class="migration-stat-num">+2 milhões</div>
+        <div class="migration-stat-label">agendamentos importados, com as sessões recorrentes preservadas</div>
       </div>
+      <div class="migration-stat">
+        <div class="migration-stat-num">Histórico junto</div>
+        <div class="migration-stat-label">sessões, prontuários e arquivos vêm com o paciente</div>
+      </div>
+    </div>
+
+    <div class="migration-steps">
+      <div class="migration-step">
+        <div class="migration-step-num">1</div>
+        <h3>Você manda o que tem hoje</h3>
+        <p>A exportação do seu sistema atual, uma planilha ou o que estiver à mão. A gente diz o que dá para aproveitar.</p>
+      </div>
+      <div class="migration-step">
+        <div class="migration-step-num">2</div>
+        <h3>A gente importa</h3>
+        <p>Pacientes, agendamentos, histórico de sessões, prontuários e arquivos entram organizados na sua conta.</p>
+      </div>
+      <div class="migration-step">
+        <div class="migration-step-num">3</div>
+        <h3>Sua equipe começa sem redigitar nada</h3>
+        <p>Vocês abrem a Terapee e a agenda da semana já está lá, com os pacientes de sempre.</p>
+      </div>
+    </div>
+
+    <div class="migration-cta">
+      <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20quero%20migrar%20para%20a%20Terapee%20e%20trazer%20os%20dados%20da%20minha%20cl%C3%ADnica" class="btn btn-primary">Falar sobre a minha migração</a>
+      <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline">Criar conta gratuita →</a>
     </div>
   </div>
 </section>
@@ -2490,6 +2593,57 @@ document.addEventListener('click', function (e) {
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>Acesso por perfil de função</li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>Backup automático diário</li>
     </ul>
+  </div>
+</section>
+
+<!-- ============ PARA QUEM ============ -->
+<section class="target-audience section hm-for" id="para-quem">
+  <div class="container animate-on-scroll">
+    <div class="hm-head">
+      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span> Para quem</span>
+      <h2 class="section-title">Feita para a rotina de cada especialidade</h2>
+      <p class="section-subtitle">Psicologia, fono, TO e terapia infantil têm problemas diferentes. A Terapee resolve cada um com o recurso certo.</p>
+    </div>
+    <div class="hm-specs">
+      <a class="hm-spec" href="/para-psicologos">
+        <div class="hm-spec-top"><span class="hm-spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3a3 3 0 0 0-3 3v.5A3 3 0 0 0 4 9.3 3 3 0 0 0 5 15a3 3 0 0 0 4 3.8V3zM15 3a3 3 0 0 1 3 3v.5a3 3 0 0 1 2 2.8 3 3 0 0 1-1 5.7 3 3 0 0 1-4 3.8V3z"/></svg></span><h3>Psicologia</h3></div>
+        <p class="hm-spec-pain">Paciente que falta sem avisar e cobrança constrangedora.</p>
+        <p class="hm-spec-fix">Sessão semanal recorrente, confirmação no WhatsApp e cobrança que sai sozinha, sem você tocar no assunto.</p>
+        <span class="hm-more">Terapee para psicologia <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="hm-spec" href="/para-fonoaudiologos">
+        <div class="hm-spec-top"><span class="hm-spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M8 11h.01M12 11h.01M16 11h.01"/></svg></span><h3>Fonoaudiologia</h3></div>
+        <p class="hm-spec-pain">Muitas sessões por semana e pacote difícil de acompanhar.</p>
+        <p class="hm-spec-fix">Pacotes com saldo que se controla sozinho e lembrete no WhatsApp antes de cada atendimento.</p>
+        <span class="hm-more">Terapee para fonoaudiologia <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="hm-spec" href="/para-terapeutas-ocupacionais">
+        <div class="hm-spec-top"><span class="hm-spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.4l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></svg></span><h3>Terapia ocupacional</h3></div>
+        <p class="hm-spec-pain">Atendimento no consultório, no domicílio e na escola.</p>
+        <p class="hm-spec-fix">Agenda e prontuário no celular, e relatórios e planos terapêuticos a partir dos seus modelos.</p>
+        <span class="hm-more">Terapee para terapia ocupacional <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="hm-spec" href="/para-clinicas-multidisciplinares">
+        <div class="hm-spec-top"><span class="hm-spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span><h3>Clínica multidisciplinar</h3></div>
+        <p class="hm-spec-pain">Cada profissional com uma agenda e um repasse diferente.</p>
+        <p class="hm-spec-fix">Multi-agenda para a recepção ver todo mundo, acesso por perfil e repasse calculado no fim do mês.</p>
+        <span class="hm-more">Terapee para clínica multidisciplinar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="hm-spec" href="/para-terapia-infantil">
+        <div class="hm-spec-top"><span class="hm-spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><path d="M12 8v7M8 11h8M10 22l2-7 2 7"/></svg></span><h3>Terapia infantil</h3></div>
+        <p class="hm-spec-pain">Família para manter informada e relatório para a escola.</p>
+        <p class="hm-spec-fix">Lembretes e cobranças no WhatsApp da família e documentos gerados a partir dos seus modelos.</p>
+        <span class="hm-more">Terapee para terapia infantil <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="target-calc" href="/ferramentas/calculadora-de-precificacao?aba=equipe&amp;utm_source=home&amp;utm_medium=site&amp;utm_campaign=cta-para-quem" data-calc-cta="para-quem">
+          <div class="calc-strip-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="11" x2="8" y2="11.01"/><line x1="12" y1="11" x2="12" y2="11.01"/><line x1="16" y1="11" x2="16" y2="11.01"/><line x1="8" y1="15" x2="8" y2="15.01"/><line x1="12" y1="15" x2="12" y2="15.01"/><line x1="16" y1="15" x2="16" y2="18"/><line x1="8" y1="18" x2="12" y2="18"/></svg></div>
+          <div>
+            <strong>Tem profissionais parceiros?</strong>
+            <span>Simule o repasse da sua equipe e veja quanto fica com a clínica.</span>
+          </div>
+          <span class="target-arrow" aria-hidden="true">→</span>
+        </a>
+    </div>
   </div>
 </section>
 
@@ -2571,165 +2725,59 @@ document.addEventListener('click', function (e) {
   </div>
 </section>
 
-<!-- ============ MIGRACAO ============ -->
-<section class="migration-section section" id="migracao">
-  <div class="container animate-on-scroll">
-    <div style="text-align:center;">
-      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h12"/><path d="M12 6l6 6-6 6"/><path d="M20 4v16"/></svg></span> Migração</span>
-      <h2 class="section-title">Já usa outro sistema? A gente traz sua clínica inteira.</h2>
-      <p class="section-subtitle" style="margin:0 auto;">Trocar de sistema não pode custar anos de histórico redigitado — e não custa. A migração é feita pelo nosso time, e já fizemos isso em escala.</p>
-    </div>
-
-    <div class="migration-stats">
-      <div class="migration-stat">
-        <div class="migration-stat-num">+28 mil</div>
-        <div class="migration-stat-label">pacientes já migrados de outros sistemas para a Terapee</div>
-      </div>
-      <div class="migration-stat">
-        <div class="migration-stat-num">+2 milhões</div>
-        <div class="migration-stat-label">agendamentos importados, com as sessões recorrentes preservadas</div>
-      </div>
-      <div class="migration-stat">
-        <div class="migration-stat-num">Histórico junto</div>
-        <div class="migration-stat-label">sessões, prontuários e arquivos vêm com o paciente</div>
-      </div>
-    </div>
-
-    <div class="migration-steps">
-      <div class="migration-step">
-        <div class="migration-step-num">1</div>
-        <h3>Você manda o que tem hoje</h3>
-        <p>A exportação do seu sistema atual, uma planilha ou o que estiver à mão. A gente diz o que dá para aproveitar.</p>
-      </div>
-      <div class="migration-step">
-        <div class="migration-step-num">2</div>
-        <h3>A gente importa</h3>
-        <p>Pacientes, agendamentos, histórico de sessões, prontuários e arquivos entram organizados na sua conta.</p>
-      </div>
-      <div class="migration-step">
-        <div class="migration-step-num">3</div>
-        <h3>Sua equipe começa sem redigitar nada</h3>
-        <p>Vocês abrem a Terapee e a agenda da semana já está lá, com os pacientes de sempre.</p>
-      </div>
-    </div>
-
-    <div class="migration-cta">
-      <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20quero%20migrar%20para%20o%20Terapee%20e%20trazer%20os%20dados%20da%20minha%20cl%C3%ADnica" class="btn btn-primary">Falar sobre a minha migração</a>
-      <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline">Criar conta gratuita →</a>
-    </div>
-  </div>
-</section>
-
 <!-- ============ PRICING ============ -->
-<section class="pricing section" id="planos">
+<section class="pricing section hm-pricing" id="planos">
   <div class="container">
-    <div class="animate-on-scroll">
-      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></span> Nossos planos</span>
-      <h2 class="section-title">Nossos planos</h2>
-      <p class="section-subtitle" style="margin:0 auto;">Escolha o plano ideal para sua fase atual. Mude quando quiser.</p>
-      <p style="text-align:center;margin-top:14px;">
-        <span style="display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:#E7F5EE;border:1px solid #BFE3D2;color:#0B6B48;font-size:13px;font-weight:700;">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-          Emissão de NFS-e incluída em todos os planos, sem custo por nota
-        </span>
-      </p>
-    </div>
-
-    <div class="pricing-toggle">
-      <button class="toggle-btn active" data-period="mensal">Mensal</button>
-      <button class="toggle-btn" data-period="anual">Anual</button>
-      <span class="discount-badge">- 20%</span>
-    </div>
-
-    <div class="pricing-grid">
-      <!-- Plano Individual -->
-      <div class="pricing-card animate-on-scroll">
-        <div class="pricing-plan-label">Plano 1</div>
-        <div class="pricing-plan-name">Plano Individual</div>
-        <div class="pricing-desc">Para uso individual, com ou sem CNPJ.</div>
-        <div class="pricing-price">
-          <span class="pricing-currency">R$</span>
-          <span class="pricing-amount" data-monthly="79" data-yearly="63,20">79</span>
-          <span class="pricing-period">/mês</span>
-        </div>
-        <div class="pricing-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 758,40 por ano (economia de R$ 189,60)">Cobrado mensalmente</div>
-        <div class="pricing-resources">Recursos:</div>
-        <div class="pricing-features">
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> 1 usuário</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Agendamentos ilimitados (incluso recorrência)</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Check-in</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Lembretes via WhatsApp</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Prontuário eletrônico</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Telemedicina <span class="new-tag">Novo</span></div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Formulários personalizáveis <span class="new-tag">Novo</span></div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Envio de cobranças via WhatsApp</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Cadastro de pacientes</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Emissão de NFS-e <span class="new-tag">Novo</span></div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Conecte seu próprio WhatsApp (contratado à parte)</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Disponível em qualquer dispositivo</div>
-        </div>
-        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline">Começar com o Individual</a>
-        <div class="pricing-note">Não é necessário cartão de crédito</div>
-      </div>
-
-      <!-- Plano Clínica -->
-      <div class="pricing-card featured animate-on-scroll">
-        <div class="pricing-popular">Melhor opção</div>
-        <div class="pricing-plan-label">Plano 2</div>
-        <div class="pricing-plan-name">Plano Clínica</div>
-        <div class="pricing-desc">Para clínicas com mais de um profissional.</div>
-        <div class="pricing-price">
-          <span class="pricing-currency">R$</span>
-          <span class="pricing-amount" data-monthly="229" data-yearly="183,20">229</span>
-          <span class="pricing-period">/mês</span>
-        </div>
-        <div class="pricing-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 2.198,40 por ano (economia de R$ 549,60)">Cobrado mensalmente</div>
-        <div class="pricing-resources">Recursos:</div>
-        <div class="pricing-features">
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Até 15 usuários</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Agendamentos ilimitados (incluso recorrência)</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Check-in</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Lembretes via WhatsApp</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Prontuário eletrônico</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Telemedicina <span class="new-tag">Novo</span></div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Formulários personalizáveis <span class="new-tag">Novo</span></div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Envio de cobranças via WhatsApp</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Cadastro de pacientes</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Emissão de NFS-e <span class="new-tag">Novo</span></div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Cadastro de secretária</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Conecte seu próprio WhatsApp (contratado à parte)</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Multi-agenda</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Disponível em qualquer dispositivo</div>
-        </div>
-        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary">Começar com o Clínica</a>
-        <div class="pricing-note">Não é necessário cartão de crédito</div>
-      </div>
-
-      <!-- Plano Clínica Max -->
-      <div class="pricing-card animate-on-scroll">
-        <div class="pricing-plan-label">Plano 3</div>
-        <div class="pricing-plan-name">Plano Clínica Max</div>
-        <div class="pricing-desc">Para quem quer as mensagens saindo do próprio número da clínica. Usuários ilimitados.</div>
-        <div class="pricing-price">
-          <span class="pricing-currency">R$</span>
-          <span class="pricing-amount" data-monthly="349" data-yearly="279,20">349</span>
-          <span class="pricing-period">/mês</span>
-        </div>
-        <div class="pricing-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 3.350,40 por ano (economia de R$ 837,60)">Cobrado mensalmente</div>
-        <div class="pricing-resources">Recursos:</div>
-        <div class="pricing-features">
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Tudo do plano Clínica +</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Usuários ilimitados</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Conecte seu próprio WhatsApp, incluído <span class="new-tag">Novo</span></div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Seu logo na plataforma</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Lembrete de aniversariantes</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <a href="/funcionalidades/agendamento-online" style="color:inherit;text-decoration:underline;">Página de agendamento online</a></div>
-        </div>
-        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline">Começar com o Clínica Max</a>
-        <div class="pricing-note">Não é necessário cartão de crédito</div>
+    <div class="hm-head animate-on-scroll">
+      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></span> Planos</span>
+      <h2 class="section-title">Um preço para a clínica inteira, não por profissional</h2>
+      <p class="section-subtitle">Escolha pelo tamanho da equipe. Agenda, WhatsApp, prontuário, cobrança e NFS-e vêm em todos os planos.</p>
+      <div class="pl-toggle" role="group" aria-label="Período de cobrança">
+        <button type="button" class="pl-tbtn active" data-period="mensal" aria-pressed="true">Mensal</button>
+        <button type="button" class="pl-tbtn" data-period="anual" aria-pressed="false">Anual <span class="pl-off">−20%</span></button>
       </div>
     </div>
-    <p style="text-align:center;margin-top:28px;font-size:15px;"><a href="/planos/#comparar" style="color:var(--primary);font-weight:700;">Compare todos os recursos dos planos →</a></p>
+    <div class="pl-cards">
+      <div class="pl-card">
+        <div class="pl-head"><span class="pl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span><h3>Individual</h3></div>
+        <p class="pl-for">Para quem atende sozinho, com ou sem CNPJ.</p>
+        <div class="pl-price"><small>R$</small><b data-monthly="79" data-yearly="63,20">79</b><span>/mês</span></div>
+        <p class="pl-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 758,40 por ano (economia de R$ 189,60)">Cobrado mensalmente</p>
+        <p class="pl-per pl-per-empty" aria-hidden="true">&nbsp;</p>
+        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline pl-cta">Testar o Individual grátis</a>
+        <p class="pl-ul-title"><b>1 usuário</b>, com:</p>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Agenda com sessões recorrentes e pacotes</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Lembretes e confirmação pelo WhatsApp</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Prontuário, formulários e teleconsulta</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Cobrança pelo WhatsApp, recibos e documentos</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>NFS-e sem custo por nota</span></li></ul>
+      </div>
+      <div class="pl-card pl-hot">
+        <span class="pl-badge">Recomendado para clínicas</span>
+        <div class="pl-head"><span class="pl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span><h3>Clínica</h3></div>
+        <p class="pl-for">Para clínicas com mais de um profissional e recepção.</p>
+        <div class="pl-price"><small>R$</small><b data-monthly="229" data-yearly="183,20">229</b><span>/mês</span></div>
+        <p class="pl-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 2.198,40 por ano (economia de R$ 549,60)">Cobrado mensalmente</p>
+        <p class="pl-per" data-monthly="R$ 15,27 por profissional, com a equipe de 15" data-yearly="R$ 12,21 por profissional, com a equipe de 15">R$ 15,27 por profissional, com a equipe de 15</p>
+        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary pl-cta">Testar o Clínica grátis</a>
+        <p class="pl-ul-title">Tudo do Individual, com <b>até 15 usuários</b> e:</p>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Multi-agenda: a equipe toda numa tela</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Acesso para a secretária marcar e confirmar</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Repasse calculado para cada profissional</span></li></ul>
+      </div>
+      <div class="pl-card">
+        <div class="pl-head"><span class="pl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg></span><h3>Clínica Max</h3></div>
+        <p class="pl-for">Para clínicas que querem as mensagens saindo do número próprio.</p>
+        <div class="pl-price"><small>R$</small><b data-monthly="349" data-yearly="279,20">349</b><span>/mês</span></div>
+        <p class="pl-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 3.350,40 por ano (economia de R$ 837,60)">Cobrado mensalmente</p>
+        <p class="pl-per">Sem limite de profissionais</p>
+        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline pl-cta">Testar o Clínica Max grátis</a>
+        <p class="pl-ul-title">Tudo do Clínica, com <b>usuários ilimitados</b> e:</p>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>WhatsApp próprio da clínica, já incluído</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Página de agendamento online</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Seu logo na plataforma</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Lembrete de aniversariantes</span></li></ul>
+      </div>
+    </div>
+    <ul class="pl-all" aria-label="Em todos os planos">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>14 dias grátis, sem cartão</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Agendamentos ilimitados</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>NFS-e sem custo por nota</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Migração feita pelo nosso time</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Cancele quando quiser</li>
+    </ul>
+    <p class="hm-compare"><a href="/planos/#comparar">Compare todos os recursos dos planos →</a></p>
     <div class="calc-strip">
       <div class="calc-strip-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="11" x2="8" y2="11.01"/><line x1="12" y1="11" x2="12" y2="11.01"/><line x1="16" y1="11" x2="16" y2="11.01"/><line x1="8" y1="15" x2="8" y2="15.01"/><line x1="12" y1="15" x2="12" y2="15.01"/><line x1="16" y1="15" x2="16" y2="18"/><line x1="8" y1="18" x2="12" y2="18"/></svg></div>
       <div class="calc-strip-text">
@@ -2751,7 +2799,7 @@ document.addEventListener('click', function (e) {
     <div class="faq-layout">
       <div class="faq-left">
         <p>As principais dúvidas dos nossos clientes. Precisa saber de algo específico? Entre em contato com o nosso suporte.</p>
-        <a href="https://api.whatsapp.com/send?phone=552123422477&text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20o%20Terapee" class="btn btn-outline">Fale conosco</a>
+        <a href="https://api.whatsapp.com/send?phone=552123422477&text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20a%20Terapee" class="btn btn-outline">Fale conosco</a>
       </div>
       <div class="faq-right">
         <div class="faq-item">
@@ -2774,7 +2822,7 @@ document.addEventListener('click', function (e) {
         </div>
         <div class="faq-item">
           <button class="faq-question">
-            Os dados estão seguros? O Terapee está em conformidade com a LGPD?
+            Os dados estão seguros? A Terapee está em conformidade com a LGPD?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
@@ -2787,12 +2835,12 @@ document.addEventListener('click', function (e) {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Funcionam, sim. O Terapee envia lembretes automáticos das sessões pelo WhatsApp e o paciente confirma a presença em um clique. Nas clínicas que usam, as faltas caem 25%. Os lembretes já estão inclusos nos planos. Se preferir, você também pode conectar o seu próprio número de WhatsApp (recurso disponível com custo adicional).</div>
+            <div class="faq-answer-inner">Funcionam, sim. A Terapee envia lembretes automáticos das sessões pelo WhatsApp e o paciente confirma a presença em um clique. Nas clínicas que usam, as faltas caem 25%. Os lembretes já estão inclusos nos planos. Se preferir, você também pode conectar o seu próprio número de WhatsApp (recurso disponível com custo adicional).</div>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question">
-            O Terapee emite recibos e nota fiscal?
+            A Terapee emite recibos e nota fiscal?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
@@ -2801,7 +2849,7 @@ document.addEventListener('click', function (e) {
         </div>
         <div class="faq-item">
           <button class="faq-question">
-            O Terapee funciona para clínicas com vários profissionais?
+            A Terapee funciona para clínicas com vários profissionais?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
@@ -2814,7 +2862,7 @@ document.addEventListener('click', function (e) {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Sim, e já fizemos isso em escala: trouxemos mais de 28 mil pacientes e mais de 2 milhões de agendamentos de clínicas que vieram de outros sistemas, junto com histórico de sessões, prontuários e arquivos. Você manda o que tem hoje, a gente importa, e sua equipe começa sem redigitar nada. <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20quero%20migrar%20para%20o%20Terapee%20e%20trazer%20os%20dados%20da%20minha%20cl%C3%ADnica" style="color:var(--primary);font-weight:600;">Fale com a gente pelo WhatsApp</a>.</div>
+            <div class="faq-answer-inner">Sim, e já fizemos isso em escala: trouxemos mais de 28 mil pacientes e mais de 2 milhões de agendamentos de clínicas que vieram de outros sistemas, junto com histórico de sessões, prontuários e arquivos. Você manda o que tem hoje, a gente importa, e sua equipe começa sem redigitar nada. <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20quero%20migrar%20para%20a%20Terapee%20e%20trazer%20os%20dados%20da%20minha%20cl%C3%ADnica" style="color:var(--primary);font-weight:600;">Fale com a gente pelo WhatsApp</a>.</div>
           </div>
         </div>
         <div class="faq-item">
@@ -2841,18 +2889,18 @@ document.addEventListener('click', function (e) {
 </section>
 
 <!-- ============ CTA FINAL ============ -->
-<section style="padding: 80px 24px;">
-<div class="cta-section" id="fale-conosco">
+<section class="hm-cta" id="fale-conosco">
   <div class="container">
-    <h2>Sua clínica funcionando no automático começa agora.</h2>
-    <p>Menos faltas. Recebimento em dia. Sua equipe livre pra cuidar do paciente. Teste gratuitamente por 14 dias, sem compromisso.</p>
-    <div class="cta-buttons">
-      <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary">Criar conta gratuita →</a>
-      <a href="https://api.whatsapp.com/send?phone=552123422477&text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20o%20Terapee" class="btn btn-outline">Falar com consultor</a>
+    <div class="hm-cta-box">
+      <h2>Na semana que vem, a agenda confirma sozinha</h2>
+      <p>Crie a conta e teste todas as funcionalidades por 14 dias. Se você vem de outro sistema, nosso time traz seus pacientes e agendamentos.</p>
+      <div class="hm-cta-btns">
+        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-white">Testar grátis por 14 dias →</a>
+        <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20a%20Terapee" target="_blank" rel="noopener" class="btn hm-btn-ghost">Falar com a gente no WhatsApp</a>
+      </div>
+      <small>Sem cartão de crédito · Cancele quando quiser</small>
     </div>
-    <p class="cta-note">Não é necessário cartão de crédito para começar.</p>
   </div>
-</div>
 </section>
 
 <!-- ============ FOOTER ============ -->
@@ -2946,7 +2994,7 @@ document.addEventListener('click', function (e) {
       <div>
         <p class="footer-col-title">Contato</p>
         <div class="footer-col-links">
-          <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20o%20Terapee" class="footer-contact-item" target="_blank" rel="noopener">(21) 2342-2477</a>
+          <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20a%20Terapee" class="footer-contact-item" target="_blank" rel="noopener">(21) 2342-2477</a>
           <a href="mailto:suporte@terapee.com.br" class="footer-contact-item">suporte@terapee.com.br</a>
         </div>
       </div>
@@ -2994,17 +3042,11 @@ document.querySelectorAll('.faq-question').forEach(q => {
 });
 
 // Pricing toggle
-document.querySelectorAll('.toggle-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const isAnual = btn.dataset.period === 'anual';
-    document.querySelectorAll('.pricing-amount, .pricing-bill').forEach(el => {
-      el.textContent = isAnual ? el.dataset.yearly : el.dataset.monthly;
-    });
-  });
-});
-
+document.querySelectorAll('.pl-tbtn').forEach(btn => btn.addEventListener('click', () => {
+  const anual = btn.dataset.period === 'anual';
+  document.querySelectorAll('.pl-tbtn').forEach(b => { b.classList.toggle('active', b === btn); b.setAttribute('aria-pressed', b === btn); });
+  document.querySelectorAll('[data-monthly]').forEach(el => { el.textContent = anual ? el.dataset.yearly : el.dataset.monthly; });
+}));
 // Scroll animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
