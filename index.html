@@ -1321,6 +1321,7 @@ img { max-width: 100%; display: block; }
 .pricing-currency { font-size: 18px; font-weight: 700; color: var(--dark); }
 .pricing-amount { font-size: 48px; font-weight: 800; color: var(--dark); line-height: 1; }
 .pricing-period { font-size: 15px; color: var(--gray-400); font-weight: 600; }
+.pricing-bill { font-size: 13px; color: var(--gray-500); margin-bottom: 20px; min-height: 20px; }
 .pricing-resources {
   font-size: 12px;
   font-weight: 700;
@@ -2651,6 +2652,7 @@ document.addEventListener('click', function (e) {
           <span class="pricing-amount" data-monthly="79" data-yearly="63,20">79</span>
           <span class="pricing-period">/mês</span>
         </div>
+        <div class="pricing-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 758,40 por ano (economia de R$ 189,60)">Cobrado mensalmente</div>
         <div class="pricing-resources">Recursos:</div>
         <div class="pricing-features">
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> 1 usuário</div>
@@ -2681,6 +2683,7 @@ document.addEventListener('click', function (e) {
           <span class="pricing-amount" data-monthly="229" data-yearly="183,20">229</span>
           <span class="pricing-period">/mês</span>
         </div>
+        <div class="pricing-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 2.198,40 por ano (economia de R$ 549,60)">Cobrado mensalmente</div>
         <div class="pricing-resources">Recursos:</div>
         <div class="pricing-features">
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Até 15 usuários</div>
@@ -2712,6 +2715,7 @@ document.addEventListener('click', function (e) {
           <span class="pricing-amount" data-monthly="349" data-yearly="279,20">349</span>
           <span class="pricing-period">/mês</span>
         </div>
+        <div class="pricing-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 3.350,40 por ano (economia de R$ 837,60)">Cobrado mensalmente</div>
         <div class="pricing-resources">Recursos:</div>
         <div class="pricing-features">
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Tudo do plano Clínica +</div>
@@ -2995,7 +2999,7 @@ document.querySelectorAll('.toggle-btn').forEach(btn => {
     document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     const isAnual = btn.dataset.period === 'anual';
-    document.querySelectorAll('.pricing-amount').forEach(el => {
+    document.querySelectorAll('.pricing-amount, .pricing-bill').forEach(el => {
       el.textContent = isAnual ? el.dataset.yearly : el.dataset.monthly;
     });
   });
