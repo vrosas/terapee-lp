@@ -15,7 +15,7 @@ vários terapeutas.
 - Aplicação: https://web.terapee.com.br/
 - Idioma e mercado: português do Brasil (pt-BR)
 - Teste grátis: 14 dias, sem cartão de crédito
-- Planos mensais: Start R$ 55,90 · Clínica R$ 89,90 · Clínica Max R$ 175,00
+- Planos mensais: Individual R$ 55,90 · Clínica R$ 89,90 · Clínica Max R$ 175,00 (20% de desconto no anual). Comparativo completo: https://www.terapee.com.br/planos/
 - Emissão de NFS-e pelo Emissor Nacional do gov.br, incluída em todos os planos
 - Lembretes automáticos no WhatsApp reduzem faltas em 25%
 - Conformidade com a LGPD; o cliente pode exportar os dados ao cancelar

@@ -117,22 +117,6 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Para quem é o Terapee?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "O Terapee é o sistema feito para clínicas de terapia: psicologia, fonoaudiologia, terapia ocupacional, fisioterapia, ABA e clínicas multidisciplinares — de quem atende sozinho a clínicas com equipe e terapia infantil."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Preciso instalar algum programa? Funciona no celular?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Não é preciso instalar nada. O Terapee funciona direto no navegador: você acessa pelo computador, tablet ou celular, com tudo sempre sincronizado e atualizado em tempo real."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "Existe teste grátis? Preciso informar cartão de crédito?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -149,14 +133,6 @@
         },
         {
           "@type": "Question",
-          "name": "Como é feito o pagamento da mensalidade?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Todas as mensalidades e anuidades são pagas através de cartão de crédito."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "Os dados estão seguros? O Terapee está em conformidade com a LGPD?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -169,14 +145,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "O Terapee envia lembretes automáticos das sessões pelo WhatsApp e o paciente confirma a presença em um clique. Nas clínicas que usam, as faltas caem 25%. Os lembretes já estão inclusos nos planos. Você também pode conectar o seu próprio número de WhatsApp (recurso disponível com custo adicional)."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Como funciona a Telemedicina (atendimento por vídeo)?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Você atende por vídeo direto do navegador, sem instalar nada. A sala de atendimento é criada a partir do agendamento e o link chega ao paciente pelo WhatsApp. Funciona no computador, tablet ou celular, com conexão segura, e você registra a evolução no prontuário ao final da sessão."
           }
         },
         {
@@ -200,15 +168,7 @@
           "name": "Já uso um app e quero migrar para a Terapee. Vocês ajudam na migração?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim, e já fizemos isso em escala: trouxemos mais de 14 mil pacientes e mais de 400 mil agendamentos de clínicas que vieram de outros sistemas, junto com histórico de sessões, prontuários e arquivos. Você manda o que tem hoje, a gente importa, e sua equipe começa sem redigitar nada. Fale com a gente pelo WhatsApp (21) 2342-2477."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Vocês oferecem suporte? Como falo com a equipe?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim! Nosso time atende pelo WhatsApp (21) 2342-2477 e pelo e-mail suporte@terapee.com.br."
+            "text": "Sim, e já fizemos isso em escala: trouxemos mais de 28 mil pacientes e mais de 2 milhões de agendamentos de clínicas que vieram de outros sistemas, junto com histórico de sessões, prontuários e arquivos. Você manda o que tem hoje, a gente importa, e sua equipe começa sem redigitar nada. Fale com a gente pelo WhatsApp (21) 2342-2477."
           }
         },
         {
@@ -233,14 +193,14 @@
 }
 </script>
 
-<link rel="preload" href="/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 @font-face {
-  font-family: 'Plus Jakarta Sans';
+  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400 800;
   font-display: swap;
-  src: url(/fonts/plus-jakarta-sans-latin.woff2) format('woff2');
+  src: url(/fonts/dm-sans-latin.woff2) format('woff2');
 }
 </style>
 <style>
@@ -248,7 +208,7 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   color: #1a1a2e;
   background: var(--gray-50);
   line-height: 1.6;
@@ -2136,6 +2096,79 @@ document.addEventListener('click', function (e) {
   if (a) (window.dataLayer = window.dataLayer || []).push({ event: 'calculadora_cta_home', posicao: a.getAttribute('data-calc-cta') });
 });
 </script>
+<style>
+/* ========== HERO COM TELA DO SISTEMA ========== */
+.hx{position:relative;padding:136px 0 96px;overflow:hidden;background:radial-gradient(900px 500px at 85% 10%,rgba(68,76,231,.12),transparent 60%),radial-gradient(700px 400px at 0% 100%,rgba(18,183,106,.07),transparent 60%),linear-gradient(#fff,#F8F9FE)}
+.hx::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#F0F2F7 1px,transparent 1px),linear-gradient(90deg,#F0F2F7 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 20%,transparent 75%);opacity:.7;pointer-events:none}
+.hx-grid{position:relative;display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center}
+.hx-pill{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border-radius:999px;background:#fff;border:1px solid #E7EAF2;font-size:14px;font-weight:600;color:#2A3142}
+.hx-pill b{background:var(--primary-bg);color:var(--primary);padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700}
+.hx h1{font-size:clamp(38px,4.6vw,58px);line-height:1.06;letter-spacing:-.005em;font-weight:800;color:var(--dark);margin-top:24px}
+.hx-hl{background:linear-gradient(120deg,#444CE7,#7A5AF8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hx-lead{font-size:19px;line-height:1.6;color:var(--gray-600);margin-top:24px;max-width:560px}
+.hx-ctas{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
+.hx-assure{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;font-size:14px;font-weight:600;color:var(--gray-700)}
+.hx-assure span{display:inline-flex;align-items:center;gap:8px}
+.hx-assure svg{width:18px;height:18px;color:#12B76A;flex:none}
+.hx-stage{position:relative;height:560px}
+.hx-app{position:absolute;inset:0 0 auto 24px;background:#fff;border-radius:22px;border:1px solid #E7EAF2;box-shadow:0 2px 4px rgba(16,24,40,.04),0 32px 64px -24px rgba(30,36,90,.28);overflow:hidden}
+.hx-app-top{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid #F0F2F7}
+.hx-dots{display:flex;gap:6px}.hx-dots i{width:10px;height:10px;border-radius:50%;background:#E4E7EF;display:block}
+.hx-app-title{font-weight:700;font-size:14px;color:var(--dark)}
+.hx-app-title small{display:block;font-weight:500;font-size:12px;color:#8A93A6}
+.hx-seg{margin-left:auto;display:flex;background:#F7F8FC;border-radius:10px;padding:3px;font-size:12px;font-weight:600;color:#5B6476}
+.hx-seg span{padding:5px 10px;border-radius:8px}.hx-seg .on{background:#fff;color:var(--dark);box-shadow:0 1px 2px rgba(16,24,40,.08)}
+.hx-week{display:grid;grid-template-columns:44px repeat(5,1fr);font-size:11px}
+.hx-hd{padding:10px 8px;font-weight:700;color:#5B6476;border-bottom:1px solid #F0F2F7;text-align:center}
+.hx-hd b{display:block;font-size:16px;color:var(--dark)}
+.hx-hd.today b{color:var(--primary)}
+.hx-t{color:#8A93A6;padding:6px 6px 0;height:58px;border-right:1px solid #F0F2F7;font-weight:600}
+.hx-c{height:58px;border-bottom:1px dashed #F0F2F7;border-right:1px solid #F0F2F7;padding:4px}
+.hx-ev{border-radius:9px;padding:6px 8px;height:50px;font-weight:600;line-height:1.25;overflow:hidden;border-left:3px solid}
+.hx-ev small{display:block;font-weight:500;opacity:.8;font-size:10px;margin-top:2px}
+.hx-ev.ok{background:#E7F8EF;border-color:#12B76A;color:#05603A}
+.hx-ev.wait{background:#FEF4E6;border-color:#F79009;color:#93370D}
+.hx-ev.p{background:#EEF0FF;border-color:var(--primary);color:#2D31A6}
+.hx-ev.no{background:#F2F4F7;border-color:#98A2B3;color:#475467;text-decoration:line-through}
+.hx-float{position:absolute;background:#fff;border-radius:18px;border:1px solid #E7EAF2;box-shadow:0 2px 4px rgba(16,24,40,.04),0 32px 64px -24px rgba(30,36,90,.28);animation:hxbob 6s ease-in-out infinite}
+@keyframes hxbob{50%{transform:translateY(-8px)}}
+.hx-wa{left:-28px;bottom:6px;width:280px;overflow:hidden;animation-delay:-2s}
+.hx-wa-hd{background:#075E54;color:#fff;padding:10px 14px;display:flex;gap:10px;align-items:center;font-size:13px;font-weight:700}
+.hx-wa-hd i{width:28px;height:28px;border-radius:50%;background:#fff url("/logo-terapee.svg") center/70% no-repeat;display:block}
+.hx-wa-hd small{display:block;font-weight:500;opacity:.8;font-size:11px}
+.hx-wa-body{background:#EFE7DD;padding:12px;display:flex;flex-direction:column;gap:8px;font-size:12.5px;line-height:1.4;color:#111}
+.hx-bub{background:#fff;padding:8px 10px;border-radius:10px 10px 10px 2px;max-width:92%;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+.hx-act{margin-top:8px;border-top:1px solid #EEE;padding-top:7px;color:#027EB5;font-weight:700;text-align:center}
+.hx-bub.me{align-self:flex-end;background:#D9FDD3;border-radius:10px 10px 2px 10px}
+.hx-bub time{display:block;text-align:right;font-size:10px;color:#667781;margin-top:2px}
+.hx-toast{right:-14px;top:300px;width:290px;padding:16px;animation-delay:-4s}
+.hx-row{display:flex;align-items:center;gap:12px}
+.hx-ico{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;flex:none}
+.hx-ico svg{width:20px;height:20px}
+.hx-ico.g{background:#E7F8EF;color:#12B76A}.hx-ico.b{background:#EEF0FF;color:var(--primary)}
+.hx-toast b{font-size:14px;display:block;color:var(--dark)}
+.hx-toast small{color:#5B6476;font-size:12px}
+.hx-sep{height:1px;background:#F0F2F7;margin:12px 0}
+@media (max-width:1080px){.hx-grid{grid-template-columns:1fr}.hx-stage{max-width:620px;width:100%;margin:8px auto 0}}
+@media (max-width:640px){
+  .hx{padding:104px 0 56px}.hx-pill{font-size:13px;gap:8px}.hx-pill b{white-space:nowrap}.hx h1{font-size:38px}.hx-lead{font-size:17px}
+  .hx-ctas .btn{width:100%;justify-content:center}
+  .hx-stage{height:auto;padding-bottom:12px}
+  .hx-app{position:relative;inset:auto}
+  .hx-seg{display:none}
+  .hx-week{grid-template-columns:34px repeat(3,1fr)}.hx-week .d4,.hx-week .d5{display:none}
+  .hx-wa{position:relative;left:auto;bottom:auto;width:auto;margin:-40px 12px 0;animation:none}
+  .hx-toast{position:relative;right:auto;top:auto;width:auto;margin:12px 12px 0;animation:none}
+}
+@media (prefers-reduced-motion:reduce){.hx-float{animation:none}}
+/* ========== SEGURANÇA COMPACTA ========== */
+.sec-strip{padding:56px 0;border-top:1px solid #eef0f4;border-bottom:1px solid #eef0f4;background:#fff}
+.sec-strip .container{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.sec-strip h2{font-size:22px;font-weight:800;color:var(--dark);letter-spacing:-.01em;max-width:320px;line-height:1.25}
+.sec-strip ul{display:flex;flex-wrap:wrap;gap:10px}
+.sec-strip li{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--gray-700);background:var(--gray-50);border:1px solid var(--gray-200);padding:9px 14px;border-radius:999px}
+.sec-strip li svg{width:16px;height:16px;color:var(--primary);flex:none}
+</style>
 </head>
 <body>
 <!-- ============ HEADER ============ -->
@@ -2147,11 +2180,9 @@ document.addEventListener('click', function (e) {
     <nav class="nav">
       <a href="/funcionalidades/">Funcionalidades</a>
       <a href="/#para-quem">Para quem</a>
-      <a href="/#planos">Planos</a>
-      <a href="/#seguranca">Segurança</a>
+      <a href="/planos/">Planos</a>
       <a href="/#faq">Dúvidas</a>
       <a href="https://blog.terapee.com.br/">Blog</a>
-      <a href="/#fale-conosco">Contato</a>
     </nav>
     <div class="header-actions">
       <a href="https://web.terapee.com.br/" target="_blank" class="btn btn-outline" style="padding:10px 20px;font-size:14px;">Entrar</a>
@@ -2164,31 +2195,93 @@ document.addEventListener('click', function (e) {
 </header>
 
 <!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-badge">
-      <span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg></span> O sistema feito para clínicas de terapia
+<section class="hx">
+  <div class="container hx-grid">
+    <div class="hx-copy">
+      <span class="hx-pill"><b>Para terapia</b> O sistema de gestão da sua clínica</span>
+      <h1>Agenda confirmada. Pagamento em dia. <span class="hx-hl">Equipe livre para atender.</span></h1>
+      <p class="hx-lead">A Terapee confirma cada sessão pelo WhatsApp, cobra mensalidades e pacotes sozinha e emite a nota fiscal em dois cliques. Para clínicas de psicologia, fono, TO e ABA.</p>
+      <div class="hx-ctas">
+        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary">Testar grátis por 14 dias →</a>
+        <a href="#fluxo" class="btn btn-outline">Ver como funciona</a>
+      </div>
+      <div class="hx-assure">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Sem cartão de crédito</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Migração feita pelo nosso time</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Cancele quando quiser</span>
+      </div>
     </div>
-    <h1>Sua <span class="highlight">clínica de terapia</span> cheia, recebendo em dia e sem você correr atrás.</h1>
-    <p>A Terapee cuida da agenda, dos lembretes e da cobrança automaticamente — para sua equipe passar o dia atendendo, não apagando incêndio.</p>
-    <div class="hero-cta">
-      <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary">Criar conta gratuita →</a>
-      <a href="#funcionalidades" class="btn btn-outline">Ver funcionalidades</a>
-    </div>
-    <p class="hero-note">Não é necessário cartão de crédito para começar.</p>
-  </div>
-</section>
 
-<!-- ============ DASHBOARD PREVIEW ============ -->
-<section class="dashboard-preview">
-  <div class="container">
-    <div class="dashboard-card">
-      <img
-        src="/og-image.png"
-        alt="Terapee — plataforma de gestão para clínicas de terapia"
-        class="dashboard-preview-img"
-        loading="eager"
-      >
+    <div class="hx-stage" role="img" aria-label="Tela da Terapee: agenda da semana da clínica, confirmação de sessão pelo WhatsApp e NFS-e emitida a partir de um pacote pago">
+      <div class="hx-app" aria-hidden="true">
+        <div class="hx-app-top">
+          <div class="hx-dots"><i></i><i></i><i></i></div>
+          <div class="hx-app-title">Agenda da clínica<small>6 profissionais · semana de 13 a 17 out</small></div>
+          <div class="hx-seg"><span>Dia</span><span class="on">Semana</span><span>Mês</span></div>
+        </div>
+        <div class="hx-week">
+          <div class="hx-hd"></div>
+          <div class="hx-hd">SEG<b>13</b></div><div class="hx-hd">TER<b>14</b></div><div class="hx-hd today">QUA<b>15</b></div><div class="hx-hd d4">QUI<b>16</b></div><div class="hx-hd d5">SEX<b>17</b></div>
+          <div class="hx-t">08h</div>
+          <div class="hx-c"><div class="hx-ev ok">Ana R.<small>Psicologia</small></div></div>
+          <div class="hx-c"><div class="hx-ev p">Leo M.<small>Fono · 3/8</small></div></div>
+          <div class="hx-c"><div class="hx-ev ok">Bia S.<small>TO</small></div></div>
+          <div class="hx-c d4"><div class="hx-ev ok">Ana R.<small>Psicologia</small></div></div>
+          <div class="hx-c d5"></div>
+          <div class="hx-t">09h</div>
+          <div class="hx-c"></div>
+          <div class="hx-c"><div class="hx-ev ok">Caio T.<small>ABA</small></div></div>
+          <div class="hx-c"><div class="hx-ev wait">Davi L.<small>Aguardando</small></div></div>
+          <div class="hx-c d4"><div class="hx-ev p">Leo M.<small>Fono · 4/8</small></div></div>
+          <div class="hx-c d5"><div class="hx-ev ok">Gabi P.<small>Psicologia</small></div></div>
+          <div class="hx-t">10h</div>
+          <div class="hx-c"><div class="hx-ev p">Ian F.<small>Fono · 6/10</small></div></div>
+          <div class="hx-c"><div class="hx-ev no">Eva C.<small>Desmarcou</small></div></div>
+          <div class="hx-c"><div class="hx-ev ok">Malu V.<small>Psicologia</small></div></div>
+          <div class="hx-c d4"></div>
+          <div class="hx-c d5"><div class="hx-ev wait">Rui A.<small>Aguardando</small></div></div>
+          <div class="hx-t">11h</div>
+          <div class="hx-c"><div class="hx-ev ok">Nina O.<small>TO</small></div></div>
+          <div class="hx-c"></div>
+          <div class="hx-c"><div class="hx-ev ok">Theo B.<small>ABA</small></div></div>
+          <div class="hx-c d4"><div class="hx-ev ok">Lia D.<small>TO</small></div></div>
+          <div class="hx-c d5"></div>
+          <div class="hx-t">14h</div>
+          <div class="hx-c"><div class="hx-ev ok">Joana K.<small>Psicologia</small></div></div>
+          <div class="hx-c"><div class="hx-ev ok">Pedro N.<small>Fono</small></div></div>
+          <div class="hx-c"><div class="hx-ev ok">Ana R.<small>Confirmou agora</small></div></div>
+          <div class="hx-c d4"><div class="hx-ev p">Ian F.<small>Fono · 7/10</small></div></div>
+          <div class="hx-c d5"><div class="hx-ev ok">Sofia M.<small>TO</small></div></div>
+          <div class="hx-t">15h</div>
+          <div class="hx-c"></div>
+          <div class="hx-c"><div class="hx-ev ok">Vito H.<small>ABA</small></div></div>
+          <div class="hx-c"><div class="hx-ev wait">Zeca R.<small>Aguardando</small></div></div>
+          <div class="hx-c d4"></div>
+          <div class="hx-c d5"><div class="hx-ev ok">Lara G.<small>Psicologia</small></div></div>
+        </div>
+      </div>
+
+      <div class="hx-float hx-wa" aria-hidden="true">
+        <div class="hx-wa-hd"><i></i><div>Clínica Bem Viver<small>via Terapee</small></div></div>
+        <div class="hx-wa-body">
+          <div class="hx-bub">Olá, Ana! Lembrete da sua sessão de <b>amanhã, quarta, às 14h</b> com a Dra. Paula.
+            <div class="hx-act">✓ Confirmar presença</div>
+            <time>14:00</time></div>
+          <div class="hx-bub me">Confirmar presença<time>14:02 ✓✓</time></div>
+        </div>
+      </div>
+
+      <div class="hx-float hx-toast" aria-hidden="true">
+        <div class="hx-row">
+          <div class="hx-ico g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div>
+          <div><b>Pacote pago · R$ 1.040</b><small>Leo M. · 8 sessões de fono · Pix</small></div>
+        </div>
+        <div class="hx-sep"></div>
+        <div class="hx-row">
+          <div class="hx-ico b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div>
+          <div><b>NFS-e emitida</b><small>Emissor Nacional · 2 cliques</small></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -2207,11 +2300,11 @@ document.addEventListener('click', function (e) {
         <div class="proof-stat-label">menos faltas com lembrete e confirmação no WhatsApp</div>
       </div>
       <div class="proof-stat">
-        <div class="proof-stat-num">+14 mil</div>
+        <div class="proof-stat-num">+28 mil</div>
         <div class="proof-stat-label">pacientes migrados de outros sistemas, com histórico</div>
       </div>
       <div class="proof-stat">
-        <div class="proof-stat-num">+400 mil</div>
+        <div class="proof-stat-num">+2 milhões</div>
         <div class="proof-stat-label">agendamentos importados sem ninguém redigitar</div>
       </div>
     </div>
@@ -2219,113 +2312,6 @@ document.addEventListener('click', function (e) {
       Mensalidades e pacotes com cobrança recorrente automática, e a NFS-e emitida direto da cobrança paga — incluída em todos os planos, sem custo por nota.
       <a href="/funcionalidades/nota-fiscal-nfse" style="color:#2563eb;font-weight:600;text-decoration:underline;">Como funciona a emissão de NFS-e</a>
     </p>
-  </div>
-</section>
-
-<!-- ============ COMO FUNCIONA ============ -->
-<section class="how-it-works section" id="como-funciona">
-  <div class="container animate-on-scroll">
-    <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg></span> Como funciona na prática</span>
-    <h2 class="section-title">Como funciona na prática</h2>
-    <p class="section-subtitle" style="margin:0 auto;">Comece em pouco tempo: a Terapee organiza a agenda, liga os lembretes e a cobrança e deixa tudo rodando sozinho — agenda cheia, contas em dia e tempo de volta pra você.</p>
-
-    <div class="tabs">
-      <button class="tab-btn active" data-tab="agenda">Gestão de agenda</button>
-      <button class="tab-btn" data-tab="pacientes">Gestão de pacientes</button>
-      <button class="tab-btn" data-tab="pagamentos">Gestão de pagamentos</button>
-    </div>
-
-    <!-- Tab: Agenda -->
-    <div class="tab-content active" id="tab-agenda">
-      <div class="tab-text">
-        <h3>Gestão de agenda</h3>
-        <p>Organize suas consultas com agilidade e precisão. Crie sessões avulsas ou recorrentes, visualize sua agenda diária ou mensal e envie lembretes automáticos pelo WhatsApp para reduzir faltas e manter tudo funcionando de forma fluida.</p>
-        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary">Criar conta gratuita →</a>
-      </div>
-      <div class="tab-visual">
-        <div class="tab-card">
-          <div class="tab-card-header">Próximas Sessões</div>
-          <div class="tab-card-sub">Quarta-feira, 24 Out</div>
-          <div class="appointment-row">
-            <div><span class="appt-time">09:00</span> <span class="appt-ampm">AM</span></div>
-            <div class="appt-info">
-              <div class="appt-name">Mariana Costa</div>
-              <div class="appt-status confirmed">Confirmado via WhatsApp</div>
-            </div>
-          </div>
-          <div class="appointment-row">
-            <div><span class="appt-time">10:30</span> <span class="appt-ampm">AM</span></div>
-            <div class="appt-info">
-              <div class="appt-name">Pedro Henrique</div>
-              <div class="appt-status">Aguardando confirmação</div>
-            </div>
-          </div>
-          <div class="appointment-row free">
-            <span>11:30 — Horário Livre</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tab: Pacientes -->
-    <div class="tab-content" id="tab-pacientes">
-      <div class="tab-text">
-        <h3>Gestão de pacientes</h3>
-        <p>Tenha todos os dados sempre à mão. Cadastre pacientes, consulte histórico e acesse informações essenciais em poucos cliques. Tudo organizado de forma simples e acessível.</p>
-        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary">Criar conta gratuita →</a>
-      </div>
-      <div class="tab-visual">
-        <div class="tab-card">
-          <div class="patient-profile">
-            <div class="patient-avatar">👩‍⚕️</div>
-            <div class="patient-name">Fernanda Oliveira</div>
-            <div class="patient-specialty">Terapia Cognitivo-Comportamental</div>
-          </div>
-          <div class="patient-stats">
-            <div class="patient-stat">
-              <div class="ps-label">Próxima Visita</div>
-              <div class="ps-value">26 Out</div>
-            </div>
-            <div class="patient-stat">
-              <div class="ps-label">Sessões</div>
-              <div class="ps-value">12</div>
-            </div>
-            <div class="patient-stat">
-              <div class="ps-label">Financeiro</div>
-              <div class="ps-value green">Em dia</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tab: Pagamentos -->
-    <div class="tab-content" id="tab-pagamentos">
-      <div class="tab-text">
-        <h3>Gestão de pagamentos</h3>
-        <p>Controle financeiro sem complicação. Acompanhe valores recebidos e pendentes, visualize gráficos mensais, emita cobranças pelo WhatsApp e, na cobrança já paga, emita a NFS-e em dois cliques — sem abrir o portal da prefeitura.</p>
-        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary">Criar conta gratuita →</a>
-      </div>
-      <div class="tab-visual">
-        <div class="tab-card">
-          <div class="tab-card-header">Fluxo de Caixa</div>
-          <div class="tab-card-sub">Últimos 6 meses</div>
-          <div class="finance-header">
-            <div>
-              <div class="growth">+12.5%</div>
-            </div>
-          </div>
-          <div class="chart-bars">
-            <div class="chart-bar" style="height:50%"><span class="chart-bar-label">Mai</span></div>
-            <div class="chart-bar" style="height:65%"><span class="chart-bar-label">Jun</span></div>
-            <div class="chart-bar" style="height:55%"><span class="chart-bar-label">Jul</span></div>
-            <div class="chart-bar" style="height:75%"><span class="chart-bar-label">Ago</span></div>
-            <div class="chart-bar" style="height:85%"><span class="chart-bar-label">Set</span></div>
-            <div class="chart-bar" style="height:100%"><span class="chart-bar-label">Out</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -2431,387 +2417,6 @@ document.addEventListener('click', function (e) {
   </div>
 </section>
 
-<!-- ============ BENEFITS ============ -->
-<section class="benefits section">
-  <div class="container">
-    <div style="text-align:center;" class="animate-on-scroll">
-      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg></span> Benefícios</span>
-      <h2 class="section-title">O que muda quando a clínica roda na Terapee</h2>
-      <p class="section-subtitle" style="margin:0 auto;">Cada recurso pensado pra um resultado: menos cadeira vazia, recebimento em dia e tempo de volta pra equipe.</p>
-    </div>
-    <div class="benefits-grid">
-      <div class="benefit-card animate-on-scroll">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
-        </div>
-        <h3>Reduza faltas em 25%</h3>
-        <p>Lembrete automático no WhatsApp e confirmação de presença antes de cada sessão. Menos cadeira vazia, agenda mais previsível.</p>
-        <div class="benefit-mini-ui">
-          <div class="mini-notif"><span class="dot green"></span>Lembrete de consulta enviado</div>
-          <div class="mini-notif"><span class="dot blue"></span>Nota fiscal emitida</div>
-          <div class="mini-notif"><span class="dot orange"></span>Prontuário atualizado</div>
-        </div>
-      </div>
-      <div class="benefit-card animate-on-scroll">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-        </div>
-        <h3>Devolva horas pra sua equipe</h3>
-        <p>Autoagendamento, confirmação por WhatsApp e portal do paciente. A secretária deixa de ser telefonista e cuida de quem está na clínica.</p>
-        <div class="benefit-mini-ui">
-          <div class="mini-notif"><span class="dot green"></span>Sincronizando agenda...</div>
-          <div class="mini-notif">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            Segurança total — Dados criptografados
-          </div>
-        </div>
-      </div>
-      <div class="benefit-card animate-on-scroll">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-        </div>
-        <h3>Receba sem ficar cobrando</h3>
-        <p>Mensalidade e pacote de sessões com cobrança recorrente automática. O dinheiro entra sozinho — sua equipe para de correr atrás de quem não pagou.</p>
-        <div class="benefit-mini-ui">
-          <div class="mini-notif"><span class="dot green"></span>Pagamento Recebido — R$ 350,00</div>
-          <div class="mini-notif"><span class="dot blue"></span>Cobrança Enviada</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ DESTAQUES ============ -->
-<section class="highlights section" id="destaques">
-  <div class="container">
-    <div style="text-align:center;" class="animate-on-scroll">
-      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg></span> Destaques</span>
-      <h2 class="section-title">As funcionalidades que mais transformam sua rotina</h2>
-      <p class="section-subtitle" style="margin:0 auto;">Conheça em detalhes os recursos que mais economizam seu tempo e organizam a sua clínica.</p>
-    </div>
-    <div class="feature-showcase">
-
-      <!-- 1 · AGENDA -->
-      <div class="feat-row animate-on-scroll">
-        <div class="feat-copy">
-          <span class="feat-tag" style="background:rgba(68,76,231,0.10);color:#444CE7;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>Agenda</span>
-          <h3>Uma agenda que organiza a clínica inteira</h3>
-          <p>Veja a semana de toda a equipe em uma só tela. Crie sessões avulsas ou recorrentes, evite conflitos de horário e acompanhe as confirmações em tempo real.</p>
-          <ul class="highlight-list">
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Visão diária, semanal e por profissional</li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Sessões recorrentes em poucos cliques</li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Status de confirmação atualizado na hora</li>
-          </ul>
-          <a href="/funcionalidades/agenda" class="highlight-link">Saiba mais →</a>
-        </div>
-        <div class="feat-art" style="background:#EEF4FF;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="1.5" style="position:absolute; right:-30px; bottom:-40px; width:210px; height:210px; opacity:0.07;"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
-          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:372px; background:#fff; border:1px solid #EEF0F5; border-radius:16px; box-shadow:0 18px 50px rgba(17,17,17,0.12); padding:18px;">
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
-              <div style="font-size:15px; font-weight:700; color:#111;">Janeiro 2025</div>
-              <span style="padding:5px 10px; background:#EEF4FF; border-radius:999px; font-size:11px; font-weight:600; color:#444CE7;">Semana</span>
-            </div>
-            <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:8px;">
-              <div style="display:flex; flex-direction:column; gap:6px;"><div style="text-align:center;"><div style="font-size:10px; font-weight:600; letter-spacing:0.06em; color:#C9CDD8;">SEG</div><div style="font-size:14px; font-weight:700; color:#111;">12</div></div><div style="border-left:3px solid #444CE7; background:rgba(68,76,231,0.08); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">09:00</div><div style="font-size:10px; color:#4A4F5C;">Maria S.</div></div><div style="border-left:3px solid #F59E0B; background:rgba(245,158,11,0.10); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">14:00</div><div style="font-size:10px; color:#4A4F5C;">João P.</div></div></div>
-              <div style="display:flex; flex-direction:column; gap:6px;"><div style="text-align:center;"><div style="font-size:10px; font-weight:600; letter-spacing:0.06em; color:#C9CDD8;">TER</div><div style="font-size:14px; font-weight:700; color:#111;">13</div></div><div style="border-left:3px solid #0D9488; background:rgba(13,148,136,0.10); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">10:00</div><div style="font-size:10px; color:#4A4F5C;">Lúcia F.</div></div></div>
-              <div style="display:flex; flex-direction:column; gap:6px;"><div style="text-align:center;"><div style="font-size:10px; font-weight:600; letter-spacing:0.06em; color:#444CE7;">QUA</div><div style="font-size:14px; font-weight:700; color:#444CE7;">14</div></div><div style="border-left:3px solid #16A34A; background:rgba(22,163,74,0.10); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">08:00</div><div style="font-size:10px; color:#4A4F5C;">Pedro H.</div></div><div style="border-left:3px solid #9333EA; background:rgba(147,51,234,0.10); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">15:00</div><div style="font-size:10px; color:#4A4F5C;">Ana C.</div></div></div>
-              <div style="display:flex; flex-direction:column; gap:6px;"><div style="text-align:center;"><div style="font-size:10px; font-weight:600; letter-spacing:0.06em; color:#C9CDD8;">QUI</div><div style="font-size:14px; font-weight:700; color:#111;">15</div></div><div style="border-left:3px solid #EC4899; background:rgba(236,72,153,0.10); border-radius:7px; padding:6px 7px;"><div style="font-size:10px; font-weight:700; color:#111;">11:00</div><div style="font-size:10px; color:#4A4F5C;">Carla M.</div></div></div>
-            </div>
-          </div>
-          <div style="position:absolute; top:30px; right:28px; display:flex; align-items:center; gap:8px; padding:9px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5s ease-in-out infinite;"><span style="width:24px; height:24px; border-radius:7px; background:rgba(22,163,74,0.12); display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:12px; font-weight:600; color:#111;">Confirmado</span></div>
-          <div style="position:absolute; bottom:28px; left:28px; display:flex; align-items:center; gap:10px; padding:8px 14px 8px 10px; background:#fff; border:1px solid #EEF0F5; border-radius:999px; box-shadow:0 10px 28px rgba(17,17,17,0.12);"><div style="display:flex;"><span style="width:26px; height:26px; border-radius:999px; background:#EEF4FF; color:#444CE7; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 2px #fff;">MS</span><span style="width:26px; height:26px; border-radius:999px; background:#E7F6EF; color:#16A34A; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 2px #fff; margin-left:-8px;">PH</span><span style="width:26px; height:26px; border-radius:999px; background:#F3EAFC; color:#9333EA; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 2px #fff; margin-left:-8px;">AC</span></div><span style="font-size:12px; font-weight:600; color:#4A4F5C; white-space:nowrap;">8 sessões hoje</span></div>
-        </div>
-      </div>
-
-      <!-- 2 · WHATSAPP -->
-      <div class="feat-row animate-on-scroll">
-        <div class="feat-copy">
-          <span class="feat-tag" style="background:#E7F8ED;color:#0c8a3e;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>Reduz faltas</span>
-          <h3>Lembretes automáticos no WhatsApp</h3>
-          <p>A Terapee envia o lembrete sozinha, no horário certo. O paciente confirma com um toque e a resposta aparece na sua agenda na hora — menos faltas, menos ligações.</p>
-          <ul class="highlight-list">
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio programado 24h antes da sessão</li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Confirmação atualiza o status automaticamente</li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Até 32% menos faltas no primeiro mês</li>
-          </ul>
-          <a href="/funcionalidades/lembretes-whatsapp" class="highlight-link">Saiba mais →</a>
-        </div>
-        <div class="feat-art" style="background:#E7F8ED;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="1.5" style="position:absolute; left:-34px; top:-30px; width:200px; height:200px; opacity:0.10;"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
-          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:286px; background:#ECE5DD; border-radius:22px; box-shadow:0 18px 50px rgba(17,17,17,0.16); overflow:hidden;">
-            <div style="display:flex; align-items:center; gap:10px; padding:12px 14px; background:#075E54;"><span style="width:30px; height:30px; border-radius:999px; background:rgba(255,255,255,0.22); display:flex; align-items:center; justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg></span><div><div style="font-size:13px; font-weight:700; color:#fff;">Clínica Terapee</div><div style="font-size:10px; color:rgba(255,255,255,0.7);">online</div></div></div>
-            <div style="padding:16px 14px; display:flex; flex-direction:column; gap:10px;">
-              <div style="align-self:flex-start; max-width:84%; background:#fff; border-radius:12px 12px 12px 4px; padding:9px 11px; box-shadow:0 1px 1px rgba(0,0,0,0.08);"><div style="font-size:12px; color:#111; line-height:1.4;">Olá, Maria! Lembrete da sua sessão <b>amanhã às 14h</b> com a Dra. Beatriz. Posso confirmar?</div><div style="font-size:9px; color:#8A8F9C; text-align:right; margin-top:3px;">09:02</div></div>
-              <div style="align-self:flex-end; max-width:80%; background:#DCF8C6; border-radius:12px 12px 4px 12px; padding:9px 11px; box-shadow:0 1px 1px rgba(0,0,0,0.08);"><div style="font-size:12px; color:#111; line-height:1.4;">Sim, confirmado! Obrigada.</div><div style="display:flex; align-items:center; justify-content:flex-end; gap:3px; margin-top:3px;"><span style="font-size:9px; color:#8A8F9C;">09:05</span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#34B7F1" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></div></div>
-            </div>
-          </div>
-          <div style="position:absolute; top:34px; right:26px; display:flex; align-items:center; gap:8px; padding:9px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5.5s ease-in-out infinite;"><span style="width:24px; height:24px; border-radius:7px; background:rgba(22,163,74,0.12); display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></span><div><div style="font-size:12px; font-weight:700; color:#111; line-height:1;">−32% faltas</div><div style="font-size:10px; color:#8A8F9C; margin-top:2px;">no último mês</div></div></div>
-          <div style="position:absolute; bottom:30px; left:26px; display:flex; align-items:center; gap:7px; padding:8px 12px; background:#fff; border:1px solid #EEF0F5; border-radius:999px; box-shadow:0 10px 28px rgba(17,17,17,0.12);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8A8F9C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span style="font-size:11px; font-weight:600; color:#4A4F5C;">Envio automático · 24h antes</span></div>
-        </div>
-      </div>
-
-      <!-- 3 · COBRANÇA -->
-      <div class="feat-row animate-on-scroll">
-        <div class="feat-copy">
-          <span class="feat-tag" style="background:rgba(22,163,74,0.12);color:#16A34A;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>Cobrança</span>
-          <h3>Cobrança automática, financeiro sempre claro</h3>
-          <p>Gere cobranças por Pix ou cartão e avise o paciente pelo WhatsApp. Ao receber, você dá baixa com um clique e o financeiro se atualiza: o que entrou e o que falta, sem planilha.</p>
-          <ul class="highlight-list">
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Cobranças por Pix e cartão em segundos</li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Baixa do recebimento em um clique</li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Visão clara do que há a receber no mês</li>
-          </ul>
-          <a href="/funcionalidades/cobranca-automatica" class="highlight-link">Saiba mais →</a>
-        </div>
-        <div class="feat-art" style="background:#ECFDF3;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="1.5" style="position:absolute; right:-30px; bottom:-36px; width:200px; height:200px; opacity:0.08;"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:362px; background:#fff; border:1px solid #EEF0F5; border-radius:16px; box-shadow:0 18px 50px rgba(17,17,17,0.12); padding:20px;">
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="font-size:14px; font-weight:700; color:#111;">Cobrança #1042</div><span style="display:flex; align-items:center; gap:5px; font-size:11px; font-weight:600; color:#16A34A; background:rgba(22,163,74,0.10); padding:4px 9px; border-radius:999px;"><span style="width:6px;height:6px;border-radius:999px;background:#16A34A;"></span>Pago</span></div>
-            <div style="display:flex; align-items:center; gap:11px; margin-bottom:16px;"><span style="width:38px; height:38px; border-radius:999px; background:#EEF4FF; color:#444CE7; font-size:13px; font-weight:700; display:flex; align-items:center; justify-content:center;">MS</span><div><div style="font-size:13px; font-weight:600; color:#111;">Maria Santos</div><div style="font-size:11px; color:#8A8F9C;">Sessão · 12/01 · Psicologia</div></div></div>
-            <div style="display:flex; align-items:flex-end; justify-content:space-between; padding-top:14px; border-top:1px solid #EEF0F5;"><div><div style="font-size:11px; color:#8A8F9C;">Valor recebido</div><div style="font-size:26px; font-weight:700; color:#111; letter-spacing:-0.02em;">R$ 250,00</div></div><span style="display:flex; align-items:center; gap:6px; font-size:11px; font-weight:600; color:#4A4F5C; background:#F7F8FC; padding:6px 10px; border-radius:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4A4F5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>Pix</span></div>
-          </div>
-          <div style="position:absolute; top:32px; right:26px; display:flex; align-items:center; gap:9px; padding:10px 14px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5s ease-in-out infinite;"><span style="width:26px; height:26px; border-radius:8px; background:#16A34A; display:flex; align-items:center; justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><div><div style="font-size:12px; font-weight:700; color:#111; line-height:1;">Pagamento recebido</div><div style="font-size:10px; color:#8A8F9C; margin-top:2px;">baixa registrada</div></div></div>
-          <div style="position:absolute; bottom:30px; left:26px; padding:11px 15px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12);"><div style="font-size:10px; color:#8A8F9C;">A receber no mês</div><div style="font-size:18px; font-weight:700; color:#111; letter-spacing:-0.02em; margin-top:2px;">R$ 24.580</div></div>
-        </div>
-      </div>
-
-      <!-- 4 · NFS-e -->
-      <div class="feat-row animate-on-scroll">
-        <div class="feat-copy">
-          <span class="feat-tag" style="background:rgba(68,76,231,0.10);color:#444CE7;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="13" y1="17" x2="8" y2="17"></line></svg>Nota fiscal <span class="new-tag">Novo</span></span>
-          <h3>A nota fiscal sai de dentro do sistema</h3>
-          <p>Emita a NFS-e direto na cobrança que já está paga, pelo Emissor Nacional do gov.br. Sem abrir o portal da prefeitura, sem redigitar CPF e valor, sem contratar mais nada — está incluída em todos os planos.</p>
-          <ul class="highlight-list">
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Paciente, valor e descrição já preenchidos</li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Nota autorizada em segundos, com número e chave</li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>XML e PDF da competência para a contabilidade</li>
-          </ul>
-          <a href="/funcionalidades/nota-fiscal-nfse" class="highlight-link">Saiba mais →</a>
-        </div>
-        <div class="feat-art" style="background:#EEF4FF;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="1.5" style="position:absolute; right:-28px; bottom:-36px; width:205px; height:205px; opacity:0.07;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:376px; background:#fff; border:1px solid #EEF0F5; border-radius:16px; box-shadow:0 18px 50px rgba(17,17,17,0.12); padding:18px;">
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
-              <div style="font-size:14px; font-weight:700; color:#111;">Receitas</div>
-              <span style="padding:5px 10px; background:#EEF4FF; border-radius:999px; font-size:11px; font-weight:600; color:#444CE7;">Agosto</span>
-            </div>
-            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 11px; border:1px solid #EEF0F5; border-radius:10px; margin-bottom:8px;">
-              <div><div style="font-size:11px; font-weight:700; color:#111;">Maria Silva</div><div style="font-size:10px; color:#8A8F9C;">Sessão de terapia · R$ 180,00</div></div>
-              <span style="padding:5px 11px; background:#444CE7; border-radius:8px; font-size:10px; font-weight:700; color:#fff;">Emitir</span>
-            </div>
-            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 11px; border:1px solid #EEF0F5; border-radius:10px; margin-bottom:8px;">
-              <div><div style="font-size:11px; font-weight:700; color:#111;">João Pereira</div><div style="font-size:10px; color:#8A8F9C;">Sessão de terapia · R$ 180,00</div></div>
-              <span style="display:flex; align-items:center; gap:5px; padding:5px 10px; background:rgba(22,163,74,0.10); border-radius:999px; font-size:10px; font-weight:700; color:#16A34A;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Emitida</span>
-            </div>
-            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 11px; border:1px solid #EEF0F5; border-radius:10px;">
-              <div><div style="font-size:11px; font-weight:700; color:#111;">Lúcia Ferraz</div><div style="font-size:10px; color:#8A8F9C;">Mensalidade · R$ 640,00</div></div>
-              <span style="display:flex; align-items:center; gap:5px; padding:5px 10px; background:rgba(22,163,74,0.10); border-radius:999px; font-size:10px; font-weight:700; color:#16A34A;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Emitida</span>
-            </div>
-          </div>
-          <div style="position:absolute; top:30px; left:26px; display:flex; align-items:center; gap:9px; padding:10px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5.5s ease-in-out infinite;"><span style="width:26px; height:26px; border-radius:8px; background:rgba(22,163,74,0.12); display:flex; align-items:center; justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span style="font-size:12px; font-weight:600; color:#111;">Nota autorizada</span></div>
-          <div style="position:absolute; bottom:28px; right:26px; display:flex; align-items:center; gap:8px; padding:9px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5s ease-in-out infinite;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M7 8h10"></path><path d="M7 12h10"></path><path d="M7 16h6"></path></svg><span style="font-size:11px; font-weight:600; color:#111;">Emissor Nacional · gov.br</span></div>
-        </div>
-      </div>
-
-      <!-- 5 · PRONTUÁRIO -->
-      <div class="feat-row animate-on-scroll">
-        <div class="feat-copy">
-          <span class="feat-tag" style="background:rgba(147,51,234,0.12);color:#9333EA;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v6h6"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Prontuário</span>
-          <h3>Prontuário eletrônico completo e seguro</h3>
-          <p>Registre a evolução de cada sessão e consulte todo o histórico do paciente de qualquer lugar, com anexos, assinatura e total conformidade com a LGPD.</p>
-          <ul class="highlight-list">
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Registro por sessão com data e hora automáticas</li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Anexo de laudos, avaliações e exames</li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Criptografia AES-256 e controle de acesso</li>
-          </ul>
-          <a href="/funcionalidades/prontuario-eletronico" class="highlight-link">Saiba mais →</a>
-        </div>
-        <div class="feat-art" style="background:#F3F0FB;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#9333EA" stroke-width="1.5" style="position:absolute; right:-28px; bottom:-38px; width:200px; height:200px; opacity:0.07;"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v6h6"></path></svg>
-          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:364px; background:#fff; border:1px solid #EEF0F5; border-radius:16px; box-shadow:0 18px 50px rgba(17,17,17,0.12); padding:20px;">
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;"><div><div style="font-size:14px; font-weight:700; color:#111;">Evolução clínica</div><div style="font-size:11px; color:#8A8F9C; margin-top:2px;">12 de janeiro de 2025 · Sessão 8</div></div><span style="display:flex; align-items:center; gap:5px; font-size:11px; font-weight:600; color:#16A34A; background:rgba(22,163,74,0.10); padding:4px 9px; border-radius:999px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Assinado</span></div>
-            <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:16px;"><span style="height:9px; width:100%; border-radius:5px; background:#F1F2F7;"></span><span style="height:9px; width:92%; border-radius:5px; background:#F1F2F7;"></span><span style="height:9px; width:97%; border-radius:5px; background:#F1F2F7;"></span><span style="height:9px; width:64%; border-radius:5px; background:#F1F2F7;"></span></div>
-            <div style="display:flex; align-items:center; gap:9px; padding:9px 11px; border:1px solid #EEF0F5; border-radius:9px;"><span style="width:30px; height:30px; border-radius:8px; background:#F3F0FB; color:#9333EA; display:flex; align-items:center; justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9333EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg></span><div style="flex:1;"><div style="font-size:12px; font-weight:600; color:#111;">avaliacao-neuropsicologica.pdf</div><div style="font-size:10px; color:#8A8F9C;">2,4 MB · anexado</div></div></div>
-          </div>
-          <div style="position:absolute; top:30px; right:26px; display:flex; align-items:center; gap:9px; padding:10px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5.5s ease-in-out infinite;"><span style="width:26px; height:26px; border-radius:999px; background:#F3EAFC; color:#9333EA; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center;">MS</span><div><div style="font-size:11px; font-weight:700; color:#111; line-height:1;">Histórico completo</div><div style="font-size:10px; color:#8A8F9C; margin-top:2px;">8 evoluções</div></div></div>
-          <div style="position:absolute; bottom:30px; left:26px; display:flex; align-items:center; gap:7px; padding:8px 12px; background:#fff; border:1px solid #EEF0F5; border-radius:999px; box-shadow:0 10px 28px rgba(17,17,17,0.12);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg><span style="font-size:11px; font-weight:600; color:#4A4F5C;">Seguro e em conformidade (LGPD)</span></div>
-        </div>
-      </div>
-
-      <!-- 6 · TELEMEDICINA -->
-      <div class="feat-row animate-on-scroll">
-        <div class="feat-copy">
-          <span class="feat-tag" style="background:rgba(68,76,231,0.10);color:#444CE7;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2"></rect></svg>Telemedicina</span>
-          <h3>Atendimento por vídeo, sem instalar nada</h3>
-          <p>A sala de atendimento abre direto no navegador, com link enviado pelo WhatsApp. Tudo ligado à agenda e ao prontuário, com conexão segura.</p>
-          <ul class="highlight-list">
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Sala de vídeo por link, sem aplicativos</li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Acesso pelo celular, tablet ou computador</li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Integrada à agenda e ao prontuário</li>
-          </ul>
-          <a href="/funcionalidades/telemedicina" class="highlight-link">Saiba mais →</a>
-        </div>
-        <div class="feat-art" style="background:#E8F0FE;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="1.5" style="position:absolute; left:-30px; bottom:-34px; width:200px; height:200px; opacity:0.07;"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2"></rect></svg>
-          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:382px; background:#0E1730; border-radius:16px; box-shadow:0 20px 54px rgba(17,17,17,0.22); padding:14px; overflow:hidden;">
-            <div style="position:relative; height:178px; border-radius:11px; background:linear-gradient(150deg,#2D3F66,#1B2748); display:flex; align-items:center; justify-content:center; overflow:hidden;">
-              <span style="width:74px; height:74px; border-radius:999px; background:rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; font-size:24px; font-weight:700; color:#fff;">BR</span>
-              <div style="position:absolute; top:12px; left:12px; display:flex; align-items:center; gap:6px; padding:5px 10px; background:rgba(22,163,74,0.92); border-radius:999px;"><span style="width:6px; height:6px; border-radius:999px; background:#fff;"></span><span style="font-size:10px; font-weight:600; color:#fff;">Online</span></div>
-              <div style="position:absolute; top:12px; right:12px; padding:5px 10px; background:rgba(0,0,0,0.4); border-radius:999px; font-size:11px; font-weight:600; color:#fff;">12:45</div>
-              <div style="position:absolute; bottom:10px; left:12px; font-size:11px; font-weight:600; color:#fff; text-shadow:0 1px 4px rgba(0,0,0,0.5);">Dra. Beatriz Rocha</div>
-              <div style="position:absolute; bottom:10px; right:10px; width:62px; height:46px; border-radius:8px; background:linear-gradient(150deg,#4A5B82,#2D3A5C); border:2px solid rgba(255,255,255,0.4); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:#fff;">MS</div>
-            </div>
-            <div style="display:flex; align-items:center; justify-content:center; gap:12px; padding:14px 0 4px;">
-              <span style="width:38px; height:38px; border-radius:999px; background:rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
-              <span style="width:38px; height:38px; border-radius:999px; background:rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2"></rect></svg></span>
-              <span style="width:38px; height:38px; border-radius:999px; background:#DC2626; display:flex; align-items:center; justify-content:center; transform:rotate(135deg);"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
-            </div>
-          </div>
-          <div style="position:absolute; bottom:28px; right:26px; display:flex; align-items:center; gap:8px; padding:9px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5s ease-in-out infinite;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg><span style="font-size:11px; font-weight:600; color:#111;">Ligada à agenda e ao prontuário</span></div>
-        </div>
-      </div>
-
-      <!-- 7 · FINANCEIRO -->
-      <div class="feat-row animate-on-scroll">
-        <div class="feat-copy">
-          <span class="feat-tag" style="background:rgba(68,76,231,0.10);color:#444CE7;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>Financeiro</span>
-          <h3>Financeiro e relatórios sem planilha</h3>
-          <p>Acompanhe faturamento, consultas e inadimplência em um painel claro. Exporte relatórios prontos para a contabilidade com um clique.</p>
-          <ul class="highlight-list">
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Painel de faturamento mês a mês</li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Controle de inadimplência em tempo real</li>
-            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Relatórios exportáveis em um clique</li>
-          </ul>
-          <a href="/funcionalidades/gestao-financeira" class="highlight-link">Saiba mais →</a>
-        </div>
-        <div class="feat-art" style="background:#EEF4FF;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="1.5" style="position:absolute; right:-26px; top:-34px; width:200px; height:200px; opacity:0.07;"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
-          <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:380px; background:#fff; border:1px solid #EEF0F5; border-radius:16px; box-shadow:0 18px 50px rgba(17,17,17,0.12); padding:20px;">
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:6px;"><div style="font-size:13px; font-weight:700; color:#111;">Faturamento</div><span style="display:flex; align-items:center; gap:4px; font-size:11px; font-weight:700; color:#16A34A;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>+8%</span></div>
-            <div style="font-size:24px; font-weight:700; color:#111; letter-spacing:-0.02em; margin-bottom:16px;">R$ 24.580</div>
-            <div style="display:flex; align-items:flex-end; gap:12px; height:96px; padding:0 2px; border-bottom:1px solid #EEF0F5; margin-bottom:14px;">
-              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;"><span style="width:100%; height:42px; border-radius:6px 6px 0 0; background:#C7D7FE;"></span></div>
-              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;"><span style="width:100%; height:58px; border-radius:6px 6px 0 0; background:#A4BCFD;"></span></div>
-              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;"><span style="width:100%; height:50px; border-radius:6px 6px 0 0; background:#C7D7FE;"></span></div>
-              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;"><span style="width:100%; height:72px; border-radius:6px 6px 0 0; background:#6172F3;"></span></div>
-              <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px;"><span style="width:100%; height:88px; border-radius:6px 6px 0 0; background:#444CE7;"></span></div>
-            </div>
-            <div style="display:flex; gap:10px;">
-              <div style="flex:1; padding:10px 12px; background:#F7F8FC; border-radius:10px;"><div style="font-size:10px; color:#8A8F9C;">Consultas</div><div style="font-size:16px; font-weight:700; color:#111;">128</div></div>
-              <div style="flex:1; padding:10px 12px; background:#F7F8FC; border-radius:10px;"><div style="font-size:10px; color:#8A8F9C;">Inadimplência</div><div style="font-size:16px; font-weight:700; color:#DC2626;">R$ 1.250</div></div>
-            </div>
-          </div>
-          <div style="position:absolute; top:30px; left:26px; display:flex; align-items:center; gap:9px; padding:10px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5.5s ease-in-out infinite;"><span style="width:26px; height:26px; border-radius:8px; background:rgba(68,76,231,0.12); display:flex; align-items:center; justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg></span><span style="font-size:12px; font-weight:600; color:#111;">Relatório exportado</span></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============ FUNCIONALIDADES ============ -->
-<section class="features section" id="funcionalidades">
-  <div class="container">
-    <div style="text-align:center;" class="animate-on-scroll">
-      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg></span> Funcionalidades</span>
-      <h2 class="section-title">Funcionalidades do nosso sistema</h2>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card animate-on-scroll">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="13" y1="17" x2="8" y2="17"/><path d="M15.5 17.5l1.5 1.5 3-3"/></svg>
-        </div>
-        <h3>Emissão de NFS-e <span class="new-tag">Novo</span></h3>
-        <p>Emita a nota fiscal direto da cobrança já paga, pelo Emissor Nacional do gov.br. Incluída em todos os planos.</p>
-      </div>
-      <div class="feature-card animate-on-scroll">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        </div>
-        <h3>Prontuário eletrônico</h3>
-        <p>Registre prontuários a cada sessão e consulte tudo de onde e quando quiser.</p>
-      </div>
-      <div class="feature-card animate-on-scroll">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        </div>
-        <h3>Emissão de recibos</h3>
-        <p>Gere recibos em PDF a partir dos seus modelos, com os dados do paciente já preenchidos.</p>
-      </div>
-      <div class="feature-card animate-on-scroll">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        </div>
-        <h3>Gestão de agenda</h3>
-        <p>Controle seus agendamentos de forma prática e facilite sessões recorrentes.</p>
-      </div>
-      <div class="feature-card animate-on-scroll">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
-        </div>
-        <h3>Lembretes via WhatsApp</h3>
-        <p>Envio automático de lembretes para reduzir faltas e manter sua agenda organizada.</p>
-      </div>
-      <div class="feature-card animate-on-scroll">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-        </div>
-        <h3>Telemedicina</h3>
-        <p>Atenda por vídeo direto do navegador, com sala segura e integrada à sua agenda.</p>
-      </div>
-      <div class="feature-card animate-on-scroll">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-        </div>
-        <h3>Emissão de cobranças</h3>
-        <p>Envie pedidos de pagamento de forma prática, com avisos via WhatsApp e e-mail.</p>
-      </div>
-      <div class="feature-card animate-on-scroll">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
-        </div>
-        <h3>Formulários personalizáveis</h3>
-        <p>Crie formulários adaptados à sua necessidade para cada tipo de atendimento.</p>
-      </div>
-      <div class="feature-card animate-on-scroll">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-        </div>
-        <h3>Gestão financeira</h3>
-        <p>Controle de recebimentos, pendências e relatórios mensais para manter suas finanças sempre em dia.</p>
-      </div>
-      <div class="feature-card animate-on-scroll">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-        </div>
-        <h3>Gestão de pacientes</h3>
-        <p>Cadastro completo, histórico de sessões e dados sempre acessíveis em poucos cliques.</p>
-      </div>
-      <div class="feature-card animate-on-scroll">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
-        </div>
-        <h3>Multi-agenda</h3>
-        <p>Gerencie a agenda de toda a equipe em um só painel, com visibilidade completa por profissional.</p>
-      </div>
-      <div class="feature-card animate-on-scroll">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-        </div>
-        <h3>Check-in de pacientes</h3>
-        <p>Controle de chegada com registro automático no sistema, sem precisar de planilhas ou anotações manuais.</p>
-      </div>
-      <div class="feature-card animate-on-scroll">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/><path d="M9 7h1"/></svg>
-        </div>
-        <h3>Documentos personalizáveis</h3>
-        <p>Gere atestados, declarações, relatórios e contratos em segundos, com os dados do paciente preenchidos automaticamente.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ PÚBLICO ALVO ============ -->
 <section class="target-audience section" id="para-quem">
   <div class="container animate-on-scroll">
@@ -2874,136 +2479,15 @@ document.addEventListener('click', function (e) {
 </section>
 
 <!-- ============ LGPD & SEGURANÇA ============ -->
-<section class="lgpd-section section" id="seguranca">
+<section class="sec-strip" id="seguranca">
   <div class="container">
-    <div class="lgpd-header animate-on-scroll">
-      <span class="section-label">
-        <span class="badge-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </span>
-        Segurança & LGPD
-      </span>
-      <h2 class="section-title">Seus dados protegidos,<br>você tranquilo</h2>
-      <p class="section-subtitle">O Terapee foi desenvolvido em conformidade com a LGPD e adota as melhores práticas de segurança da informação para proteger os dados de você e dos seus pacientes.</p>
-    </div>
-
-    <div class="lgpd-grid">
-      <div class="lgpd-card animate-on-scroll">
-        <div class="lgpd-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        </div>
-        <h3>Criptografia em trânsito e em repouso</h3>
-        <p>Todos os dados são criptografados em trânsito (TLS 1.3) e em repouso (AES-256), garantindo que nenhuma informação sensível trafegue de forma exposta.</p>
-      </div>
-
-      <div class="lgpd-card animate-on-scroll">
-        <div class="lgpd-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        </div>
-        <h3>Dados protegidos na nuvem</h3>
-        <p>Nossa infraestrutura utiliza provedores de nuvem reconhecidos, com criptografia e controle de acesso, em conformidade com as exigências da Lei Geral de Proteção de Dados.</p>
-      </div>
-
-      <div class="lgpd-card animate-on-scroll">
-        <div class="lgpd-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 12l2 2 4-4"/><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg>
-        </div>
-        <h3>Conformidade com a LGPD</h3>
-        <p>Operamos em conformidade com a Lei nº 13.709/2018. Possuímos Encarregado de Dados (DPO) designado, políticas de privacidade e processos de resposta a incidentes.</p>
-      </div>
-
-      <div class="lgpd-card animate-on-scroll">
-        <div class="lgpd-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-        </div>
-        <h3>Direitos dos titulares garantidos</h3>
-        <p>Pacientes e profissionais podem solicitar acesso, correção, portabilidade ou exclusão de seus dados a qualquer momento, conforme previsto na LGPD.</p>
-      </div>
-
-      <div class="lgpd-card animate-on-scroll">
-        <div class="lgpd-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
-        </div>
-        <h3>Controle de acesso por perfis</h3>
-        <p>Permissões granulares por função (profissional, secretária, financeiro) garantem que cada pessoa acessa apenas as informações necessárias para o seu trabalho.</p>
-      </div>
-
-      <div class="lgpd-card animate-on-scroll">
-        <div class="lgpd-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.51"/></svg>
-        </div>
-        <h3>Backups automáticos diários</h3>
-        <p>Seus dados são salvos automaticamente todos os dias com redundância geográfica, eliminando o risco de perda de informações clínicas e financeiras.</p>
-      </div>
-    </div>
-
-    <div class="lgpd-badge-row animate-on-scroll">
-      <div class="lgpd-trust-badge">
-        <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-        Em conformidade com a LGPD
-      </div>
-      <div class="lgpd-trust-badge">
-        <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-        Criptografia TLS 1.3 + AES-256
-      </div>
-      <div class="lgpd-trust-badge">
-        <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-        Infraestrutura em nuvem segura
-      </div>
-      <div class="lgpd-trust-badge">
-        <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
-        DPO designado
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ DIFERENCIAÇÃO ============ -->
-<section class="differentiation section">
-  <div class="container">
-    <div style="text-align:center;" class="animate-on-scroll">
-      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg></span> Por que a Terapee</span>
-      <h2 class="section-title">Feita pra clínica de terapia. De verdade.</h2>
-      <p class="section-subtitle" style="margin:0 auto;">Os sistemas grandes nasceram pra consultório médico e tentam servir todo mundo. A Terapee foi pensada pra como a sua clínica funciona: sessões recorrentes, pacotes, equipe multidisciplinar e a relação contínua com o paciente.</p>
-    </div>
-    <div class="animate-on-scroll" style="overflow-x:auto;margin-top:48px;">
-      <table style="width:100%;max-width:880px;margin:0 auto;border-collapse:collapse;font-size:15px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 24px rgba(15,23,42,.06);">
-        <thead>
-          <tr>
-            <th style="text-align:left;padding:18px 20px;background:#f8fafc;color:#5b6472;font-weight:600;border-bottom:1px solid #eef0f4;"></th>
-            <th style="text-align:left;padding:18px 20px;background:#f8fafc;color:#5b6472;font-weight:600;border-bottom:1px solid #eef0f4;">Sistema genérico de clínica</th>
-            <th style="text-align:left;padding:18px 20px;background:#eef4ff;color:#1f2733;font-weight:700;border-bottom:1px solid #dbe7ff;">Terapee</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="padding:16px 20px;color:#5b6472;border-bottom:1px solid #eef0f4;">Feito para</td>
-            <td style="padding:16px 20px;color:#5b6472;border-bottom:1px solid #eef0f4;">Consultório médico</td>
-            <td style="padding:16px 20px;color:#1f2733;font-weight:600;border-bottom:1px solid #eef0f4;background:#f7faff;">Clínica de terapia</td>
-          </tr>
-          <tr>
-            <td style="padding:16px 20px;color:#5b6472;border-bottom:1px solid #eef0f4;">Sessão recorrente / pacote</td>
-            <td style="padding:16px 20px;color:#5b6472;border-bottom:1px solid #eef0f4;">Adaptado</td>
-            <td style="padding:16px 20px;color:#1f2733;font-weight:600;border-bottom:1px solid #eef0f4;background:#f7faff;">No centro do produto</td>
-          </tr>
-          <tr>
-            <td style="padding:16px 20px;color:#5b6472;border-bottom:1px solid #eef0f4;">Lembrete + confirmação</td>
-            <td style="padding:16px 20px;color:#5b6472;border-bottom:1px solid #eef0f4;">Às vezes</td>
-            <td style="padding:16px 20px;color:#1f2733;font-weight:600;border-bottom:1px solid #eef0f4;background:#f7faff;">Automático, no WhatsApp</td>
-          </tr>
-          <tr>
-            <td style="padding:16px 20px;color:#5b6472;border-bottom:1px solid #eef0f4;">Cobrança recorrente</td>
-            <td style="padding:16px 20px;color:#5b6472;border-bottom:1px solid #eef0f4;">Add-on</td>
-            <td style="padding:16px 20px;color:#1f2733;font-weight:600;border-bottom:1px solid #eef0f4;background:#f7faff;">Nativa</td>
-          </tr>
-          <tr>
-            <td style="padding:16px 20px;color:#5b6472;">Linguagem</td>
-            <td style="padding:16px 20px;color:#5b6472;">Técnica</td>
-            <td style="padding:16px 20px;color:#1f2733;font-weight:600;background:#f7faff;">Simples, do seu dia a dia</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <h2>Dados dos pacientes protegidos, conforme a LGPD.</h2>
+    <ul>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Criptografia TLS 1.3 e AES-256</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Conformidade com a LGPD e DPO designado</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>Acesso por perfil de função</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>Backup automático diário</li>
+    </ul>
   </div>
 </section>
 
@@ -3096,11 +2580,11 @@ document.addEventListener('click', function (e) {
 
     <div class="migration-stats">
       <div class="migration-stat">
-        <div class="migration-stat-num">+14 mil</div>
+        <div class="migration-stat-num">+28 mil</div>
         <div class="migration-stat-label">pacientes já migrados de outros sistemas para a Terapee</div>
       </div>
       <div class="migration-stat">
-        <div class="migration-stat-num">+400 mil</div>
+        <div class="migration-stat-num">+2 milhões</div>
         <div class="migration-stat-label">agendamentos importados, com as sessões recorrentes preservadas</div>
       </div>
       <div class="migration-stat">
@@ -3179,7 +2663,6 @@ document.addEventListener('click', function (e) {
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Cadastro de pacientes</div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Emissão de NFS-e <span class="new-tag">Novo</span></div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Conecte seu próprio WhatsApp (contratado à parte)</div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Lembrete de aniversariantes</div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Disponível em qualquer dispositivo</div>
         </div>
         <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline">Começar com o Individual</a>
@@ -3209,8 +2692,8 @@ document.addEventListener('click', function (e) {
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Envio de cobranças via WhatsApp</div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Cadastro de pacientes</div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Emissão de NFS-e <span class="new-tag">Novo</span></div>
-          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Lembrete de aniversariantes</div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Cadastro de secretária</div>
+          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Conecte seu próprio WhatsApp (contratado à parte)</div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Multi-agenda</div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Disponível em qualquer dispositivo</div>
         </div>
@@ -3234,12 +2717,14 @@ document.addEventListener('click', function (e) {
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Usuários ilimitados</div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Conecte seu próprio WhatsApp, incluído <span class="new-tag">Novo</span></div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Seu logo na plataforma</div>
+          <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Lembrete de aniversariantes</div>
           <div class="pricing-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <a href="/funcionalidades/agendamento-online" style="color:inherit;text-decoration:underline;">Página de agendamento online</a></div>
         </div>
         <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline">Começar com o Clínica Max</a>
         <div class="pricing-note">Não é necessário cartão de crédito</div>
       </div>
     </div>
+    <p style="text-align:center;margin-top:28px;font-size:15px;"><a href="/planos/#comparar" style="color:var(--primary);font-weight:700;">Compare todos os recursos dos planos →</a></p>
     <div class="calc-strip">
       <div class="calc-strip-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="11" x2="8" y2="11.01"/><line x1="12" y1="11" x2="12" y2="11.01"/><line x1="16" y1="11" x2="16" y2="11.01"/><line x1="8" y1="15" x2="8" y2="15.01"/><line x1="12" y1="15" x2="12" y2="15.01"/><line x1="16" y1="15" x2="16" y2="18"/><line x1="8" y1="18" x2="12" y2="18"/></svg></div>
       <div class="calc-strip-text">
@@ -3266,24 +2751,6 @@ document.addEventListener('click', function (e) {
       <div class="faq-right">
         <div class="faq-item">
           <button class="faq-question">
-            Para quem é o Terapee?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">É o sistema feito para clínicas de terapia: psicologia, fonoaudiologia, terapia ocupacional, fisioterapia, ABA e clínicas multidisciplinares — de quem atende sozinho a clínicas com equipe e terapia infantil.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            Preciso instalar algum programa? Funciona no celular?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Não é preciso instalar nada. O Terapee funciona direto no navegador: você acessa pelo computador, tablet ou celular, com tudo sempre sincronizado e atualizado em tempo real.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
             Existe teste grátis? Preciso informar cartão de crédito?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
@@ -3302,15 +2769,6 @@ document.addEventListener('click', function (e) {
         </div>
         <div class="faq-item">
           <button class="faq-question">
-            Como é feito o pagamento da mensalidade?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Todas as mensalidades/anuidades são pagas através de cartão de crédito.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
             Os dados estão seguros? O Terapee está em conformidade com a LGPD?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
@@ -3325,15 +2783,6 @@ document.addEventListener('click', function (e) {
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">Funcionam, sim. O Terapee envia lembretes automáticos das sessões pelo WhatsApp e o paciente confirma a presença em um clique. Nas clínicas que usam, as faltas caem 25%. Os lembretes já estão inclusos nos planos. Se preferir, você também pode conectar o seu próprio número de WhatsApp (recurso disponível com custo adicional).</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            Como funciona a Telemedicina (atendimento por vídeo)?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Você atende por vídeo direto do navegador, sem instalar nada. A sala de atendimento é criada a partir do agendamento e o link chega ao paciente pelo WhatsApp. Funciona no computador, tablet ou celular, com conexão segura, e você registra a evolução no prontuário ao final da sessão.</div>
           </div>
         </div>
         <div class="faq-item">
@@ -3360,16 +2809,7 @@ document.addEventListener('click', function (e) {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Sim, e já fizemos isso em escala: trouxemos mais de 14 mil pacientes e mais de 400 mil agendamentos de clínicas que vieram de outros sistemas, junto com histórico de sessões, prontuários e arquivos. Você manda o que tem hoje, a gente importa, e sua equipe começa sem redigitar nada. <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20quero%20migrar%20para%20o%20Terapee%20e%20trazer%20os%20dados%20da%20minha%20cl%C3%ADnica" style="color:var(--primary);font-weight:600;">Fale com a gente pelo WhatsApp</a>.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            Vocês oferecem suporte? Como falo com a equipe?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Sim! Nosso time atende pelo WhatsApp (21) 2342-2477 e pelo e-mail suporte@terapee.com.br. Estamos sempre prontos para ajudar você a tirar o máximo da plataforma.</div>
+            <div class="faq-answer-inner">Sim, e já fizemos isso em escala: trouxemos mais de 28 mil pacientes e mais de 2 milhões de agendamentos de clínicas que vieram de outros sistemas, junto com histórico de sessões, prontuários e arquivos. Você manda o que tem hoje, a gente importa, e sua equipe começa sem redigitar nada. <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20quero%20migrar%20para%20o%20Terapee%20e%20trazer%20os%20dados%20da%20minha%20cl%C3%ADnica" style="color:var(--primary);font-weight:600;">Fale com a gente pelo WhatsApp</a>.</div>
           </div>
         </div>
         <div class="faq-item">
@@ -3391,42 +2831,6 @@ document.addEventListener('click', function (e) {
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ BLOG ============ -->
-<section class="blog section" id="blog">
-  <div class="container">
-    <div style="text-align:center;" class="animate-on-scroll">
-      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></span> Blog da Terapee</span>
-      <h2 class="section-title">Conteúdo para quem toca uma clínica</h2>
-      <p class="section-subtitle" style="margin:0 auto;">Gestão, agenda, financeiro e prontuário explicados sem juridiquês, com o passo a passo que a sua clínica pode aplicar na semana que vem.</p>
-    </div>
-
-    <div class="blog-grid">
-      <a href="https://blog.terapee.com.br/post/prontuario-eletronico-guia-para-clinicas" class="blog-card animate-on-scroll">
-        <span class="blog-card-tag">Prontuário</span>
-        <h3>Prontuário eletrônico: guia para clínicas</h3>
-        <p>O que um prontuário eletrônico precisa ter, quais regras legais importam e como escolher a solução certa para a sua clínica.</p>
-        <span class="blog-card-link">Ler artigo →</span>
-      </a>
-      <a href="https://blog.terapee.com.br/post/nfs-e-para-clinicas-como-emitir-sem-complicacao" class="blog-card animate-on-scroll">
-        <span class="blog-card-tag">Financeiro</span>
-        <h3>NFS-e para clínicas: como emitir sem complicação</h3>
-        <p>Como emitir a nota fiscal de serviços com menos erros, entender o portal correto e organizar o fluxo fiscal da clínica.</p>
-        <span class="blog-card-link">Ler artigo →</span>
-      </a>
-      <a href="https://blog.terapee.com.br/post/teleconsulta-como-funciona-e-quando-e-indicada" class="blog-card animate-on-scroll">
-        <span class="blog-card-tag">Teleconsulta</span>
-        <h3>Teleconsulta: como funciona e quando é indicada</h3>
-        <p>Quando a teleconsulta é indicada, quando exigir o presencial e como organizar o processo com segurança na clínica.</p>
-        <span class="blog-card-link">Ler artigo →</span>
-      </a>
-    </div>
-
-    <div class="blog-cta">
-      <a href="https://blog.terapee.com.br/" class="btn btn-outline">Ver todos os artigos →</a>
     </div>
   </div>
 </section>
@@ -3456,7 +2860,7 @@ document.addEventListener('click', function (e) {
       <div class="footer-links">
         <a href="/funcionalidades/">Funcionalidades</a>
         <a href="/#fluxo">Como funciona</a>
-        <a href="/#planos">Planos</a>
+        <a href="/planos/">Planos</a>
         <a href="/#migracao">Migração</a>
         <a href="/#seguranca">Segurança &amp; LGPD</a>
         <a href="/#faq">Dúvidas</a>
