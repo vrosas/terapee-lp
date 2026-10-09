@@ -133,6 +133,14 @@
         },
         {
           "@type": "Question",
+          "name": "Vocês têm plano terapêutico e registro de sessão para ABA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim, é novidade. O plano terapêutico (objetivos, metas e alvos com níveis de ajuda e critério de domínio) fica no prontuário do paciente, o registro de sessão é feito alvo a alvo no navegador do tablet e vira gráfico por alvo e relatório em PDF. A Terapee não traz protocolos publicados: a clínica cadastra a estrutura dos instrumentos que já usa."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Os dados estão seguros? A Terapee está em conformidade com a LGPD?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -2095,6 +2103,11 @@ a.target-item:hover .target-arrow { color: var(--primary); transform: translateX
 document.addEventListener('click', function (e) {
   var a = e.target.closest && e.target.closest('[data-calc-cta]');
   if (a) (window.dataLayer = window.dataLayer || []).push({ event: 'calculadora_cta_home', posicao: a.getAttribute('data-calc-cta') });
+  var b = e.target.closest && e.target.closest('[data-plano-aba-cta]');
+  if (b) {
+    (window.dataLayer = window.dataLayer || []).push({ event: 'plano_aba_cta', posicao: b.getAttribute('data-plano-aba-cta') });
+    if (typeof window.clarity === 'function') window.clarity('event', 'plano_aba_cta_' + b.getAttribute('data-plano-aba-cta'));
+  }
 });
 </script>
 <style>
@@ -2534,6 +2547,31 @@ document.addEventListener('click', function (e) {
   </div>
 </section>
 
+<!-- ============ PLANO TERAPEUTICO / ABA ============ -->
+<section class="pa-home" id="plano-terapeutico">
+  <div class="container pa-home-grid">
+    <div class="animate-on-scroll">
+      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l3-3 3 2 5-6"/></svg></span> Novo · Plano terapêutico e ABA</span>
+      <h2 class="section-title">Seu PEI fora do Word, no mesmo lugar do prontuário e da agenda</h2>
+      <p class="section-subtitle">Para clínicas que atendem TEA com ABA e para equipes multidisciplinares que ainda montam o plano terapêutico num arquivo.</p>
+      <ul class="pa-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Objetivos, metas e alvos com tipo de medida, níveis de ajuda e critério de domínio.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Registro de sessão alvo a alvo no tablet, salvo a cada toque e ligado à consulta da agenda.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Gráfico por alvo e relatório em PDF do plano, da evolução e da frequência para o convênio.</span></li>
+      </ul>
+      <div class="pa-home-ctas">
+        <a href="/funcionalidades/plano-terapeutico-aba" class="btn btn-primary" data-plano-aba-cta="home-saiba-mais">Conhecer o plano terapêutico →</a>
+        <a href="https://web.terapee.com.br/register?utm_source=home&amp;utm_medium=site&amp;utm_campaign=plano-aba&amp;utm_content=destaque-home" target="_blank" class="btn btn-outline" data-plano-aba-cta="home-teste">Testar grátis por 14 dias</a>
+      </div>
+    </div>
+      <div class="sp-stage" role="img" aria-label="Tela da Terapee no tablet: registro de sessão com alvos marcados como independente, com ajuda ou erro, contador de frequência e cronômetro de duração. Dados fictícios.">
+        <!-- PRINT: registro-sessao-tablet (o mesmo da página /funcionalidades/plano-terapeutico-aba). Quando houver o print, trocar o .hx-app e o .sp-toast por:
+             <img src="/assets/plano-aba/registro-sessao-tablet.webp" width="1200" height="900" alt="Registro de sessão ABA na Terapee aberto no tablet, com alvos marcados como independente, com ajuda ou erro" loading="lazy"> -->
+        <div class="hx-app pa-app" aria-hidden="true"><div class="hx-app-top"><div class="hx-dots"><i></i><i></i><i></i></div><div class="hx-app-title">Registro de sessão<small>Caio T. · Quarta, 15 de outubro · 14:00</small></div><span class="pa-saved">Salvo</span></div><div class="pa-reg"><div class="pa-tgt"><div class="pa-tgt-hd"><div><b>Nomear cores</b><small>Tentativas · fase de intervenção</small></div><span class="pa-score">5 de 8 independente</span></div><div class="pa-btns"><span class="pa-btn i">Independente</span><span class="pa-btn h">Com ajuda ▾</span><span class="pa-btn e">Erro</span></div><div class="pa-tally"><i class="i">I</i><i class="i">I</i><i class="h">DV</i><i class="i">I</i><i class="e">E</i><i class="i">I</i><i class="h">DG</i><i class="i">I</i><i class="undo">↶ Desfazer</i></div></div><div class="pa-tgt"><div class="pa-tgt-hd"><div><b>Pedir ajuda com frase</b><small>Frequência</small></div></div><div class="pa-ctr"><span>−</span><b>4</b><span>+</span><small>vezes nesta sessão</small></div></div><div class="pa-tgt"><div class="pa-tgt-hd"><div><b>Permanecer sentado na atividade</b><small>Duração</small></div></div><div class="pa-ctr"><span>❚❚</span><b class="pa-timer">03:42</b><small>cronômetro rodando</small></div></div></div></div><div class="sp-toast" aria-hidden="true"><div class="hx-ico g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><div><b>Cada toque salvo na hora</b><small>Fechar o navegador não perde a sessão</small></div></div>
+      </div>
+  </div>
+</section>
+
 <!-- ============ MIGRACAO ============ -->
 <section class="migration-section section" id="migracao">
   <div class="container animate-on-scroll">
@@ -2821,6 +2859,15 @@ document.addEventListener('click', function (e) {
           </div>
         </div>
         <div class="faq-item">
+          <button type="button" class="faq-question">
+            Vocês têm plano terapêutico e registro de sessão para ABA?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Sim, é novidade. O plano terapêutico (objetivos, metas e alvos com níveis de ajuda e critério de domínio) fica no prontuário do paciente, o registro de sessão é feito alvo a alvo no navegador do tablet e vira gráfico por alvo e relatório em PDF. A Terapee não traz protocolos publicados: a clínica cadastra a estrutura dos instrumentos que já usa. <a href="/funcionalidades/plano-terapeutico-aba" style="color:var(--primary);font-weight:600;text-decoration:underline;">Veja como funciona</a>.</div>
+          </div>
+        </div>
+        <div class="faq-item">
           <button class="faq-question">
             Os dados estão seguros? A Terapee está em conformidade com a LGPD?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
@@ -2945,6 +2992,7 @@ document.addEventListener('click', function (e) {
           <a href="/funcionalidades/agendamento-online">Agendamento online</a>
           <a href="/funcionalidades/pacotes-de-sessoes">Pacotes de sessões</a>
           <a href="/funcionalidades/check-in">Check-in de pacientes</a>
+          <a href="/funcionalidades/plano-terapeutico-aba">Plano terapêutico ABA</a>
           <a href="/funcionalidades/formularios-personalizaveis">Formulários personalizáveis</a>
           <a href="/funcionalidades/documentos-personalizaveis">Documentos personalizáveis</a>
           <a href="/funcionalidades/assinatura-digital">Assinatura digital</a>
