@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cadastro e gestão de pacientes para clínicas | Terapee</title>
-<meta name="description" content="Cadastre pacientes, consulte histórico de atendimentos e acesse informações em poucos cliques. Gestão de pacientes segura e em conformidade com a LGPD.">
+<title>Plano terapêutico ABA, PEI e registro de sessão | Terapee</title>
+<meta name="description" content="Tire o PEI do Word: metas, níveis de ajuda e critério de domínio, registro de sessão ABA no tablet, gráfico por alvo e relatório em PDF para o convênio.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.terapee.com.br/funcionalidades/gestao-de-pacientes">
+<link rel="canonical" href="https://www.terapee.com.br/funcionalidades/plano-terapeutico-aba">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.terapee.com.br/funcionalidades/gestao-de-pacientes">
-<meta property="og:title" content="Cadastro e gestão de pacientes para clínicas | Terapee">
-<meta property="og:description" content="Cadastre pacientes, consulte histórico de atendimentos e acesse informações em poucos cliques. Gestão de pacientes segura e em conformidade com a LGPD.">
+<meta property="og:url" content="https://www.terapee.com.br/funcionalidades/plano-terapeutico-aba">
+<meta property="og:title" content="Plano terapêutico ABA, PEI e registro de sessão | Terapee">
+<meta property="og:description" content="Tire o PEI do Word: metas, níveis de ajuda e critério de domínio, registro de sessão ABA no tablet, gráfico por alvo e relatório em PDF para o convênio.">
 <meta property="og:image" content="https://www.terapee.com.br/og-image.png">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="preload" href="/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -1749,8 +1749,8 @@ img { max-width: 100%; display: block; }
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Gestão de pacientes",
-      "item": "https://www.terapee.com.br/funcionalidades/gestao-de-pacientes"
+      "name": "Plano terapêutico ABA",
+      "item": "https://www.terapee.com.br/funcionalidades/plano-terapeutico-aba"
     }
   ]
 }
@@ -1770,36 +1770,85 @@ img { max-width: 100%; display: block; }
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "O que fica registrado no cadastro do paciente?",
+      "name": "Preciso instalar um aplicativo no tablet?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dados de contato, histórico de atendimentos, documentos anexados e status financeiro — tudo reunido em um só lugar e acessível em segundos."
+        "text": "Não. A Terapee é um sistema web: o registro de sessão abre no navegador do tablet, do celular ou do computador. Não há app para baixar."
       }
     },
     {
       "@type": "Question",
-      "name": "Como a Terapee protege os dados dos pacientes?",
+      "name": "A Terapee vem com VB-MAPP, ABLLS-R ou outro protocolo pronto?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Os dados são criptografados (AES-256 em repouso e TLS 1.3 em trânsito) e o acesso é controlado por perfil, em conformidade com a LGPD: somente profissionais autorizados acessam os dados clínicos."
+        "text": "Não. Protocolos publicados são protegidos por direito autoral e não vêm no sistema, e a Terapee não tem vínculo com seus autores ou editoras. O que a Terapee oferece é a estrutura: você cadastra os domínios, os itens e a escala dos instrumentos que a sua clínica já usa, aplica no paciente e compara com a avaliação anterior."
       }
     },
     {
       "@type": "Question",
-      "name": "Consigo encontrar um paciente rapidamente?",
+      "name": "A biblioteca de programas já vem preenchida?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. A busca rápida localiza qualquer paciente pelo nome e abre o cadastro, o histórico e os documentos imediatamente."
+        "text": "Não. A biblioteca começa vazia e é da sua clínica. Cada programa que a equipe cadastra pode ser reaproveitado no plano de outros pacientes."
       }
     },
     {
       "@type": "Question",
-      "name": "O cadastro se conecta com a agenda e o financeiro?",
+      "name": "O estagiário consegue registrar a sessão?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. Cada paciente fica vinculado aos seus agendamentos, recibos e pendências, então o histórico clínico e financeiro está sempre atualizado."
+        "text": "Sim. O estagiário aplica e registra a sessão; criar e editar metas fica com o profissional ou supervisor. A recepção e o financeiro não veem o plano nem as avaliações."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "E se o navegador fechar ou a internet cair no meio da sessão?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada marcação é salva no momento em que é feita. Se o navegador fechar, o que já foi marcado continua salvo quando você reabre a sessão. Se a rede falhar durante um envio, o registro não fica duplicado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Consigo o plano que estava vigente em uma data, para o convênio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Cada revisão do plano fica congelada, então você gera o plano vigente em qualquer data. Também há PDFs da evolução por período e da declaração de frequência, todos com o logo da clínica."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A funcionalidade já está pronta para usar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, já está no ar. No sistema, as abas Plano e Avaliações aparecem com o selo Beta: estão funcionando e seguimos ajustando com o retorno das clínicas que usam."
       }
     }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Terapee",
+  "url": "https://www.terapee.com.br/funcionalidades/plano-terapeutico-aba",
+  "applicationCategory": "MedicalApplication",
+  "applicationSubCategory": "Plano terapêutico e registro de sessão ABA",
+  "operatingSystem": "Web",
+  "inLanguage": "pt-BR",
+  "description": "Plano terapêutico estruturado (objetivos, metas e alvos) dentro do prontuário, registro de sessão ABA no tablet, gráfico por alvo e relatórios em PDF para clínicas de terapia.",
+  "featureList": [
+    "Plano terapêutico com objetivos de longo prazo, metas de curto prazo e alvos",
+    "Tipo de medida por meta: tentativas, frequência ou duração",
+    "Níveis de ajuda: dica gestual, dica verbal, modelo, física parcial e física total",
+    "Critério de domínio por % de acerto, número de sessões e mínimo de tentativas",
+    "Registro de sessão alvo a alvo no navegador do tablet, vinculado à agenda",
+    "Rascunho da evolução gerado no prontuário ao encerrar a sessão",
+    "Gráfico por alvo com linhas de mudança de fase e sugestão de domínio",
+    "Revisões do plano congeladas e plano vigente em qualquer data",
+    "Relatórios em PDF: plano terapêutico, evolução por período e declaração de frequência",
+    "Avaliações com a estrutura dos instrumentos que a clínica já usa"
   ]
 }
 </script>
@@ -1871,146 +1920,240 @@ img { max-width: 100%; display: block; }
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
       <a href="/funcionalidades/">Funcionalidades</a>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-      <span aria-current="page">Gestão de pacientes</span>
+      <span aria-current="page">Plano terapêutico ABA</span>
     </nav>
     <div class="subpage-hero-grid">
       <div class="subpage-hero-copy">
-    <div class="subpage-badge">Funcionalidade</div>
-    <h1>A ficha completa do paciente <span class="highlight">em um clique</span></h1>
-    <p class="lead">Cadastro, histórico de sessões, documentos e situação financeira de cada paciente na mesma tela, com cada profissional vendo só o que deve, conforme a LGPD.</p>
+    <div class="subpage-badge">Novo · Plano terapêutico e registro de sessão</div>
+    <h1>Seu plano terapêutico fora do Word, com <span class="highlight">registro de sessão e gráfico por alvo</span></h1>
+    <p class="lead">Objetivos, metas e alvos do PEI dentro do prontuário do paciente, ligados à agenda que a clínica já usa. Na sessão, o profissional marca alvo a alvo no tablet; ao encerrar, a evolução sai em rascunho e o gráfico se atualiza.</p>
     <div class="subpage-cta-group">
-      <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary">Testar grátis por 14 dias →</a>
-      <a href="/funcionalidades/" class="btn btn-outline">Ver todas as funcionalidades</a>
+      <a href="https://web.terapee.com.br/register?utm_source=plano-terapeutico-aba&amp;utm_medium=site&amp;utm_campaign=plano-aba&amp;utm_content=hero" target="_blank" class="btn btn-primary" data-plano-aba-cta="hero">Testar grátis por 14 dias →</a>
+      <a href="#como-funciona" class="btn btn-outline">Ver como funciona</a>
     </div>
-    <div class="sp-assure"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Sem cartão de crédito</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Migração feita pelo nosso time</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Cancele quando quiser</span></div>
+    <div class="sp-assure"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Sem cartão de crédito</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>No navegador do tablet, sem instalar app</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Cancele quando quiser</span></div>
         </div>
-      <div class="sp-stage" role="img" aria-label="Tela da Terapee: lista de pacientes com histórico e situação financeira"><div class="hx-app" aria-hidden="true"><div class="hx-app-top"><div class="hx-dots"><i></i><i></i><i></i></div><div class="hx-app-title">Pacientes<small>Busca rápida por nome ou CPF</small></div></div><div class="sp-list"><div class="sp-row"><span class="sp-av" style="background:#7A5AF8">AR</span><div><b>Ana Ribeiro</b><small>Psicologia · 32 sessões</small></div><span class="sp-chip g">Em dia</span></div><div class="sp-row"><span class="sp-av" style="background:#2E90FA">LM</span><div><b>Leo Martins</b><small>Fonoaudiologia · 12 sessões</small></div><span class="sp-chip g">Em dia</span></div><div class="sp-row"><span class="sp-av" style="background:#F79009">DL</span><div><b>Davi Lima</b><small>Terapia ocupacional · 8 sessões</small></div><span class="sp-chip a">Pendente</span></div><div class="sp-row"><span class="sp-av" style="background:#444CE7">MV</span><div><b>Malu Vieira</b><small>Psicologia · 21 sessões</small></div><span class="sp-chip g">Em dia</span></div></div></div><div class="sp-toast" aria-hidden="true"><div class="hx-ico b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div><div><b>Histórico completo</b><small>Sessões, documentos e anexos</small></div></div></div>
+      <div class="sp-stage" role="img" aria-label="Tela da Terapee no tablet: registro de sessão com alvos marcados como independente, com ajuda ou erro, contador de frequência e cronômetro de duração. Dados fictícios.">
+        <!-- PRINT: registro-sessao-tablet. Quando houver o print, trocar o .hx-app e o .sp-toast por:
+             <img src="/assets/plano-aba/registro-sessao-tablet.webp" width="1200" height="900" alt="Registro de sessão ABA na Terapee aberto no tablet, com alvos marcados como independente, com ajuda ou erro" loading="lazy"> -->
+        <div class="hx-app pa-app" aria-hidden="true"><div class="hx-app-top"><div class="hx-dots"><i></i><i></i><i></i></div><div class="hx-app-title">Registro de sessão<small>Caio T. · Quarta, 15 de outubro · 14:00</small></div><span class="pa-saved">Salvo</span></div><div class="pa-reg"><div class="pa-tgt"><div class="pa-tgt-hd"><div><b>Nomear cores</b><small>Tentativas · fase de intervenção</small></div><span class="pa-score">5 de 8 independente</span></div><div class="pa-btns"><span class="pa-btn i">Independente</span><span class="pa-btn h">Com ajuda ▾</span><span class="pa-btn e">Erro</span></div><div class="pa-tally"><i class="i">I</i><i class="i">I</i><i class="h">DV</i><i class="i">I</i><i class="e">E</i><i class="i">I</i><i class="h">DG</i><i class="i">I</i><i class="undo">↶ Desfazer</i></div></div><div class="pa-tgt"><div class="pa-tgt-hd"><div><b>Pedir ajuda com frase</b><small>Frequência</small></div></div><div class="pa-ctr"><span>−</span><b>4</b><span>+</span><small>vezes nesta sessão</small></div></div><div class="pa-tgt"><div class="pa-tgt-hd"><div><b>Permanecer sentado na atividade</b><small>Duração</small></div></div><div class="pa-ctr"><span>❚❚</span><b class="pa-timer">03:42</b><small>cronômetro rodando</small></div></div></div></div><div class="sp-toast" aria-hidden="true"><div class="hx-ico g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><div><b>Cada toque salvo na hora</b><small>Fechar o navegador não perde a sessão</small></div></div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="features-grid-section ft-features">
   <div class="container">
-    <div class="ft-head"><h2 class="section-title">Tudo sobre o paciente, num lugar só</h2>
-    <p class="section-subtitle">Cadastro, histórico, documentos e financeiro conectados.</p></div>
+    <div class="ft-head"><h2 class="section-title">O que muda quando o PEI sai do Word</h2>
+    <p class="section-subtitle">Plano, registro de sessão e relatório no mesmo lugar do prontuário e da agenda.</p></div>
     <div class="features-grid">
     <div class="feature-card animate-on-scroll">
-      <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></div>
-      <h3>Cadastro completo</h3>
-      <p>Armazene nome, data de nascimento, contatos, convênio, responsável (para menores) e observações relevantes.</p>
+      <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="6" rx="1.5"/><rect x="14" y="10" width="7" height="5" rx="1.5"/><rect x="14" y="17" width="7" height="4" rx="1.5"/><path d="M6.5 9v9.5H14M6.5 12.5H14"/></svg></div>
+      <h3>Objetivos, metas e alvos em ordem</h3>
+      <p>Objetivos de longo prazo se desdobram em metas de curto prazo e alvos. O plano fica no prontuário do paciente, com histórico, e não num arquivo anexado.</p>
     </div>
-
     <div class="feature-card animate-on-scroll">
-      <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-      <h3>Histórico de atendimentos</h3>
-      <p>Consulte todas as sessões passadas, prontuários e registros financeiros de um paciente em uma única tela.</p>
+      <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></div>
+      <h3>Medida, ajuda e critério de domínio</h3>
+      <p>Cada meta diz como é medida (tentativas, frequência ou duração), quais níveis de ajuda valem, da dica gestual à física total, e qual é o critério de domínio: % de acerto, número de sessões e mínimo de tentativas.</p>
     </div>
-
     <div class="feature-card animate-on-scroll">
-      <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
-      <h3>Busca rápida</h3>
-      <p>Encontre qualquer paciente pelo nome em menos de dois segundos, mesmo com centenas de cadastros.</p>
+      <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2.5"/><path d="M8 8l2 2 4-4M8 15h8M11 19h2"/></svg></div>
+      <h3>Registro alvo a alvo, no tablet</h3>
+      <p>Independente, com ajuda (e qual) ou erro; contador de frequência; cronômetro de duração; desfazer. Roda no navegador do tablet ou do celular, e o estagiário também registra.</p>
     </div>
-
     <div class="feature-card animate-on-scroll">
-      <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
-      <h3>Controle de acesso LGPD</h3>
-      <p>Cada profissional acessa apenas seus próprios pacientes. A secretária acessa dados básicos, sem informações clínicas.</p>
+      <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h3>Nenhum toque se perde</h3>
+      <p>Cada marcação é salva na hora. Se o navegador fechar no meio da sessão, o que já foi marcado continua lá; se a rede falhar, o registro não é duplicado.</p>
     </div>
-
     <div class="feature-card animate-on-scroll">
-      <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.4 11.1l-9.2 9.2a6 6 0 0 1-8.5-8.5l9.2-9.2a4 4 0 0 1 5.7 5.7l-9.2 9.2a2 2 0 0 1-2.8-2.8l8.5-8.5"/></svg></div>
-      <h3>Documentos anexados</h3>
-      <p>Salve laudos, encaminhamentos, autorizações e outros documentos diretamente no perfil do paciente.</p>
+      <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l3-3 3 2 5-6"/><path d="M15 3v14" stroke-dasharray="2 2"/></svg></div>
+      <h3>Gráfico por alvo, com mudança de fase</h3>
+      <p>Sessão a sessão, com as linhas de mudança de fase marcadas. Quando o critério de domínio é atingido, a Terapee sugere o domínio do alvo e o profissional decide.</p>
     </div>
-
     <div class="feature-card animate-on-scroll">
-      <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M8 17v-5M13 17V8M18 17v-9"/></svg></div>
-      <h3>Status financeiro</h3>
-      <p>Veja rapidamente se o paciente está com pagamentos em dia ou possui sessões em aberto.</p>
-    </div></div>
+      <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
+      <h3>Relatório em PDF para o convênio</h3>
+      <p>Plano vigente ou de qualquer revisão, evolução por período e declaração de frequência com realizados e faltas, todos com o logo da clínica.</p>
+    </div>
+    </div>
   </div>
 </section>
 
-<section class="how-section ft-how">
+<section class="pa-show" aria-labelledby="pa-show-title">
+  <div class="container">
+    <div class="ft-head"><h2 class="section-title" id="pa-show-title">Do plano ao relatório, sem copiar e colar</h2>
+    <p class="section-subtitle">Telas com dados fictícios.</p></div>
+
+    <div class="pa-row">
+      <div class="pa-copy">
+        <h3>Um plano com estrutura, revisões e histórico</h3>
+        <p>Monte objetivos, metas e alvos dentro do prontuário. Cada alvo tem a sua fase e guarda o histórico de mudanças de fase. Os programas que a equipe cadastra vão para a biblioteca da clínica e podem ser reaproveitados no plano de outros pacientes.</p>
+        <ul class="pa-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Níveis de ajuda: dica gestual, dica verbal, modelo, física parcial e física total.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Cada revisão fica congelada: dá para gerar o plano vigente em qualquer data, como o convênio costuma pedir.</span></li>
+        </ul>
+      </div>
+      <figure class="pa-shot" role="img" aria-label="Tela da Terapee: plano terapêutico com um objetivo de longo prazo, uma meta de curto prazo com tipo de medida, nível de ajuda e critério de domínio, e três alvos em fases diferentes. Dados fictícios.">
+        <!-- PRINT: plano-estrutura. Trocar o .hx-app por:
+             <img src="/assets/plano-aba/plano-estrutura.webp" width="1200" height="900" alt="Plano terapêutico na Terapee com objetivo, meta, critério de domínio e alvos" loading="lazy"> -->
+        <div class="hx-app pa-app" aria-hidden="true"><div class="hx-app-top"><div class="hx-dots"><i></i><i></i><i></i></div><div class="hx-app-title">Plano terapêutico<small>Caio T. · revisão 3, vigente desde 1º de outubro</small></div></div><div class="pa-tree"><div class="pa-node l1"><small>Objetivo de longo prazo</small><b>Ampliar a comunicação funcional</b></div><div class="pa-node l2"><small>Meta de curto prazo</small><b>Fazer pedidos com frase de duas palavras</b><div class="pa-tags"><span>Tentativas</span><span>Ajuda: dica verbal</span><span>Domínio: 80% em 3 sessões, mín. 10 tentativas</span></div></div><div class="pa-node l3"><b>Pedir água</b><span class="sp-chip g">Manutenção</span></div><div class="pa-node l3"><b>Pedir brinquedo</b><span class="sp-chip b">Intervenção</span></div><div class="pa-node l3"><b>Pedir ajuda</b><span class="sp-chip n">Linha de base</span></div></div></div>
+      </figure>
+    </div>
+
+    <div class="pa-row rev">
+      <div class="pa-copy">
+        <h3>O gráfico se monta sozinho, sessão a sessão</h3>
+        <p>Cada sessão registrada vira um ponto no gráfico do alvo, com as linhas de mudança de fase. Quando o critério de domínio é atingido, a Terapee mostra a sugestão de domínio; quem decide é o profissional responsável.</p>
+      </div>
+      <figure class="pa-shot" role="img" aria-label="Gráfico de um alvo na Terapee: porcentagem de respostas independentes por sessão, com linhas de mudança de fase e a linha do critério de domínio em 80%. Dados fictícios.">
+        <!-- PRINT: grafico-por-alvo. Trocar o .hx-app por:
+             <img src="/assets/plano-aba/grafico-por-alvo.webp" width="1200" height="800" alt="Gráfico por alvo na Terapee com linhas de mudança de fase e sugestão de domínio" loading="lazy"> -->
+        <div class="hx-app pa-app" aria-hidden="true"><div class="hx-app-top"><div class="hx-dots"><i></i><i></i><i></i></div><div class="hx-app-title">Pedir água<small>% independente por sessão</small></div><span class="sp-chip g" style="margin-left:auto">Sugestão de domínio</span></div><div class="pa-chart"><svg viewBox="0 0 400 190" role="presentation" focusable="false"><g stroke="#F0F2F7" stroke-width="1"><line x1="40" y1="20" x2="390" y2="20"/><line x1="40" y1="57.5" x2="390" y2="57.5"/><line x1="40" y1="95" x2="390" y2="95"/><line x1="40" y1="132.5" x2="390" y2="132.5"/></g><line x1="40" y1="170" x2="390" y2="170" stroke="#C7CCDB"/><line x1="40" y1="20" x2="40" y2="170" stroke="#C7CCDB"/><g font-size="10" fill="#8A93A6" font-family="inherit"><text x="32" y="24" text-anchor="end">100%</text><text x="32" y="99" text-anchor="end">50%</text><text x="32" y="174" text-anchor="end">0</text><text x="90" y="186" text-anchor="middle">Linha de base</text><text x="230" y="186" text-anchor="middle">Intervenção</text><text x="354" y="186" text-anchor="middle">Manutenção</text></g><line x1="40" y1="50" x2="390" y2="50" stroke="#12B76A" stroke-width="1.5" stroke-dasharray="5 4"/><g stroke="#98A2B3" stroke-width="1.5" stroke-dasharray="3 3"><line x1="142" y1="14" x2="142" y2="170"/><line x1="317" y1="14" x2="317" y2="170"/></g><g fill="none" stroke="#444CE7" stroke-width="2.4" stroke-linejoin="round"><polyline points="40,140 69,125 98,140 128,132"/><polyline points="157,110 186,95 215,88 244,65 273,50 302,42"/><polyline points="332,35 361,42 390,35"/></g><g fill="#fff" stroke="#444CE7" stroke-width="2"><circle cx="40" cy="140" r="3.5"/><circle cx="69" cy="125" r="3.5"/><circle cx="98" cy="140" r="3.5"/><circle cx="128" cy="132" r="3.5"/><circle cx="157" cy="110" r="3.5"/><circle cx="186" cy="95" r="3.5"/><circle cx="215" cy="88" r="3.5"/><circle cx="244" cy="65" r="3.5"/><circle cx="273" cy="50" r="3.5"/><circle cx="302" cy="42" r="3.5"/><circle cx="332" cy="35" r="3.5"/><circle cx="361" cy="42" r="3.5"/><circle cx="390" cy="35" r="3.5"/></g></svg><div class="pa-legend"><span><i></i>% independente</span><span><i class="ph"></i>Mudança de fase</span><span><i class="cr"></i>Critério de domínio (80%)</span></div></div></div>
+      </figure>
+    </div>
+
+    <div class="pa-row">
+      <div class="pa-copy">
+        <h3>O relatório que o convênio pede, em PDF</h3>
+        <p>Gere o plano terapêutico vigente ou de cada revisão, a evolução por período (por alvo, sessão a sessão) e a declaração de frequência, com realizados e faltas no período. Tudo com o logo da clínica.</p>
+        <ul class="pa-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Ao encerrar a sessão, o rascunho da evolução já vai para o prontuário, vinculado à consulta.</span></li>
+        </ul>
+      </div>
+      <figure class="pa-shot" role="img" aria-label="Relatório em PDF da Terapee: plano terapêutico vigente em uma data, com espaço para o logo da clínica e a lista de metas com tipo de medida e critério de domínio. Dados fictícios.">
+        <!-- PRINT: relatorio-plano-pdf. Trocar o .hx-app por:
+             <img src="/assets/plano-aba/relatorio-plano-pdf.webp" width="1200" height="900" alt="Relatório em PDF do plano terapêutico vigente, com o logo da clínica" loading="lazy"> -->
+        <div class="hx-app pa-app" aria-hidden="true"><div class="pa-doc"><div class="pa-doc-hd"><span class="pa-logo">Logo da clínica</span><span class="sp-chip b">PDF</span></div><h4>Plano terapêutico</h4><small style="color:#8A93A6">Vigente em 15 de outubro · revisão 3</small><dl><dt>Paciente</dt><dd>Caio T.</dd><dt>Período</dt><dd>1º de outubro a 31 de dezembro</dd></dl><table><thead><tr><th>Meta</th><th>Medida</th><th>Critério</th></tr></thead><tbody><tr><td>Pedidos com frase</td><td>Tentativas</td><td>80% em 3 sessões</td></tr><tr><td>Pedir ajuda</td><td>Frequência</td><td>5 por sessão</td></tr><tr><td>Permanecer sentado</td><td>Duração</td><td>5 min em 3 sessões</td></tr></tbody></table><div class="pa-files"><span>Plano vigente</span><span>Evolução por período</span><span>Declaração de frequência</span></div></div></div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="pa-access">
+  <div class="container">
+    <div class="ft-head"><h2 class="section-title">Avaliações da sua clínica e acesso de quem atende</h2>
+    <p class="section-subtitle">Plano e avaliações são conteúdo clínico: ficam com quem cuida do paciente.</p></div>
+    <div class="pa-access-grid">
+      <div class="pa-card animate-on-scroll">
+        <h3>Os instrumentos que a clínica já usa, estruturados no sistema</h3>
+        <p>Cadastre a estrutura dos seus instrumentos de avaliação: domínios, itens e a escala que fizer sentido. Aplique no paciente, veja o resultado por domínio, compare com a avaliação anterior, gere o PDF e crie metas no plano a partir dos itens avaliados.</p>
+        <p class="pa-note">A Terapee não traz protocolos publicados nem uma biblioteca de programas pronta. Quem monta a estrutura das avaliações e os programas é a clínica, com o material que ela já usa.</p>
+      </div>
+      <div class="pa-card animate-on-scroll">
+        <h3>Quem vê e quem mexe no plano</h3>
+        <ul class="pa-who">
+          <li><span class="es-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span><span><strong>Veem:</strong> o administrador e os profissionais vinculados ao paciente.</span></li>
+          <li><span class="es-x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></span><span><strong>Não veem:</strong> a recepção e o financeiro.</span></li>
+          <li><span class="es-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span><span><strong>Planeja:</strong> o profissional ou supervisor cria e edita metas.</span></li>
+          <li><span class="es-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span><span><strong>Aplica:</strong> o estagiário registra a sessão, sem alterar o plano.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-section ft-how" id="como-funciona">
   <div class="container">
     <h2 class="section-title">Como funciona na prática</h2>
     <div class="steps-list">
     <div class="step-item animate-on-scroll">
       <div class="step-num">1</div>
       <div>
-        <h3>Cadastre o paciente em minutos</h3>
-        <p>Preencha nome, contato e informações essenciais. Campos opcionais para dados complementares.</p>
+        <h3>Monte o plano</h3>
+        <p>Objetivos, metas e alvos no prontuário do paciente, com programas da biblioteca da clínica ou a partir dos itens de uma avaliação.</p>
       </div>
     </div>
 
     <div class="step-item animate-on-scroll">
       <div class="step-num">2</div>
       <div>
-        <h3>Vincule os agendamentos</h3>
-        <p>Todos os agendamentos e sessões ficam automaticamente vinculados ao perfil do paciente.</p>
+        <h3>Abra a sessão pela agenda</h3>
+        <p>O registro fica vinculado à consulta do dia. O profissional ou o estagiário marca alvo a alvo no tablet.</p>
       </div>
     </div>
 
     <div class="step-item animate-on-scroll">
       <div class="step-num">3</div>
       <div>
-        <h3>Acompanhe o histórico</h3>
-        <p>Acesse a linha do tempo completa do paciente: sessões, prontuários e pagamentos em ordem cronológica.</p>
+        <h3>Encerre e revise a evolução</h3>
+        <p>Ao encerrar, a Terapee gera o rascunho da evolução no prontuário, já vinculado à consulta. É só revisar.</p>
       </div>
     </div>
 
     <div class="step-item animate-on-scroll">
       <div class="step-num">4</div>
       <div>
-        <h3>Gerencie o acesso</h3>
-        <p>Defina quem pode ver o quê — controle granular por perfil de usuário conforme a LGPD.</p>
+        <h3>Acompanhe e preste contas</h3>
+        <p>Gráfico por alvo, sugestão de domínio e os PDFs do plano, da evolução e da frequência para o convênio.</p>
       </div>
     </div></div>
   </div>
 </section>
 
+<!-- PROVA SOCIAL: falta um depoimento real de clínica que usa o plano terapêutico / registro ABA.
+     Quando houver (com autorização), descomentar e preencher:
 <section class="testimonial-section">
   <div class="container">
-    <p class="testimonial-quote">Tenho mais de 80 pacientes ativos e consigo encontrar qualquer informação em segundos. Isso mudou minha rotina.</p>
-    <p class="testimonial-author"><strong>Dr. Felipe Andrade</strong> · Fonoaudiólogo</p>
+    <p class="testimonial-quote">[depoimento real]</p>
+    <p class="testimonial-author"><strong>[Nome]</strong> · [Função, clínica]</p>
   </div>
 </section>
+-->
 
 <section class="faq-page-section" style="background:var(--white);padding:80px 0;">
   <div class="container">
     <div style="text-align:center;">
-      <h2 class="section-title">Perguntas frequentes sobre a gestão de pacientes</h2>
+      <h2 class="section-title">Perguntas frequentes sobre o plano terapêutico ABA</h2>
     </div>
     <div class="faq-layout">
       <div class="faq-left">
-        <p>Ficou com alguma dúvida sobre a gestão de pacientes? Fale com o nosso suporte que a gente te ajuda.</p>
-        <a href="https://api.whatsapp.com/send?phone=552123422477&text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20a%20Terapee" class="btn btn-outline">Fale conosco</a>
+        <p>Quer ver o plano terapêutico com os casos da sua clínica? Fale com o nosso suporte que a gente te mostra.</p>
+        <a href="https://api.whatsapp.com/send?phone=552123422477&text=Ol%C3%A1,%20tenho%20interesse%20no%20plano%20terap%C3%AAutico%20e%20registro%20ABA%20da%20Terapee" class="btn btn-outline">Fale conosco</a>
       </div>
       <div class="faq-right">
         <div class="faq-item">
-          <button class="faq-question">O que fica registrado no cadastro do paciente?
+          <button type="button" class="faq-question">Preciso instalar um aplicativo no tablet?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Dados de contato, histórico de atendimentos, documentos anexados e status financeiro — tudo reunido em um só lugar e acessível em segundos.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Não. A Terapee é um sistema web: o registro de sessão abre no navegador do tablet, do celular ou do computador. Não há app para baixar.</div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">Como a Terapee protege os dados dos pacientes?
+          <button type="button" class="faq-question">A Terapee vem com VB-MAPP, ABLLS-R ou outro protocolo pronto?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Os dados são criptografados (AES-256 em repouso e TLS 1.3 em trânsito) e o acesso é controlado por perfil, em conformidade com a LGPD: somente profissionais autorizados acessam os dados clínicos.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Não. Protocolos publicados são protegidos por direito autoral e não vêm no sistema, e a Terapee não tem vínculo com seus autores ou editoras. O que a Terapee oferece é a estrutura: você cadastra os domínios, os itens e a escala dos instrumentos que a sua clínica já usa, aplica no paciente e compara com a avaliação anterior.</div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">Consigo encontrar um paciente rapidamente?
+          <button type="button" class="faq-question">A biblioteca de programas já vem preenchida?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Sim. A busca rápida localiza qualquer paciente pelo nome e abre o cadastro, o histórico e os documentos imediatamente.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Não. A biblioteca começa vazia e é da sua clínica. Cada programa que a equipe cadastra pode ser reaproveitado no plano de outros pacientes.</div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">O cadastro se conecta com a agenda e o financeiro?
+          <button type="button" class="faq-question">O estagiário consegue registrar a sessão?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Sim. Cada paciente fica vinculado aos seus agendamentos, recibos e pendências, então o histórico clínico e financeiro está sempre atualizado.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Sim. O estagiário aplica e registra a sessão; criar e editar metas fica com o profissional ou supervisor. A recepção e o financeiro não veem o plano nem as avaliações.</div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-question">E se o navegador fechar ou a internet cair no meio da sessão?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Cada marcação é salva no momento em que é feita. Se o navegador fechar, o que já foi marcado continua salvo quando você reabre a sessão. Se a rede falhar durante um envio, o registro não fica duplicado.</div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-question">Consigo o plano que estava vigente em uma data, para o convênio?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Sim. Cada revisão do plano fica congelada, então você gera o plano vigente em qualquer data. Também há PDFs da evolução por período e da declaração de frequência, todos com o logo da clínica.</div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-question">A funcionalidade já está pronta para usar?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Sim, já está no ar. No sistema, as abas Plano e Avaliações aparecem com o selo Beta: estão funcionando e seguimos ajustando com o retorno das clínicas que usam.</div></div>
         </div>
       </div>
     </div>
@@ -2020,11 +2163,11 @@ img { max-width: 100%; display: block; }
 <section class="es-cta ft-cta">
   <div class="container">
     <div class="es-cta-box">
-      <h2>Traga seus pacientes para a Terapee</h2>
+      <h2>Leve o próximo PEI para dentro da Terapee</h2>
       <p>Teste todas as funcionalidades por 14 dias. Se você vem de outro sistema, nosso time traz seus pacientes e agendamentos.</p>
       <div class="es-cta-btns">
-        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-white">Testar grátis por 14 dias →</a>
-        <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20a%20Terapee" target="_blank" rel="noopener" class="btn es-btn-ghost">Falar com a gente no WhatsApp</a>
+        <a href="https://web.terapee.com.br/register?utm_source=plano-terapeutico-aba&amp;utm_medium=site&amp;utm_campaign=plano-aba&amp;utm_content=cta-final" target="_blank" class="btn btn-white" data-plano-aba-cta="cta-final">Testar grátis por 14 dias →</a>
+        <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20tenho%20interesse%20no%20plano%20terap%C3%AAutico%20e%20registro%20ABA%20da%20Terapee" target="_blank" rel="noopener" class="btn es-btn-ghost" data-plano-aba-cta="whatsapp">Falar com a gente no WhatsApp</a>
       </div>
       <small>Sem cartão de crédito · Cancele quando quiser</small>
     </div>
@@ -2035,9 +2178,10 @@ img { max-width: 100%; display: block; }
   <div class="container">
     <h2>Funciona junto com</h2>
     <div class="ft-rel-grid">
-      <a class="ft-rel" href="/funcionalidades/prontuario-eletronico"><span class="ft-rel-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span><span><b>Prontuário eletrônico</b><small>Evoluções com data e hora, em qualquer dispositivo.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="ft-rel" href="/funcionalidades/formularios-personalizaveis"><span class="ft-rel-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="18" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1M9 11h6M9 15h6"/></svg></span><span><b>Formulários</b><small>Anamnese e consentimento preenchidos no digital.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="ft-rel" href="/para-psicologos"><span class="ft-rel-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3a3 3 0 0 0-3 3v.5A3 3 0 0 0 4 9.3 3 3 0 0 0 5 15a3 3 0 0 0 4 3.8V3zM15 3a3 3 0 0 1 3 3v.5a3 3 0 0 1 2 2.8 3 3 0 0 1-1 5.7 3 3 0 0 1-4 3.8V3z"/></svg></span><span><b>Para psicólogos</b><small>A Terapee na rotina do consultório de psicologia.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="ft-rel" href="/funcionalidades/prontuario-eletronico"><span class="ft-rel-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span><span><b>Prontuário eletrônico</b><small>Onde o plano vive e a evolução da sessão é registrada.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="ft-rel" href="/funcionalidades/agenda"><span class="ft-rel-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><span><b>Agenda</b><small>Cada registro de sessão ligado à consulta do dia.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="ft-rel" href="/funcionalidades/documentos-personalizaveis"><span class="ft-rel-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15h6"/></svg></span><span><b>Documentos</b><small>Laudos e relatórios com a identidade da clínica.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="ft-rel" href="/para-terapia-infantil"><span class="ft-rel-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><path d="M12 8v7M8 11h8M10 22l2-7 2 7"/></svg></span><span><b>Terapia infantil</b><small>Família avisada, sessões em dia e relatório pronto.</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
@@ -2180,6 +2324,16 @@ document.querySelectorAll('.faq-question').forEach(q => {
 window.addEventListener('scroll', () => {
   const h = document.getElementById('header');
   h.style.boxShadow = window.scrollY > 50 ? '0 2px 20px rgba(0,0,0,0.08)' : 'none';
+});
+</script>
+
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('[data-plano-aba-cta]');
+  if (!a) return;
+  var pos = a.getAttribute('data-plano-aba-cta');
+  (window.dataLayer = window.dataLayer || []).push({ event: 'plano_aba_cta', posicao: pos });
+  if (typeof window.clarity === 'function') window.clarity('event', 'plano_aba_cta_' + pos);
 });
 </script>
 

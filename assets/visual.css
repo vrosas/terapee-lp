@@ -120,6 +120,7 @@
 .es-pains{padding:88px 0;background:#fff}
 .es-pair-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .es-pair{display:flex;flex-direction:column;border-radius:20px;border:1px solid #E7EAF2;background:#fff;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.04);transition:border-color .2s,box-shadow .2s,transform .2s}
+.es-pair-wide{grid-column:1/-1}
 .es-pair:hover{border-color:var(--primary-300);box-shadow:0 24px 48px -24px rgba(30,36,90,.25);transform:translateY(-2px)}
 .es-pair:focus-visible,.es-extra-grid a:focus-visible{outline:3px solid var(--primary-300);outline-offset:2px}
 .es-pain{display:flex;align-items:center;gap:12px;padding:20px 24px;background:#FEF6F5;border-bottom:1px solid #FDE3E0}
@@ -223,3 +224,100 @@
 
 @media (max-width:1024px){.ft-features .features-grid,.ft-how .steps-list{grid-template-columns:repeat(2,minmax(0,1fr))}.ft-rel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.ft-features .features-grid,.ft-how .steps-list,.ft-rel-grid{grid-template-columns:1fr}.ft-features,.ft-how{padding:64px 0!important}}
+
+/* ========== PLANO TERAPÊUTICO E REGISTRO ABA ==========
+   Tela do registro de sessão (hero da página e destaque na home), estrutura
+   do plano, gráfico por alvo e relatório. Tudo com dados fictícios; os
+   comentários "PRINT:" no HTML marcam onde entram os prints reais do app. */
+.pa-new{display:inline-block;background:#E7F8EF;color:#05603A;font-size:11px;font-weight:800;letter-spacing:.02em;padding:3px 9px;border-radius:999px;vertical-align:middle;margin-left:8px}
+.pa-saved{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;color:#05603A;background:#E7F8EF;padding:5px 10px;border-radius:999px;white-space:nowrap}
+.pa-saved::before{content:"";width:7px;height:7px;border-radius:50%;background:#12B76A}
+.pa-reg{padding:6px 18px 14px}
+.pa-tgt{padding:14px 0;border-bottom:1px solid #F0F2F7}
+.pa-tgt:last-child{border-bottom:0}
+.pa-tgt-hd{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:10px}
+.pa-tgt-hd b{font-size:14px;color:var(--dark)}
+.pa-tgt-hd small{display:block;font-size:11.5px;color:#8A93A6;margin-top:1px}
+.pa-score{font-size:12px;font-weight:700;color:#2D31A6;white-space:nowrap}
+.pa-btns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.pa-btn{display:block;text-align:center;padding:9px 6px;border-radius:10px;font-size:12px;font-weight:700;border:1px solid}
+.pa-btn.i{background:#E7F8EF;border-color:#A6F4C5;color:#05603A}
+.pa-btn.h{background:#FEF4E6;border-color:#FEDF89;color:#93370D}
+.pa-btn.e{background:#FEECEB;border-color:#FECDCA;color:#B42318}
+.pa-tally{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+.pa-tally i{width:22px;height:22px;border-radius:7px;display:grid;place-items:center;font-style:normal;font-size:9.5px;font-weight:800;color:#fff}
+.pa-tally .i{background:#12B76A}.pa-tally .h{background:#F79009}.pa-tally .e{background:#F04438}
+.pa-tally .undo{background:#F2F4F7;color:#475467;width:auto;padding:0 8px;font-size:10.5px}
+.pa-ctr{display:flex;align-items:center;gap:10px}
+.pa-ctr span{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;border:1px solid #E7EAF2;background:#F7F8FC;font-weight:800;color:#2A3142}
+.pa-ctr b{font-size:22px;color:var(--dark);min-width:28px;text-align:center}
+.pa-ctr small{font-size:12px;color:#8A93A6}
+.pa-timer{font-variant-numeric:tabular-nums}
+
+/* Destaque na home */
+.pa-home{padding:96px 0;background:#F8F9FE;border-top:1px solid #F0F2F7;border-bottom:1px solid #F0F2F7}
+.pa-home-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.pa-home .section-title{text-align:left;text-wrap:balance}
+.pa-home .section-subtitle{text-align:left;margin:0 0 24px}
+.pa-list{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:12px}
+.pa-list li{display:flex;gap:12px;font-size:15.5px;line-height:1.55;color:var(--gray-700)}
+.pa-list svg{width:20px;height:20px;color:#12B76A;flex:none;margin-top:2px}
+.pa-home-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.pa-home .sp-stage{max-width:520px;width:100%;margin:0 auto}
+@media (max-width:900px){.pa-home-grid{grid-template-columns:1fr;gap:36px}.pa-home{padding:64px 0}}
+@media (max-width:640px){.pa-home-ctas .btn{width:100%;justify-content:center}}
+
+/* Telas da página: estrutura do plano, gráfico e relatório */
+.pa-show{padding:88px 0;background:#fff;border-top:1px solid #F0F2F7}
+.pa-row{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.pa-row+.pa-row{margin-top:72px}
+.pa-row.rev .pa-copy{order:2}
+.pa-copy h3{font-size:clamp(22px,2.4vw,28px);line-height:1.2;font-weight:800;color:var(--dark);margin-bottom:12px;text-wrap:balance}
+.pa-copy p{font-size:16px;line-height:1.65;color:var(--gray-600)}
+.pa-copy .pa-list{margin:18px 0 0}
+.pa-shot{margin:0}
+.pa-shot .hx-app{position:relative;inset:auto;width:100%}
+.pa-tree{padding:16px 18px 18px;display:grid;gap:10px;font-size:13px}
+.pa-node{border:1px solid #E7EAF2;border-radius:12px;padding:10px 12px;background:#FBFBFE}
+.pa-node b{display:block;color:var(--dark);font-size:13.5px}
+.pa-node small{color:#8A93A6;font-size:11.5px}
+.pa-node.l1{border-left:3px solid var(--primary)}
+.pa-node.l2{margin-left:18px;border-left:3px solid #7A5AF8}
+.pa-node.l3{margin-left:36px;background:#fff;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.pa-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.pa-tags span{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;background:#EEF0FF;color:#2D31A6}
+.pa-chart{padding:14px 18px 18px}
+.pa-chart svg{display:block;width:100%;height:auto}
+.pa-legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:10px;font-size:11.5px;color:#5B6476;font-weight:600}
+.pa-legend span{display:inline-flex;align-items:center;gap:6px}
+.pa-legend i{width:14px;height:3px;border-radius:2px;background:var(--primary);display:block}
+.pa-legend i.ph{width:2px;height:12px;background:#98A2B3}
+.pa-legend i.cr{background:#12B76A;height:2px}
+.pa-doc{padding:22px 24px 26px;font-size:12px;color:#2A3142}
+.pa-doc-hd{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:2px solid #EEF0FF;margin-bottom:14px}
+.pa-logo{display:inline-flex;align-items:center;justify-content:center;width:84px;height:30px;border:1.5px dashed #C7CCDB;border-radius:8px;font-size:10px;font-weight:700;color:#8A93A6}
+.pa-doc h4{font-size:15px;font-weight:800;color:var(--dark);margin:0 0 4px}
+.pa-doc dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:12px 0}
+.pa-doc dt{color:#8A93A6;font-weight:600}
+.pa-doc dd{margin:0;font-weight:600}
+.pa-doc table{width:100%;border-collapse:collapse;margin-top:6px}
+.pa-doc th,.pa-doc td{text-align:left;padding:7px 6px;border-bottom:1px solid #F0F2F7}
+.pa-doc th{font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:#8A93A6}
+.pa-files{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.pa-files span{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:9px;background:#F7F8FC;border:1px solid #E7EAF2;font-weight:700;font-size:11.5px;color:#475467}
+@media (max-width:900px){.pa-row{grid-template-columns:1fr;gap:28px}.pa-row.rev .pa-copy{order:0}.pa-show{padding:64px 0}.pa-row+.pa-row{margin-top:56px}}
+
+/* Avaliações e acesso */
+.pa-access{padding:88px 0;background:#F8F9FE;border-top:1px solid #F0F2F7}
+.pa-access-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.pa-card{padding:28px;border-radius:20px;background:#fff;border:1px solid #E7EAF2}
+.pa-card h3{font-size:20px;font-weight:800;color:var(--dark);margin-bottom:10px}
+.pa-card>p{font-size:15px;line-height:1.65;color:var(--gray-600)}
+.pa-note{margin-top:16px;padding:12px 14px;border-radius:12px;background:#F7F8FC;border:1px solid #E7EAF2;font-size:13.5px;line-height:1.55;color:var(--gray-700)}
+.pa-who{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:12px}
+.pa-who li{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.55;color:var(--gray-700)}
+.pa-who .es-ck,.pa-who .es-x{width:30px;height:30px;border-radius:9px}
+.pa-who .es-ck svg,.pa-who .es-x svg{width:16px;height:16px}
+@media (max-width:768px){.pa-access-grid{grid-template-columns:1fr}.pa-access{padding:64px 0}.pa-card{padding:22px}}
+@media (max-width:420px){.pa-btn{font-size:11px;padding:9px 4px}}
+@media (max-width:640px){.pa-app .hx-dots{display:none}.pa-app .hx-app-top{flex-wrap:wrap;row-gap:8px}.pa-doc{padding:18px 16px 20px}}
