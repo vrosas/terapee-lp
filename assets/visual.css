@@ -45,8 +45,15 @@
 }
 
 /* ---------- Rodapé ---------- */
-.made-in{max-width:1200px;margin:0 auto;padding:22px 24px 30px;border-top:1px solid var(--gray-200);text-align:center;font-size:14px;font-weight:500;color:var(--gray-500);display:flex;align-items:center;justify-content:center;gap:6px}
+.made-in{max-width:1200px;margin:0 auto;padding:4px 24px 30px;text-align:center;font-size:14px;font-weight:500;color:var(--gray-500);display:flex;align-items:center;justify-content:center;gap:6px}
 .made-in svg{width:16px;height:16px;color:#E5484D}
+
+/* Colunas do rodapé em grade: seis colunas no desktop (Ferramentas grátis
+   fica embaixo de Comparativos), três no tablet e duas no celular. */
+.footer-nav{display:grid;grid-template-columns:repeat(6,auto);justify-content:space-between;gap:32px 28px}
+.footer-col-sub{margin-top:24px}
+@media (max-width:1024px){.footer-nav{grid-template-columns:repeat(3,minmax(0,1fr));justify-content:stretch}}
+@media (max-width:640px){.footer-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}}
 
 /* ========== HERO COM TELA DO SISTEMA ========== */
 .hx{position:relative;padding:136px 0 96px;overflow:hidden;background:radial-gradient(900px 500px at 85% 10%,rgba(68,76,231,.12),transparent 60%),radial-gradient(700px 400px at 0% 100%,rgba(18,183,106,.07),transparent 60%),linear-gradient(#fff,#F8F9FE)}
