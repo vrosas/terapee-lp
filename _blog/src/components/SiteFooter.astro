@@ -1,0 +1,105 @@
+---
+import { CATEGORIES } from '../data/categories';
+// Rodapé copiado das páginas estáticas do site. Ao mudar o rodapé do site, mude aqui também.
+---
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <a href="/" class="footer-logo">
+        <img src="/logo-terapee.svg" alt="Terapee" class="logo-img">
+      </a>
+      <div class="footer-links">
+        <a href="/funcionalidades/">Funcionalidades</a>
+        <a href="/#fluxo">Como funciona</a>
+        <a href="/planos/">Planos</a>
+        <a href="/#migracao">Migração</a>
+        <a href="/#seguranca">Segurança &amp; LGPD</a>
+        <a href="/#faq">Dúvidas</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#fale-conosco">Fale Conosco</a>
+      </div>
+    </div>
+
+    <nav class="footer-nav">
+      <div>
+        <p class="footer-col-title">Funcionalidades</p>
+        <div class="footer-col-links">
+          <a href="/funcionalidades/agenda">Gestão de agenda</a>
+          <a href="/funcionalidades/prontuario-eletronico">Prontuário eletrônico</a>
+          <a href="/funcionalidades/telemedicina">Telemedicina</a>
+          <a href="/funcionalidades/lembretes-whatsapp">Lembretes via WhatsApp</a>
+          <a href="/funcionalidades/gestao-financeira">Gestão financeira</a>
+          <a href="/funcionalidades/gestao-de-pacientes">Gestão de pacientes</a>
+          <a href="/funcionalidades/cobranca-automatica">Cobrança automática</a>
+          <a href="/funcionalidades/nota-fiscal-nfse">Emissão de NFS-e</a>
+          <a href="/funcionalidades/emissao-de-recibos">Emissão de recibos</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Mais funcionalidades</p>
+        <div class="footer-col-links">
+          <a href="/funcionalidades/multi-agenda">Multi-agenda</a>
+          <a href="/funcionalidades/agendamento-online">Agendamento online</a>
+          <a href="/funcionalidades/pacotes-de-sessoes">Pacotes de sessões</a>
+          <a href="/funcionalidades/check-in">Check-in de pacientes</a>
+          <a href="/funcionalidades/plano-terapeutico-aba">Plano terapêutico ABA</a>
+          <a href="/funcionalidades/formularios-personalizaveis">Formulários personalizáveis</a>
+          <a href="/funcionalidades/documentos-personalizaveis">Documentos personalizáveis</a>
+          <a href="/funcionalidades/assinatura-digital">Assinatura digital</a>
+          <a href="/funcionalidades/repasse-profissionais">Repasse para profissionais</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Para quem</p>
+        <div class="footer-col-links">
+          <a href="/para-psicologos">Psicólogos</a>
+          <a href="/para-fonoaudiologos">Fonoaudiólogos</a>
+          <a href="/para-terapeutas-ocupacionais">Terapeutas Ocupacionais</a>
+          <a href="/para-clinicas-multidisciplinares">Clínicas Multidisciplinares</a>
+          <a href="/para-terapia-infantil">Terapia Infantil</a>
+          <a href="/para-clinicas-aba">Clínicas ABA</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Comparativos</p>
+        <div class="footer-col-links">
+          <a href="/alternativas/psicoplanner">Alternativa ao PsicoPlanner</a>
+          <a href="/alternativas/ninsaude">Alternativa ao Ninsaúde</a>
+          <a href="/alternativas/clinica-agil">Alternativa ao Clínica Ágil</a>
+        </div>
+        <p class="footer-col-title footer-col-sub">Ferramentas grátis</p>
+        <div class="footer-col-links">
+          <a href="/ferramentas/calculadora-de-precificacao">Calculadora de precificação</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Conteúdo</p>
+        <div class="footer-col-links">
+          <a href="/blog/">Todos os artigos</a>
+          {CATEGORIES.map((c) => <a href={`/blog/categoria/${c.slug}/`}>{c.name}</a>)}
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Contato</p>
+        <div class="footer-col-links">
+          <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20a%20Terapee" class="footer-contact-item" target="_blank" rel="noopener">(21) 2342-2477</a>
+          <a href="mailto:suporte@terapee.com.br" class="footer-contact-item">suporte@terapee.com.br</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="footer-bottom">
+      <span>© Copyright {new Date().getFullYear()} Terapee – Todos os direitos reservados. CNPJ 54.321.098/0001-00</span>
+      <div class="footer-legal">
+        <a href="/politica-de-privacidade">Política de Privacidade</a>
+        <a href="/termos-de-uso">Termos de Uso</a>
+      </div>
+    </div>
+  </div>
+<p class="made-in">Feito com orgulho no Rio de Janeiro/RJ <svg viewBox="0 0 24 24" aria-label="coração" role="img"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.2C.8 8.3 2.9 4.5 6.6 4.1c2.1-.2 3.9.9 5.4 2.8 1.5-1.9 3.3-3 5.4-2.8 3.7.4 5.8 4.2 4.2 7.7C19.5 16.4 12 21 12 21z"/></svg></p>
+</footer>

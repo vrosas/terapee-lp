@@ -1,0 +1,12 @@
+---
+interface Props { items: { name: string; href?: string }[] }
+const { items } = Astro.props;
+---
+<nav class="breadcrumb" aria-label="Trilha de navegação">
+  {items.map((item, i) => (
+    <>
+      {i > 0 && <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6" /></svg>}
+      {item.href ? <a href={item.href}>{item.name}</a> : <span aria-current="page">{item.name}</span>}
+    </>
+  ))}
+</nav>

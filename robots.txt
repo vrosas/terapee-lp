@@ -5,4 +5,4 @@ Disallow: /cdn-cgi/
 # Índice de sitemaps (site + blog)
 Sitemap: https://www.terapee.com.br/sitemap-index.xml
 Sitemap: https://www.terapee.com.br/sitemap.xml
-Sitemap: https://blog.terapee.com.br/sitemap.xml
+Sitemap: https://www.terapee.com.br/blog/sitemap.xml

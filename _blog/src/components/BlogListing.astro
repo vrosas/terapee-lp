@@ -1,0 +1,54 @@
+---
+// Usado pela página inicial do blog e pelas páginas de categoria.
+import PostCard from './PostCard.astro';
+import TrialCta from './TrialCta.astro';
+import AboutTerapee from './AboutTerapee.astro';
+import Breadcrumb from './Breadcrumb.astro';
+import { CATEGORIES } from '../data/categories';
+import type { Post } from '../lib/posts';
+
+interface Props {
+  posts: Post[];
+  heading: string;
+  lead: string;
+  badge: string;
+  activeCategory?: string;
+  breadcrumb: { name: string; href?: string }[];
+}
+const { posts, heading, lead, badge, activeCategory, breadcrumb } = Astro.props;
+const [featured, ...rest] = posts;
+---
+<main>
+  <section class="subpage-hero blog-hero">
+    <div class="container">
+      <Breadcrumb items={breadcrumb} />
+      <div class="subpage-badge">{badge}</div>
+      <h1 set:html={heading} />
+      <p class="lead">{lead}</p>
+      <nav class="cat-nav" aria-label="Categorias do blog">
+        <a href="/blog/" class:list={['cat-chip', { active: !activeCategory }]} aria-current={!activeCategory ? 'page' : undefined}>Todos</a>
+        {CATEGORIES.map((c) => (
+          <a href={`/blog/categoria/${c.slug}/`} class:list={['cat-chip', { active: activeCategory === c.slug }]} aria-current={activeCategory === c.slug ? 'page' : undefined}>{c.name}</a>
+        ))}
+      </nav>
+    </div>
+  </section>
+
+  <section class="blog-list">
+    <div class="container">
+      {posts.length === 0 ? (
+        <div class="blog-empty">
+          <p class="blog-empty-title">Os primeiros artigos estão a caminho.</p>
+          <p>Enquanto isso, conheça as <a href="/funcionalidades/">funcionalidades da Terapee</a> ou use a <a href="/ferramentas/calculadora-de-precificacao">calculadora de precificação</a> grátis.</p>
+        </div>
+      ) : (
+        <>
+          <PostCard post={featured} featured />
+          {rest.length > 0 && <div class="post-grid">{rest.map((p) => <PostCard post={p} />)}</div>}
+        </>
+      )}
+      <TrialCta source={activeCategory ? `categoria-${activeCategory}` : 'blog-home'} />
+      <AboutTerapee />
+    </div>
+  </section>
+</main>

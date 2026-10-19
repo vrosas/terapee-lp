@@ -1,0 +1,16 @@
+---
+interface Props { compact?: boolean; source?: string }
+const { compact = false, source = 'blog' } = Astro.props;
+const href = `https://web.terapee.com.br/register?utm_source=blog&utm_medium=cta&utm_campaign=${encodeURIComponent(source)}`;
+---
+<aside class:list={['trial-cta', { 'trial-cta--compact': compact }]} aria-label="Teste a Terapee">
+  <div class="trial-cta-copy">
+    <p class="trial-cta-kicker">Terapee</p>
+    <p class="trial-cta-title">Agenda, prontuário, cobrança e WhatsApp no mesmo lugar</p>
+    {!compact && <p class="trial-cta-text">Sistema de gestão para psicólogos, fonoaudiólogos, terapeutas ocupacionais e clínicas multidisciplinares. Teste grátis por 14 dias, sem cartão de crédito.</p>}
+  </div>
+  <div class="trial-cta-actions">
+    <a href={href} target="_blank" rel="noopener" class="btn btn-primary">Testar grátis por 14 dias →</a>
+    {!compact && <a href="/funcionalidades/" class="trial-cta-link">Ver funcionalidades</a>}
+  </div>
+</aside>

@@ -1,0 +1,142 @@
+/* ========== BLOG ========== */
+.blog-body { background: var(--white); }
+
+/* Topo da listagem (usa .subpage-hero do /assets/visual.css) */
+.blog-hero { padding-bottom: 56px; }
+.blog-hero h1 { max-width: 820px; margin-bottom: 18px; }
+.blog-hero p.lead { max-width: 640px; color: var(--gray-600); margin-bottom: 28px; }
+.cat-nav { display: flex; flex-wrap: wrap; gap: 8px; }
+.cat-chip {
+  font-size: 14px; font-weight: 600; color: var(--gray-700);
+  background: var(--white); border: 1px solid var(--gray-200);
+  padding: 8px 16px; border-radius: 999px; transition: all .2s;
+}
+.cat-chip:hover { border-color: var(--primary-300); color: var(--primary); }
+.cat-chip.active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+
+.blog-list { padding: 48px 0 96px; }
+
+/* Cards */
+.post-card { display: grid; grid-template-rows: auto 1fr; background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; transition: box-shadow .25s, transform .25s, border-color .25s; }
+.post-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); border-color: var(--primary-200); }
+.post-card-media { display: block; aspect-ratio: 1200 / 630; background: var(--primary-50); overflow: hidden; }
+.post-card-media img { width: 100%; height: 100%; object-fit: cover; }
+.post-card-placeholder { display: flex; align-items: flex-end; width: 100%; height: 100%; padding: 20px 22px; background: radial-gradient(420px 220px at 90% 0%, rgba(122,90,248,.35), transparent 70%), linear-gradient(135deg, #444CE7, #6172F3); color: rgba(255,255,255,.92); font-weight: 800; font-size: 22px; letter-spacing: -.01em; }
+.post-card-placeholder[data-cat="financeiro"] { background: radial-gradient(420px 220px at 90% 0%, rgba(18,183,106,.45), transparent 70%), linear-gradient(135deg, #3538CD, #444CE7); }
+.post-card-placeholder[data-cat="agenda"] { background: radial-gradient(420px 220px at 90% 0%, rgba(59,130,246,.5), transparent 70%), linear-gradient(135deg, #444CE7, #3B82F6); }
+.post-card-placeholder[data-cat="prontuario"] { background: radial-gradient(420px 220px at 90% 0%, rgba(164,188,253,.55), transparent 70%), linear-gradient(135deg, #1e293b, #444CE7); }
+.post-card-placeholder[data-cat="teleconsulta"] { background: radial-gradient(420px 220px at 90% 0%, rgba(122,90,248,.55), transparent 70%), linear-gradient(135deg, #3538CD, #7A5AF8); }
+.post-card-body { display: flex; flex-direction: column; padding: 22px 24px 24px; }
+.post-tag { align-self: flex-start; font-size: 12px; font-weight: 700; color: var(--primary); background: var(--primary-50); padding: 4px 10px; border-radius: 999px; margin-bottom: 12px; }
+.post-card-title { font-size: 19px; line-height: 1.3; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+.post-card-title a:hover { color: var(--primary); }
+.post-card-excerpt { font-size: 15px; color: var(--gray-600); line-height: 1.6; margin-bottom: 16px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.post-meta { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: 13px; color: var(--gray-500); }
+.post-draft { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: #B54708; background: #FEF0C7; padding: 2px 8px; border-radius: 999px; }
+
+.post-card--featured { grid-template-rows: none; grid-template-columns: 1.15fr 1fr; margin-bottom: 28px; }
+.post-card--featured .post-card-media { aspect-ratio: auto; min-height: 320px; }
+.post-card--featured .post-card-body { padding: 36px 40px; justify-content: center; }
+.post-card--featured .post-card-title { font-size: clamp(24px, 2.6vw, 32px); line-height: 1.2; margin-bottom: 12px; }
+.post-card--featured .post-card-excerpt { font-size: 16px; -webkit-line-clamp: 4; }
+.post-card--featured .post-meta { margin-top: 8px; }
+
+.post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+.blog-empty { text-align: center; padding: 56px 24px; border: 1px dashed var(--gray-300); border-radius: var(--radius-lg); color: var(--gray-600); }
+.blog-empty-title { font-size: 20px; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+.blog-empty a { color: var(--primary); font-weight: 600; }
+
+/* CTA de teste grátis */
+.trial-cta { display: flex; align-items: center; justify-content: space-between; gap: 24px 40px; flex-wrap: wrap; margin: 56px 0 0; padding: 36px 40px; border-radius: var(--radius-xl); color: var(--white); background: radial-gradient(600px 300px at 100% 0%, rgba(122,90,248,.55), transparent 65%), linear-gradient(135deg, #3538CD, #444CE7); }
+.trial-cta-copy { flex: 1 1 380px; }
+.trial-cta-kicker { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; opacity: .75; margin-bottom: 6px; }
+.trial-cta-title { font-size: clamp(20px, 2.2vw, 26px); font-weight: 800; line-height: 1.25; }
+.trial-cta-text { margin-top: 8px; opacity: .88; font-size: 15px; max-width: 560px; }
+.trial-cta-actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.trial-cta .btn-primary { background: var(--white); color: var(--primary-dark); box-shadow: 0 6px 20px rgba(15,23,42,.25); }
+.trial-cta .btn-primary:hover { background: var(--primary-50); }
+.trial-cta-link { font-weight: 700; font-size: 15px; color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
+.trial-cta--compact { display: block; margin: 0; padding: 24px; border-radius: var(--radius-lg); }
+.trial-cta--compact .trial-cta-title { font-size: 17px; margin-bottom: 16px; }
+.trial-cta--compact .btn { padding: 11px 18px; font-size: 14px; width: 100%; justify-content: center; }
+
+/* Sobre a Terapee */
+.about-terapee { display: flex; gap: 28px; align-items: flex-start; margin: 48px 0 0; padding: 32px; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); background: var(--gray-50); }
+.about-terapee-logo { width: 120px; height: auto; flex: none; margin-top: 4px; }
+.about-terapee h2 { font-size: 18px; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+.about-terapee p { font-size: 15px; color: var(--gray-600); line-height: 1.7; }
+.about-terapee p + p { margin-top: 10px; }
+
+/* ========== POST ========== */
+.post-header { padding: 120px 0 36px; background: radial-gradient(900px 420px at 85% 0%, rgba(68,76,231,.10), transparent 60%), linear-gradient(#fff, #F8F9FE); border-bottom: 1px solid var(--gray-100); }
+.post-header-inner > h1, .post-header-inner > .post-lead { max-width: 820px; }
+.post-header h1 { font-size: clamp(32px, 4.4vw, 48px); line-height: 1.12; font-weight: 800; letter-spacing: -.01em; color: var(--dark); margin-bottom: 16px; }
+.post-lead { font-size: 19px; line-height: 1.6; color: var(--gray-600); margin-bottom: 20px; }
+.post-header .post-meta { font-size: 14px; }
+.post-header .post-meta strong { color: var(--gray-900); }
+
+.post-cover { margin-top: 32px; }
+.post-cover img { max-width: 960px; }
+.post-cover img { width: 100%; height: auto; border-radius: var(--radius-lg); }
+
+.post-layout { display: grid; grid-template-columns: minmax(0, 720px) 280px; justify-content: space-between; gap: 64px; padding-top: 48px; }
+.post-aside-inner { position: sticky; top: 96px; }
+.post-aside-inner > * + * { margin-top: 28px; }
+.post-toc-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--gray-500); margin-bottom: 12px; }
+.post-toc ol { list-style: none; border-left: 2px solid var(--gray-200); }
+.post-toc li a { display: block; padding: 6px 0 6px 14px; margin-left: -2px; border-left: 2px solid transparent; font-size: 14px; line-height: 1.45; color: var(--gray-600); }
+.post-toc li a:hover { color: var(--primary); border-left-color: var(--primary); }
+
+.post-footer { padding-bottom: 24px; }
+.post-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 40px; list-style: none; }
+.post-tags li { font-size: 13px; color: var(--gray-600); background: var(--gray-100); padding: 4px 12px; border-radius: 999px; }
+
+.related { padding: 72px 0 8px; }
+.related-title { font-size: 26px; font-weight: 800; color: var(--dark); margin-bottom: 24px; }
+main > .container:last-child { padding-bottom: 80px; }
+
+/* Texto do post */
+.prose { font-size: 18px; line-height: 1.75; color: var(--gray-700); }
+.prose > * + * { margin-top: 1.15em; }
+.prose h2 { font-size: 28px; line-height: 1.25; font-weight: 800; color: var(--dark); margin-top: 2em; scroll-margin-top: 96px; }
+.prose h3 { font-size: 21px; line-height: 1.3; font-weight: 800; color: var(--dark); margin-top: 1.7em; scroll-margin-top: 96px; }
+.prose h2 + *, .prose h3 + * { margin-top: .6em; }
+.prose a { color: var(--primary); font-weight: 600; text-decoration: underline; text-decoration-color: var(--primary-200); text-underline-offset: 3px; }
+.prose a:hover { text-decoration-color: var(--primary); }
+.prose strong { color: var(--gray-900); }
+.prose ul, .prose ol { padding-left: 1.4em; }
+.prose ul { list-style: disc; }
+.prose ol { list-style: decimal; }
+.prose li + li { margin-top: .4em; }
+.prose li::marker { color: var(--primary); }
+.prose blockquote { border-left: 4px solid var(--primary); background: var(--primary-50); padding: 16px 22px; border-radius: 0 var(--radius) var(--radius) 0; color: var(--gray-900); }
+.prose img { border-radius: var(--radius); margin: 1.6em 0; }
+.prose hr { border: 0; border-top: 1px solid var(--gray-200); margin: 2.4em 0; }
+.prose code { font-size: .88em; background: var(--gray-100); padding: 2px 6px; border-radius: 6px; }
+.prose pre { background: var(--dark); color: #e2e8f0; padding: 18px 20px; border-radius: var(--radius); overflow-x: auto; font-size: 14px; line-height: 1.6; }
+.prose pre code { background: none; padding: 0; }
+.prose table { width: 100%; border-collapse: collapse; font-size: 15px; display: block; overflow-x: auto; }
+.prose th, .prose td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--gray-200); }
+.prose th { font-weight: 700; color: var(--gray-900); background: var(--gray-50); }
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .post-grid { grid-template-columns: 1fr 1fr; }
+  .post-layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .post-aside { display: none; }
+}
+@media (max-width: 900px) {
+  .post-card--featured { grid-template-columns: 1fr; }
+  .post-card--featured .post-card-media { min-height: 0; aspect-ratio: 1200 / 630; }
+  .post-card--featured .post-card-body { padding: 24px; }
+}
+@media (max-width: 640px) {
+  .post-grid { grid-template-columns: 1fr; }
+  .blog-list { padding: 32px 0 64px; }
+  .trial-cta { padding: 28px 24px; }
+  .about-terapee { flex-direction: column; gap: 16px; padding: 24px; }
+  .post-header { padding-top: 104px; }
+  .prose { font-size: 17px; }
+  .prose h2 { font-size: 24px; }
+}
