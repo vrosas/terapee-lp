@@ -44,7 +44,7 @@ const [featured, ...rest] = posts;
       ) : (
         <>
           <PostCard post={featured} featured />
-          {rest.length > 0 && <div class="post-grid">{rest.map((p) => <PostCard post={p} />)}</div>}
+          {rest.length > 0 && <div class:list={['post-grid', { 'post-grid--2': rest.length % 3 !== 0 && rest.length % 2 === 0 }]}>{rest.map((p) => <PostCard post={p} />)}</div>}
         </>
       )}
       <TrialCta source={activeCategory ? `categoria-${activeCategory}` : 'blog-home'} />

@@ -18,7 +18,7 @@ quando estiver pronto. O painel salva um arquivo `.mdx` em `_blog/src/content/po
 
 **Direto no arquivo**
 
-Copie `_blog/src/content/posts/modelo-de-post.mdx`, renomeie (o nome do arquivo vira o
+Copie `_blog/modelo-de-post.mdx` para `_blog/src/content/posts/`, renomeie (o nome do arquivo vira o
 endereço do post) e edite. Campos do topo:
 
 | Campo | Obrigatório | Observação |
