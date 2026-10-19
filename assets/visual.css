@@ -328,3 +328,6 @@
 @media (max-width:768px){.pa-access-grid{grid-template-columns:1fr}.pa-access{padding:64px 0}.pa-card{padding:22px}}
 @media (max-width:420px){.pa-btn{font-size:11px;padding:9px 4px}}
 @media (max-width:640px){.pa-app .hx-dots{display:none}.pa-app .hx-app-top{flex-wrap:wrap;row-gap:8px}.pa-doc{padding:18px 16px 20px}}
+
+/* Selo de especialidade dentro do H1 (palavra-chave no título principal) */
+.subpage-hero h1 .subpage-badge{display:flex;width:fit-content;line-height:1.4;-webkit-text-fill-color:currentColor}
