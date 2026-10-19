@@ -1,0 +1,133 @@
+---
+import { render } from 'astro:content';
+import { Image, getImage } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import TrialCta from '../components/TrialCta.astro';
+import PostCard from '../components/PostCard.astro';
+import AboutTerapee from '../components/AboutTerapee.astro';
+import { AUTHORS, categoryBySlug } from '../data/categories';
+import { getPublishedPosts, postPath, formatDate, isoDate, readingMinutes, type Post } from '../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post, all: posts } }));
+}
+
+const { post, all } = Astro.props as { post: Post; all: Post[] };
+const { Content, headings } = await render(post);
+const d = post.data;
+const cat = categoryBySlug(d.category)!;
+const author = AUTHORS[d.author as keyof typeof AUTHORS];
+const site = 'https://www.terapee.com.br';
+const path = postPath(post);
+const toc = headings.filter((h) => h.depth === 2);
+
+const og = d.cover ? (await getImage({ src: d.cover, width: 1200, height: 630, fit: 'cover', format: 'jpg' })).src : undefined;
+
+const related = [
+  ...all.filter((p) => p.id !== post.id && p.data.category === d.category),
+  ...all.filter((p) => p.id !== post.id && p.data.category !== d.category),
+].slice(0, 3);
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: d.title,
+    description: d.description,
+    url: site + path,
+    mainEntityOfPage: site + path,
+    datePublished: d.publishedAt.toISOString(),
+    dateModified: (d.updatedAt ?? d.publishedAt).toISOString(),
+    inLanguage: 'pt-BR',
+    articleSection: cat.name,
+    keywords: d.tags.join(', ') || undefined,
+    image: new URL(og ?? '/og-image.png', site).href,
+    author: d.author === 'equipe-terapee'
+      ? { '@type': 'Organization', name: 'Terapee', url: `${site}/` }
+      : { '@type': 'Person', name: author.name, jobTitle: author.role },
+    publisher: { '@type': 'Organization', name: 'Terapee', url: `${site}/`, logo: { '@type': 'ImageObject', url: `${site}/logo-terapee.png` } },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Início', item: `${site}/` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${site}/blog/` },
+      { '@type': 'ListItem', position: 3, name: cat.name, item: `${site}/blog/categoria/${cat.slug}/` },
+      { '@type': 'ListItem', position: 4, name: d.title, item: site + path },
+    ],
+  },
+];
+---
+<BaseLayout
+  title={`${d.seoTitle ?? d.title} | Terapee`}
+  description={d.description}
+  path={path}
+  ogType="article"
+  ogImage={og}
+  jsonLd={jsonLd}
+  noindex={d.draft}
+  publishedAt={d.publishedAt}
+  updatedAt={d.updatedAt}
+>
+  <main>
+    <article class="post">
+      <header class="post-header">
+        <div class="container post-header-inner">
+          <Breadcrumb items={[{ name: 'Início', href: '/' }, { name: 'Blog', href: '/blog/' }, { name: cat.name, href: `/blog/categoria/${cat.slug}/` }]} />
+          <a href={`/blog/categoria/${cat.slug}/`} class="post-tag">{cat.name}</a>
+          <h1>{d.title}</h1>
+          <p class="post-lead">{d.description}</p>
+          <p class="post-meta">
+            <span>Por <strong>{author.name}</strong></span>
+            <span aria-hidden="true">·</span>
+            <time datetime={isoDate(d.publishedAt)}>{formatDate(d.publishedAt)}</time>
+            {d.updatedAt && <><span aria-hidden="true">·</span><span>Atualizado em <time datetime={isoDate(d.updatedAt)}>{formatDate(d.updatedAt)}</time></span></>}
+            <span aria-hidden="true">·</span>
+            <span>{readingMinutes(post)} min de leitura</span>
+            {d.draft && <span class="post-draft">rascunho</span>}
+          </p>
+        </div>
+      </header>
+
+      {d.cover && (
+        <div class="container post-cover">
+          <Image src={d.cover} alt={d.coverAlt ?? ''} widths={[640, 960, 1280]} sizes="(max-width: 1000px) 100vw, 960px" loading="eager" fetchpriority="high" />
+        </div>
+      )}
+
+      <div class="container post-layout">
+        <div class="prose">
+          <Content />
+        </div>
+        <aside class="post-aside"><div class="post-aside-inner">
+          {toc.length >= 3 && (
+            <nav class="post-toc" aria-label="Neste artigo">
+              <p class="post-toc-title">Neste artigo</p>
+              <ol>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+            </nav>
+          )}
+          <TrialCta compact source={`post-${post.id}`} />
+        </div></aside>
+      </div>
+
+      <div class="container post-footer">
+        {d.tags.length > 0 && <ul class="post-tags">{d.tags.map((t) => <li>{t}</li>)}</ul>}
+        <TrialCta source={`post-${post.id}`} />
+      </div>
+    </article>
+
+    {related.length > 0 && (
+      <section class="related">
+        <div class="container">
+          <h2 class="related-title">Continue lendo</h2>
+          <div class="post-grid">{related.map((p) => <PostCard post={p} />)}</div>
+        </div>
+      </section>
+    )}
+
+    <div class="container"><AboutTerapee /></div>
+  </main>
+</BaseLayout>

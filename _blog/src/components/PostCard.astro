@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+import { categoryBySlug } from '../data/categories';
+import { postPath, formatDate, isoDate, readingMinutes, type Post } from '../lib/posts';
+
+interface Props { post: Post; featured?: boolean }
+const { post, featured = false } = Astro.props;
+const cat = categoryBySlug(post.data.category);
+---
+<article class:list={['post-card', { 'post-card--featured': featured }]}>
+  <a href={postPath(post)} class="post-card-media" tabindex="-1" aria-hidden="true">
+    {post.data.cover
+      ? <Image src={post.data.cover} alt="" widths={[480, 800, 1200]} sizes={featured ? '(max-width: 900px) 100vw, 640px' : '(max-width: 640px) 100vw, 380px'} loading={featured ? 'eager' : 'lazy'} />
+      : <span class="post-card-placeholder" data-cat={post.data.category}><span>{cat?.name}</span></span>}
+  </a>
+  <div class="post-card-body">
+    <a href={`/blog/categoria/${post.data.category}/`} class="post-tag">{cat?.name}</a>
+    <h3 class="post-card-title"><a href={postPath(post)}>{post.data.title}</a></h3>
+    <p class="post-card-excerpt">{post.data.description}</p>
+    <p class="post-meta">
+      <time datetime={isoDate(post.data.publishedAt)}>{formatDate(post.data.publishedAt)}</time>
+      <span aria-hidden="true">·</span>
+      <span>{readingMinutes(post)} min de leitura</span>
+      {post.data.draft && <span class="post-draft">rascunho</span>}
+    </p>
+  </div>
+</article>

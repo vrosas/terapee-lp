@@ -1,0 +1,322 @@
+/* Copiado do site estático (funcionalidades/agenda) para o blog ter o mesmo topo e rodapé. */
+/* ========== RESET & BASE ========== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: #1a1a2e;
+  background: var(--gray-50);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* ========== CSS VARIABLES ========== */
+:root {
+  --primary: #444CE7;
+  --primary-dark: #3538CD;
+  --primary-light: #E0EAFF;
+  --primary-bg: #EEF4FF;
+  --primary-50: #EEF4FF;
+  --primary-100: #E0EAFF;
+  --primary-200: #C7D7FE;
+  --primary-300: #A4BCFD;
+  --primary-400: #8098F9;
+  --primary-500: #6172F3;
+  --primary-600: #444CE7;
+  --accent: #3B82F6;
+  --dark: #0f172a;
+  --gray-900: #1e293b;
+  --gray-700: #334155;
+  --gray-600: #475569;
+  --gray-500: #64748b;
+  --gray-400: #94a3b8;
+  --gray-300: #cbd5e1;
+  --gray-200: #e2e8f0;
+  --gray-100: #f1f5f9;
+  --gray-50: #f8fafc;
+  --white: #ffffff;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.1);
+  --shadow-xl: 0 20px 60px rgba(0,0,0,0.12);
+  --max-width: 1200px;
+}
+
+/* ========== UTILITIES ========== */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+.section { padding: 100px 0; }
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--gray-600);
+  background: rgba(255, 255, 255, 0.6);
+  padding: 6px 16px 6px 8px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.section-label .badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  flex-shrink: 0;
+}
+.section-label .badge-icon svg {
+  width: 14px;
+  height: 14px;
+  color: var(--primary);
+}
+.section-title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+.section-subtitle {
+  font-size: 17px;
+  color: var(--gray-600);
+  max-width: 600px;
+  line-height: 1.7;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: 0 4px 14px rgba(68,76,231,0.35);
+}
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(68,76,231,0.45);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+.btn-outline:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== HEADER ========== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.logo .logo-img { height: 36px; width: auto; }
+.nav { display: flex; align-items: center; gap: clamp(18px, 2.7vw, 32px); }
+.nav a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-600);
+  transition: color 0.2s;
+}
+.nav a:hover { color: var(--primary); }
+.header-actions { display: flex; align-items: center; gap: 12px; }
+.header-actions .btn { padding: 10px 22px; font-size: 14px; }
+.mobile-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.mobile-toggle span {
+  width: 24px;
+  height: 2.5px;
+  background: var(--dark);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background: var(--white);
+  border-top: 1px solid var(--gray-200);
+  padding: 48px 0 32px;
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.footer-logo .logo-img { height: 30px; width: auto; }
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+.footer-links a {
+  font-size: 13px;
+  color: var(--gray-600);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--primary); }
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--gray-200);
+  font-size: 13px;
+  color: var(--gray-500);
+}
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+.footer-legal a {
+  font-size: 13px;
+  color: var(--gray-500);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.footer-legal a:hover { color: var(--primary); }
+/* Footer links update */
+.footer-col-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gray-900);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+.footer-col-links { display: flex; flex-direction: column; gap: 8px; }
+.footer-col-links a { font-size: 13px; color: var(--gray-500); transition: color 0.2s; }
+.footer-col-links a:hover { color: var(--primary); }
+@media (max-width: 768px) {
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-legal { justify-content: center; }
+}
+/* ========== HEADER MOBILE ==========
+   Em telas estreitas o CTA do cabecalho cobria a logo: logo (173px) + botoes
+   + hamburguer nao cabiam na largura. Aqui a logo e o botao encolhem para
+   caber; abaixo de 360px o botao sai (a acao continua no hero e no rodape).
+   Os botoes do header tem padding/font-size inline, dai o !important. */
+@media (max-width: 768px) {
+  .header-inner { padding: 0 16px; gap: 12px; }
+  .logo { flex: 0 0 auto; }
+  .logo .logo-img { height: 28px; }
+  .header-actions { gap: 8px; }
+  .header-actions .btn-outline { display: none; }
+  .header-actions .btn { padding: 9px 14px !important; font-size: 13px !important; white-space: nowrap; }
+}
+@media (max-width: 359px) {
+  .header-actions .btn-primary { display: none; }
+}
+
+/* The header nav needs ~1090px to fit all links without colliding with the
+   logo and the CTA buttons, so it collapses into the mobile menu below that. */
+@media (max-width: 1100px) {
+  .nav { display: none; }
+  .mobile-toggle { display: flex; }
+}
+
+/* ==== estrutura compartilhada ==== */
+.breadcrumb { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 13px; font-weight: 500; color: var(--gray-500); margin-bottom: 24px; }
+.breadcrumb a { color: var(--primary); transition: opacity 0.2s; }
+.breadcrumb a:hover { opacity: 0.75; }
+.breadcrumb svg { width: 14px; height: 14px; flex-shrink: 0; color: var(--gray-300); }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--gray-200); }
+.footer-contact-item { display: inline-flex; align-items: center; gap: 7px; }
+
+.nav a { white-space: nowrap; }

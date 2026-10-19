@@ -66,9 +66,9 @@ vários terapeutas.
 
 ## Conteúdo
 
-- [Blog da Terapee](https://blog.terapee.com.br/): artigos sobre gestão de clínicas de terapia.
-- [Gestão de clínicas](https://blog.terapee.com.br/category/gestao)
-- [Agenda](https://blog.terapee.com.br/category/agenda)
+- [Blog da Terapee](https://www.terapee.com.br/blog/): artigos sobre gestão de clínicas de terapia.
+- [Gestão de clínicas](/blog/categoria/gestao/)
+- [Agenda](/blog/categoria/agenda/)
 
 ## Opcional
 
