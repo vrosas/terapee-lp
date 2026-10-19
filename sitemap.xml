@@ -33,6 +33,7 @@
   <url><loc>https://www.terapee.com.br/para-terapeutas-ocupacionais</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.terapee.com.br/para-clinicas-multidisciplinares</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.terapee.com.br/para-terapia-infantil</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.terapee.com.br/para-clinicas-aba</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
 
   <!-- Comparativos -->
   <url><loc>https://www.terapee.com.br/alternativas/</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
