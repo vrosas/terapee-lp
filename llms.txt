@@ -51,6 +51,7 @@ vários terapeutas.
 - [Terapeutas ocupacionais](https://www.terapee.com.br/para-terapeutas-ocupacionais)
 - [Clínicas multidisciplinares](https://www.terapee.com.br/para-clinicas-multidisciplinares)
 - [Clínicas de terapia infantil](https://www.terapee.com.br/para-terapia-infantil)
+- [Clínicas ABA](https://www.terapee.com.br/para-clinicas-aba): plano terapêutico (PEI), registro de sessão alvo a alvo, gráfico por alvo e relatórios em PDF para o convênio, junto da agenda, da família no WhatsApp e do repasse da equipe. Não faz faturamento TISS.
 
 ## Ferramentas grátis
 
