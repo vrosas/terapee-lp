@@ -2,9 +2,13 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 export type Post = CollectionEntry<'posts'>;
 
-/** Posts publicados (rascunhos só aparecem no `npm run dev`), do mais novo ao mais antigo. */
+// Rascunhos aparecem no `npm run dev` e nos previews da Vercel (links dos PRs),
+// para dar para revisar antes de publicar. Em produção, nunca.
+const SHOW_DRAFTS = import.meta.env.DEV || process.env.VERCEL_ENV === 'preview';
+
+/** Posts publicados (mais os rascunhos, fora da produção), do mais novo ao mais antigo. */
 export async function getPublishedPosts(): Promise<Post[]> {
-  const posts = await getCollection('posts', ({ data }) => import.meta.env.DEV || !data.draft);
+  const posts = await getCollection('posts', ({ data }) => SHOW_DRAFTS || !data.draft);
   return posts.sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
 }
 

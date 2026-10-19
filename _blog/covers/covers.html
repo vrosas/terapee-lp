@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Capas do blog</title>
+<!--
+  Capas dos posts do blog (1200 × 630), no mesmo estilo das ilustrações das
+  páginas de funcionalidades. Para gerar de novo os PNGs em _blog/src/assets/posts/:
+    python3 -m http.server 8099   (na raiz do repositório)
+    python3 _blog/covers/render.py
+-->
+<style>
+@font-face { font-family: 'DM Sans'; font-weight: 400 800; src: url(/fonts/dm-sans-latin.woff2) format('woff2'); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'DM Sans', sans-serif; background: #e5e7eb; padding: 24px; display: grid; gap: 24px; color: #1a1a2e; }
+:root {
+  --primary: #444CE7; --primary-dark: #3538CD; --primary-50: #EEF4FF; --primary-100: #E0EAFF; --primary-200: #C7D7FE;
+  --violet: #7A5AF8; --green: #12B76A; --green-50: #ECFDF3; --wa: #075E54; --wa-bg: #ECE5DD; --wa-out: #DCF8C6;
+  --dark: #0f172a; --g900: #1e293b; --g700: #334155; --g600: #475569; --g500: #64748b; --g400: #94a3b8; --g300: #cbd5e1; --g200: #e2e8f0; --g100: #f1f5f9; --g50: #f8fafc;
+}
+.cover { position: relative; width: 1200px; height: 630px; overflow: hidden; border-radius: 0;
+  background:
+    radial-gradient(700px 420px at 92% 8%, rgba(68,76,231,.16), transparent 62%),
+    radial-gradient(600px 380px at 0% 100%, rgba(18,183,106,.08), transparent 60%),
+    linear-gradient(#fff, #F5F7FF);
+}
+.cover::before { content: ""; position: absolute; inset: 0;
+  background-image: linear-gradient(#EEF0F6 1px, transparent 1px), linear-gradient(90deg, #EEF0F6 1px, transparent 1px);
+  background-size: 48px 48px; opacity: .8;
+  -webkit-mask-image: radial-gradient(ellipse 75% 70% at 60% 45%, #000 25%, transparent 80%);
+          mask-image: radial-gradient(ellipse 75% 70% at 60% 45%, #000 25%, transparent 80%); }
+.cover > * { position: absolute; }
+
+/* peças comuns */
+.card { background: #fff; border: 1px solid #E7EAF2; border-radius: 22px;
+  box-shadow: 0 2px 4px rgba(16,24,40,.04), 0 32px 64px -24px rgba(30,36,90,.28); }
+.chip { display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid #E7EAF2; border-radius: 16px;
+  padding: 14px 20px 14px 14px; box-shadow: 0 12px 32px -12px rgba(30,36,90,.25); }
+.chip .ico { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; flex: none; }
+.chip .ico svg { width: 22px; height: 22px; }
+.chip b { display: block; font-size: 19px; font-weight: 800; color: var(--dark); line-height: 1.2; }
+.chip small { display: block; font-size: 14px; color: var(--g500); margin-top: 2px; }
+.pill { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; padding: 5px 11px; border-radius: 999px; }
+.bar { height: 10px; border-radius: 6px; background: var(--g100); }
+.kicker { font-size: 14px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--g500); }
+.brand { left: 56px; bottom: 44px; display: flex; align-items: center; gap: 10px; }
+.brand img { height: 34px; }
+
+/* ===== 1. Precificação ===== */
+#c-preco .calc { left: 96px; top: 70px; width: 560px; padding: 34px 38px 32px; }
+#c-preco .calc h4 { font-size: 24px; font-weight: 800; margin: 6px 0 22px; }
+#c-preco .row { display: flex; justify-content: space-between; align-items: center; padding: 13px 0; border-bottom: 1px solid var(--g100); font-size: 19px; color: var(--g700); }
+#c-preco .row b { color: var(--dark); font-weight: 700; }
+#c-preco .row .tag { font-size: 13px; font-weight: 700; color: var(--primary); background: var(--primary-50); padding: 3px 9px; border-radius: 999px; margin-left: 10px; }
+#c-preco .total { margin-top: 22px; border-radius: 16px; padding: 20px 24px; color: #fff; display: flex; justify-content: space-between; align-items: center;
+  background: radial-gradient(300px 160px at 100% 0%, rgba(122,90,248,.6), transparent 70%), linear-gradient(135deg, #3538CD, #444CE7); }
+#c-preco .total span { font-size: 17px; opacity: .85; }
+#c-preco .total b { font-size: 40px; font-weight: 800; letter-spacing: -.01em; }
+#c-preco .formula { right: 70px; top: 120px; width: 420px; padding: 30px 32px; }
+#c-preco .formula .eq { font-size: 25px; font-weight: 800; line-height: 1.35; margin-top: 12px; color: var(--dark); }
+#c-preco .formula .eq em { font-style: normal; color: var(--primary); }
+#c-preco .formula .line { height: 3px; background: var(--dark); border-radius: 2px; margin: 10px 0; }
+#c-preco .c1 { right: 120px; bottom: 96px; }
+
+/* ===== 2. Faltas ===== */
+#c-faltas { background:
+    radial-gradient(700px 420px at 92% 8%, rgba(18,183,106,.14), transparent 62%),
+    radial-gradient(600px 380px at 0% 100%, rgba(68,76,231,.10), transparent 60%),
+    linear-gradient(#fff, #F3FBF6); }
+#c-faltas .agenda { left: 80px; top: 80px; width: 520px; padding: 28px 30px; }
+#c-faltas .agenda h4 { font-size: 22px; font-weight: 800; margin: 4px 0 18px; }
+#c-faltas .slot { display: grid; grid-template-columns: 70px 1fr auto; align-items: center; gap: 14px; padding: 13px 0; border-bottom: 1px solid var(--g100); }
+#c-faltas .slot:last-child { border-bottom: 0; }
+#c-faltas .slot time { font-size: 17px; font-weight: 700; color: var(--g600); }
+#c-faltas .slot .who { font-size: 18px; font-weight: 700; color: var(--dark); }
+#c-faltas .slot .who small { display: block; font-size: 14px; font-weight: 500; color: var(--g500); }
+#c-faltas .ok { color: #067647; background: var(--green-50); }
+#c-faltas .wait { color: #B54708; background: #FEF0C7; }
+#c-faltas .free { color: var(--primary); background: var(--primary-50); }
+#c-faltas .phone { right: 96px; top: 64px; width: 400px; border-radius: 26px; overflow: hidden; }
+#c-faltas .wa-head { background: var(--wa); color: #fff; padding: 18px 22px; display: flex; align-items: center; gap: 12px; }
+#c-faltas .wa-av { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,.2); display: grid; place-items: center; }
+#c-faltas .wa-head b { font-size: 18px; } #c-faltas .wa-head small { display: block; font-size: 13px; opacity: .8; }
+#c-faltas .wa-body { background: var(--wa-bg); padding: 22px 18px 26px; display: grid; gap: 12px; }
+#c-faltas .msg { max-width: 300px; background: #fff; border-radius: 14px; padding: 13px 15px; font-size: 16px; line-height: 1.45; color: #111b21; box-shadow: 0 1px 1px rgba(0,0,0,.08); }
+#c-faltas .msg.out { justify-self: end; background: var(--wa-out); }
+#c-faltas .msg small { display: block; text-align: right; font-size: 12px; color: #667781; margin-top: 4px; }
+#c-faltas .c1 { left: 420px; bottom: 70px; }
+
+/* ===== 3. NFS-e ===== */
+#c-nfse .doc { width: 430px; padding: 30px 32px; }
+#c-nfse .doc-back { left: 56px; top: 120px; transform: rotate(-4deg); opacity: .96; }
+#c-nfse .doc-front { left: 350px; top: 66px; width: 470px; }
+#c-nfse .doc h4 { font-size: 23px; font-weight: 800; margin: 6px 0 4px; }
+#c-nfse .doc .sub { font-size: 15px; color: var(--g500); margin-bottom: 18px; }
+#c-nfse .field { display: flex; justify-content: space-between; padding: 11px 0; border-bottom: 1px dashed var(--g200); font-size: 17px; color: var(--g600); }
+#c-nfse .field b { color: var(--dark); }
+#c-nfse .value { display: flex; justify-content: space-between; align-items: baseline; margin-top: 18px; }
+#c-nfse .value span { font-size: 16px; color: var(--g500); }
+#c-nfse .value b { font-size: 34px; font-weight: 800; color: var(--dark); }
+#c-nfse .stamp { position: absolute; right: 26px; top: 26px; }
+#c-nfse .c1 { right: 60px; top: 170px; }
+#c-nfse .c2 { right: 120px; bottom: 110px; }
+
+/* ===== 4. Repasse ===== */
+#c-repasse .report { left: 80px; top: 70px; width: 640px; padding: 30px 34px; }
+#c-repasse .report h4 { font-size: 23px; font-weight: 800; margin: 6px 0 18px; }
+#c-repasse .pro { display: grid; grid-template-columns: 46px 170px 1fr 110px; align-items: center; gap: 14px; padding: 13px 0; border-bottom: 1px solid var(--g100); }
+#c-repasse .pro:last-child { border-bottom: 0; }
+#c-repasse .av { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 16px; }
+#c-repasse .pro .name { font-size: 18px; font-weight: 700; color: var(--dark); }
+#c-repasse .pro .name small { display: block; font-size: 14px; font-weight: 500; color: var(--g500); }
+#c-repasse .split { display: flex; height: 14px; border-radius: 8px; overflow: hidden; }
+#c-repasse .split i:first-child { background: var(--primary); } #c-repasse .split i:last-child { background: var(--primary-200); }
+#c-repasse .pro b { font-size: 18px; text-align: right; color: var(--dark); }
+#c-repasse .legend { display: flex; gap: 20px; margin-top: 16px; font-size: 15px; color: var(--g600); }
+#c-repasse .legend span { display: inline-flex; align-items: center; gap: 8px; }
+#c-repasse .legend i { width: 12px; height: 12px; border-radius: 4px; display: inline-block; }
+#c-repasse .donut { right: 90px; top: 110px; width: 330px; padding: 30px; text-align: center; }
+#c-repasse .ring { width: 190px; height: 190px; border-radius: 50%; margin: 14px auto 16px; display: grid; place-items: center;
+  background: conic-gradient(var(--primary) 0 50%, var(--primary-200) 50% 100%); }
+#c-repasse .ring div { width: 128px; height: 128px; border-radius: 50%; background: #fff; display: grid; place-items: center; font-size: 30px; font-weight: 800; }
+#c-repasse .donut p { font-size: 16px; color: var(--g600); }
+#c-repasse .c1 { right: 250px; bottom: 60px; }
+
+/* ===== 5. Prontuário ===== */
+#c-pront .record { left: 96px; top: 60px; width: 640px; padding: 30px 34px; }
+#c-pront .ph { display: flex; align-items: center; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid var(--g100); }
+#c-pront .ph .av { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #7A5AF8, #444CE7); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 20px; }
+#c-pront .ph b { font-size: 22px; font-weight: 800; } #c-pront .ph small { display: block; font-size: 15px; color: var(--g500); }
+#c-pront .ph .pill { margin-left: auto; }
+#c-pront .entry { display: grid; grid-template-columns: 16px 1fr; gap: 16px; padding-top: 20px; }
+#c-pront .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--primary); margin-top: 6px; box-shadow: 0 0 0 5px var(--primary-100); }
+#c-pront .entry h5 { font-size: 18px; font-weight: 800; color: var(--dark); }
+#c-pront .entry h5 span { font-weight: 500; color: var(--g500); font-size: 15px; margin-left: 8px; }
+#c-pront .entry .bar { margin-top: 12px; }
+#c-pront .lock { right: 110px; top: 110px; width: 300px; padding: 30px; text-align: center; }
+#c-pront .lock .big { width: 84px; height: 84px; margin: 4px auto 16px; border-radius: 24px; display: grid; place-items: center; background: var(--primary-50); }
+#c-pront .lock .big svg { width: 44px; height: 44px; color: var(--primary); }
+#c-pront .lock b { display: block; font-size: 22px; font-weight: 800; }
+#c-pront .lock small { display: block; font-size: 15px; color: var(--g500); margin-top: 6px; }
+#c-pront .c1 { right: 130px; bottom: 90px; }
+</style>
+</head>
+<body>
+
+<!-- 1. Quanto cobrar por sessão -->
+<section class="cover" id="c-preco">
+  <div class="card calc">
+    <p class="kicker">Preço da sessão</p>
+    <h4>O que cada sessão precisa pagar</h4>
+    <div class="row"><span>Custo fixo por sessão</span><b>R$ 50,00</b></div>
+    <div class="row"><span>Custo variável</span><b>R$ 3,00</b></div>
+    <div class="row"><span>Sua remuneração</span><b>R$ 100,00</b></div>
+    <div class="row"><span>Impostos e taxas<span class="tag">8%</span></span><b>no preço</b></div>
+    <div class="row" style="border:0"><span>Margem<span class="tag">20%</span></span><b>no preço</b></div>
+    <div class="total"><span>Preço da sessão</span><b>R$ 212,50</b></div>
+  </div>
+  <div class="card formula">
+    <p class="kicker">A conta</p>
+    <div class="eq"><em>custos</em> + <em>remuneração</em></div>
+    <div class="line"></div>
+    <div class="eq">1 − impostos − taxas − margem</div>
+  </div>
+  <div class="chip c1">
+    <span class="ico" style="background:var(--green-50);color:var(--green)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+    <span><b>Preço mínimo: R$ 166,30</b><small>abaixo disso, você paga para trabalhar</small></span>
+  </div>
+</section>
+
+<!-- 2. Como reduzir faltas -->
+<section class="cover" id="c-faltas">
+  <div class="card agenda">
+    <p class="kicker">Agenda de amanhã</p>
+    <h4>Confirmações das sessões</h4>
+    <div class="slot"><time>08:00</time><span class="who">Pedro A.<small>Fonoaudiologia</small></span><span class="pill ok">✓ Confirmada</span></div>
+    <div class="slot"><time>09:00</time><span class="who">Laura M.<small>Psicologia</small></span><span class="pill ok">✓ Confirmada</span></div>
+    <div class="slot"><time>10:00</time><span class="who">Horário livre<small>remarcado pelo paciente</small></span><span class="pill free">Disponível</span></div>
+    <div class="slot"><time>11:00</time><span class="who">Rafael S.<small>Terapia ocupacional</small></span><span class="pill wait">Aguardando</span></div>
+  </div>
+  <div class="card phone">
+    <div class="wa-head">
+      <span class="wa-av"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 21s-7.5-4.6-9.6-9.2C.8 8.3 2.9 4.5 6.6 4.1c2.1-.2 3.9.9 5.4 2.8 1.5-1.9 3.3-3 5.4-2.8 3.7.4 5.8 4.2 4.2 7.7C19.5 16.4 12 21 12 21z"/></svg></span>
+      <span><b>Clínica Terapee</b><small>online</small></span>
+    </div>
+    <div class="wa-body">
+      <div class="msg">Olá, Laura! Lembrete da sua sessão <b>amanhã às 9h</b>. Confirma?<br>1 · Confirmar &nbsp; 2 · Remarcar<small>18:02</small></div>
+      <div class="msg out">1<small>18:05 ✓✓</small></div>
+      <div class="msg">Sessão confirmada. Até amanhã! 💙<small>18:05</small></div>
+    </div>
+  </div>
+  <div class="chip c1">
+    <span class="ico" style="background:var(--green-50);color:var(--green)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+    <span><b>Lembrete automático</b><small>na véspera, com confirmação em 1 clique</small></span>
+  </div>
+</section>
+
+<!-- 3. NFS-e e Receita Saúde -->
+<section class="cover" id="c-nfse">
+  <div class="card doc doc-back">
+    <p class="kicker">Receita Saúde</p>
+    <h4>Recibo de saúde</h4>
+    <p class="sub">Profissional pessoa física</p>
+    <div class="field"><span>Pagador</span><b>CPF ***.456.789-**</b></div>
+    <div class="field"><span>Beneficiário</span><b>CPF ***.321.654-**</b></div>
+    <div class="field"><span>Data do pagamento</span><b>19/10/2026</b></div>
+  </div>
+  <div class="card doc doc-front">
+    <span class="pill stamp" style="color:#067647;background:var(--green-50)">● Autorizada</span>
+    <p class="kicker">NFS-e · Padrão nacional</p>
+    <h4>Nota fiscal de serviço</h4>
+    <p class="sub">Emitida pelo Emissor Nacional</p>
+    <div class="field"><span>Prestador</span><b>Clínica Bem-Estar Ltda.</b></div>
+    <div class="field"><span>Tomador</span><b>Laura M.</b></div>
+    <div class="field"><span>Serviço</span><b>Sessão de psicoterapia</b></div>
+    <div class="value"><span>Valor do serviço</span><b>R$ 200,00</b></div>
+  </div>
+  <div class="chip c1">
+    <span class="ico" style="background:var(--primary-50);color:var(--primary)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span>
+    <span><b>Tem CNPJ?</b><small>NFS-e pelo Emissor Nacional</small></span>
+  </div>
+  <div class="chip c2">
+    <span class="ico" style="background:var(--green-50);color:var(--green)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></span>
+    <span><b>Pessoa física?</b><small>Recibo pelo Receita Saúde</small></span>
+  </div>
+</section>
+
+<!-- 4. Repasse -->
+<section class="cover" id="c-repasse">
+  <div class="card report">
+    <p class="kicker">Fechamento de outubro</p>
+    <h4>Repasse por profissional</h4>
+    <div class="pro"><span class="av" style="background:#444CE7">AB</span><span class="name">Ana B.<small>Psicologia · 62 sessões</small></span><span class="split"><i style="width:50%"></i><i style="width:50%"></i></span><b>R$ 5.704</b></div>
+    <div class="pro"><span class="av" style="background:#12B76A">CR</span><span class="name">Carla R.<small>Fonoaudiologia · 48</small></span><span class="split"><i style="width:55%"></i><i style="width:45%"></i></span><b>R$ 4.858</b></div>
+    <div class="pro"><span class="av" style="background:#7A5AF8">JL</span><span class="name">João L.<small>Terapia ocupacional · 40</small></span><span class="split"><i style="width:60%"></i><i style="width:40%"></i></span><b>R$ 4.416</b></div>
+    <div class="legend"><span><i style="background:var(--primary)"></i>Profissional</span><span><i style="background:var(--primary-200)"></i>Clínica</span></div>
+  </div>
+  <div class="card donut">
+    <p class="kicker">Sessão de R$ 200</p>
+    <div class="ring"><div>50%</div></div>
+    <p><b style="color:var(--dark)">R$ 92</b> profissional · <b style="color:var(--dark)">R$ 92</b> clínica</p>
+  </div>
+  <div class="chip c1">
+    <span class="ico" style="background:var(--primary-50);color:var(--primary)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span>
+    <span><b>Bruto ou líquido?</b><small>defina por escrito no contrato</small></span>
+  </div>
+</section>
+
+<!-- 5. Prontuário -->
+<section class="cover" id="c-pront">
+  <div class="card record">
+    <div class="ph">
+      <span class="av">LM</span>
+      <span><b>Laura M.</b><small>Prontuário · Psicologia</small></span>
+      <span class="pill" style="color:var(--primary);background:var(--primary-50)">Em atendimento</span>
+    </div>
+    <div class="entry"><span class="dot"></span><div><h5>Evolução — sessão 12<span>14/10/2026</span></h5><div class="bar" style="width:92%"></div><div class="bar" style="width:78%;margin-top:9px"></div><div class="bar" style="width:84%;margin-top:9px"></div></div></div>
+    <div class="entry"><span class="dot" style="background:var(--g300);box-shadow:0 0 0 5px var(--g100)"></span><div><h5>Evolução — sessão 11<span>07/10/2026</span></h5><div class="bar" style="width:88%"></div><div class="bar" style="width:70%;margin-top:9px"></div></div></div>
+    <div class="entry"><span class="dot" style="background:var(--g300);box-shadow:0 0 0 5px var(--g100)"></span><div><h5>Avaliação da demanda e objetivos<span>05/08/2026</span></h5><div class="bar" style="width:80%"></div></div></div>
+  </div>
+  <div class="card lock">
+    <span class="big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.5"/></svg></span>
+    <b>Sigilo e LGPD</b>
+    <small>acesso só do profissional responsável</small>
+  </div>
+  <div class="chip c1">
+    <span class="ico" style="background:var(--primary-50);color:var(--primary)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></span>
+    <span><b>Guarda mínima: 5 anos</b><small>Resolução CFP nº 001/2009</small></span>
+  </div>
+</section>
+
+</body>
+</html>
