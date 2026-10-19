@@ -62,6 +62,7 @@ vários terapeutas.
 - [Alternativa ao PsicoPlanner](https://www.terapee.com.br/alternativas/psicoplanner)
 - [Alternativa ao Ninsaúde](https://www.terapee.com.br/alternativas/ninsaude)
 - [Alternativa ao Clínica Ágil](https://www.terapee.com.br/alternativas/clinica-agil)
+- [Alternativa ao PsicoManager](https://www.terapee.com.br/alternativas/psicomanager)
 
 ## Conteúdo
 
