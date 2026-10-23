@@ -30,7 +30,7 @@ vários terapeutas.
 - [Gestão de pacientes](https://www.terapee.com.br/funcionalidades/gestao-de-pacientes): cadastro, responsáveis, contatos e documentos.
 - [Lembretes no WhatsApp](https://www.terapee.com.br/funcionalidades/lembretes-whatsapp): confirmação automática de consulta para reduzir faltas.
 - [Telemedicina](https://www.terapee.com.br/funcionalidades/telemedicina): atendimento por vídeo integrado à agenda.
-- [Cobrança automática](https://www.terapee.com.br/funcionalidades/cobranca-automatica): mensalidades e pacotes com cobrança recorrente.
+- [Cobrança automática](https://www.terapee.com.br/funcionalidades/cobranca-automatica): cobrança de mensalidades e pacotes pelo WhatsApp, com o link de pagamento da clínica, e lembrete automático antes do vencimento.
 - [Gestão financeira](https://www.terapee.com.br/funcionalidades/gestao-financeira): receitas, despesas e repasses da clínica.
 - [Emissão de NFS-e](https://www.terapee.com.br/funcionalidades/nota-fiscal-nfse): nota fiscal de serviço emitida direto da cobrança paga.
 - [Emissão de recibos](https://www.terapee.com.br/funcionalidades/emissao-de-recibos): recibos em PDF para os pacientes.
