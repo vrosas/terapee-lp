@@ -117,82 +117,58 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Existe teste grátis? Preciso informar cartão de crédito?",
+          "name": "Preciso de cartão para testar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim! Você tem 14 dias de teste grátis com acesso às funcionalidades da plataforma e não precisa cadastrar cartão de crédito para começar."
+            "text": "Não. São 14 dias com acesso completo, e você escolhe o plano no primeiro acesso."
           }
         },
         {
           "@type": "Question",
-          "name": "Quais são os planos e qual a diferença entre eles?",
+          "name": "Qual a diferença entre os planos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Temos três planos: o Individual, para quem atende sozinho; o Clínica, para equipes com mais de um profissional (inclui multi-agenda e cadastro de secretária); e o Clínica Max, para clínicas maiores, com usuários ilimitados e recursos extras. Você pode pagar mensal ou anual, com desconto no plano anual."
+            "text": "O número de usuários (contando recepção e financeiro) e de onde sai o WhatsApp. No Clínica Max, os lembretes saem do número da sua clínica; nos outros, do número oficial da Terapee."
           }
         },
         {
           "@type": "Question",
-          "name": "Vocês têm plano terapêutico e registro de sessão para ABA?",
+          "name": "Já uso outro sistema. Perco o histórico?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim, é novidade. O plano terapêutico (objetivos, metas e alvos com níveis de ajuda e critério de domínio) fica no prontuário do paciente, o registro de sessão é feito alvo a alvo no navegador do tablet e vira gráfico por alvo e relatório em PDF. Protocolos que a clínica já aplica, como VB-MAPP, ABLLS-R, Portage e Denver II, podem ser implementados no próprio sistema, com o material da clínica."
+            "text": "Não. A nossa equipe importa pacientes, agenda e histórico."
           }
         },
         {
           "@type": "Question",
-          "name": "Os dados estão seguros? A Terapee está em conformidade com a LGPD?",
+          "name": "Emite nota fiscal?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim. Os dados são criptografados em repouso (AES-256) e em trânsito (TLS 1.3), com controle de acesso por perfil — apenas profissionais autorizados acessam os dados clínicos de cada paciente. A plataforma é construída em conformidade com a LGPD."
+            "text": "Sim, NFS-e pelo Emissor Nacional do gov.br, com o certificado A1 da clínica, para municípios que aderiram ao Emissor Nacional. A tela de configuração avisa se o seu município aceita."
           }
         },
         {
           "@type": "Question",
-          "name": "Como funcionam os lembretes via WhatsApp?",
+          "name": "Serve para ABA?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A Terapee envia lembretes automáticos das sessões pelo WhatsApp e o paciente confirma a presença em um clique. Nas clínicas que usam, as faltas caem 25%. Os lembretes já estão inclusos nos planos. Você também pode conectar o seu próprio número de WhatsApp (recurso disponível com custo adicional)."
+            "text": "Sim. Plano terapêutico com objetivos, metas e alvos, registro de sessão no tablet e gráficos. Os protocolos publicados (VB-MAPP, ABLLS-R e outros) não vêm prontos: a clínica cadastra a estrutura dos que já usa."
           }
         },
         {
           "@type": "Question",
-          "name": "A Terapee emite recibos e nota fiscal?",
+          "name": "E a LGPD?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim, os dois. Você gera recibos em PDF a partir dos seus modelos, em poucos cliques. E emite a NFS-e (nota fiscal de serviço) direto da cobrança já paga, pelo Emissor Nacional do gov.br — sem abrir o portal da prefeitura. A emissão de nota fiscal está incluída em todos os planos, sem custo por nota."
+            "text": "Dados separados por clínica, acesso por perfil, backup diário, encarregado de dados designado e exclusão da conta pela própria plataforma."
           }
         },
         {
           "@type": "Question",
-          "name": "A Terapee funciona para clínicas com vários profissionais?",
+          "name": "Posso cancelar quando quiser?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim. Nos planos Clínica e Clínica Max você gerencia a agenda de toda a equipe em um só painel (multi-agenda), cadastra secretárias e controla os acessos de cada profissional — ideal para clínicas multidisciplinares."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Já uso um app e quero migrar para a Terapee. Vocês ajudam na migração?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim, e já fizemos isso em escala: trouxemos mais de 28 mil pacientes e mais de 2 milhões de agendamentos de clínicas que vieram de outros sistemas, junto com histórico de sessões, prontuários e arquivos. Você manda o que tem hoje, a gente importa, e sua equipe começa sem redigitar nada. Fale com a gente pelo WhatsApp (21) 2342-2477."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Ao cancelar posso levar meus dados para onde quiser?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Claro! Os dados são seus. Ao cancelar geramos um arquivo com seus dados para download e os dados são apagados de nosso sistema."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Posso cancelar a qualquer momento?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Você pode cancelar sua assinatura a qualquer momento."
+            "text": "Sim, sem multa, e você pode exportar os seus dados antes."
           }
         }
       ]
@@ -2110,168 +2086,303 @@ document.addEventListener('click', function (e) {
   }
 });
 </script>
-<style>
-/* ========== HERO COM TELA DO SISTEMA ========== */
-.hx{position:relative;padding:136px 0 96px;overflow:hidden;background:radial-gradient(900px 500px at 85% 10%,rgba(68,76,231,.12),transparent 60%),radial-gradient(700px 400px at 0% 100%,rgba(18,183,106,.07),transparent 60%),linear-gradient(#fff,#F8F9FE)}
-.hx::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#F0F2F7 1px,transparent 1px),linear-gradient(90deg,#F0F2F7 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 20%,transparent 75%);opacity:.7;pointer-events:none}
-.hx-grid{position:relative;display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center}
-.hx-pill{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;border-radius:999px;background:#fff;border:1px solid #E7EAF2;font-size:14px;font-weight:600;color:#2A3142}
-.hx-pill b{background:var(--primary-bg);color:var(--primary);padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700}
-.hx h1{font-size:clamp(38px,4.6vw,58px);line-height:1.06;letter-spacing:-.005em;font-weight:800;color:var(--dark);margin-top:24px}
-.hx-hl{background:linear-gradient(120deg,#444CE7,#7A5AF8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.hx-lead{font-size:19px;line-height:1.6;color:var(--gray-600);margin-top:24px;max-width:560px}
-.hx-ctas{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
-.hx-assure{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;font-size:14px;font-weight:600;color:var(--gray-700)}
-.hx-assure span{display:inline-flex;align-items:center;gap:8px}
-.hx-assure svg{width:18px;height:18px;color:#12B76A;flex:none}
-.hx-stage{position:relative;height:560px}
-.hx-app{position:absolute;inset:0 0 auto 24px;background:#fff;border-radius:22px;border:1px solid #E7EAF2;box-shadow:0 2px 4px rgba(16,24,40,.04),0 32px 64px -24px rgba(30,36,90,.28);overflow:hidden}
-.hx-app-top{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid #F0F2F7}
-.hx-dots{display:flex;gap:6px}.hx-dots i{width:10px;height:10px;border-radius:50%;background:#E4E7EF;display:block}
-.hx-app-title{font-weight:700;font-size:14px;color:var(--dark)}
-.hx-app-title small{display:block;font-weight:500;font-size:12px;color:#8A93A6}
-.hx-seg{margin-left:auto;display:flex;background:#F7F8FC;border-radius:10px;padding:3px;font-size:12px;font-weight:600;color:#5B6476}
-.hx-seg span{padding:5px 10px;border-radius:8px}.hx-seg .on{background:#fff;color:var(--dark);box-shadow:0 1px 2px rgba(16,24,40,.08)}
-.hx-week{display:grid;grid-template-columns:44px repeat(5,1fr);font-size:11px}
-.hx-hd{padding:10px 8px;font-weight:700;color:#5B6476;border-bottom:1px solid #F0F2F7;text-align:center}
-.hx-hd b{display:block;font-size:16px;color:var(--dark)}
-.hx-hd.today b{color:var(--primary)}
-.hx-t{color:#8A93A6;padding:6px 6px 0;height:58px;border-right:1px solid #F0F2F7;font-weight:600}
-.hx-c{height:58px;border-bottom:1px dashed #F0F2F7;border-right:1px solid #F0F2F7;padding:4px}
-.hx-ev{border-radius:9px;padding:6px 8px;height:50px;font-weight:600;line-height:1.25;overflow:hidden;border-left:3px solid}
-.hx-ev small{display:block;font-weight:500;opacity:.8;font-size:10px;margin-top:2px}
-.hx-ev.ok{background:#E7F8EF;border-color:#12B76A;color:#05603A}
-.hx-ev.wait{background:#FEF4E6;border-color:#F79009;color:#93370D}
-.hx-ev.p{background:#EEF0FF;border-color:var(--primary);color:#2D31A6}
-.hx-ev.no{background:#F2F4F7;border-color:#98A2B3;color:#475467;text-decoration:line-through}
-.hx-float{position:absolute;background:#fff;border-radius:18px;border:1px solid #E7EAF2;box-shadow:0 2px 4px rgba(16,24,40,.04),0 32px 64px -24px rgba(30,36,90,.28);animation:hxbob 6s ease-in-out infinite}
-@keyframes hxbob{50%{transform:translateY(-8px)}}
-.hx-wa{left:-28px;bottom:6px;width:280px;overflow:hidden;animation-delay:-2s}
-.hx-wa-hd{background:#075E54;color:#fff;padding:10px 14px;display:flex;gap:10px;align-items:center;font-size:13px;font-weight:700}
-.hx-wa-hd i{width:28px;height:28px;border-radius:50%;background:#fff url("/logo-terapee.svg") center/70% no-repeat;display:block}
-.hx-wa-hd small{display:block;font-weight:500;opacity:.8;font-size:11px}
-.hx-wa-body{background:#EFE7DD;padding:12px;display:flex;flex-direction:column;gap:8px;font-size:12.5px;line-height:1.4;color:#111}
-.hx-bub{background:#fff;padding:8px 10px;border-radius:10px 10px 10px 2px;max-width:92%;box-shadow:0 1px 1px rgba(0,0,0,.06)}
-.hx-act{margin-top:8px;border-top:1px solid #EEE;padding-top:7px;color:#027EB5;font-weight:700;text-align:center}
-.hx-bub.me{align-self:flex-end;background:#D9FDD3;border-radius:10px 10px 2px 10px}
-.hx-bub time{display:block;text-align:right;font-size:10px;color:#667781;margin-top:2px}
-.hx-toast{right:-14px;top:300px;width:290px;padding:16px;animation-delay:-4s}
-.hx-row{display:flex;align-items:center;gap:12px}
-.hx-ico{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;flex:none}
-.hx-ico svg{width:20px;height:20px}
-.hx-ico.g{background:#E7F8EF;color:#12B76A}.hx-ico.b{background:#EEF0FF;color:var(--primary)}
-.hx-toast b{font-size:14px;display:block;color:var(--dark)}
-.hx-toast small{color:#5B6476;font-size:12px}
-.hx-sep{height:1px;background:#F0F2F7;margin:12px 0}
-@media (max-width:1080px){.hx-grid{grid-template-columns:1fr}.hx-stage{max-width:620px;width:100%;margin:8px auto 0}}
-@media (max-width:640px){
-  .hx{padding:104px 0 56px}.hx-pill{font-size:13px;gap:8px}.hx-pill b{white-space:nowrap}.hx h1{font-size:38px}.hx-lead{font-size:17px}
-  .hx-ctas .btn{width:100%;justify-content:center}
-  .hx-stage{height:auto;padding-bottom:12px}
-  .hx-app{position:relative;inset:auto}
-  .hx-seg{display:none}
-  .hx-week{grid-template-columns:34px repeat(3,1fr)}.hx-week .d4,.hx-week .d5{display:none}
-  .hx-wa{position:relative;left:auto;bottom:auto;width:auto;margin:-40px 12px 0;animation:none}
-  .hx-toast{position:relative;right:auto;top:auto;width:auto;margin:12px 12px 0;animation:none}
-}
-@media (prefers-reduced-motion:reduce){.hx-float{animation:none}}
-/* ========== SEGURANÇA COMPACTA ========== */
-.sec-strip{padding:56px 0;border-top:1px solid #eef0f4;border-bottom:1px solid #eef0f4;background:#fff}
-.sec-strip .container{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
-.sec-strip h2{font-size:22px;font-weight:800;color:var(--dark);letter-spacing:-.01em;max-width:320px;line-height:1.25}
-.sec-strip ul{display:flex;flex-wrap:wrap;gap:10px}
-.sec-strip li{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--gray-700);background:var(--gray-50);border:1px solid var(--gray-200);padding:9px 14px;border-radius:999px}
-.sec-strip li svg{width:16px;height:16px;color:var(--primary);flex:none}
-/* ==== home: blocos revistos ==== */
-.hm-head{text-align:center;max-width:720px;margin:0 auto 44px}
-.hm-head .section-subtitle{margin:0 auto}
-.hm-head .section-title{text-wrap:balance}
-.hm-more{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--primary)}
-.hm-more svg{width:16px;height:16px;transition:transform .2s}
-.hm-pain:hover .hm-more svg,.hm-spec:hover .hm-more svg{transform:translateX(3px)}
-.hm-pain:focus-visible,.hm-spec:focus-visible{outline:3px solid var(--primary-300);outline-offset:2px}
-
-.hm-problem{background:#fff}
-.hm-pains{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.hm-pain{display:flex;flex-direction:column;padding:24px;border-radius:18px;background:#F8F9FE;border:1px solid #EEF0F6;transition:border-color .2s,box-shadow .2s,transform .2s}
-.hm-pain:hover{border-color:var(--primary-300);background:#fff;box-shadow:0 24px 48px -24px rgba(30,36,90,.25);transform:translateY(-2px)}
-.hm-pain-ico{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#FEECEB;color:#D92D20;margin-bottom:16px}
-.hm-pain-ico svg{width:21px;height:21px}
-.hm-pain h3{font-size:17px;line-height:1.3;font-weight:800;color:var(--dark);margin-bottom:10px}
-.hm-pain p{font-size:14.5px;line-height:1.6;color:var(--gray-600);margin-bottom:18px}
-.hm-pain p b{color:#05603A}
-
-.hm-for{background:#F8F9FE}
-.hm-specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.hm-spec{display:flex;flex-direction:column;padding:24px;border-radius:18px;background:#fff;border:1px solid #E7EAF2;box-shadow:0 1px 2px rgba(16,24,40,.04);transition:border-color .2s,box-shadow .2s,transform .2s}
-.hm-spec:hover{border-color:var(--primary-300);box-shadow:0 24px 48px -24px rgba(30,36,90,.25);transform:translateY(-2px)}
-.hm-spec-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-.hm-spec-ico{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:var(--primary-50);color:var(--primary);flex:none}
-.hm-spec-ico svg{width:21px;height:21px}
-.hm-spec h3{font-size:18px;font-weight:800;color:var(--dark)}
-.hm-spec-pain{font-size:14px;font-weight:600;color:var(--gray-500);margin-bottom:8px}
-.hm-spec-fix{font-size:15px;line-height:1.6;color:var(--gray-700);margin-bottom:18px}
-.hm-specs .target-calc{margin:0;height:100%;align-self:stretch}
-
-.hm-pricing{background:#fff}
-.hm-pricing .hm-head{margin-bottom:36px}
-.pl-toggle{display:inline-flex;margin-top:24px;background:#fff;border:1px solid var(--gray-200);border-radius:14px;padding:5px;gap:4px}
-.pl-tbtn{border:0;background:transparent;font:inherit;font-weight:700;font-size:15px;padding:10px 20px;border-radius:10px;cursor:pointer;color:var(--gray-600);display:inline-flex;gap:8px;align-items:center}
-.pl-tbtn.active{background:var(--primary);color:#fff}
-.pl-off{font-size:11px;background:#E7F8EF;color:#05603A;padding:2px 7px;border-radius:6px}
-.pl-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch;text-align:left}
-.pl-card{position:relative;background:#fff;border:1px solid #E7EAF2;border-radius:24px;padding:32px;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(16,24,40,.04)}
-.pl-card h3{font-size:22px;font-weight:800;color:var(--dark)}
-.pl-for{color:var(--gray-600);font-size:15px;margin-top:6px;min-height:46px}
-.pl-hot{border:2px solid var(--primary);box-shadow:0 2px 4px rgba(16,24,40,.04),0 32px 64px -24px rgba(68,76,231,.4)}
-.pl-badge{position:absolute;top:-13px;left:32px;background:var(--primary);color:#fff;font-size:12px;font-weight:800;padding:5px 12px;border-radius:999px}
-.pl-head{display:flex;align-items:center;gap:12px}
-.pl-ico{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--primary-50);color:var(--primary);flex:none}
-.pl-ico svg{width:20px;height:20px}
-.pl-hot .pl-ico{background:var(--primary);color:#fff}
-.pl-price{display:flex;align-items:baseline;gap:4px;margin-top:20px;color:var(--dark)}
-.pl-price small{font-size:16px;font-weight:700;color:var(--gray-500)}
-.pl-price b{font-size:46px;font-weight:800;line-height:1;letter-spacing:-.02em}
-.pl-price span{color:var(--gray-500);font-weight:600}
-.pl-bill{font-size:13px;color:var(--gray-500);margin-top:6px;min-height:20px}
-.pl-per{display:inline-flex;align-self:flex-start;margin-top:12px;font-size:13px;font-weight:700;color:#05603A;background:#E7F8EF;padding:4px 10px;border-radius:999px}
-.pl-per-empty{visibility:hidden}
-.pl-cta{margin-top:20px;width:100%;justify-content:center}
-.pl-ul-title{margin-top:24px;padding-top:20px;border-top:1px solid var(--gray-100);font-size:14px;color:var(--gray-600)}
-.pl-ul-title b{color:var(--dark)}
-.pl-card ul{list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:10px;font-size:15px;color:var(--gray-700)}
-.pl-card li{display:flex;gap:10px}
-.pl-card li svg{width:18px;height:18px;color:var(--primary);flex:none;margin-top:3px}
-.pl-all{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-top:36px;font-size:14px;font-weight:600;color:var(--gray-700)}
-.pl-all li{display:inline-flex;align-items:center;gap:8px}
-.pl-all svg{width:18px;height:18px;color:#12B76A;flex:none}
-.hm-compare{text-align:center;margin:24px 0 32px}
-.hm-compare a{color:var(--primary);font-weight:700;font-size:15px}
-
-.hm-cta{padding:24px 0 96px;background:#fff}
-.hm-cta-box{text-align:center;padding:72px 32px;border-radius:28px;background:radial-gradient(600px 300px at 90% 0%,rgba(122,90,248,.45),transparent 60%),linear-gradient(135deg,#2D31A6 0%,#444CE7 100%)}
-.hm-cta-box h2{font-size:clamp(26px,3.4vw,40px);line-height:1.15;font-weight:800;color:#fff;max-width:720px;margin:0 auto 14px;text-wrap:balance}
-.hm-cta-box p{font-size:17px;line-height:1.6;color:rgba(255,255,255,.88);max-width:600px;margin:0 auto 32px}
-.hm-cta-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.hm-cta-box .btn-white{background:#fff;color:var(--primary)}
-.hm-cta-box .btn-white:hover{background:var(--primary-50);transform:translateY(-2px)}
-.hm-btn-ghost{color:#fff;border:1.5px solid rgba(255,255,255,.5);background:transparent}
-.hm-btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
-.hm-cta-box small{display:block;margin-top:18px;font-size:13px;color:rgba(255,255,255,.75)}
-
-@media (max-width:1024px){.hm-pains{grid-template-columns:repeat(2,minmax(0,1fr))}.hm-specs{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:900px){.pl-cards{grid-template-columns:1fr}.pl-hot{order:-1}.pl-for{min-height:0}.pl-per-empty{display:none}}
-@media (max-width:640px){
-  .hm-pains,.hm-specs{grid-template-columns:1fr}
-  .pl-card{padding:26px 22px}
-  .pl-all{justify-content:flex-start;flex-direction:column;align-items:flex-start;gap:10px}
-  .hm-cta{padding-bottom:64px}
-  .hm-cta-box{padding:52px 22px;border-radius:22px}
-  .hm-cta-btns .btn{width:100%;justify-content:center}
-}
-@media (prefers-reduced-motion:reduce){.hm-pain,.hm-spec{transition:none}.hm-pain:hover,.hm-spec:hover{transform:none}}
-</style>
 <link rel="stylesheet" href="/assets/visual.css">
+<style>
+/* ========== HOME (out/2026) — classes nh- isoladas do CSS base ========== */
+/* Layout: página clara de uma coluna (1120px); faixas em azul-suave com cantos arredondados alternam com fundo branco; seções de duas colunas texto + tela do produto. */
+.nh {
+  --bg: #FFFFFF;
+  --tint: #F1F5FF;
+  --tint-2: #E6EDFF;
+  --surface: #FFFFFF;
+  --line: #E1E7F3;
+  --ink: #0F1E45;
+  --fg: #2B3654;
+  --muted: #5F6A86;
+  --accent: #444CE7;
+  --accent-hover: #3538CD;
+  --accent-soft: #EEF4FF;
+  --on-accent: #FFFFFF;
+  --ok: #17A673;
+  --ok-soft: #E2F6EE;
+  --warn: #C26A10;
+  --warn-soft: #FFF1E0;
+  --violet: #7B5CF5;
+  --violet-soft: #EEE9FF;
+  --chip: #FFF6EC;
+  --chip-ink: #B65A0B;
+  --foot: #0D1838;
+  --on-foot: #C9D1EA;
+  --shadow: 0 18px 50px -24px rgba(25, 50, 130, .28);
+  --font: "DM Sans", "Segoe UI", system-ui, sans-serif;
+}
+
+.nh, .nh * { box-sizing: border-box; }
+.nh h1, .nh h2, .nh h3 { color: var(--ink); margin: 0; line-height: 1.15; text-wrap: balance; letter-spacing: -0.015em; }
+.nh h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); font-weight: 700; }
+.nh h2 { font-size: clamp(1.75rem, 3.2vw, 2.4rem); font-weight: 600; }
+.nh h3 { font-size: 1.12rem; font-weight: 600; letter-spacing: 0; }
+.nh p { margin: 0; }
+.nh a { color: var(--accent); }
+.nh a:focus-visible, .nh button:focus-visible, .nh summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
+.nh svg.nh-i { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+.nh .nh-gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.nh .nh-sec { padding-block: 96px; }
+.nh .nh-wrap { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 48px; }
+.nh .nh-wrap > * { min-width: 0; }
+.nh .nh-panel { max-width: 1240px; margin: 0 auto; background: var(--tint); border-radius: 28px; }
+.nh .nh-panel > .nh-wrap { padding-block: 80px; padding-inline: clamp(0px, 4vw, 60px); max-width: 1240px; }
+.nh .nh-two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center; }
+@media (max-width: 900px) { .nh .nh-two { grid-template-columns: 1fr; gap: 40px; } .nh .nh-sec { padding-block: 72px; } }
+
+.nh .nh-head { display: grid; gap: 14px; max-width: 640px; }
+.nh .nh-head.nh-center { justify-items: center; text-align: center; margin: 0 auto; }
+.nh .nh-lead { font-size: 1.08rem; color: var(--muted); max-width: 60ch; }
+.nh .nh-chip-eyebrow { justify-self: start; display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px 5px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); font-size: .74rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink); }
+.nh .nh-chip-eyebrow svg.nh-i { width: 15px; height: 15px; color: var(--chip-ink); }
+.nh .nh-head.nh-center .nh-chip-eyebrow { justify-self: center; }
+
+.nh .nh-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 26px; border-radius: 999px; font: 600 1rem var(--font); text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: background .15s, border-color .15s, transform .15s; }
+.nh .nh-btn svg.nh-i { width: 18px; height: 18px; }
+.nh .nh-btn-primary { background: var(--accent); color: var(--on-accent); box-shadow: 0 10px 24px -12px rgba(68, 76, 231, .6); }
+.nh .nh-btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+.nh .nh-btn-ghost { background: var(--surface); color: var(--ink); border-color: var(--line); }
+.nh .nh-btn-ghost:hover { border-color: var(--accent); }
+.nh .nh-btn-sm { padding: 10px 20px; font-size: .92rem; }
+.nh .nh-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+
+.nh .nh-checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.nh .nh-checks li { display: grid; grid-template-columns: 22px minmax(0,1fr); gap: 12px; align-items: start; }
+.nh .nh-checks li::before { content: ""; width: 22px; height: 22px; border-radius: 50%; margin-top: 2px; background: var(--ok) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12 4 4 8-8'/%3E%3C/svg%3E") center / 14px no-repeat; }
+.nh .nh-checks b { display: block; color: var(--ink); font-weight: 600; }
+.nh .nh-checks span { color: var(--muted); font-size: .95rem; }
+
+.nh .nh-ibadge { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); flex: none; }
+
+/* Hero */
+.nh .nh-hero { background: linear-gradient(180deg, var(--tint) 0%, var(--bg) 100%); padding-block: 136px 96px; }
+.nh .nh-hero .nh-two { grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); }
+.nh .nh-hero-copy { display: grid; gap: 22px; }
+.nh .nh-hero h1 .nh-hl { color: var(--accent); display: block; }
+.nh .nh-trust { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: .92rem; color: var(--muted); }
+.nh .nh-trust li { display: flex; align-items: center; gap: 8px; }
+.nh .nh-trust svg.nh-i { width: 18px; height: 18px; color: var(--accent); }
+.nh .nh-trust b { color: var(--ink); }
+@media (max-width: 900px) { .nh .nh-hero .nh-two { grid-template-columns: 1fr; } }
+
+/* App frame (agenda mock) */
+.nh .nh-stage { position: relative; padding: 40px 0 56px 24px; }
+.nh .nh-frame { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); overflow: hidden; }
+.nh .nh-frame-bar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; border-bottom: 1px solid var(--line); background: var(--tint); }
+.nh .nh-frame-bar i { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
+.nh .nh-frame-bar span { margin-left: 10px; font-size: .75rem; color: var(--muted); }
+.nh .nh-week { display: grid; grid-template-columns: 44px repeat(5, minmax(0,1fr)); font-size: .68rem; }
+.nh .nh-week .nh-h { padding: 8px 6px; color: var(--muted); font-weight: 600; text-align: center; border-bottom: 1px solid var(--line); }
+.nh .nh-week .nh-t { padding: 6px 4px 0; color: var(--muted); font-variant-numeric: tabular-nums; border-right: 1px solid var(--line); height: 44px; }
+.nh .nh-week .nh-c { border-bottom: 1px dashed var(--line); height: 44px; padding: 3px; }
+.nh .nh-ev { border-radius: 6px; padding: 4px 6px; font-weight: 600; line-height: 1.25; height: 100%; overflow: hidden; }
+.nh .nh-ev small { display: block; font-weight: 500; opacity: .8; }
+.nh .nh-ev.nh-b { background: var(--accent-soft); color: var(--accent); }
+.nh .nh-ev.nh-g { background: var(--ok-soft); color: var(--ok); }
+.nh .nh-ev.nh-v { background: var(--violet-soft); color: var(--violet); }
+.nh .nh-ev.nh-o { background: var(--warn-soft); color: var(--warn); }
+.nh .nh-float { position: absolute; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 12px 14px; display: flex; gap: 11px; align-items: center; width: 250px; font-size: .82rem; line-height: 1.35; }
+.nh .nh-float b { color: var(--ink); display: block; font-size: .86rem; }
+.nh .nh-float span { color: var(--muted); }
+.nh .nh-float .nh-ibadge { width: 38px; height: 38px; }
+.nh .nh-float .nh-ibadge svg.nh-i { width: 19px; height: 19px; }
+.nh .nh-float.nh-f1 { left: -20px; bottom: 0; }
+.nh .nh-float.nh-f1 .nh-ibadge { background: var(--ok-soft); color: var(--ok); }
+.nh .nh-float.nh-f2 { right: -12px; top: 0; width: 210px; }
+.nh .nh-float.nh-f2 .nh-ibadge { background: var(--violet-soft); color: var(--violet); }
+.nh .nh-float.nh-f3 { right: 24px; bottom: 0; width: 230px; }
+@media (max-width: 1100px) { .nh .nh-float.nh-f1 { left: 0; } }
+@media (max-width: 760px) and (min-width: 561px) { .nh .nh-float.nh-f3 { display: none; } }
+@media (max-width: 560px) { .nh .nh-stage { padding: 0; } .nh .nh-float { position: static; width: auto; margin-top: 10px; } .nh .nh-week { font-size: .6rem; } }
+
+/* Desafios */
+.nh .nh-challenges { display: grid; gap: 0; }
+.nh .nh-challenge { display: grid; grid-template-columns: 46px minmax(0,1fr); gap: 18px; padding-block: 22px; border-bottom: 1px solid var(--line); }
+.nh .nh-challenge:first-child { padding-top: 0; }
+.nh .nh-challenge:last-of-type { border-bottom: 0; }
+.nh .nh-challenge h3 { font-size: 1.15rem; margin-bottom: 4px; }
+.nh .nh-challenge p { color: var(--muted); font-size: .96rem; }
+.nh .nh-challenge p b { color: var(--ink); font-weight: 600; }
+.nh .nh-collage { position: relative; min-height: 400px; }
+.nh .nh-collage .nh-card { position: absolute; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); padding: 16px; font-size: .82rem; }
+.nh .nh-collage .nh-blue { position: absolute; left: 0; top: 30px; width: 58%; height: 330px; border-radius: 22px; background: var(--accent); }
+.nh .nh-collage .nh-c1 { left: 9%; top: 70px; width: 62%; }
+.nh .nh-collage .nh-c2 { right: 0; top: 0; width: 52%; }
+.nh .nh-collage .nh-c3 { right: 6%; bottom: 0; width: 55%; }
+.nh .nh-collage .nh-msg { background: var(--tint); border-radius: 12px 12px 12px 4px; padding: 10px 12px; color: var(--fg); margin-top: 8px; }
+.nh .nh-collage .nh-reply { display: flex; gap: 8px; margin-top: 10px; }
+.nh .nh-collage .nh-reply span { flex: 1; text-align: center; padding: 7px; border-radius: 8px; font-weight: 600; }
+.nh .nh-collage .nh-reply .nh-y { background: var(--ok-soft); color: var(--ok); }
+.nh .nh-collage .nh-reply .nh-n { background: var(--tint); color: var(--muted); }
+.nh .nh-lbl { font-size: .7rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); font-weight: 600; }
+.nh .nh-bar { height: 8px; border-radius: 99px; background: var(--tint-2); overflow: hidden; margin-top: 8px; }
+.nh .nh-bar i { display: block; height: 100%; width: 75%; background: var(--accent); border-radius: 99px; }
+.nh .nh-row { display: flex; justify-content: space-between; gap: 8px; padding-block: 6px; border-bottom: 1px solid var(--line); }
+.nh .nh-row:last-child { border-bottom: 0; }
+.nh .nh-row b { color: var(--ink); }
+.nh .nh-tag { font-size: .7rem; font-weight: 700; padding: 2px 8px; border-radius: 99px; }
+.nh .nh-tag.nh-ok { background: var(--ok-soft); color: var(--ok); }
+.nh .nh-tag.nh-wait { background: var(--accent-soft); color: var(--accent); }
+@media (max-width: 900px) { .nh .nh-collage { min-height: 0; display: grid; gap: 12px; } .nh .nh-collage .nh-blue { display: none; } .nh .nh-collage .nh-card { position: static; width: auto; } }
+
+/* Solução: cards */
+.nh .nh-solution { background: linear-gradient(180deg, var(--bg) 0%, var(--tint) 100%); }
+.nh .nh-cards { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 22px; }
+.nh .nh-fcard { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 28px; display: grid; gap: 12px; grid-template-rows: auto auto 1fr auto; box-shadow: 0 8px 28px -22px rgba(25, 50, 130, .35); }
+.nh .nh-fcard p { color: var(--muted); font-size: .95rem; }
+.nh .nh-more { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; font-size: .9rem; text-decoration: none; }
+.nh .nh-more svg.nh-i { width: 16px; height: 16px; }
+.nh .nh-sec-head-row { display: flex; justify-content: space-between; align-items: end; gap: 32px; flex-wrap: wrap; }
+.nh .nh-sec-head-row > p { max-width: 300px; color: var(--muted); font-size: .95rem; }
+@media (max-width: 900px) { .nh .nh-cards { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (max-width: 600px) { .nh .nh-cards { grid-template-columns: 1fr; } }
+
+/* Tabs */
+.nh .nh-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); overflow-x: auto; scrollbar-width: none; }
+.nh .nh-tabs button { flex: 1 0 auto; border: 0; background: none; font: 500 .98rem var(--font); color: var(--muted); padding: 14px 18px; border-bottom: 2px solid transparent; margin-bottom: -1px; cursor: pointer; white-space: nowrap; }
+.nh .nh-tabs button[aria-selected="true"] { color: var(--ink); font-weight: 600; border-bottom-color: var(--accent); }
+.nh .nh-tabs button:hover { color: var(--ink); }
+.nh .nh-tabpanel .nh-two { align-items: center; }
+.nh .nh-tabpanel h3 { font-size: 1.6rem; font-weight: 600; }
+.nh .nh-tabtext { display: grid; gap: 20px; }
+.nh .nh-tabtext > p { color: var(--muted); }
+.nh .nh-rule { width: 36px; height: 3px; border-radius: 3px; background: var(--accent); }
+.nh .nh-shot { background: var(--accent); border-radius: 22px; padding: 28px 0 0 28px; overflow: hidden; }
+.nh .nh-shot .nh-frame { border-radius: 14px 0 0 0; border-right: 0; border-bottom: 0; }
+.nh .nh-shot .nh-body { padding: 18px; display: grid; gap: 10px; font-size: .84rem; min-height: 260px; align-content: start; }
+.nh .nh-shot .nh-body .nh-row { border-bottom-color: var(--line); }
+.nh .nh-timeline { display: grid; gap: 10px; }
+.nh .nh-tl { border-left: 3px solid var(--accent); padding: 6px 0 6px 12px; }
+.nh .nh-tl b { color: var(--ink); display: block; }
+.nh .nh-tl span { color: var(--muted); }
+.nh .nh-targets { display: grid; gap: 10px; }
+.nh .nh-target { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 4px 10px; align-items: center; }
+.nh .nh-target .nh-bar { grid-column: 1 / -1; margin-top: 0; }
+.nh .nh-taps { display: flex; gap: 6px; }
+.nh .nh-taps span { flex: 1; text-align: center; padding: 10px 4px; border-radius: 10px; font-weight: 700; font-size: .78rem; }
+.nh .nh-taps .nh-i1 { background: var(--ok-soft); color: var(--ok); }
+.nh .nh-taps .nh-i2 { background: var(--accent-soft); color: var(--accent); }
+.nh .nh-taps .nh-i3 { background: var(--warn-soft); color: var(--warn); }
+
+.nh .nh-flow { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0,1fr)); gap: 10px; counter-reset: s; }
+.nh .nh-flow li { counter-increment: s; display: grid; gap: 6px; align-content: start; font-size: .86rem; color: var(--fg); padding: 14px 12px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); }
+.nh .nh-flow li::before { content: counter(s); font-weight: 700; font-size: 1.15rem; color: var(--ink); }
+.nh .nh-flow li small { font-size: .66rem; letter-spacing: .07em; text-transform: uppercase; font-weight: 700; color: var(--muted); }
+.nh .nh-flow li.nh-auto { background: var(--accent-soft); border-color: transparent; }
+.nh .nh-flow li.nh-auto small, .nh .nh-flow li.nh-auto::before { color: var(--accent); }
+.nh .nh-flowhead { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 12px 24px; }
+.nh .nh-flowhead p { color: var(--muted); font-size: .9rem; }
+@media (max-width: 980px) { .nh .nh-flow { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+
+/* Especialidades */
+.nh .nh-specs { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 16px; }
+.nh .nh-spec { position: relative; border-radius: 20px; padding: 18px; min-height: 250px; display: grid; align-content: space-between; overflow: hidden; text-decoration: none; color: var(--fg); }
+.nh .nh-spec:nth-child(1) { background: var(--accent-soft); }
+.nh .nh-spec:nth-child(2) { background: var(--ok-soft); }
+.nh .nh-spec:nth-child(3) { background: var(--warn-soft); }
+.nh .nh-spec:nth-child(4) { background: var(--violet-soft); }
+.nh .nh-spec:nth-child(5) { background: var(--tint-2); }
+.nh .nh-spec .nh-mini { background: var(--surface); border-radius: 12px; padding: 10px 12px; font-size: .76rem; line-height: 1.35; box-shadow: 0 10px 24px -18px rgba(25,50,130,.5); }
+.nh .nh-spec .nh-mini b { display: block; color: var(--ink); font-size: .8rem; }
+.nh .nh-spec .nh-mini span { color: var(--muted); }
+.nh .nh-spec .nh-label { justify-self: start; background: var(--surface); color: var(--accent); font-weight: 700; font-size: .82rem; padding: 6px 12px; border-radius: 999px; }
+.nh .nh-spec:hover .nh-label { background: var(--accent); color: var(--on-accent); }
+@media (max-width: 980px) { .nh .nh-specs { grid-template-columns: repeat(2, minmax(0,1fr)); } .nh .nh-spec { min-height: 200px; } }
+@media (max-width: 480px) { .nh .nh-specs { grid-template-columns: 1fr; } }
+
+/* Migração + números */
+.nh .nh-stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+.nh .nh-stat { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 22px; display: grid; gap: 6px; }
+.nh .nh-stat b { font-size: clamp(1.9rem, 3vw, 2.4rem); color: var(--ink); line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+.nh .nh-stat span { color: var(--muted); font-size: .9rem; line-height: 1.4; }
+.nh .nh-stat.nh-wide { grid-column: 1 / -1; display: flex; align-items: center; gap: 16px; }
+.nh .nh-stat.nh-wide p { color: var(--muted); font-size: .92rem; }
+.nh .nh-stat.nh-wide p b { font-size: 1rem; display: inline; color: var(--ink); letter-spacing: 0; }
+@media (max-width: 520px) { .nh .nh-stats { grid-template-columns: 1fr; } }
+
+/* Depoimentos */
+.nh .nh-testi { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.6fr); gap: 48px; align-items: start; }
+.nh .nh-testi .nh-head { gap: 20px; }
+.nh .nh-arrows { display: flex; gap: 10px; }
+.nh .nh-arrows button { width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; display: grid; place-items: center; box-shadow: 0 6px 18px -12px rgba(25,50,130,.5); }
+.nh .nh-arrows button:hover { border-color: var(--accent); color: var(--accent); }
+.nh .nh-arrows svg.nh-i { width: 18px; height: 18px; }
+.nh .nh-track { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(280px, 46%); gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; scrollbar-width: thin; }
+.nh .nh-quote { scroll-snap-align: start; margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 28px; display: grid; gap: 18px; grid-template-rows: auto 1fr auto; }
+.nh .nh-quote .nh-qm { font-size: 3rem; line-height: .6; color: var(--accent); font-weight: 700; height: 22px; }
+.nh .nh-quote blockquote { margin: 0; color: var(--fg); }
+.nh .nh-quote blockquote.nh-ph { color: var(--muted); font-style: italic; }
+.nh .nh-quote figcaption { display: flex; gap: 12px; align-items: center; border-top: 1px solid var(--line); padding-top: 18px; font-size: .88rem; color: var(--muted); }
+.nh .nh-quote figcaption b { display: block; color: var(--ink); font-size: .95rem; }
+.nh .nh-avatar { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; background: var(--accent-soft); color: var(--accent); flex: none; }
+@media (max-width: 900px) { .nh .nh-testi { grid-template-columns: 1fr; } .nh .nh-track { grid-auto-columns: minmax(260px, 85%); } }
+
+/* Preços */
+.nh .nh-toggle { display: inline-flex; padding: 5px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); justify-self: center; }
+.nh .nh-toggle button { border: 0; background: transparent; font: 600 .95rem var(--font); color: var(--muted); padding: 9px 20px; border-radius: 999px; cursor: pointer; }
+.nh .nh-toggle button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+.nh .nh-toggle .nh-save { font-size: .74rem; margin-left: 4px; }
+.nh .nh-plans { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+.nh .nh-plan { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 30px; display: grid; gap: 18px; grid-template-rows: auto auto auto auto 1fr auto; position: relative; }
+.nh .nh-plan.nh-featured { border: 2px solid var(--accent); box-shadow: var(--shadow); }
+.nh .nh-plan .nh-ribbon { position: absolute; top: -13px; left: 30px; background: var(--accent); color: var(--on-accent); font-size: .74rem; font-weight: 700; padding: 4px 12px; border-radius: 999px; }
+.nh .nh-plan .nh-who { color: var(--muted); font-size: .93rem; }
+.nh .nh-price { display: grid; gap: 4px; min-height: 86px; align-content: start; }
+.nh .nh-price b { font-size: 2.6rem; color: var(--ink); line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -0.03em; }
+.nh .nh-price b sup { font-size: 1rem; font-weight: 600; vertical-align: top; position: relative; top: .45em; margin-right: 3px; letter-spacing: 0; }
+.nh .nh-price b span { font-size: 1rem; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+.nh .nh-price small { color: var(--muted); font-size: .84rem; }
+.nh .nh-price .nh-saving { color: var(--ok); font-weight: 600; }
+.nh .nh-users { display: flex; gap: 8px; align-items: center; font-weight: 600; color: var(--ink); font-size: .95rem; padding: 10px 12px; background: var(--tint); border-radius: 12px; }
+.nh .nh-users svg.nh-i { width: 18px; height: 18px; color: var(--accent); }
+.nh .nh-users em { font-style: normal; font-weight: 500; color: var(--muted); font-size: .82rem; margin-left: auto; }
+.nh .nh-plan .nh-checks { gap: 10px; font-size: .93rem; }
+.nh .nh-plan .nh-checks li::before { width: 18px; height: 18px; background-size: 11px; }
+.nh .nh-plan .nh-checks li { grid-template-columns: 18px minmax(0,1fr); gap: 10px; }
+.nh .nh-plan .nh-btn { width: 100%; }
+.nh .nh-included { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; list-style: none; padding: 18px 24px; margin: 0; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); font-size: .92rem; }
+.nh .nh-included li { display: flex; align-items: center; gap: 7px; }
+.nh .nh-included svg.nh-i { width: 17px; height: 17px; color: var(--ok); }
+@media (max-width: 920px) { .nh .nh-plans { grid-template-columns: 1fr; } .nh .nh-price { min-height: 0; } }
+
+/* Por que contratar */
+.nh .nh-secure { position: relative; display: grid; gap: 14px; }
+.nh .nh-secure .nh-card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px; display: flex; gap: 14px; align-items: center; box-shadow: 0 8px 28px -22px rgba(25, 50, 130, .35); }
+.nh .nh-secure .nh-card:nth-child(2) { margin-left: 40px; }
+.nh .nh-secure .nh-card:nth-child(3) { margin-left: 80px; }
+.nh .nh-secure .nh-card p { color: var(--muted); font-size: .9rem; }
+.nh .nh-secure .nh-card b { color: var(--ink); display: block; }
+@media (max-width: 600px) { .nh .nh-secure .nh-card:nth-child(n) { margin-left: 0; } }
+
+/* FAQ */
+.nh .nh-faq { display: grid; gap: 12px; max-width: 820px; width: 100%; margin: 0 auto; }
+.nh .nh-faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
+.nh .nh-faq summary { cursor: pointer; list-style: none; padding: 20px 56px 20px 22px; font-weight: 600; color: var(--ink); position: relative; }
+.nh .nh-faq summary::-webkit-details-marker { display: none; }
+.nh .nh-faq summary::after { content: ""; position: absolute; right: 22px; top: 50%; width: 22px; height: 22px; margin-top: -11px; border-radius: 50%; background: var(--accent-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23444CE7' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") center / 12px no-repeat; transition: transform .2s; }
+.nh .nh-faq details[open] summary::after { transform: rotate(45deg); }
+.nh .nh-faq details p { padding: 0 22px 22px; color: var(--muted); max-width: 70ch; }
+
+/* CTA final */
+.nh .nh-cta { position: relative; overflow: hidden; }
+.nh .nh-cta .nh-wrap { justify-items: center; text-align: center; gap: 22px; }
+.nh .nh-cta .nh-rings { position: absolute; right: -120px; top: -120px; width: 420px; height: 420px; border-radius: 50%; border: 1px solid var(--tint-2); box-shadow: 0 0 0 40px var(--tint), 0 0 0 41px var(--tint-2), 0 0 0 90px var(--tint), 0 0 0 91px var(--tint-2); pointer-events: none; }
+.nh .nh-cta .nh-rings.nh-l { left: -180px; right: auto; top: auto; bottom: -200px; }
+.nh .nh-cta .nh-wrap > * { position: relative; }
+
+@media (prefers-reduced-motion: reduce) { .nh, .nh * { transition: none !important; scroll-behavior: auto !important; } }
+
+.nh .nh-quote .nh-stars { color: #F5A524; letter-spacing: 2px; font-size: .95rem; }
+.nh .nh-more { color: var(--accent); }
+@media (max-width: 900px) { .nh .nh-hero { padding-block: 112px 64px; } }
+
+</style>
 </head>
 <body>
 <!-- ============ HEADER ============ -->
@@ -2297,658 +2408,460 @@ document.addEventListener('click', function (e) {
   </div>
 </header>
 
-<!-- ============ HERO ============ -->
-<section class="hx">
-  <div class="container hx-grid">
-    <div class="hx-copy">
-      <span class="hx-pill"><b>Para terapia</b> O sistema de gestão da sua clínica</span>
-      <h1>Agenda confirmada. Pagamento em dia. <span class="hx-hl">Equipe livre para atender.</span></h1>
-      <p class="hx-lead">A Terapee confirma cada sessão pelo WhatsApp, cobra mensalidades e pacotes sozinha e emite a nota fiscal em dois cliques. Para clínicas de psicologia, fono, TO e ABA.</p>
-      <div class="hx-ctas">
-        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary">Testar grátis por 14 dias →</a>
-        <a href="#fluxo" class="btn btn-outline">Ver como funciona</a>
-      </div>
-      <div class="hx-assure">
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Sem cartão de crédito</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Migração feita pelo nosso time</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Cancele quando quiser</span>
-      </div>
-    </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-repeat" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol>
+  <symbol id="i-msg" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M5 2h14v20l-3-2-2 2-2-2-2 2-2-2-3 2z"/><path d="M9 7h6M9 11h6M9 15h4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20M16 15h2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 18.7a6 6 0 0 1 10 0"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 10 6-3v10l-6-3z"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></symbol>
+</svg>
 
-    <div class="hx-stage" role="img" aria-label="Tela da Terapee: agenda da semana da clínica, confirmação de sessão pelo WhatsApp e NFS-e emitida a partir de um pacote pago">
-      <div class="hx-app" aria-hidden="true">
-        <div class="hx-app-top">
-          <div class="hx-dots"><i></i><i></i><i></i></div>
-          <div class="hx-app-title">Agenda da clínica<small>6 profissionais · semana de 13 a 17 out</small></div>
-          <div class="hx-seg"><span>Dia</span><span class="on">Semana</span><span>Mês</span></div>
+<main class="nh">
+  <!-- 1. Topo -->
+  <section class="nh-hero nh-gutter" id="topo">
+    <div class="nh-wrap nh-two">
+      <div class="nh-hero-copy">
+        <span class="nh-chip-eyebrow"><svg class="nh-i"><use href="#i-spark"/></svg>Sistema de gestão feito para terapia</span>
+        <h1>Menos faltas. <span class="nh-hl">Menos planilha.</span> Mais tempo para atender.</h1>
+        <p class="nh-lead">A Terapee junta agenda, prontuário, cobrança e nota fiscal num só lugar, feita para quem atende por sessão, pacote e mensalidade.</p>
+        <ul class="nh-checks">
+          <li><span><b>Lembrete e confirmação pelo WhatsApp</b></span></li>
+          <li><span><b>Saldo de pacotes e mensalidades sem planilha</b></span></li>
+          <li><span><b>Prontuário, cobrança e NFS-e no mesmo lugar</b></span></li>
+        </ul>
+        <div class="nh-actions">
+          <a class="nh-btn nh-btn-primary" href="https://web.terapee.com.br/register" target="_blank" rel="noopener">Testar grátis por 14 dias <svg class="nh-i"><use href="#i-arrow"/></svg></a>
         </div>
-        <div class="hx-week">
-          <div class="hx-hd"></div>
-          <div class="hx-hd">SEG<b>13</b></div><div class="hx-hd">TER<b>14</b></div><div class="hx-hd today">QUA<b>15</b></div><div class="hx-hd d4">QUI<b>16</b></div><div class="hx-hd d5">SEX<b>17</b></div>
-          <div class="hx-t">08h</div>
-          <div class="hx-c"><div class="hx-ev ok">Ana R.<small>Psicologia</small></div></div>
-          <div class="hx-c"><div class="hx-ev p">Leo M.<small>Fono · 3/8</small></div></div>
-          <div class="hx-c"><div class="hx-ev ok">Bia S.<small>TO</small></div></div>
-          <div class="hx-c d4"><div class="hx-ev ok">Ana R.<small>Psicologia</small></div></div>
-          <div class="hx-c d5"></div>
-          <div class="hx-t">09h</div>
-          <div class="hx-c"></div>
-          <div class="hx-c"><div class="hx-ev ok">Caio T.<small>ABA</small></div></div>
-          <div class="hx-c"><div class="hx-ev wait">Davi L.<small>Aguardando</small></div></div>
-          <div class="hx-c d4"><div class="hx-ev p">Leo M.<small>Fono · 4/8</small></div></div>
-          <div class="hx-c d5"><div class="hx-ev ok">Gabi P.<small>Psicologia</small></div></div>
-          <div class="hx-t">10h</div>
-          <div class="hx-c"><div class="hx-ev p">Ian F.<small>Fono · 6/10</small></div></div>
-          <div class="hx-c"><div class="hx-ev no">Eva C.<small>Desmarcou</small></div></div>
-          <div class="hx-c"><div class="hx-ev ok">Malu V.<small>Psicologia</small></div></div>
-          <div class="hx-c d4"></div>
-          <div class="hx-c d5"><div class="hx-ev wait">Rui A.<small>Aguardando</small></div></div>
-          <div class="hx-t">11h</div>
-          <div class="hx-c"><div class="hx-ev ok">Nina O.<small>TO</small></div></div>
-          <div class="hx-c"></div>
-          <div class="hx-c"><div class="hx-ev ok">Theo B.<small>ABA</small></div></div>
-          <div class="hx-c d4"><div class="hx-ev ok">Lia D.<small>TO</small></div></div>
-          <div class="hx-c d5"></div>
-          <div class="hx-t">14h</div>
-          <div class="hx-c"><div class="hx-ev ok">Joana K.<small>Psicologia</small></div></div>
-          <div class="hx-c"><div class="hx-ev ok">Pedro N.<small>Fono</small></div></div>
-          <div class="hx-c"><div class="hx-ev ok">Ana R.<small>Confirmou agora</small></div></div>
-          <div class="hx-c d4"><div class="hx-ev p">Ian F.<small>Fono · 7/10</small></div></div>
-          <div class="hx-c d5"><div class="hx-ev ok">Sofia M.<small>TO</small></div></div>
-          <div class="hx-t">15h</div>
-          <div class="hx-c"></div>
-          <div class="hx-c"><div class="hx-ev ok">Vito H.<small>ABA</small></div></div>
-          <div class="hx-c"><div class="hx-ev wait">Zeca R.<small>Aguardando</small></div></div>
-          <div class="hx-c d4"></div>
-          <div class="hx-c d5"><div class="hx-ev ok">Lara G.<small>Psicologia</small></div></div>
-        </div>
+        <ul class="nh-trust">
+          <li><svg class="nh-i"><use href="#i-card"/></svg>Sem cartão de crédito · cancele quando quiser</li>
+          <li><svg class="nh-i"><use href="#i-users"/></svg><span><b>+400 clínicas</b> de terapia usam a Terapee</span></li>
+        </ul>
       </div>
 
-      <div class="hx-float hx-wa" aria-hidden="true">
-        <div class="hx-wa-hd"><i></i><div>Clínica Bem Viver<small>via Terapee</small></div></div>
-        <div class="hx-wa-body">
-          <div class="hx-bub">Olá, Ana! Lembrete da sua sessão de <b>amanhã, quarta, às 14h</b> com a Dra. Paula.
-            <div class="hx-act">✓ Confirmar presença</div>
-            <time>14:00</time></div>
-          <div class="hx-bub me">Confirmar presença<time>14:02 ✓✓</time></div>
-        </div>
-      </div>
-
-      <div class="hx-float hx-toast" aria-hidden="true">
-        <div class="hx-row">
-          <div class="hx-ico g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div>
-          <div><b>Pacote pago · R$ 1.040</b><small>Leo M. · 8 sessões de fono · Pix</small></div>
-        </div>
-        <div class="hx-sep"></div>
-        <div class="hx-row">
-          <div class="hx-ico b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div>
-          <div><b>NFS-e emitida</b><small>Emissor Nacional · 2 cliques</small></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PROVA SOCIAL ============ -->
-<section class="social-proof" style="padding:56px 24px;border-top:1px solid #eef0f4;border-bottom:1px solid #eef0f4;">
-  <div class="container animate-on-scroll" style="text-align:center;">
-    <p style="font-size:15px;color:#5b6472;margin:0;">Clínicas de psicologia, fono, TO, fisio e ABA já tocam o dia a dia na Terapee.</p>
-    <div class="proof-stats">
-      <div class="proof-stat">
-        <div class="proof-stat-num">+400</div>
-        <div class="proof-stat-label">clínicas de terapia usando a Terapee</div>
-      </div>
-      <div class="proof-stat">
-        <div class="proof-stat-num">25%</div>
-        <div class="proof-stat-label">menos faltas com lembrete e confirmação no WhatsApp</div>
-      </div>
-      <div class="proof-stat">
-        <div class="proof-stat-num">+28 mil</div>
-        <div class="proof-stat-label">pacientes migrados de outros sistemas, com histórico</div>
-      </div>
-      <div class="proof-stat">
-        <div class="proof-stat-num">+2 milhões</div>
-        <div class="proof-stat-label">agendamentos importados sem ninguém redigitar</div>
-      </div>
-    </div>
-    <p class="proof-footnote">
-      Mensalidades e pacotes com cobrança recorrente automática, e a NFS-e emitida direto da cobrança paga — incluída em todos os planos, sem custo por nota.
-      <a href="/funcionalidades/nota-fiscal-nfse" style="color:#2563eb;font-weight:600;text-decoration:underline;">Como funciona a emissão de NFS-e</a>
-    </p>
-  </div>
-</section>
-
-<!-- ============ PROBLEMA / DOR ============ -->
-<section class="problem section hm-problem">
-  <div class="container animate-on-scroll">
-    <div class="hm-head">
-      <h2 class="section-title">A rotina de uma clínica de terapia não é só atender.</h2>
-      <p class="section-subtitle">Software de clínica médica não foi feito para isso. A Terapee foi.</p>
-    </div>
-    <div class="hm-pains">
-      <a class="hm-pain" href="/funcionalidades/lembretes-whatsapp">
-        <span class="hm-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg></span>
-        <h3>Paciente falta e ninguém avisou</h3>
-        <p><b>Na Terapee:</b> o lembrete sai 24h antes e o paciente confirma no WhatsApp. A cadeira vazia aparece na agenda antes do horário.</p>
-        <span class="hm-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a class="hm-pain" href="/funcionalidades/agendamento-online">
-        <span class="hm-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
-        <h3>Secretária o dia inteiro no telefone</h3>
-        <p><b>Na Terapee:</b> A confirmação cai sozinha na agenda. E, com a página de agendamento, o próprio paciente marca no horário livre.</p>
-        <span class="hm-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a class="hm-pain" href="/funcionalidades/pacotes-de-sessoes">
-        <span class="hm-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg></span>
-        <h3>Pacote que ninguém sabe quantas faltam</h3>
-        <p><b>Na Terapee:</b> O pacote é agendado inteiro e o saldo se controla: falta justificada devolve a sessão, falta sem aviso desconta.</p>
-        <span class="hm-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a class="hm-pain" href="/funcionalidades/cobranca-automatica">
-        <span class="hm-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></span>
-        <h3>Fim do mês com a cobrança na planilha</h3>
-        <p><b>Na Terapee:</b> Mensalidades e pacotes são cobrados sozinhos por Pix ou cartão, e a NFS-e sai da cobrança paga em dois cliques.</p>
-        <span class="hm-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FLUXO DE AUTOMACAO ============ -->
-<section class="flow section" id="fluxo">
-  <div class="container animate-on-scroll">
-    <div style="text-align:center;">
-      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span> Fluxo automático</span>
-      <h2 class="section-title">Da sessão marcada à nota fiscal, sem ninguém empurrar</h2>
-      <p class="section-subtitle" style="margin:0 auto;">A Terapee faz sozinha o que é repetitivo e deixa claro o que ainda depende de você.</p>
-    </div>
-
-    <div class="flow-timeline">
-      <div class="flow-step">
-        <div class="flow-num">1</div>
-        <div class="flow-body">
-          <div class="flow-head">
-            <span class="flow-title">Sessão agendada</span>
-            <span class="flow-tag">você faz</span>
+      <div class="nh-stage" aria-label="Exemplo da agenda da semana">
+        <div class="nh-frame">
+          <div class="nh-frame-bar"><i></i><i></i><i></i><span>Agenda · semana de 27 de outubro</span></div>
+          <div class="nh-week">
+            <div class="nh-h"></div><div class="nh-h">Seg</div><div class="nh-h">Ter</div><div class="nh-h">Qua</div><div class="nh-h">Qui</div><div class="nh-h">Sex</div>
+            <div class="nh-t">08:00</div><div class="nh-c"><div class="nh-ev nh-g">Lucas M.<small>Fono</small></div></div><div class="nh-c"><div class="nh-ev nh-b">Helena R.<small>TO</small></div></div><div class="nh-c"></div><div class="nh-c"><div class="nh-ev nh-g">Lucas M.<small>Fono</small></div></div><div class="nh-c"><div class="nh-ev nh-b">Helena R.<small>TO</small></div></div>
+            <div class="nh-t">08:50</div><div class="nh-c"><div class="nh-ev nh-v">Davi S.<small>ABA</small></div></div><div class="nh-c"></div><div class="nh-c"><div class="nh-ev nh-v">Davi S.<small>ABA</small></div></div><div class="nh-c"></div><div class="nh-c"><div class="nh-ev nh-v">Davi S.<small>ABA</small></div></div>
+            <div class="nh-t">09:40</div><div class="nh-c"></div><div class="nh-c"><div class="nh-ev nh-o">Alice P.<small>Remarcar</small></div></div><div class="nh-c"><div class="nh-ev nh-b">Theo A.<small>Psico</small></div></div><div class="nh-c"><div class="nh-ev nh-g">Maria L.<small>Fono</small></div></div><div class="nh-c"></div>
+            <div class="nh-t">10:30</div><div class="nh-c"><div class="nh-ev nh-b">Theo A.<small>Psico</small></div></div><div class="nh-c"><div class="nh-ev nh-g">Maria L.<small>Fono</small></div></div><div class="nh-c"></div><div class="nh-c"><div class="nh-ev nh-b">Bia F.<small>TO</small></div></div><div class="nh-c"><div class="nh-ev nh-g">Rafa C.<small>Fono</small></div></div>
+            <div class="nh-t">11:20</div><div class="nh-c"></div><div class="nh-c"><div class="nh-ev nh-v">Grupo<small>Habilidades</small></div></div><div class="nh-c"><div class="nh-ev nh-g">Rafa C.<small>Fono</small></div></div><div class="nh-c"></div><div class="nh-c"><div class="nh-ev nh-b">Bia F.<small>TO</small></div></div>
           </div>
-          <p class="flow-desc">Avulsa ou recorrente, na agenda da equipe. O pacote de sessões já fica contado.</p>
+        </div>
+        <div class="nh-float nh-f1"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-msg"/></svg></span><div><b>Helena confirmou</b><span>Sessão de terça, 08:00</span></div></div>
+        <div class="nh-float nh-f2"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-box"/></svg></span><div><b>Pacote 9 de 12</b><span>Lucas M. · 3 a realizar</span></div></div>
+        <div class="nh-float nh-f3"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-receipt"/></svg></span><div><b>NFS-e emitida</b><span>A partir do pagamento de outubro</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Desafios -->
+  <section class="nh-sec nh-gutter" id="desafios">
+    <div class="nh-wrap nh-two">
+      <div style="display:grid; gap:40px">
+        <div class="nh-head">
+          <span class="nh-chip-eyebrow"><svg class="nh-i"><use href="#i-spark"/></svg>Desafios</span>
+          <h2>A rotina de uma clínica de terapia não é só atender.</h2>
+          <p class="nh-lead">Entre uma sessão e outra, alguém confirma quem vem, confere o saldo do pacote, cobra a mensalidade e emite a nota. É esse trabalho que a Terapee assume.</p>
+        </div>
+        <div class="nh-collage" aria-hidden="true">
+          <div class="nh-blue"></div>
+          <div class="nh-card nh-c1">
+            <span class="nh-lbl">WhatsApp · ontem 10:30</span>
+            <div class="nh-msg">Olá, Helena! Lembrete da sessão de terça às 08:00. Você confirma?</div>
+            <div class="nh-reply"><span class="nh-y">Vou</span><span class="nh-n">Não vou</span></div>
+          </div>
+          <div class="nh-card nh-c2">
+            <span class="nh-lbl">Pacote · Lucas M.</span>
+            <div class="nh-row"><span>Realizadas</span><b>9</b></div>
+            <div class="nh-row"><span>A realizar</span><b>3</b></div>
+            <div class="nh-bar"><i></i></div>
+          </div>
+          <div class="nh-card nh-c3">
+            <span class="nh-lbl">Cobranças de outubro</span>
+            <div class="nh-row"><span>Helena R.</span><span class="nh-tag nh-ok">Pago</span></div>
+            <div class="nh-row"><span>Davi S.</span><span class="nh-tag nh-wait">Enviada</span></div>
+            <div class="nh-row"><span>Maria L.</span><span class="nh-tag nh-ok">Pago</span></div>
+          </div>
         </div>
       </div>
-      <div class="flow-step is-auto">
-        <div class="flow-num">2</div>
-        <div class="flow-body">
-          <div class="flow-head">
-            <span class="flow-title">Lembrete no WhatsApp</span>
-            <span class="flow-tag auto">automático</span>
-          </div>
-          <p class="flow-desc">A Terapee envia sozinha, 24h antes. Ninguém da sua equipe precisa lembrar.</p>
-        </div>
+      <div class="nh-challenges">
+        <div class="nh-challenge"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-cal"/></svg></span><div><h3>O paciente falta sem avisar</h3><p><b>Lembrete automático pelo WhatsApp</b> antes da sessão. O paciente confirma ou avisa que não vai por um link, e a clínica é avisada na hora.</p></div></div>
+        <div class="nh-challenge"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-phone"/></svg></span><div><h3>A recepção passa o dia ao telefone</h3><p><b>As confirmações chegam sozinhas</b>, e o paciente pode pedir horário pela página de agendamento online.</p></div></div>
+        <div class="nh-challenge"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-box"/></svg></span><div><h3>O saldo do pacote fica numa planilha</h3><p><b>O saldo é calculado sozinho.</b> Falta justificada devolve a sessão, falta sem aviso desconta.</p></div></div>
+        <div class="nh-challenge"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-wallet"/></svg></span><div><h3>A cobrança é feita na mão</h3><p><b>As cobranças do mês são geradas de uma vez</b> e enviadas ao paciente pelo WhatsApp. A nota fiscal sai do pagamento.</p></div></div>
+        <div class="nh-actions" style="margin-top:12px"><a class="nh-btn nh-btn-primary" href="https://web.terapee.com.br/register" target="_blank" rel="noopener">Testar grátis por 14 dias</a></div>
       </div>
-      <div class="flow-step is-auto">
-        <div class="flow-num">3</div>
-        <div class="flow-body">
-          <div class="flow-head">
-            <span class="flow-title">Paciente confirma</span>
-            <span class="flow-tag auto">automático</span>
-          </div>
-          <p class="flow-desc">A resposta cai na agenda na hora e o status muda sozinho. Cadeira vazia você descobre antes, não no horário.</p>
+    </div>
+  </section>
+
+  <!-- 3. Solução (por que importa) -->
+  <section class="nh-sec nh-solution nh-gutter" id="solucao">
+    <div class="nh-wrap">
+      <div class="nh-sec-head-row">
+        <div class="nh-head">
+          <span class="nh-chip-eyebrow"><svg class="nh-i"><use href="#i-spark"/></svg>Solução</span>
+          <h2>Terapia não funciona como consulta médica. O seu sistema também não deveria.</h2>
         </div>
+        <p>O mesmo paciente volta toda semana por meses, paga por pacote ou mensalidade, e cada profissional recebe o seu repasse.</p>
       </div>
-      <div class="flow-step">
-        <div class="flow-num">4</div>
-        <div class="flow-body">
-          <div class="flow-head">
-            <span class="flow-title">Sessão atendida</span>
-            <span class="flow-tag">você faz</span>
-          </div>
-          <p class="flow-desc">Check-in na chegada e evolução registrada no prontuário, com data e hora automáticas.</p>
+      <div class="nh-cards">
+        <article class="nh-fcard"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-repeat"/></svg></span><h3>Séries que se mantêm sozinhas</h3><p>Sessões semanais, em mais de um dia por semana, em grupo ou com dois profissionais.</p><a class="nh-more" href="/funcionalidades/agenda">Ver a agenda <svg class="nh-i"><use href="#i-right"/></svg></a></article>
+        <article class="nh-fcard"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-msg"/></svg></span><h3>Lembretes pelo WhatsApp</h3><p>O paciente confirma ou cancela por um link, e quem cancela libera a vaga a tempo.</p><a class="nh-more" href="/funcionalidades/lembretes-whatsapp">Ver como funciona <svg class="nh-i"><use href="#i-right"/></svg></a></article>
+        <article class="nh-fcard"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-box"/></svg></span><h3>Pacotes e mensalidades</h3><p>O saldo e as cobranças acompanham a agenda, sem conferência em planilha.</p><a class="nh-more" href="/funcionalidades/pacotes-de-sessoes">Ver pacotes de sessões <svg class="nh-i"><use href="#i-right"/></svg></a></article>
+        <article class="nh-fcard"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-clip"/></svg></span><h3>Prontuário e teleconsulta</h3><p>Evolução por sessão, modelos, anexos e videochamada com o prontuário aberto ao lado.</p><a class="nh-more" href="/funcionalidades/prontuario-eletronico">Ver o prontuário <svg class="nh-i"><use href="#i-right"/></svg></a></article>
+        <article class="nh-fcard"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-target"/></svg></span><h3>Plano terapêutico e ABA</h3><p>Objetivos, metas e alvos, registro da sessão no tablet e gráficos por alvo.</p><a class="nh-more" href="/funcionalidades/plano-terapeutico-aba" data-plano-aba-cta="home-cards">Ver o plano terapêutico <svg class="nh-i"><use href="#i-right"/></svg></a></article>
+        <article class="nh-fcard"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-receipt"/></svg></span><h3>Cobrança e nota fiscal</h3><p>Cobranças do mês geradas de uma vez e NFS-e pelo Emissor Nacional a partir do pagamento.</p><a class="nh-more" href="/funcionalidades/nota-fiscal-nfse">Ver a NFS-e <svg class="nh-i"><use href="#i-right"/></svg></a></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Por dentro (abas + fluxo) -->
+  <section class="nh-sec nh-gutter" id="por-dentro" style="padding-top:24px">
+    <div class="nh-panel">
+      <div class="nh-wrap">
+        <div class="nh-head nh-center">
+          <span class="nh-chip-eyebrow"><svg class="nh-i"><use href="#i-spark"/></svg>Por dentro</span>
+          <h2>Conheça a Terapee por dentro</h2>
+          <p class="nh-lead">Agenda, prontuário e financeiro na mesma tela, sem trocar de sistema no meio do dia.</p>
         </div>
-      </div>
-      <div class="flow-step is-auto">
-        <div class="flow-num">5</div>
-        <div class="flow-body">
-          <div class="flow-head">
-            <span class="flow-title">Cobrança enviada</span>
-            <span class="flow-tag auto">automático</span>
+
+        <div>
+          <div class="nh-tabs" role="tablist" aria-label="Módulos">
+            <button role="tab" id="tab-agenda" aria-controls="p-agenda" aria-selected="true">Agenda</button>
+            <button role="tab" id="tab-pront" aria-controls="p-pront" aria-selected="false" tabindex="-1">Prontuário</button>
+            <button role="tab" id="tab-fin" aria-controls="p-fin" aria-selected="false" tabindex="-1">Financeiro</button>
+            <button role="tab" id="tab-pei" aria-controls="p-pei" aria-selected="false" tabindex="-1">Plano terapêutico</button>
+            <button role="tab" id="tab-nfse" aria-controls="p-nfse" aria-selected="false" tabindex="-1">NFS-e</button>
           </div>
-          <p class="flow-desc">Pix ou cartão, na hora certa. Mensalidade e pacote saem no automático, todo mês.</p>
+
+          <div class="nh-tabpanel" role="tabpanel" id="p-agenda" aria-labelledby="tab-agenda">
+            <div class="nh-two" style="padding-top:48px">
+              <div class="nh-tabtext">
+                <h3>Agenda que entende terapia</h3>
+                <p>Sessões avulsas, séries semanais, pacotes e mensalidades, por profissional e por sala. A grade de cada profissional segue o horário dele, de 50 em 50 ou de hora em hora.</p>
+                <div class="nh-rule"></div>
+                <ul class="nh-checks">
+                  <li><span><b>Confirmação pelo WhatsApp</b>O paciente confirma ou cancela por um link, e a clínica é avisada.</span></li>
+                  <li><span><b>Agendamento online</b>Uma página para o paciente pedir horário, que a clínica aprova.</span></li>
+                </ul>
+              </div>
+              <div class="nh-shot"><div class="nh-frame"><div class="nh-frame-bar"><i></i><i></i><i></i><span>Terça, 28 de outubro</span></div><div class="nh-body">
+                <div class="nh-row"><span>08:00 · Helena R.</span><span class="nh-tag nh-ok">Confirmou</span></div>
+                <div class="nh-row"><span>08:50 · Davi S.</span><span class="nh-tag nh-ok">Confirmou</span></div>
+                <div class="nh-row"><span>09:40 · Alice P.</span><span class="nh-tag nh-wait">Lembrete enviado</span></div>
+                <div class="nh-row"><span>10:30 · Maria L.</span><span class="nh-tag nh-ok">Confirmou</span></div>
+                <div class="nh-row"><span>11:20 · Grupo habilidades</span><span class="nh-tag nh-wait">4 pacientes</span></div>
+              </div></div></div>
+            </div>
+          </div>
+
+          <div class="nh-tabpanel" role="tabpanel" id="p-pront" aria-labelledby="tab-pront" hidden>
+            <div class="nh-two" style="padding-top:48px">
+              <div class="nh-tabtext">
+                <h3>Prontuário ao lado da agenda</h3>
+                <p>Evolução por sessão com modelos da clínica, anexos e exportação em PDF. A sessão que ainda pede evolução aparece para quem atendeu.</p>
+                <div class="nh-rule"></div>
+                <ul class="nh-checks">
+                  <li><span><b>Evolução restrita</b>O profissional escolhe o que fica só com ele.</span></li>
+                  <li><span><b>Teleconsulta integrada</b>Videochamada sem instalar nada, com o prontuário aberto ao lado.</span></li>
+                </ul>
+              </div>
+              <div class="nh-shot"><div class="nh-frame"><div class="nh-frame-bar"><i></i><i></i><i></i><span>Prontuário · Lucas M.</span></div><div class="nh-body nh-timeline">
+                <div class="nh-tl"><b>21 out · Fonoaudiologia</b><span>Evolução registrada pela profissional na sessão.</span></div>
+                <div class="nh-tl"><b>14 out · Fonoaudiologia</b><span>Evolução registrada · 1 anexo</span></div>
+                <div class="nh-tl"><b>07 out · Avaliação</b><span>Modelo de avaliação da clínica</span></div>
+              </div></div></div>
+            </div>
+          </div>
+
+          <div class="nh-tabpanel" role="tabpanel" id="p-fin" aria-labelledby="tab-fin" hidden>
+            <div class="nh-two" style="padding-top:48px">
+              <div class="nh-tabtext">
+                <h3>Financeiro sem planilha paralela</h3>
+                <p>Receitas, despesas, contas a receber e a pagar. As cobranças do mês são geradas de uma vez, e o repasse de cada profissional é fechado pelo sistema.</p>
+                <div class="nh-rule"></div>
+                <ul class="nh-checks">
+                  <li><span><b>Saldo de pacote automático</b>Falta justificada devolve a sessão, falta sem aviso desconta.</span></li>
+                  <li><span><b>Repasse por profissional</b>Percentual ou valor fixo, por convênio ou tipo de atendimento.</span></li>
+                </ul>
+              </div>
+              <div class="nh-shot"><div class="nh-frame"><div class="nh-frame-bar"><i></i><i></i><i></i><span>Contas a receber · outubro</span></div><div class="nh-body">
+                <div class="nh-row"><span>Helena R. · mensalidade</span><span class="nh-tag nh-ok">Pago</span></div>
+                <div class="nh-row"><span>Lucas M. · pacote 12 sessões</span><span class="nh-tag nh-ok">Pago</span></div>
+                <div class="nh-row"><span>Davi S. · mensalidade</span><span class="nh-tag nh-wait">Enviada</span></div>
+                <div class="nh-row"><span>Maria L. · sessão avulsa</span><span class="nh-tag nh-wait">Vence 31/10</span></div>
+              </div></div></div>
+            </div>
+          </div>
+
+          <div class="nh-tabpanel" role="tabpanel" id="p-pei" aria-labelledby="tab-pei" hidden>
+            <div class="nh-two" style="padding-top:48px">
+              <div class="nh-tabtext">
+                <h3>O seu PEI fora do Word</h3>
+                <p>Objetivos, metas e alvos com critério de domínio. Durante a sessão, o profissional marca alvo a alvo no tablet, e o sistema monta o rascunho da evolução.</p>
+                <div class="nh-rule"></div>
+                <ul class="nh-checks">
+                  <li><span><b>Gráfico por alvo</b>Com as mudanças de fase e o aviso quando o critério é atingido.</span></li>
+                  <li><span><b>Relatórios em PDF</b>Plano vigente, evolução por período e declaração de frequência.</span></li>
+                </ul>
+                <p style="font-size:.85rem">A clínica cadastra a estrutura dos protocolos que já usa. Protocolos publicados, como VB-MAPP e ABLLS-R, não vêm prontos.</p>
+                <div class="nh-actions"><a class="nh-btn nh-btn-primary" href="/funcionalidades/plano-terapeutico-aba" data-plano-aba-cta="home-abas">Conhecer o plano terapêutico</a></div>
+              </div>
+              <div class="nh-shot"><div class="nh-frame"><div class="nh-frame-bar"><i></i><i></i><i></i><span>Sessão · Davi S.</span></div><div class="nh-body nh-targets">
+                <div class="nh-target"><b>Imitação motora</b><span class="nh-tag nh-ok">80%</span><div class="nh-bar"><i style="width:80%"></i></div></div>
+                <div class="nh-target"><b>Contato visual</b><span class="nh-tag nh-wait">55%</span><div class="nh-bar"><i style="width:55%"></i></div></div>
+                <div class="nh-taps"><span class="nh-i1">Independente</span><span class="nh-i2">Com ajuda</span><span class="nh-i3">Erro</span></div>
+              </div></div></div>
+            </div>
+          </div>
+
+          <div class="nh-tabpanel" role="tabpanel" id="p-nfse" aria-labelledby="tab-nfse" hidden>
+            <div class="nh-two" style="padding-top:48px">
+              <div class="nh-tabtext">
+                <h3>Nota fiscal a partir do pagamento</h3>
+                <p>NFS-e pelo Emissor Nacional do gov.br, com o certificado A1 da clínica, sem custo por nota. As notas do mês vão para o contador por e-mail.</p>
+                <div class="nh-rule"></div>
+                <ul class="nh-checks">
+                  <li><span><b>Aviso do seu município</b>A configuração diz se a sua cidade já aderiu ao Emissor Nacional.</span></li>
+                  <li><span><b>Envio ao contador</b>XML e PDF das notas do mês num único e-mail.</span></li>
+                </ul>
+              </div>
+              <div class="nh-shot"><div class="nh-frame"><div class="nh-frame-bar"><i></i><i></i><i></i><span>Notas fiscais · outubro</span></div><div class="nh-body">
+                <div class="nh-row"><span>NFS-e nº 128 · Helena R.</span><span class="nh-tag nh-ok">Autorizada</span></div>
+                <div class="nh-row"><span>NFS-e nº 127 · Lucas M.</span><span class="nh-tag nh-ok">Autorizada</span></div>
+                <div class="nh-row"><span>Enviar notas ao contador</span><span class="nh-tag nh-wait">24 notas</span></div>
+              </div></div></div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">6</div>
-        <div class="flow-body">
-          <div class="flow-head">
-            <span class="flow-title">Recebimento registrado</span>
-            <span class="flow-tag">você faz</span>
-          </div>
-          <p class="flow-desc">A clínica dá baixa na cobrança paga com um clique. Daí em diante o financeiro se atualiza sozinho: você vê o que entrou e o que falta sem abrir planilha.</p>
-        </div>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">7</div>
-        <div class="flow-body">
-          <div class="flow-head">
-            <span class="flow-title">NFS-e emitida</span>
-            <span class="flow-tag">2 cliques</span>
-          </div>
-          <p class="flow-desc">Direto da cobrança já paga, pelo Emissor Nacional do gov.br. Sem abrir o portal da prefeitura, sem redigitar CPF e valor.</p>
+
+        <div id="fluxo" style="display:grid; gap:20px">
+          <div class="nh-flowhead"><h3 style="font-size:1.3rem">Da sessão marcada à nota fiscal</h3><p>Em azul, o que a Terapee faz sozinha.</p></div>
+          <ol class="nh-flow">
+            <li><small>Equipe</small>Agenda a sessão ou a série</li>
+            <li class="nh-auto"><small>Automático</small>Lembra o paciente no WhatsApp</li>
+            <li class="nh-auto"><small>Automático</small>Paciente confirma pelo link</li>
+            <li><small>Equipe</small>Atende e registra a evolução</li>
+            <li class="nh-auto"><small>Automático</small>Gera e envia a cobrança</li>
+            <li><small>Equipe</small>Dá baixa com um clique</li>
+            <li><small>Equipe</small>Emite a NFS-e</li>
+          </ol>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="flow-result">
-      <p><strong>No fim do mês:</strong> agenda confirmada, cobranças enviadas sozinhas e nota emitida em dois cliques — sua equipe entra só nos quatro pontos que precisam de gente.</p>
+  <!-- 5. Para quem -->
+  <section class="nh-sec nh-gutter" id="para-quem" style="padding-top:24px">
+    <div class="nh-wrap">
+      <div class="nh-sec-head-row">
+        <div class="nh-head">
+          <span class="nh-chip-eyebrow"><svg class="nh-i"><use href="#i-spark"/></svg>Para quem</span>
+          <h2>Feita para quem atende por sessão</h2>
+        </div>
+        <p>Do terapeuta que atende sozinho à clínica multidisciplinar com recepção, financeiro e estagiários.</p>
+      </div>
+      <div class="nh-specs">
+        <a class="nh-spec" href="/para-psicologos"><div class="nh-mini"><b>Theo A. · Psicologia</b><span>Toda quinta, 09:40 · evolução restrita</span></div><span class="nh-label">Psicologia</span></a>
+        <a class="nh-spec" href="/para-fonoaudiologos"><div class="nh-mini"><b>Lucas M. · Fono</b><span>Pacote 9 de 12 · seg e qui</span></div><span class="nh-label">Fonoaudiologia</span></a>
+        <a class="nh-spec" href="/para-terapeutas-ocupacionais"><div class="nh-mini"><b>Helena R. · TO</b><span>Mensalista · confirmou terça</span></div><span class="nh-label">Terapia ocupacional</span></a>
+        <a class="nh-spec" href="/para-clinicas-aba"><div class="nh-mini"><b>Davi S. · ABA</b><span>Imitação motora · 80% de acerto</span></div><span class="nh-label">ABA</span></a>
+        <a class="nh-spec" href="/para-clinicas-multidisciplinares"><div class="nh-mini"><b>12 profissionais · 4 salas</b><span>Repasse fechado por profissional</span></div><span class="nh-label">Multidisciplinar</span></a>
+      </div>
     </div>
+  </section>
 
-    <div style="text-align:center;margin-top:32px;">
-      <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary">Criar conta gratuita →</a>
-      <p style="font-size:14px;color:#5b6472;margin:14px 0 0;">14 dias grátis. Não é necessário cartão de crédito.</p>
+  <!-- 6. Migração + números -->
+  <section class="nh-gutter" id="migracao">
+    <div class="nh-panel">
+      <div class="nh-wrap nh-two">
+        <div style="display:grid; gap:24px">
+          <div class="nh-head">
+            <span class="nh-chip-eyebrow"><svg class="nh-i"><use href="#i-spark"/></svg>Migração</span>
+            <h2>Já usa outro sistema? A gente traz a sua clínica inteira.</h2>
+            <p class="nh-lead">Você envia os dados que tem hoje, a nossa equipe importa tudo, e você começa sem redigitar nada.</p>
+          </div>
+          <div class="nh-rule"></div>
+          <ul class="nh-checks">
+            <li><span><b>Pacientes, agenda e histórico</b>Importados pela nossa equipe, com conferência antes de liberar.</span></li>
+            <li><span><b>Suporte depois da virada</b>Ajudamos recepção e profissionais nas primeiras semanas.</span></li>
+          </ul>
+          <div class="nh-actions"><a class="nh-btn nh-btn-primary" href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20quero%20migrar%20para%20a%20Terapee%20e%20trazer%20os%20dados%20da%20minha%20cl%C3%ADnica" target="_blank" rel="noopener">Falar sobre a minha migração</a></div>
+        </div>
+        <div class="nh-stats">
+          <div class="nh-stat"><b>400+</b><span>clínicas de terapia</span></div>
+          <div class="nh-stat"><b>25%</b><span>menos faltas com lembrete e confirmação no WhatsApp</span></div>
+          <div class="nh-stat"><b>28 mil+</b><span>pacientes migrados com histórico</span></div>
+          <div class="nh-stat"><b>2 mi+</b><span>agendamentos importados</span></div>
+          <div class="nh-stat nh-wide"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-db"/></svg></span><p><b>Seus dados continuam seus.</b> Exporte tudo quando quiser, inclusive se decidir sair.</p></div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============ PLANO TERAPEUTICO / ABA ============ -->
-<section class="pa-home" id="plano-terapeutico">
-  <div class="container pa-home-grid">
-    <div class="animate-on-scroll">
-      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l3-3 3 2 5-6"/></svg></span> Novo · Plano terapêutico e ABA</span>
-      <h2 class="section-title">Seu PEI fora do Word, no mesmo lugar do prontuário e da agenda</h2>
-      <p class="section-subtitle">Para clínicas que atendem TEA com ABA e para equipes multidisciplinares que ainda montam o plano terapêutico num arquivo.</p>
-      <ul class="pa-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Objetivos, metas e alvos com tipo de medida, níveis de ajuda e critério de domínio.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Registro de sessão alvo a alvo no tablet, salvo a cada toque e ligado à consulta da agenda.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Gráfico por alvo e relatório em PDF do plano, da evolução e da frequência para o convênio.</span></li>
+  <!-- 7. Depoimentos -->
+  <section class="nh-sec nh-gutter" id="depoimentos">
+    <div class="nh-wrap nh-testi">
+      <div class="nh-head">
+        <span class="nh-chip-eyebrow"><svg class="nh-i"><use href="#i-spark"/></svg>Avaliado em 4.9/5 por profissionais</span>
+        <h2>O que profissionais dizem sobre a Terapee</h2>
+        <div class="nh-arrows">
+          <button type="button" id="prev" aria-label="Depoimento anterior"><svg class="nh-i"><use href="#i-left"/></svg></button>
+          <button type="button" id="next" aria-label="Próximo depoimento"><svg class="nh-i"><use href="#i-right"/></svg></button>
+        </div>
+      </div>
+      <div class="nh-track" id="track">
+        <figure class="nh-quote"><div class="nh-stars" aria-label="5 estrelas">★★★★★</div><blockquote>“A Terapee reduziu bastante minhas faltas com os lembretes automáticos. É essencial na minha rotina.”</blockquote><figcaption><span class="nh-avatar">M</span><span><b>Mariana Costa</b>Psicóloga</span></figcaption></figure>
+        <figure class="nh-quote"><div class="nh-stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Consigo organizar minha agenda inteira em minutos. A simplicidade da plataforma faz toda diferença.”</blockquote><figcaption><span class="nh-avatar">F</span><span><b>Dr. Felipe Andrade</b>Fonoaudiólogo</span></figcaption></figure>
+        <figure class="nh-quote"><div class="nh-stars" aria-label="5 estrelas">★★★★★</div><blockquote>“A gestão financeira ficou muito mais clara. Os relatórios facilitam tudo para o meu escritório.”</blockquote><figcaption><span class="nh-avatar">P</span><span><b>Paula Ribeiro</b>Terapeuta Ocupacional</span></figcaption></figure>
+        <figure class="nh-quote"><div class="nh-stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Foi libertador parar de emitir recibos manualmente. Agora faço tudo em dois cliques.”</blockquote><figcaption><span class="nh-avatar">J</span><span><b>Juliana Torres</b>Psicóloga Infantil</span></figcaption></figure>
+        <figure class="nh-quote"><div class="nh-stars" aria-label="5 estrelas">★★★★★</div><blockquote>“A plataforma é rápida, intuitiva e confiável. Não abro mão dela no meu consultório.”</blockquote><figcaption><span class="nh-avatar">R</span><span><b>Ricardo Menezes</b>Terapeuta Multidisciplinar</span></figcaption></figure>
+        <figure class="nh-quote"><div class="nh-stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Reduzi em 80% o tempo que eu gastava com burocracia. Agora foco totalmente nos meus pacientes.”</blockquote><figcaption><span class="nh-avatar">C</span><span><b>Camila Souza</b>Psicóloga</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Preços -->
+  <section class="nh-sec nh-gutter nh-solution" id="planos" style="padding-top:24px">
+    <div class="nh-wrap">
+      <div class="nh-head nh-center">
+        <span class="nh-chip-eyebrow"><svg class="nh-i"><use href="#i-spark"/></svg>Planos</span>
+        <h2>Um preço para a clínica inteira, não por profissional</h2>
+        <p class="nh-lead">Todos os planos começam com 14 dias grátis, sem cartão.</p>
+      </div>
+      <div class="nh-toggle" role="group" aria-label="Período de cobrança">
+        <button type="button" id="bill-monthly" aria-pressed="false">Mensal</button>
+        <button type="button" id="bill-annual" aria-pressed="true">Anual <span class="nh-save">−20%</span></button>
+      </div>
+      <div class="nh-plans">
+        <article class="nh-plan">
+          <h3>Individual</h3>
+          <p class="nh-who">Para quem atende sozinho.</p>
+          <div class="nh-price" data-m="79" data-a="63,20" data-at="758,40" data-s="189,60"></div>
+          <div class="nh-users"><svg class="nh-i"><use href="#i-user"/></svg>1 usuário</div>
+          <ul class="nh-checks">
+            <li><span>Agenda, prontuário, financeiro e relatórios</span></li>
+            <li><span>Lembretes pelo WhatsApp (número da Terapee)</span></li>
+            <li><span>Suporte por e-mail</span></li>
+          </ul>
+          <a class="nh-btn nh-btn-ghost" href="https://web.terapee.com.br/register" target="_blank" rel="noopener">Testar o Individual</a>
+        </article>
+        <article class="nh-plan nh-featured">
+          <span class="nh-ribbon">Mais escolhido</span>
+          <h3>Clínica</h3>
+          <p class="nh-who">Para clínica com equipe e recepção.</p>
+          <div class="nh-price" data-m="229" data-a="183,20" data-at="2.198,40" data-s="549,60"></div>
+          <div class="nh-users"><svg class="nh-i"><use href="#i-users"/></svg>Até 15 usuários <em id="per-person"></em></div>
+          <ul class="nh-checks">
+            <li><span>Tudo do Individual</span></li>
+            <li><span>Salas, convênios e repasse por profissional</span></li>
+            <li><span>Acesso para recepção e financeiro</span></li>
+            <li><span>Suporte prioritário</span></li>
+          </ul>
+          <a class="nh-btn nh-btn-primary" href="https://web.terapee.com.br/register" target="_blank" rel="noopener">Testar o Clínica</a>
+        </article>
+        <article class="nh-plan">
+          <h3>Clínica Max</h3>
+          <p class="nh-who">Para clínica grande ou multidisciplinar.</p>
+          <div class="nh-price" data-m="349" data-a="279,20" data-at="3.350,40" data-s="837,60"></div>
+          <div class="nh-users"><svg class="nh-i"><use href="#i-users"/></svg>Usuários ilimitados</div>
+          <ul class="nh-checks">
+            <li><span>Tudo do Clínica</span></li>
+            <li><span>WhatsApp pelo número da sua clínica</span></li>
+            <li><span>Mensagens personalizáveis e aniversário automático</span></li>
+            <li><span>Suporte VIP</span></li>
+          </ul>
+          <a class="nh-btn nh-btn-ghost" href="https://web.terapee.com.br/register" target="_blank" rel="noopener">Testar o Clínica Max</a>
+        </article>
+      </div>
+      <ul class="nh-included" aria-label="Incluído em todos os planos">
+        <li><svg class="nh-i"><use href="#i-check"/></svg>Usuários = toda a equipe (profissionais, recepção, financeiro)</li>
+        <li><svg class="nh-i"><use href="#i-check"/></svg>Agendamentos ilimitados</li>
+        <li><svg class="nh-i"><use href="#i-check"/></svg>NFS-e sem custo por nota</li>
+        <li><svg class="nh-i"><use href="#i-check"/></svg>Migração pela nossa equipe</li>
+        <li><svg class="nh-i"><use href="#i-check"/></svg>Cancele quando quiser</li>
       </ul>
-      <div class="pa-home-ctas">
-        <a href="/funcionalidades/plano-terapeutico-aba" class="btn btn-primary" data-plano-aba-cta="home-saiba-mais">Conhecer o plano terapêutico →</a>
-        <a href="https://web.terapee.com.br/register?utm_source=home&amp;utm_medium=site&amp;utm_campaign=plano-aba&amp;utm_content=destaque-home" target="_blank" class="btn btn-outline" data-plano-aba-cta="home-teste">Testar grátis por 14 dias</a>
-      </div>
+      <p style="text-align:center"><a class="nh-more" href="/planos/">Comparar todos os recursos dos planos <svg class="nh-i"><use href="#i-right"/></svg></a></p>
     </div>
-      <div class="sp-stage" role="img" aria-label="Tela da Terapee no tablet: registro de sessão com alvos marcados como independente, com ajuda ou erro, contador de frequência e cronômetro de duração. Dados fictícios.">
-        <!-- PRINT: registro-sessao-tablet (o mesmo da página /funcionalidades/plano-terapeutico-aba). Quando houver o print, trocar o .hx-app e o .sp-toast por:
-             <img src="/assets/plano-aba/registro-sessao-tablet.webp" width="1200" height="900" alt="Registro de sessão ABA na Terapee aberto no tablet, com alvos marcados como independente, com ajuda ou erro" loading="lazy"> -->
-        <div class="hx-app pa-app" aria-hidden="true"><div class="hx-app-top"><div class="hx-dots"><i></i><i></i><i></i></div><div class="hx-app-title">Registro de sessão<small>Caio T. · Quarta, 15 de outubro · 14:00</small></div><span class="pa-saved">Salvo</span></div><div class="pa-reg"><div class="pa-tgt"><div class="pa-tgt-hd"><div><b>Nomear cores</b><small>Tentativas · fase de intervenção</small></div><span class="pa-score">5 de 8 independente</span></div><div class="pa-btns"><span class="pa-btn i">Independente</span><span class="pa-btn h">Com ajuda ▾</span><span class="pa-btn e">Erro</span></div><div class="pa-tally"><i class="i">I</i><i class="i">I</i><i class="h">DV</i><i class="i">I</i><i class="e">E</i><i class="i">I</i><i class="h">DG</i><i class="i">I</i><i class="undo">↶ Desfazer</i></div></div><div class="pa-tgt"><div class="pa-tgt-hd"><div><b>Pedir ajuda com frase</b><small>Frequência</small></div></div><div class="pa-ctr"><span>−</span><b>4</b><span>+</span><small>vezes nesta sessão</small></div></div><div class="pa-tgt"><div class="pa-tgt-hd"><div><b>Permanecer sentado na atividade</b><small>Duração</small></div></div><div class="pa-ctr"><span>❚❚</span><b class="pa-timer">03:42</b><small>cronômetro rodando</small></div></div></div></div><div class="sp-toast" aria-hidden="true"><div class="hx-ico g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div><div><b>Cada toque salvo na hora</b><small>Fechar o navegador não perde a sessão</small></div></div>
-      </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============ MIGRACAO ============ -->
-<section class="migration-section section" id="migracao">
-  <div class="container animate-on-scroll">
-    <div style="text-align:center;">
-      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h12"/><path d="M12 6l6 6-6 6"/><path d="M20 4v16"/></svg></span> Migração</span>
-      <h2 class="section-title">Já usa outro sistema? A gente traz sua clínica inteira.</h2>
-      <p class="section-subtitle" style="margin:0 auto;">Trocar de sistema não pode custar anos de histórico redigitado — e não custa. A migração é feita pelo nosso time, e já fizemos isso em escala.</p>
+  <!-- 9. Por que contratar -->
+  <section class="nh-sec nh-gutter" id="seguranca">
+    <div class="nh-wrap nh-two">
+      <div class="nh-secure">
+        <div class="nh-card"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-shield"/></svg></span><div><b>Dados protegidos</b><p>Conexão criptografada, dados separados por clínica e backup diário.</p></div></div>
+        <div class="nh-card"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-users"/></svg></span><div><b>Acesso por perfil</b><p>Recepção, financeiro e profissionais veem só o que precisam.</p></div></div>
+        <div class="nh-card"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-video"/></svg></span><div><b>Funciona no navegador</b><p>No computador, no tablet e no celular, sem instalar nada.</p></div></div>
+      </div>
+      <div style="display:grid; gap:24px">
+        <div class="nh-head">
+          <span class="nh-chip-eyebrow"><svg class="nh-i"><use href="#i-spark"/></svg>Por que a Terapee</span>
+          <h2>Pouco risco para testar, muito tempo de volta</h2>
+        </div>
+        <ul class="nh-checks">
+          <li><span><b>Menos faltas</b>O paciente é lembrado e confirma sozinho.</span></li>
+          <li><span><b>Menos trabalho de recepção</b>Confirmação, saldo de pacote e cobranças deixam de ser feitos à mão.</span></li>
+          <li><span><b>Preço que não cresce a cada contratação</b>No plano Clínica, a equipe chega a 15 usuários sem mudar a mensalidade.</span></li>
+          <li><span><b>Sem compromisso</b>14 dias grátis, sem cartão. Se não servir, você não paga nada.</span></li>
+        </ul>
+        <div class="nh-actions"><a class="nh-btn nh-btn-primary" href="https://web.terapee.com.br/register" target="_blank" rel="noopener">Criar conta gratuita</a></div>
+      </div>
     </div>
+  </section>
 
-    <div class="migration-stats">
-      <div class="migration-stat">
-        <div class="migration-stat-num">+28 mil</div>
-        <div class="migration-stat-label">pacientes já migrados de outros sistemas para a Terapee</div>
+  <!-- 10. FAQ -->
+  <section class="nh-sec nh-gutter nh-solution" id="faq" style="padding-top:24px">
+    <div class="nh-wrap">
+      <div class="nh-head nh-center">
+        <span class="nh-chip-eyebrow"><svg class="nh-i"><use href="#i-spark"/></svg>Dúvidas</span>
+        <h2>Perguntas frequentes</h2>
       </div>
-      <div class="migration-stat">
-        <div class="migration-stat-num">+2 milhões</div>
-        <div class="migration-stat-label">agendamentos importados, com as sessões recorrentes preservadas</div>
-      </div>
-      <div class="migration-stat">
-        <div class="migration-stat-num">Histórico junto</div>
-        <div class="migration-stat-label">sessões, prontuários e arquivos vêm com o paciente</div>
+      <div class="nh-faq">
+        <details open><summary>Preciso de cartão para testar?</summary><p>Não. São 14 dias com acesso completo, e você escolhe o plano no primeiro acesso.</p></details>
+        <details><summary>Qual a diferença entre os planos?</summary><p>O número de usuários (contando recepção e financeiro) e de onde sai o WhatsApp. No Clínica Max, os lembretes saem do número da sua clínica; nos outros, do número oficial da Terapee.</p></details>
+        <details><summary>Já uso outro sistema. Perco o histórico?</summary><p>Não. A nossa equipe importa pacientes, agenda e histórico.</p></details>
+        <details><summary>Emite nota fiscal?</summary><p>Sim, NFS-e pelo Emissor Nacional do gov.br, com o certificado A1 da clínica, para municípios que aderiram ao Emissor Nacional. A tela de configuração avisa se o seu município aceita.</p></details>
+        <details><summary>Serve para ABA?</summary><p>Sim. Plano terapêutico com objetivos, metas e alvos, registro de sessão no tablet e gráficos. Os protocolos publicados (VB-MAPP, ABLLS-R e outros) não vêm prontos: a clínica cadastra a estrutura dos que já usa.</p></details>
+        <details><summary>E a LGPD?</summary><p>Dados separados por clínica, acesso por perfil, backup diário, encarregado de dados designado e exclusão da conta pela própria plataforma.</p></details>
+        <details><summary>Posso cancelar quando quiser?</summary><p>Sim, sem multa, e você pode exportar os seus dados antes.</p></details>
       </div>
     </div>
+  </section>
 
-    <div class="migration-steps">
-      <div class="migration-step">
-        <div class="migration-step-num">1</div>
-        <h3>Você manda o que tem hoje</h3>
-        <p>A exportação do seu sistema atual, uma planilha ou o que estiver à mão. A gente diz o que dá para aproveitar.</p>
-      </div>
-      <div class="migration-step">
-        <div class="migration-step-num">2</div>
-        <h3>A gente importa</h3>
-        <p>Pacientes, agendamentos, histórico de sessões, prontuários e arquivos entram organizados na sua conta.</p>
-      </div>
-      <div class="migration-step">
-        <div class="migration-step-num">3</div>
-        <h3>Sua equipe começa sem redigitar nada</h3>
-        <p>Vocês abrem a Terapee e a agenda da semana já está lá, com os pacientes de sempre.</p>
-      </div>
-    </div>
-
-    <div class="migration-cta">
-      <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20quero%20migrar%20para%20a%20Terapee%20e%20trazer%20os%20dados%20da%20minha%20cl%C3%ADnica" class="btn btn-primary">Falar sobre a minha migração</a>
-      <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline">Criar conta gratuita →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ LGPD & SEGURANÇA ============ -->
-<section class="sec-strip" id="seguranca">
-  <div class="container">
-    <h2>Dados dos pacientes protegidos, conforme a LGPD.</h2>
-    <ul>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Criptografia TLS 1.3 e AES-256</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Conformidade com a LGPD e DPO designado</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>Acesso por perfil de função</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>Backup automático diário</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============ PARA QUEM ============ -->
-<section class="target-audience section hm-for" id="para-quem">
-  <div class="container animate-on-scroll">
-    <div class="hm-head">
-      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span> Para quem</span>
-      <h2 class="section-title">Feita para a rotina de cada especialidade</h2>
-      <p class="section-subtitle">Psicologia, fono, TO e terapia infantil têm problemas diferentes. A Terapee resolve cada um com o recurso certo.</p>
-    </div>
-    <div class="hm-specs">
-      <a class="hm-spec" href="/para-psicologos">
-        <div class="hm-spec-top"><span class="hm-spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3a3 3 0 0 0-3 3v.5A3 3 0 0 0 4 9.3 3 3 0 0 0 5 15a3 3 0 0 0 4 3.8V3zM15 3a3 3 0 0 1 3 3v.5a3 3 0 0 1 2 2.8 3 3 0 0 1-1 5.7 3 3 0 0 1-4 3.8V3z"/></svg></span><h3>Psicologia</h3></div>
-        <p class="hm-spec-pain">Paciente que falta sem avisar e cobrança constrangedora.</p>
-        <p class="hm-spec-fix">Sessão semanal recorrente, confirmação no WhatsApp e cobrança que sai sozinha, sem você tocar no assunto.</p>
-        <span class="hm-more">Terapee para psicologia <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a class="hm-spec" href="/para-fonoaudiologos">
-        <div class="hm-spec-top"><span class="hm-spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M8 11h.01M12 11h.01M16 11h.01"/></svg></span><h3>Fonoaudiologia</h3></div>
-        <p class="hm-spec-pain">Muitas sessões por semana e pacote difícil de acompanhar.</p>
-        <p class="hm-spec-fix">Pacotes com saldo que se controla sozinho e lembrete no WhatsApp antes de cada atendimento.</p>
-        <span class="hm-more">Terapee para fonoaudiologia <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a class="hm-spec" href="/para-terapeutas-ocupacionais">
-        <div class="hm-spec-top"><span class="hm-spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.4l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></svg></span><h3>Terapia ocupacional</h3></div>
-        <p class="hm-spec-pain">Atendimento no consultório, no domicílio e na escola.</p>
-        <p class="hm-spec-fix">Agenda e prontuário no celular, e relatórios e planos terapêuticos a partir dos seus modelos.</p>
-        <span class="hm-more">Terapee para terapia ocupacional <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a class="hm-spec" href="/para-clinicas-multidisciplinares">
-        <div class="hm-spec-top"><span class="hm-spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span><h3>Clínica multidisciplinar</h3></div>
-        <p class="hm-spec-pain">Cada profissional com uma agenda e um repasse diferente.</p>
-        <p class="hm-spec-fix">Multi-agenda para a recepção ver todo mundo, acesso por perfil e repasse calculado no fim do mês.</p>
-        <span class="hm-more">Terapee para clínica multidisciplinar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a class="hm-spec" href="/para-terapia-infantil">
-        <div class="hm-spec-top"><span class="hm-spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><path d="M12 8v7M8 11h8M10 22l2-7 2 7"/></svg></span><h3>Terapia infantil</h3></div>
-        <p class="hm-spec-pain">Família para manter informada e relatório para a escola.</p>
-        <p class="hm-spec-fix">Lembretes e cobranças no WhatsApp da família e documentos gerados a partir dos seus modelos.</p>
-        <span class="hm-more">Terapee para terapia infantil <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a class="target-calc" href="/ferramentas/calculadora-de-precificacao?aba=equipe&amp;utm_source=home&amp;utm_medium=site&amp;utm_campaign=cta-para-quem" data-calc-cta="para-quem">
-          <div class="calc-strip-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="11" x2="8" y2="11.01"/><line x1="12" y1="11" x2="12" y2="11.01"/><line x1="16" y1="11" x2="16" y2="11.01"/><line x1="8" y1="15" x2="8" y2="15.01"/><line x1="12" y1="15" x2="12" y2="15.01"/><line x1="16" y1="15" x2="16" y2="18"/><line x1="8" y1="18" x2="12" y2="18"/></svg></div>
-          <div>
-            <strong>Tem profissionais parceiros?</strong>
-            <span>Simule o repasse da sua equipe e veja quanto fica com a clínica.</span>
-          </div>
-          <span class="target-arrow" aria-hidden="true">→</span>
-        </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TESTIMONIALS ============ -->
-<section class="testimonials section">
-  <div class="container">
-    <div style="text-align:center;" class="animate-on-scroll">
-      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg></span> Avaliado em 4.9/5 por profissionais</span>
-      <h2 class="section-title">O que profissionais dizem sobre a Terapee</h2>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card animate-on-scroll">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-text">"A Terapee reduziu bastante minhas faltas com os lembretes automáticos. É essencial na minha rotina."</div>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">M</div>
-          <div>
-            <div class="testimonial-name">Mariana Costa</div>
-            <div class="testimonial-role">Psicóloga</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card animate-on-scroll">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-text">"Consigo organizar minha agenda inteira em minutos. A simplicidade da plataforma faz toda diferença."</div>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">F</div>
-          <div>
-            <div class="testimonial-name">Dr. Felipe Andrade</div>
-            <div class="testimonial-role">Fonoaudiólogo</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card animate-on-scroll">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-text">"A gestão financeira ficou muito mais clara. Os relatórios facilitam tudo para o meu escritório."</div>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">P</div>
-          <div>
-            <div class="testimonial-name">Paula Ribeiro</div>
-            <div class="testimonial-role">Terapeuta Ocupacional</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card animate-on-scroll">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-text">"Foi libertador parar de emitir recibos manualmente. Agora faço tudo em dois cliques."</div>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">J</div>
-          <div>
-            <div class="testimonial-name">Juliana Torres</div>
-            <div class="testimonial-role">Psicóloga Infantil</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card animate-on-scroll">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-text">"A plataforma é rápida, intuitiva e confiável. Não abro mão dela no meu consultório."</div>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">R</div>
-          <div>
-            <div class="testimonial-name">Ricardo Menezes</div>
-            <div class="testimonial-role">Terapeuta Multidisciplinar</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card animate-on-scroll">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-text">"Reduzi em 80% o tempo que eu gastava com burocracia. Agora foco totalmente nos meus pacientes."</div>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">C</div>
-          <div>
-            <div class="testimonial-name">Camila Souza</div>
-            <div class="testimonial-role">Psicóloga</div>
-          </div>
+  <!-- 11. Chamada final -->
+  <section class="nh-gutter" id="fale-conosco" style="padding-bottom:96px">
+    <div class="nh-panel nh-cta">
+      <span class="nh-rings" aria-hidden="true"></span><span class="nh-rings nh-l" aria-hidden="true"></span>
+      <div class="nh-wrap">
+        <span class="nh-chip-eyebrow"><svg class="nh-i"><use href="#i-spark"/></svg>Comece hoje</span>
+        <h2>Na semana que vem, a sua agenda já se confirma sozinha</h2>
+        <p class="nh-lead">Crie a conta, cadastre a primeira semana e veja os lembretes saindo. Leva poucos minutos, e você não precisa de cartão.</p>
+        <div class="nh-actions">
+          <a class="nh-btn nh-btn-primary" href="https://web.terapee.com.br/register" target="_blank" rel="noopener">Testar grátis por 14 dias <svg class="nh-i"><use href="#i-arrow"/></svg></a>
+          <a class="nh-btn nh-btn-ghost" href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20a%20Terapee" target="_blank" rel="noopener">Falar no WhatsApp</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ============ PRICING ============ -->
-<section class="pricing section hm-pricing" id="planos">
-  <div class="container">
-    <div class="hm-head animate-on-scroll">
-      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></span> Planos</span>
-      <h2 class="section-title">Um preço para a clínica inteira, não por profissional</h2>
-      <p class="section-subtitle">Escolha pelo tamanho da equipe. Agenda, WhatsApp, prontuário, cobrança e NFS-e vêm em todos os planos.</p>
-      <div class="pl-toggle" role="group" aria-label="Período de cobrança">
-        <button type="button" class="pl-tbtn active" data-period="mensal" aria-pressed="true">Mensal</button>
-        <button type="button" class="pl-tbtn" data-period="anual" aria-pressed="false">Anual <span class="pl-off">−20%</span></button>
-      </div>
-    </div>
-    <div class="pl-cards">
-      <div class="pl-card">
-        <div class="pl-head"><span class="pl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span><h3>Individual</h3></div>
-        <p class="pl-for">Para quem atende sozinho, com ou sem CNPJ.</p>
-        <div class="pl-price"><small>R$</small><b data-monthly="79" data-yearly="63,20">79</b><span>/mês</span></div>
-        <p class="pl-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 758,40 por ano (economia de R$ 189,60)">Cobrado mensalmente</p>
-        <p class="pl-per pl-per-empty" aria-hidden="true">&nbsp;</p>
-        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline pl-cta">Testar o Individual grátis</a>
-        <p class="pl-ul-title"><b>1 usuário</b>, com:</p>
-        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Agenda com sessões recorrentes e pacotes</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Lembretes e confirmação pelo WhatsApp</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Prontuário, formulários e teleconsulta</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Cobrança pelo WhatsApp, recibos e documentos</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>NFS-e sem custo por nota</span></li></ul>
-      </div>
-      <div class="pl-card pl-hot">
-        <span class="pl-badge">Recomendado para clínicas</span>
-        <div class="pl-head"><span class="pl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span><h3>Clínica</h3></div>
-        <p class="pl-for">Para clínicas com mais de um profissional e recepção.</p>
-        <div class="pl-price"><small>R$</small><b data-monthly="229" data-yearly="183,20">229</b><span>/mês</span></div>
-        <p class="pl-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 2.198,40 por ano (economia de R$ 549,60)">Cobrado mensalmente</p>
-        <p class="pl-per" data-monthly="R$ 15,27 por profissional, com a equipe de 15" data-yearly="R$ 12,21 por profissional, com a equipe de 15">R$ 15,27 por profissional, com a equipe de 15</p>
-        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary pl-cta">Testar o Clínica grátis</a>
-        <p class="pl-ul-title">Tudo do Individual, com <b>até 15 usuários</b> e:</p>
-        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Multi-agenda: a equipe toda numa tela</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Acesso para a secretária marcar e confirmar</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Repasse calculado para cada profissional</span></li></ul>
-      </div>
-      <div class="pl-card">
-        <div class="pl-head"><span class="pl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg></span><h3>Clínica Max</h3></div>
-        <p class="pl-for">Para clínicas que querem as mensagens saindo do número próprio.</p>
-        <div class="pl-price"><small>R$</small><b data-monthly="349" data-yearly="279,20">349</b><span>/mês</span></div>
-        <p class="pl-bill" data-monthly="Cobrado mensalmente" data-yearly="Pagamento único de R$ 3.350,40 por ano (economia de R$ 837,60)">Cobrado mensalmente</p>
-        <p class="pl-per">Sem limite de profissionais</p>
-        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-outline pl-cta">Testar o Clínica Max grátis</a>
-        <p class="pl-ul-title">Tudo do Clínica, com <b>usuários ilimitados</b> e:</p>
-        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>WhatsApp próprio da clínica, já incluído</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Página de agendamento online</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Seu logo na plataforma</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span>Lembrete de aniversariantes</span></li></ul>
-      </div>
-    </div>
-    <ul class="pl-all" aria-label="Em todos os planos">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>14 dias grátis, sem cartão</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Agendamentos ilimitados</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>NFS-e sem custo por nota</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Migração feita pelo nosso time</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Cancele quando quiser</li>
-    </ul>
-    <p class="hm-compare"><a href="/planos/#comparar">Compare todos os recursos dos planos →</a></p>
-    <div class="calc-strip">
-      <div class="calc-strip-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="11" x2="8" y2="11.01"/><line x1="12" y1="11" x2="12" y2="11.01"/><line x1="16" y1="11" x2="16" y2="11.01"/><line x1="8" y1="15" x2="8" y2="15.01"/><line x1="12" y1="15" x2="12" y2="15.01"/><line x1="16" y1="15" x2="16" y2="18"/><line x1="8" y1="18" x2="12" y2="18"/></svg></div>
-      <div class="calc-strip-text">
-        <strong>Ainda decidindo? Descubra quanto sua clínica lucra por sessão.</strong>
-        <span>Calculadora grátis de preço, margem e repasse, com resultado na hora.</span>
-      </div>
-      <a href="/ferramentas/calculadora-de-precificacao?utm_source=home&amp;utm_medium=site&amp;utm_campaign=cta-planos" class="btn btn-outline" data-calc-cta="planos">Abrir calculadora →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FAQ ============ -->
-<section class="faq section" id="faq">
-  <div class="container animate-on-scroll">
-    <div style="text-align:center;">
-      <span class="section-label"><span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg></span> FAQ</span>
-      <h2 class="section-title">Dúvidas frequentes</h2>
-    </div>
-    <div class="faq-layout">
-      <div class="faq-left">
-        <p>As principais dúvidas dos nossos clientes. Precisa saber de algo específico? Entre em contato com o nosso suporte.</p>
-        <a href="https://api.whatsapp.com/send?phone=552123422477&text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20a%20Terapee" class="btn btn-outline">Fale conosco</a>
-      </div>
-      <div class="faq-right">
-        <div class="faq-item">
-          <button class="faq-question">
-            Existe teste grátis? Preciso informar cartão de crédito?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Sim! Você tem 14 dias de teste grátis com acesso às funcionalidades da plataforma e não precisa cadastrar cartão de crédito para começar. É só criar sua conta e usar.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            Quais são os planos e qual a diferença entre eles?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Temos três planos: o <strong>Individual</strong>, para quem atende sozinho; o <strong>Clínica</strong>, para equipes com mais de um profissional (inclui multi-agenda e cadastro de secretária); e o <strong>Clínica Max</strong>, para clínicas maiores, com usuários ilimitados e recursos extras. Você pode pagar mensal ou anual, com desconto no plano anual.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button type="button" class="faq-question">
-            Vocês têm plano terapêutico e registro de sessão para ABA?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Sim, é novidade. O plano terapêutico (objetivos, metas e alvos com níveis de ajuda e critério de domínio) fica no prontuário do paciente, o registro de sessão é feito alvo a alvo no navegador do tablet e vira gráfico por alvo e relatório em PDF. Protocolos que a clínica já aplica, como VB-MAPP, ABLLS-R, Portage e Denver II, podem ser implementados no próprio sistema, com o material da clínica. <a href="/funcionalidades/plano-terapeutico-aba" style="color:var(--primary);font-weight:600;text-decoration:underline;">Veja como funciona</a>.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            Os dados estão seguros? A Terapee está em conformidade com a LGPD?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Sim. Levamos a segurança a sério: os dados são criptografados em repouso (AES-256) e em trânsito (TLS 1.3), com controle de acesso por perfil — apenas profissionais autorizados acessam os dados clínicos de cada paciente. A plataforma é construída em conformidade com a LGPD.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            Como funcionam os lembretes via WhatsApp?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Funcionam, sim. A Terapee envia lembretes automáticos das sessões pelo WhatsApp e o paciente confirma a presença em um clique. Nas clínicas que usam, as faltas caem 25%. Os lembretes já estão inclusos nos planos. Se preferir, você também pode conectar o seu próprio número de WhatsApp (recurso disponível com custo adicional).</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            A Terapee emite recibos e nota fiscal?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Sim, os dois. Você gera recibos em PDF a partir dos seus modelos, em poucos cliques. E emite a NFS-e (nota fiscal de serviço) direto da cobrança já paga, pelo Emissor Nacional do gov.br — sem abrir o portal da prefeitura. A emissão de nota fiscal está incluída em todos os planos, sem custo por nota.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            A Terapee funciona para clínicas com vários profissionais?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Sim. Nos planos Clínica e Clínica Max você gerencia a agenda de toda a equipe em um só painel (multi-agenda), cadastra secretárias e controla os acessos de cada profissional — ideal para clínicas multidisciplinares.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            Já uso um app e quero migrar para a Terapee. Vocês ajudam na migração?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Sim, e já fizemos isso em escala: trouxemos mais de 28 mil pacientes e mais de 2 milhões de agendamentos de clínicas que vieram de outros sistemas, junto com histórico de sessões, prontuários e arquivos. Você manda o que tem hoje, a gente importa, e sua equipe começa sem redigitar nada. <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20quero%20migrar%20para%20a%20Terapee%20e%20trazer%20os%20dados%20da%20minha%20cl%C3%ADnica" style="color:var(--primary);font-weight:600;">Fale com a gente pelo WhatsApp</a>.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            Ao cancelar posso levar meus dados para onde quiser?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Claro! Os dados são seus. Ao cancelar geramos um arquivo com seus dados para download e os dados são apagados de nosso sistema.</div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">
-            Posso cancelar a qualquer momento?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Você pode cancelar sua assinatura a qualquer momento, mas achamos difícil que você vá querer 😉</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CTA FINAL ============ -->
-<section class="hm-cta" id="fale-conosco">
-  <div class="container">
-    <div class="hm-cta-box">
-      <h2>Na semana que vem, a agenda confirma sozinha</h2>
-      <p>Crie a conta e teste todas as funcionalidades por 14 dias. Se você vem de outro sistema, nosso time traz seus pacientes e agendamentos.</p>
-      <div class="hm-cta-btns">
-        <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-white">Testar grátis por 14 dias →</a>
-        <a href="https://api.whatsapp.com/send?phone=552123422477&amp;text=Ol%C3%A1,%20tenho%20interesse%20em%20saber%20mais%20sobre%20a%20Terapee" target="_blank" rel="noopener" class="btn hm-btn-ghost">Falar com a gente no WhatsApp</a>
-      </div>
-      <small>Sem cartão de crédito · Cancele quando quiser</small>
-    </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <!-- ============ FOOTER ============ -->
 <footer class="footer">
@@ -3058,52 +2971,56 @@ document.addEventListener('click', function (e) {
 <p class="made-in">Feito com orgulho no Rio de Janeiro/RJ <svg viewBox="0 0 24 24" aria-label="coração" role="img"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.2C.8 8.3 2.9 4.5 6.6 4.1c2.1-.2 3.9.9 5.4 2.8 1.5-1.9 3.3-3 5.4-2.8 3.7.4 5.8 4.2 4.2 7.7C19.5 16.4 12 21 12 21z"/></svg></p>
 </footer>
 
-<!-- ============ JAVASCRIPT ============ -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// Tabs
-document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
-  });
-});
-
-// FAQ Accordion
-document.querySelectorAll('.faq-question').forEach(q => {
-  q.addEventListener('click', () => {
-    const item = q.parentElement;
-    const answer = item.querySelector('.faq-answer');
-    const isOpen = item.classList.contains('open');
-    // Close all
-    document.querySelectorAll('.faq-item').forEach(i => {
-      i.classList.remove('open');
-      i.querySelector('.faq-answer').style.maxHeight = null;
+<script>
+(function () {
+  // Preços
+  var prices = document.querySelectorAll('.nh-price');
+  var per = document.getElementById('per-person');
+  var btnM = document.getElementById('bill-monthly');
+  var btnA = document.getElementById('bill-annual');
+  function render(annual) {
+    prices.forEach(function (el) {
+      var d = el.dataset;
+      el.innerHTML = annual
+        ? '<b><sup>R$</sup>' + d.a + '<span>/mês</span></b><small>R$ ' + d.at + ' por ano · <span class="saving">economia de R$ ' + d.s + '</span></small>'
+        : '<b><sup>R$</sup>' + d.m + '<span>/mês</span></b><small>Cobrança mensal</small>';
     });
-    if (!isOpen) {
-      item.classList.add('open');
-      answer.style.maxHeight = answer.scrollHeight + 'px';
-    }
-  });
-});
+    per.textContent = annual ? '≈ R$ 12,21 por pessoa' : '≈ R$ 15,27 por pessoa';
+    btnM.setAttribute('aria-pressed', String(!annual));
+    btnA.setAttribute('aria-pressed', String(annual));
+  }
+  btnM.addEventListener('click', function () { render(false); });
+  btnA.addEventListener('click', function () { render(true); });
+  render(true);
 
-// Pricing toggle
-document.querySelectorAll('.pl-tbtn').forEach(btn => btn.addEventListener('click', () => {
-  const anual = btn.dataset.period === 'anual';
-  document.querySelectorAll('.pl-tbtn').forEach(b => { b.classList.toggle('active', b === btn); b.setAttribute('aria-pressed', b === btn); });
-  document.querySelectorAll('[data-monthly]').forEach(el => { el.textContent = anual ? el.dataset.yearly : el.dataset.monthly; });
-}));
-// Scroll animations
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
+  // Abas
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function select(tab) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(t); });
+    t.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      var n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+      select(n); n.focus();
+    });
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+  // Depoimentos
+  var track = document.getElementById('track');
+  function step(dir) {
+    var card = track.querySelector('.nh-quote');
+    track.scrollBy({ left: dir * (card.offsetWidth + 20), behavior: 'smooth' });
+  }
+  document.getElementById('prev').addEventListener('click', function () { step(-1); });
+  document.getElementById('next').addEventListener('click', function () { step(1); });
+})();
 
 // Header scroll effect
 window.addEventListener('scroll', () => {
