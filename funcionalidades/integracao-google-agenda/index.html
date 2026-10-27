@@ -1773,7 +1773,7 @@ img { max-width: 100%; display: block; }
       "name": "Como funciona a integração da Terapee com o Google Agenda?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Cada profissional conecta a própria conta Google nas configurações da Terapee. A partir daí, as sessões da agenda dele na Terapee passam a aparecer no Google Agenda, no celular, no computador ou em qualquer app que mostre essa agenda."
+        "text": "Cada profissional conecta a própria conta Google no seu perfil de usuário na Terapee. A partir daí, as sessões da agenda dele passam a aparecer no Google Agenda, no celular, no computador ou em qualquer app que mostre essa agenda. Quando uma sessão é remarcada ou cancelada na Terapee, o evento no Google é atualizado também."
       }
     },
     {
@@ -1782,6 +1782,14 @@ img { max-width: 100%; display: block; }
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Não. O evento enviado ao Google leva o horário da sessão com um título genérico, sem o nome do paciente e sem nenhuma informação clínica. Os dados do paciente continuam só na Terapee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Se eu remarcar ou cancelar uma sessão, o Google Agenda é atualizado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Remarcações e cancelamentos feitos na Terapee também são enviados ao Google Agenda, então o evento muda de horário ou sai da agenda do Google sem você mexer nele."
       }
     },
     {
@@ -1797,7 +1805,7 @@ img { max-width: 100%; display: block; }
       "name": "Na clínica, cada profissional precisa conectar a sua conta?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. A conexão é individual: cada profissional liga a própria conta Google e vê no Google Agenda só as sessões da sua agenda. Quem não quiser usar a integração simplesmente não conecta."
+        "text": "Sim. A conexão é individual: cada profissional liga a própria conta Google e vê no Google Agenda só as sessões da sua agenda. Quem não quiser usar a integração simplesmente não conecta, e quem conectou pode desconectar a conta Google pelo próprio perfil quando quiser."
       }
     },
     {
@@ -1930,7 +1938,7 @@ img { max-width: 100%; display: block; }
     <div class="feature-card animate-on-scroll">
       <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></div>
       <h3>Sessões no Google, sem digitar de novo</h3>
-      <p>O que você agenda na Terapee aparece no seu Google Agenda. Não precisa copiar horário por horário para ter tudo num lugar só.</p>
+      <p>O que você agenda na Terapee aparece no seu Google Agenda, e remarcações e cancelamentos também. Não precisa copiar horário por horário.</p>
     </div>
 
     <div class="feature-card animate-on-scroll">
@@ -1942,7 +1950,7 @@ img { max-width: 100%; display: block; }
     <div class="feature-card animate-on-scroll">
       <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div>
       <h3>Cada profissional com a sua conta</h3>
-      <p>A conexão é individual. Cada terapeuta liga a própria conta Google e recebe só as sessões da sua agenda.</p>
+      <p>A conexão é individual, pelo perfil de usuário. Cada terapeuta liga a própria conta Google, recebe só as sessões da sua agenda e pode desconectar quando quiser.</p>
     </div>
 
     <div class="feature-card animate-on-scroll">
@@ -1954,7 +1962,7 @@ img { max-width: 100%; display: block; }
     <div class="feature-card animate-on-scroll">
       <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg></div>
       <h3>A Terapee continua sendo a agenda oficial</h3>
-      <p>A integração é de mão única: você marca, remarca e cancela na Terapee, onde ficam os lembretes, o check-in e o financeiro.</p>
+      <p>A integração é de mão única: você marca, remarca e cancela na Terapee, onde ficam os lembretes, o check-in e o financeiro, e o Google acompanha.</p>
     </div>
 
     <div class="feature-card animate-on-scroll">
@@ -1973,7 +1981,7 @@ img { max-width: 100%; display: block; }
       <div class="step-num">1</div>
       <div>
         <h3>Conecte a sua conta Google</h3>
-        <p>Nas configurações da Terapee, entre com a conta Google em que você quer ver as sessões e autorize o acesso à agenda.</p>
+        <p>No seu perfil de usuário na Terapee, conecte a conta Google em que você quer ver as sessões e autorize o acesso à agenda.</p>
       </div>
     </div>
 
@@ -1990,6 +1998,14 @@ img { max-width: 100%; display: block; }
       <div>
         <h3>As sessões aparecem no Google Agenda</h3>
         <p>Cada sessão entra no seu Google Agenda com um título genérico, sem o nome do paciente.</p>
+      </div>
+    </div>
+
+    <div class="step-item animate-on-scroll">
+      <div class="step-num">4</div>
+      <div>
+        <h3>Remarcou ou cancelou? O Google acompanha</h3>
+        <p>Mudou o horário ou cancelou a sessão na Terapee, o evento no Google Agenda é atualizado também.</p>
       </div>
     </div></div>
   </div>
@@ -2010,13 +2026,19 @@ img { max-width: 100%; display: block; }
           <button class="faq-question">Como funciona a integração da Terapee com o Google Agenda?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Cada profissional conecta a própria conta Google nas configurações da Terapee. A partir daí, as sessões da agenda dele na Terapee passam a aparecer no Google Agenda, no celular, no computador ou em qualquer app que mostre essa agenda.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Cada profissional conecta a própria conta Google no seu perfil de usuário na Terapee. A partir daí, as sessões da agenda dele passam a aparecer no Google Agenda, no celular, no computador ou em qualquer app que mostre essa agenda. Quando uma sessão é remarcada ou cancelada na Terapee, o evento no Google é atualizado também.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-question">O nome do paciente aparece no Google Agenda?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer"><div class="faq-answer-inner">Não. O evento enviado ao Google leva o horário da sessão com um título genérico, sem o nome do paciente e sem nenhuma informação clínica. Os dados do paciente continuam só na Terapee.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Se eu remarcar ou cancelar uma sessão, o Google Agenda é atualizado?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Sim. Remarcações e cancelamentos feitos na Terapee também são enviados ao Google Agenda, então o evento muda de horário ou sai da agenda do Google sem você mexer nele.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-question">Os compromissos que já estão no Google bloqueiam horários na Terapee?
@@ -2028,7 +2050,7 @@ img { max-width: 100%; display: block; }
           <button class="faq-question">Na clínica, cada profissional precisa conectar a sua conta?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Sim. A conexão é individual: cada profissional liga a própria conta Google e vê no Google Agenda só as sessões da sua agenda. Quem não quiser usar a integração simplesmente não conecta.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Sim. A conexão é individual: cada profissional liga a própria conta Google e vê no Google Agenda só as sessões da sua agenda. Quem não quiser usar a integração simplesmente não conecta, e quem conectou pode desconectar a conta Google pelo próprio perfil quando quiser.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-question">A integração com o Google Agenda tem custo extra?
