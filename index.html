@@ -2157,6 +2157,8 @@ document.addEventListener('click', function (e) {
 .nh .nh-checks li::before { content: ""; width: 22px; height: 22px; border-radius: 50%; margin-top: 2px; background: var(--ok) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12 4 4 8-8'/%3E%3C/svg%3E") center / 14px no-repeat; }
 .nh .nh-checks b { display: block; color: var(--ink); font-weight: 600; }
 .nh .nh-checks span { color: var(--muted); font-size: .95rem; }
+.nh .nh-checks a { color: var(--accent); font-weight: 600; white-space: nowrap; }
+.nh .nh-checks a:hover { color: var(--accent-hover); text-decoration: underline; }
 
 .nh .nh-ibadge { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); flex: none; }
 
@@ -2561,6 +2563,7 @@ document.addEventListener('click', function (e) {
                 <ul class="nh-checks">
                   <li><span><b>Confirmação pelo WhatsApp</b>O paciente confirma ou cancela por um link, e a clínica é avisada.</span></li>
                   <li><span><b>Agendamento online</b>Uma página para o paciente pedir horário, que a clínica aprova.</span></li>
+                  <li><span><b>Integração com o Google Agenda</b>As sessões aparecem no Google Agenda de cada profissional, sem o nome do paciente. <a href="/funcionalidades/integracao-google-agenda">Ver como funciona →</a></span></li>
                 </ul>
               </div>
               <div class="nh-shot"><div class="nh-frame"><div class="nh-frame-bar"><i></i><i></i><i></i><span>Terça, 28 de outubro</span></div><div class="nh-body">
@@ -2903,6 +2906,7 @@ document.addEventListener('click', function (e) {
         <div class="footer-col-links">
           <a href="/funcionalidades/multi-agenda">Multi-agenda</a>
           <a href="/funcionalidades/agendamento-online">Agendamento online</a>
+          <a href="/funcionalidades/integracao-google-agenda">Google Agenda</a>
           <a href="/funcionalidades/pacotes-de-sessoes">Pacotes de sessões</a>
           <a href="/funcionalidades/check-in">Check-in de pacientes</a>
           <a href="/funcionalidades/plano-terapeutico-aba">Plano terapêutico ABA</a>

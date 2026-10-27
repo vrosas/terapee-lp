@@ -26,6 +26,7 @@ vários terapeutas.
 
 - [Agenda online](https://www.terapee.com.br/funcionalidades/agenda): agenda inteligente com horários recorrentes e bloqueios.
 - [Multi-agenda](https://www.terapee.com.br/funcionalidades/multi-agenda): visão unificada da agenda de vários profissionais da clínica.
+- [Integração com o Google Agenda](https://www.terapee.com.br/funcionalidades/integracao-google-agenda): cada profissional conecta a própria conta Google e as sessões da Terapee aparecem no Google Agenda, com título genérico, sem o nome do paciente nem dados clínicos; remarcações e cancelamentos também são atualizados no Google. A conta é conectada e desconectada no perfil do usuário. Mão única: eventos do Google não bloqueiam horários na Terapee. Em todos os planos.
 - [Prontuário eletrônico](https://www.terapee.com.br/funcionalidades/prontuario-eletronico): evoluções e histórico clínico por paciente.
 - [Gestão de pacientes](https://www.terapee.com.br/funcionalidades/gestao-de-pacientes): cadastro, responsáveis, contatos e documentos.
 - [Lembretes no WhatsApp](https://www.terapee.com.br/funcionalidades/lembretes-whatsapp): confirmação automática de consulta para reduzir faltas.
