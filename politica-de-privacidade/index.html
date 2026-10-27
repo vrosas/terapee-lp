@@ -825,17 +825,6 @@ img { max-width: 100%; display: block; }
 }
 
 </style>
-<!-- PENDENTE-JURIDICO: trechos com class="pendente-juridico" dependem de decisão do
-     jurídico (cláusulas-padrão ANPD, país da UAZAPI). Ficam ocultos em www.terapee.com.br
-     e aparecem destacados em amarelo no preview da Vercel e em localhost, para revisão.
-     Antes de publicar: preencher ou remover cada um (grep PENDENTE-JURIDICO). -->
-<style>
-html:not(.mostrar-pendentes) .pendente-juridico { display: none; }
-.pendente-juridico, .pendente-juridico td { background: #fef08a; outline: 2px dashed #ca8a04; outline-offset: -2px; }
-</style>
-<script>
-if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement.classList.add('mostrar-pendentes');
-</script>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -990,14 +979,15 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
         <li class="toc-item"><a href="#finalidade"><span class="toc-num">04</span>Finalidade do Tratamento</a></li>
         <li class="toc-item"><a href="#base-legal"><span class="toc-num">05</span>Base Legal</a></li>
         <li class="toc-item"><a href="#compartilhamento"><span class="toc-num">06</span>Compartilhamento e Transferência Internacional</a></li>
-        <li class="toc-item"><a href="#seguranca"><span class="toc-num">07</span>Segurança dos Dados</a></li>
-        <li class="toc-item"><a href="#propriedade"><span class="toc-num">08</span>Propriedade e Acesso</a></li>
-        <li class="toc-item"><a href="#direitos"><span class="toc-num">09</span>Direitos dos Titulares</a></li>
-        <li class="toc-item"><a href="#confidencialidade"><span class="toc-num">10</span>Confidencialidade</a></li>
-        <li class="toc-item"><a href="#retencao"><span class="toc-num">11</span>Retenção de Dados</a></li>
-        <li class="toc-item"><a href="#cookies"><span class="toc-num">12</span>Cookies</a></li>
-        <li class="toc-item"><a href="#alteracoes"><span class="toc-num">13</span>Alterações da Política</a></li>
-        <li class="toc-item"><a href="#contato"><span class="toc-num">14</span>Contato e DPO</a></li>
+        <li class="toc-item"><a href="#google-agenda"><span class="toc-num">07</span>Integração com o Google Agenda</a></li>
+        <li class="toc-item"><a href="#seguranca"><span class="toc-num">08</span>Segurança dos Dados</a></li>
+        <li class="toc-item"><a href="#propriedade"><span class="toc-num">09</span>Propriedade e Acesso</a></li>
+        <li class="toc-item"><a href="#direitos"><span class="toc-num">10</span>Direitos dos Titulares</a></li>
+        <li class="toc-item"><a href="#confidencialidade"><span class="toc-num">11</span>Confidencialidade</a></li>
+        <li class="toc-item"><a href="#retencao"><span class="toc-num">12</span>Retenção de Dados</a></li>
+        <li class="toc-item"><a href="#cookies"><span class="toc-num">13</span>Cookies</a></li>
+        <li class="toc-item"><a href="#alteracoes"><span class="toc-num">14</span>Alterações da Política</a></li>
+        <li class="toc-item"><a href="#contato"><span class="toc-num">15</span>Contato e DPO</a></li>
       </ul>
     </div>
 
@@ -1121,7 +1111,7 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
           <ul class="policy-list">
             <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Dados de identificação: nome, CPF, data de nascimento e informações de contato.</span></li>
             <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Dados clínicos e de saúde (dados sensíveis): histórico de consultas, prontuário eletrônico, anotações terapêuticas e formulários de anamnese.</span></li>
-            <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Áudio e vídeo de teleconsultas (dados sensíveis): transmitidos em tempo real durante o atendimento por videochamada. Essas chamadas <strong>não são gravadas nem armazenadas</strong> pela Terapee (ver Seção 07).</span></li>
+            <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Áudio e vídeo de teleconsultas (dados sensíveis): transmitidos em tempo real durante o atendimento por videochamada. Essas chamadas <strong>não são gravadas nem armazenadas</strong> pela Terapee (ver Seção 08).</span></li>
             <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Documentos e assinaturas digitais: documentos clínicos gerados na plataforma, seu conteúdo e os metadados das assinaturas eletrônicas coletadas.</span></li>
             <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Arquivos anexados pelo Usuário ao cadastro do paciente (ex.: laudos, exames, imagens e vídeos), armazenados de forma segura.</span></li>
             <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Dados de terceiros relacionados ao paciente: contato de responsável legal/guardião (no caso de menores ou incapazes) e de responsável financeiro, que também são titulares de dados.</span></li>
@@ -1138,7 +1128,7 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
           <ul class="policy-list">
             <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Dados técnicos: endereço IP, tipo de navegador, sistema operacional e dispositivo utilizado.</span></li>
             <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Logs de acesso: registros de data, hora e atividades na plataforma, conforme exigido pelo Marco Civil da Internet (Lei nº 12.965/2014).</span></li>
-            <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Cookies e tecnologias similares: utilizados para manter sessões ativas e analisar o uso da plataforma (ver Seção 12).</span></li>
+            <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Cookies e tecnologias similares: utilizados para manter sessões ativas e analisar o uso da plataforma (ver Seção 13).</span></li>
           </ul>
         </div>
 
@@ -1297,7 +1287,7 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
               </tr>
               <tr>
                 <td><strong>Google (Agenda)</strong></td>
-                <td>Agenda do Google, somente para o profissional que conectar a própria conta</td>
+                <td>Agenda do Google, somente para o profissional que conectar a própria conta (ver Seção 07)</td>
                 <td><span class="subop-tag integ">Integração</span></td>
                 <td><span class="subop-loc ext">Estados Unidos</span></td>
               </tr>
@@ -1325,22 +1315,21 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
                 <td><span class="subop-tag support">Suporte</span></td>
                 <td><span class="subop-loc ext">Estados Unidos</span></td>
               </tr>
-              <!-- PENDENTE-JURIDICO: país do Chatwoot não confirmado (o texto anterior já dizia "Exterior"). -->
               <tr>
                 <td><strong>Chatwoot</strong></td>
                 <td>Atendimento de suporte aos Usuários via WhatsApp</td>
                 <td><span class="subop-tag support">Suporte</span></td>
-                <td><span class="subop-loc ext">Exterior</span></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
               </tr>
               <tr>
                 <td><strong>Google (Analytics e Tag Manager)</strong></td>
-                <td>Medição de audiência das nossas páginas (ver Seção 12)</td>
+                <td>Medição de audiência das nossas páginas (ver Seção 13)</td>
                 <td><span class="subop-tag analytics">Análise</span></td>
                 <td><span class="subop-loc ext">Estados Unidos</span></td>
               </tr>
               <tr>
                 <td><strong>Microsoft Clarity</strong></td>
-                <td>Análise de navegação das nossas páginas (ver Seção 12)</td>
+                <td>Análise de navegação das nossas páginas (ver Seção 13)</td>
                 <td><span class="subop-tag analytics">Análise</span></td>
                 <td><span class="subop-loc ext">Estados Unidos</span></td>
               </tr>
@@ -1352,12 +1341,12 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
         <div class="sub-section">
           <p class="sub-section-title">Transferência internacional de dados</p>
           <p>Para funcionar, a Terapee usa fornecedores de tecnologia que tratam dados fora do Brasil (coluna "País" da tabela acima). O principal é o serviço de banco de dados e hospedagem, com servidores nos Estados Unidos. É nele que ficam guardadas as informações cadastradas na plataforma, inclusive os dados de saúde dos pacientes das clínicas.</p>
-          <p>Essas transferências são feitas com base em <strong>cláusulas-padrão contratuais aprovadas pela Autoridade Nacional de Proteção de Dados (ANPD)</strong>, conforme o art. 33, inciso II, alínea "b", da Lei nº 13.709/2018 e a Resolução CD/ANPD nº 19/2024.<!-- PENDENTE-JURIDICO: frase sobre decisão de adequação (art. 33, I). Manter, ajustar ou remover conforme as cláusulas assinadas. Oculta em produção. --><span class="pendente-juridico"> [Para os fornecedores localizados em país com decisão de adequação reconhecida pela ANPD, a transferência se apoia nessa decisão (art. 33, I).]</span> Essas cláusulas obrigam cada fornecedor a proteger os dados no mesmo nível exigido pela lei brasileira, a usá-los só para o serviço contratado e a colaborar no atendimento aos direitos dos titulares.</p>
+          <p>Essas transferências são feitas com base em <strong>cláusulas-padrão contratuais aprovadas pela Autoridade Nacional de Proteção de Dados (ANPD)</strong>, conforme o art. 33, inciso II, alínea "b", da Lei nº 13.709/2018 e a Resolução CD/ANPD nº 19/2024. Para os fornecedores localizados em país com decisão de adequação reconhecida pela ANPD, a transferência se apoia nessa decisão (art. 33, I). Essas cláusulas obrigam cada fornecedor a proteger os dados no mesmo nível exigido pela lei brasileira, a usá-los só para o serviço contratado e a colaborar no atendimento aos direitos dos titulares.</p>
           <p>Quando a Terapee trata dados de pacientes, ela o faz como <strong>operadora</strong>, em nome da clínica, que é a controladora desses dados. Os fornecedores acima que tratam dados de pacientes atuam como suboperadores, autorizados pela clínica ao aceitar os <a href="/termos-de-uso">Termos de Uso</a>.</p>
           <p>Você pode pedir uma cópia das cláusulas aplicáveis ou mais informações pelo e-mail <a href="mailto:suporte@terapee.com.br">suporte@terapee.com.br</a> (assunto: "Encarregado de Dados / DPO").</p>
           <div class="alert-box warning" style="margin-top:14px;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-            <span>A lista de subprocessadores e suas localizações pode ser atualizada. Alterações relevantes serão comunicadas na forma da Seção 13.</span>
+            <span>A lista de subprocessadores e suas localizações pode ser atualizada. Alterações relevantes serão comunicadas na forma da Seção 14.</span>
           </div>
         </div>
 
@@ -1373,14 +1362,60 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
       </div>
     </div>
 
-    <!-- 7. Segurança -->
+    <!-- 7. Google Agenda -->
+    <div class="policy-section animate-on-scroll" id="google-agenda">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <div class="section-heading">
+          <div class="section-num">Seção 07</div>
+          <h2>Integração com o Google Agenda (dados de usuários do Google)</h2>
+        </div>
+      </div>
+      <div class="policy-text">
+        <p>O Terapee permite que profissionais conectem, de forma opcional, a própria conta Google para receber os atendimentos agendados no Terapee no Google Agenda. A integração só fica disponível quando a clínica a autoriza, e só é ativada por ação do próprio profissional, em “Meu Perfil”.</p>
+        <div class="sub-section">
+          <p class="sub-section-title">Dados acessados</p>
+          <p>Ao conectar, o Terapee recebe do Google:</p>
+          <ul class="policy-list" style="margin-top: 8px;">
+            <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>(a) o endereço de e-mail e o identificador da conta Google, usados apenas para mostrar ao profissional qual conta está conectada;</span></li>
+            <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>(b) permissão para criar e gerenciar somente as agendas criadas pelo próprio Terapee, pelo escopo <code>calendar.app.created</code>.</span></li>
+          </ul>
+          <p style="margin-top: 12px;">O Terapee não lê, não altera e não tem acesso à agenda pessoal do profissional, aos eventos que ele mesmo criou nem a qualquer outro dado da conta Google.</p>
+        </div>
+        <div class="sub-section">
+          <p class="sub-section-title">Uso dos dados</p>
+          <p>O Terapee cria na conta do profissional uma agenda chamada “Terapee” e mantém nela os atendimentos dele, com data, horário, sala e o primeiro nome do paciente. Quando o atendimento é cancelado, o evento é removido. Os eventos são criados como privados, sem convidados, e nenhum e-mail é enviado ao paciente pelo Google.</p>
+        </div>
+        <div class="sub-section">
+          <p class="sub-section-title">Armazenamento e segurança</p>
+          <p>O token de acesso fornecido pelo Google é armazenado criptografado (AES-256) e usado exclusivamente para manter essa agenda atualizada.</p>
+        </div>
+        <div class="sub-section">
+          <p class="sub-section-title">Compartilhamento</p>
+          <p>Os dados obtidos das APIs do Google não são vendidos, não são compartilhados com terceiros, não são usados para publicidade e não são usados para treinar modelos de inteligência artificial.</p>
+        </div>
+        <div class="sub-section">
+          <p class="sub-section-title">Revogação e exclusão</p>
+          <p>O profissional pode desconectar a integração a qualquer momento em “Meu Perfil”. Ao desconectar, o Terapee apaga a agenda “Terapee” da conta Google, revoga o acesso e exclui o token armazenado. O acesso também pode ser revogado diretamente em <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener" style="overflow-wrap: anywhere;">https://myaccount.google.com/permissions</a>.</p>
+        </div>
+        <div class="sub-section">
+          <p class="sub-section-title">Uso Limitado</p>
+          <p>O uso e a transferência, pelo Terapee, de informações recebidas das APIs do Google para qualquer outro aplicativo seguem a <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado.</p>
+          <p lang="en"><em>Terapee’s use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. Segurança -->
     <div class="policy-section animate-on-scroll" id="seguranca">
       <div class="section-header">
         <div class="section-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
         </div>
         <div class="section-heading">
-          <div class="section-num">Seção 07</div>
+          <div class="section-num">Seção 08</div>
           <h2>Segurança dos Dados</h2>
         </div>
       </div>
@@ -1406,14 +1441,14 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
       </div>
     </div>
 
-    <!-- 8. Propriedade e Acesso -->
+    <!-- 9. Propriedade e Acesso -->
     <div class="policy-section animate-on-scroll" id="propriedade">
       <div class="section-header">
         <div class="section-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
         <div class="section-heading">
-          <div class="section-num">Seção 08</div>
+          <div class="section-num">Seção 09</div>
           <h2>Propriedade e Acesso aos Dados</h2>
         </div>
       </div>
@@ -1427,14 +1462,14 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
       </div>
     </div>
 
-    <!-- 9. Direitos dos Titulares -->
+    <!-- 10. Direitos dos Titulares -->
     <div class="policy-section animate-on-scroll" id="direitos">
       <div class="section-header">
         <div class="section-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg>
         </div>
         <div class="section-heading">
-          <div class="section-num">Seção 09</div>
+          <div class="section-num">Seção 10</div>
           <h2>Direitos dos Titulares</h2>
         </div>
       </div>
@@ -1481,14 +1516,14 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
       </div>
     </div>
 
-    <!-- 10. Confidencialidade -->
+    <!-- 11. Confidencialidade -->
     <div class="policy-section animate-on-scroll" id="confidencialidade">
       <div class="section-header">
         <div class="section-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg>
         </div>
         <div class="section-heading">
-          <div class="section-num">Seção 10</div>
+          <div class="section-num">Seção 11</div>
           <h2>Confidencialidade</h2>
         </div>
       </div>
@@ -1502,14 +1537,14 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
       </div>
     </div>
 
-    <!-- 11. Retenção -->
+    <!-- 12. Retenção -->
     <div class="policy-section animate-on-scroll" id="retencao">
       <div class="section-header">
         <div class="section-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
         <div class="section-heading">
-          <div class="section-num">Seção 11</div>
+          <div class="section-num">Seção 12</div>
           <h2>Retenção de Dados</h2>
         </div>
       </div>
@@ -1536,14 +1571,14 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
       </div>
     </div>
 
-    <!-- 12. Cookies -->
+    <!-- 13. Cookies -->
     <div class="policy-section animate-on-scroll" id="cookies">
       <div class="section-header">
         <div class="section-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="8" cy="9" r="1" fill="currentColor" stroke="none"/><circle cx="14" cy="15" r="1" fill="currentColor" stroke="none"/><circle cx="16" cy="9" r="1" fill="currentColor" stroke="none"/></svg>
         </div>
         <div class="section-heading">
-          <div class="section-num">Seção 12</div>
+          <div class="section-num">Seção 13</div>
           <h2>Cookies e Tecnologias Similares</h2>
         </div>
       </div>
@@ -1557,14 +1592,14 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
       </div>
     </div>
 
-    <!-- 13. Alterações -->
+    <!-- 14. Alterações -->
     <div class="policy-section animate-on-scroll" id="alteracoes">
       <div class="section-header">
         <div class="section-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 101.49-3.51"/></svg>
         </div>
         <div class="section-heading">
-          <div class="section-num">Seção 13</div>
+          <div class="section-num">Seção 14</div>
           <h2>Alterações da Política</h2>
         </div>
       </div>
@@ -1595,14 +1630,14 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
       </div>
     </div>
 
-    <!-- 14. Contato e DPO -->
+    <!-- 15. Contato e DPO -->
     <div class="policy-section animate-on-scroll" id="contato">
       <div class="section-header">
         <div class="section-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
         <div class="section-heading">
-          <div class="section-num">Seção 14</div>
+          <div class="section-num">Seção 15</div>
           <h2>Contato e Encarregado de Dados (DPO)</h2>
         </div>
       </div>

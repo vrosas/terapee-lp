@@ -813,17 +813,6 @@ img { max-width: 100%; display: block; }
 }
 
 </style>
-<!-- PENDENTE-JURIDICO: trechos com class="pendente-juridico" dependem de decisão do
-     jurídico (cláusulas-padrão ANPD, país da UAZAPI). Ficam ocultos em www.terapee.com.br
-     e aparecem destacados em amarelo no preview da Vercel e em localhost, para revisão.
-     Antes de publicar: preencher ou remover cada um (grep PENDENTE-JURIDICO). -->
-<style>
-html:not(.mostrar-pendentes) .pendente-juridico { display: none; }
-.pendente-juridico, .pendente-juridico td { background: #fef08a; outline: 2px dashed #ca8a04; outline-offset: -2px; }
-</style>
-<script>
-if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement.classList.add('mostrar-pendentes');
-</script>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
