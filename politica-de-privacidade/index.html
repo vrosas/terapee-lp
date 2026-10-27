@@ -681,6 +681,8 @@ img { max-width: 100%; display: block; }
 .subop-tag.support { background: #E0EAFF; color: #2D31A6; }
 .subop-tag.video { background: #ffe4e6; color: #9f1239; }
 .subop-tag.docs { background: #fef3c7; color: #92400e; }
+.subop-tag.integ { background: #ede9fe; color: #5b21b6; }
+.subop-tag.analytics { background: #f1f5f9; color: #334155; }
 .subop-loc {
   display: inline-flex;
   align-items: center;
@@ -1238,8 +1240,8 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
         <p>A Terapee <strong>não vende, cede ou aluga</strong> dados pessoais a terceiros. O compartilhamento ocorre apenas nas seguintes situações:</p>
 
         <div class="sub-section">
-          <p class="sub-section-title">Suboperadores essenciais</p>
-          <p>Para a prestação do serviço, utilizamos parceiros técnicos (suboperadores) que seguem padrões de segurança compatíveis com a LGPD e estão sujeitos a contratos de confidencialidade e tratamento de dados:</p>
+          <p class="sub-section-title">Suboperadores e fornecedores</p>
+          <p>Para a prestação do serviço, utilizamos parceiros técnicos que seguem padrões de segurança compatíveis com a LGPD e estão sujeitos a contratos de confidencialidade e tratamento de dados:</p>
           <div class="subop-table-wrap">
             <table class="subop-table">
             <thead>
@@ -1247,38 +1249,68 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
                 <th>Fornecedor</th>
                 <th>Finalidade</th>
                 <th>Categoria</th>
-                <th>Localização</th>
+                <th>País</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Supabase</strong></td>
-                <td>Hospedagem do banco de dados, autenticação e armazenamento de arquivos</td>
+                <td><strong>Supabase</strong> (infraestrutura Amazon Web Services)</td>
+                <td>Banco de dados, armazenamento de arquivos e login</td>
                 <td><span class="subop-tag infra">Infraestrutura</span></td>
-                <td><span class="subop-loc ext">Exterior (EUA)</span></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
+              </tr>
+              <tr>
+                <td><strong>Cloudflare</strong></td>
+                <td>Proteção e entrega do tráfego</td>
+                <td><span class="subop-tag infra">Infraestrutura</span></td>
+                <td><span class="subop-loc ext">Estados Unidos e outros</span></td>
               </tr>
               <tr>
                 <td><strong>Vercel</strong></td>
-                <td>Hospedagem e entrega da aplicação (frontend)</td>
+                <td>Hospedagem do aplicativo e envio das notas fiscais ao sistema nacional</td>
                 <td><span class="subop-tag infra">Infraestrutura</span></td>
-                <td><span class="subop-loc ext">Exterior (EUA)</span></td>
-              </tr>
-              <tr>
-                <td><strong>Stripe</strong></td>
-                <td>Processamento de pagamentos de assinaturas e dados de cobrança</td>
-                <td><span class="subop-tag payment">Pagamentos</span></td>
-                <td><span class="subop-loc ext">Exterior</span></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
               </tr>
               <tr>
                 <td><strong>Meta (WhatsApp Cloud API)</strong></td>
-                <td>Envio de mensagens via WhatsApp (provedor padrão)</td>
+                <td>Lembretes e avisos aos pacientes (provedor padrão)</td>
                 <td><span class="subop-tag msg">Mensageria</span></td>
-                <td><span class="subop-loc ext">Exterior</span></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
               </tr>
               <tr>
                 <td><strong>UAZAPI</strong></td>
-                <td>Envio de mensagens via WhatsApp a partir de número próprio da clínica</td>
+                <td>Mensagens pelo número próprio da clínica</td>
                 <td><span class="subop-tag msg">Mensageria</span></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
+              </tr>
+              <tr>
+                <td><strong>Brevo</strong></td>
+                <td>Envio de e-mails</td>
+                <td><span class="subop-tag msg">Mensageria</span></td>
+                <td><span class="subop-loc ext">França</span></td>
+              </tr>
+              <tr>
+                <td><strong>8x8 / Jitsi (JaaS)</strong></td>
+                <td>Teleconsulta (áudio e vídeo, sem gravação)</td>
+                <td><span class="subop-tag video">Vídeo</span></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
+              </tr>
+              <tr>
+                <td><strong>Google (Agenda)</strong></td>
+                <td>Agenda do Google, somente para o profissional que conectar a própria conta</td>
+                <td><span class="subop-tag integ">Integração</span></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
+              </tr>
+              <tr>
+                <td><strong>Stripe</strong></td>
+                <td>Cobrança da assinatura</td>
+                <td><span class="subop-tag payment">Pagamentos</span></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
+              </tr>
+              <tr>
+                <td><strong>Asaas</strong></td>
+                <td>Cobrança via PIX</td>
+                <td><span class="subop-tag payment">Pagamentos</span></td>
                 <td><span class="subop-loc br">Brasil</span></td>
               </tr>
               <tr>
@@ -1288,22 +1320,29 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
                 <td><span class="subop-loc br">Brasil</span></td>
               </tr>
               <tr>
-                <td><strong>8x8 / Jitsi (JaaS)</strong></td>
-                <td>Infraestrutura de videochamada para telemedicina (áudio e vídeo, sem gravação)</td>
-                <td><span class="subop-tag video">Vídeo</span></td>
-                <td><span class="subop-loc ext">Exterior</span></td>
+                <td><strong>Anthropic</strong></td>
+                <td>Assistente de atendimento do suporte e chat do site</td>
+                <td><span class="subop-tag support">Suporte</span></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
               </tr>
-              <tr>
-                <td><strong>n8n</strong></td>
-                <td>Automação de fluxos e integrações</td>
-                <td><span class="subop-tag infra">Infraestrutura</span></td>
-                <td><span class="subop-loc ext">Exterior</span></td>
-              </tr>
+              <!-- PENDENTE-JURIDICO: país do Chatwoot não confirmado (o texto anterior já dizia "Exterior"). -->
               <tr>
                 <td><strong>Chatwoot</strong></td>
-                <td>Suporte e comunicação com usuários</td>
+                <td>Atendimento de suporte aos Usuários via WhatsApp</td>
                 <td><span class="subop-tag support">Suporte</span></td>
                 <td><span class="subop-loc ext">Exterior</span></td>
+              </tr>
+              <tr>
+                <td><strong>Google (Analytics e Tag Manager)</strong></td>
+                <td>Medição de audiência das nossas páginas (ver Seção 12)</td>
+                <td><span class="subop-tag analytics">Análise</span></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
+              </tr>
+              <tr>
+                <td><strong>Microsoft Clarity</strong></td>
+                <td>Análise de navegação das nossas páginas (ver Seção 12)</td>
+                <td><span class="subop-tag analytics">Análise</span></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
               </tr>
             </tbody>
           </table>
@@ -1312,73 +1351,9 @@ if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement
 
         <div class="sub-section">
           <p class="sub-section-title">Transferência internacional de dados</p>
-          <p>Para funcionar, a Terapee usa fornecedores de tecnologia que tratam dados fora do Brasil. O principal é o serviço de banco de dados e hospedagem, com servidores nos Estados Unidos. É nele que ficam guardadas as informações cadastradas na plataforma, inclusive os dados de saúde dos pacientes das clínicas.</p>
-          <div class="subop-table-wrap">
-            <table class="subop-table">
-            <thead>
-              <tr>
-                <th>Fornecedor</th>
-                <th>País</th>
-                <th>Para quê</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Supabase</strong> (infraestrutura Amazon Web Services)</td>
-                <td><span class="subop-loc ext">Estados Unidos</span></td>
-                <td>Banco de dados, armazenamento de arquivos e login</td>
-              </tr>
-              <tr>
-                <td><strong>Cloudflare</strong></td>
-                <td><span class="subop-loc ext">Estados Unidos e outros</span></td>
-                <td>Proteção e entrega do tráfego</td>
-              </tr>
-              <tr>
-                <td><strong>Vercel</strong></td>
-                <td><span class="subop-loc ext">Estados Unidos</span></td>
-                <td>Hospedagem do aplicativo e envio das notas fiscais ao sistema nacional</td>
-              </tr>
-              <tr>
-                <td><strong>Meta (WhatsApp)</strong></td>
-                <td><span class="subop-loc ext">Estados Unidos</span></td>
-                <td>Lembretes e avisos aos pacientes</td>
-              </tr>
-              <!-- PENDENTE-JURIDICO: país dos servidores da UAZAPI não confirmado. Linha oculta em produção até ser preenchida. -->
-              <tr class="pendente-juridico">
-                <td><strong>[UAZAPI]</strong></td>
-                <td><span class="subop-loc ext">[país]</span></td>
-                <td>[Mensagens pelo número próprio da clínica]</td>
-              </tr>
-              <tr>
-                <td><strong>8x8 (Jitsi)</strong></td>
-                <td><span class="subop-loc ext">Estados Unidos</span></td>
-                <td>Teleconsulta</td>
-              </tr>
-              <tr>
-                <td><strong>Anthropic</strong></td>
-                <td><span class="subop-loc ext">Estados Unidos</span></td>
-                <td>Assistente de atendimento do suporte e chat do site</td>
-              </tr>
-              <tr>
-                <td><strong>Stripe</strong></td>
-                <td><span class="subop-loc ext">Estados Unidos</span></td>
-                <td>Cobrança da assinatura</td>
-              </tr>
-              <tr>
-                <td><strong>Brevo</strong></td>
-                <td><span class="subop-loc ext">França</span></td>
-                <td>Envio de e-mails</td>
-              </tr>
-              <tr>
-                <td><strong>Google</strong></td>
-                <td><span class="subop-loc ext">Estados Unidos</span></td>
-                <td>Agenda do Google, somente para o profissional que conectar a própria conta</td>
-              </tr>
-            </tbody>
-          </table>
-          </div>
-          <p style="margin-top: 16px;">Essas transferências são feitas com base em <strong>cláusulas-padrão contratuais aprovadas pela Autoridade Nacional de Proteção de Dados (ANPD)</strong>, conforme o art. 33, inciso II, alínea "b", da Lei nº 13.709/2018 e a Resolução CD/ANPD nº 19/2024.<!-- PENDENTE-JURIDICO: frase sobre decisão de adequação (art. 33, I). Manter, ajustar ou remover conforme as cláusulas assinadas. Oculta em produção. --><span class="pendente-juridico"> [Para os fornecedores localizados em país com decisão de adequação reconhecida pela ANPD, a transferência se apoia nessa decisão (art. 33, I).]</span> Essas cláusulas obrigam cada fornecedor a proteger os dados no mesmo nível exigido pela lei brasileira, a usá-los só para o serviço contratado e a colaborar no atendimento aos direitos dos titulares.</p>
-          <p>Quando a Terapee trata dados de pacientes, ela o faz como <strong>operadora</strong>, em nome da clínica, que é a controladora desses dados. Os fornecedores acima atuam como suboperadores, autorizados pela clínica ao aceitar os <a href="/termos-de-uso">Termos de Uso</a>.</p>
+          <p>Para funcionar, a Terapee usa fornecedores de tecnologia que tratam dados fora do Brasil (coluna "País" da tabela acima). O principal é o serviço de banco de dados e hospedagem, com servidores nos Estados Unidos. É nele que ficam guardadas as informações cadastradas na plataforma, inclusive os dados de saúde dos pacientes das clínicas.</p>
+          <p>Essas transferências são feitas com base em <strong>cláusulas-padrão contratuais aprovadas pela Autoridade Nacional de Proteção de Dados (ANPD)</strong>, conforme o art. 33, inciso II, alínea "b", da Lei nº 13.709/2018 e a Resolução CD/ANPD nº 19/2024.<!-- PENDENTE-JURIDICO: frase sobre decisão de adequação (art. 33, I). Manter, ajustar ou remover conforme as cláusulas assinadas. Oculta em produção. --><span class="pendente-juridico"> [Para os fornecedores localizados em país com decisão de adequação reconhecida pela ANPD, a transferência se apoia nessa decisão (art. 33, I).]</span> Essas cláusulas obrigam cada fornecedor a proteger os dados no mesmo nível exigido pela lei brasileira, a usá-los só para o serviço contratado e a colaborar no atendimento aos direitos dos titulares.</p>
+          <p>Quando a Terapee trata dados de pacientes, ela o faz como <strong>operadora</strong>, em nome da clínica, que é a controladora desses dados. Os fornecedores acima que tratam dados de pacientes atuam como suboperadores, autorizados pela clínica ao aceitar os <a href="/termos-de-uso">Termos de Uso</a>.</p>
           <p>Você pode pedir uma cópia das cláusulas aplicáveis ou mais informações pelo e-mail <a href="mailto:suporte@terapee.com.br">suporte@terapee.com.br</a> (assunto: "Encarregado de Dados / DPO").</p>
           <div class="alert-box warning" style="margin-top:14px;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
