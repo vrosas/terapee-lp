@@ -823,6 +823,17 @@ img { max-width: 100%; display: block; }
 }
 
 </style>
+<!-- PENDENTE-JURIDICO: trechos com class="pendente-juridico" dependem de decisão do
+     jurídico (cláusulas-padrão ANPD, país da UAZAPI). Ficam ocultos em www.terapee.com.br
+     e aparecem destacados em amarelo no preview da Vercel e em localhost, para revisão.
+     Antes de publicar: preencher ou remover cada um (grep PENDENTE-JURIDICO). -->
+<style>
+html:not(.mostrar-pendentes) .pendente-juridico { display: none; }
+.pendente-juridico, .pendente-juridico td { background: #fef08a; outline: 2px dashed #ca8a04; outline-offset: -2px; }
+</style>
+<script>
+if (!/(^|\.)terapee\.com\.br$/.test(location.hostname)) document.documentElement.classList.add('mostrar-pendentes');
+</script>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -1301,8 +1312,74 @@ img { max-width: 100%; display: block; }
 
         <div class="sub-section">
           <p class="sub-section-title">Transferência internacional de dados</p>
-          <p>Parte dos nossos subprocessadores está localizada fora do Brasil (conforme a coluna "Localização" acima). Dessa forma, ao utilizar a plataforma, há <strong>transferência internacional de dados pessoais</strong>, inclusive de dados de saúde, realizada em conformidade com os <strong>arts. 33 a 36 da LGPD</strong>.</p>
-          <p>Essa transferência se apoia na necessidade de execução do contrato com o Usuário e, quando aplicável, em garantias contratuais de proteção firmadas com os fornecedores, exigindo-se que adotem nível de proteção de dados adequado.</p>
+          <p>Para funcionar, a Terapee usa fornecedores de tecnologia que tratam dados fora do Brasil. O principal é o serviço de banco de dados e hospedagem, com servidores nos Estados Unidos. É nele que ficam guardadas as informações cadastradas na plataforma, inclusive os dados de saúde dos pacientes das clínicas.</p>
+          <div class="subop-table-wrap">
+            <table class="subop-table">
+            <thead>
+              <tr>
+                <th>Fornecedor</th>
+                <th>País</th>
+                <th>Para quê</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Supabase</strong> (infraestrutura Amazon Web Services)</td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
+                <td>Banco de dados, armazenamento de arquivos e login</td>
+              </tr>
+              <tr>
+                <td><strong>Cloudflare</strong></td>
+                <td><span class="subop-loc ext">Estados Unidos e outros</span></td>
+                <td>Proteção e entrega do tráfego</td>
+              </tr>
+              <tr>
+                <td><strong>Vercel</strong></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
+                <td>Hospedagem do aplicativo e envio das notas fiscais ao sistema nacional</td>
+              </tr>
+              <tr>
+                <td><strong>Meta (WhatsApp)</strong></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
+                <td>Lembretes e avisos aos pacientes</td>
+              </tr>
+              <!-- PENDENTE-JURIDICO: país dos servidores da UAZAPI não confirmado. Linha oculta em produção até ser preenchida. -->
+              <tr class="pendente-juridico">
+                <td><strong>[UAZAPI]</strong></td>
+                <td><span class="subop-loc ext">[país]</span></td>
+                <td>[Mensagens pelo número próprio da clínica]</td>
+              </tr>
+              <tr>
+                <td><strong>8x8 (Jitsi)</strong></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
+                <td>Teleconsulta</td>
+              </tr>
+              <tr>
+                <td><strong>Anthropic</strong></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
+                <td>Assistente de atendimento do suporte e chat do site</td>
+              </tr>
+              <tr>
+                <td><strong>Stripe</strong></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
+                <td>Cobrança da assinatura</td>
+              </tr>
+              <tr>
+                <td><strong>Brevo</strong></td>
+                <td><span class="subop-loc ext">França</span></td>
+                <td>Envio de e-mails</td>
+              </tr>
+              <tr>
+                <td><strong>Google</strong></td>
+                <td><span class="subop-loc ext">Estados Unidos</span></td>
+                <td>Agenda do Google, somente para o profissional que conectar a própria conta</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+          <p style="margin-top: 16px;">Essas transferências são feitas com base em <strong>cláusulas-padrão contratuais aprovadas pela Autoridade Nacional de Proteção de Dados (ANPD)</strong>, conforme o art. 33, inciso II, alínea "b", da Lei nº 13.709/2018 e a Resolução CD/ANPD nº 19/2024.<!-- PENDENTE-JURIDICO: frase sobre decisão de adequação (art. 33, I). Manter, ajustar ou remover conforme as cláusulas assinadas. Oculta em produção. --><span class="pendente-juridico"> [Para os fornecedores localizados em país com decisão de adequação reconhecida pela ANPD, a transferência se apoia nessa decisão (art. 33, I).]</span> Essas cláusulas obrigam cada fornecedor a proteger os dados no mesmo nível exigido pela lei brasileira, a usá-los só para o serviço contratado e a colaborar no atendimento aos direitos dos titulares.</p>
+          <p>Quando a Terapee trata dados de pacientes, ela o faz como <strong>operadora</strong>, em nome da clínica, que é a controladora desses dados. Os fornecedores acima atuam como suboperadores, autorizados pela clínica ao aceitar os <a href="/termos-de-uso">Termos de Uso</a>.</p>
+          <p>Você pode pedir uma cópia das cláusulas aplicáveis ou mais informações pelo e-mail <a href="mailto:suporte@terapee.com.br">suporte@terapee.com.br</a> (assunto: "Encarregado de Dados / DPO").</p>
           <div class="alert-box warning" style="margin-top:14px;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
             <span>A lista de subprocessadores e suas localizações pode ser atualizada. Alterações relevantes serão comunicadas na forma da Seção 13.</span>
