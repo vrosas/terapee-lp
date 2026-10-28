@@ -10,7 +10,7 @@ const dist = path.join(root, 'dist');
 
 // O que NÃO vai para o site publicado.
 const SKIP = new Set([
-  '.git', '.github', '.vercel', '.astro', '.vscode', 'node_modules', 'dist', '_blog', 'scripts',
+  '.git', '.github', '.vercel', '.astro', '.vscode', 'node_modules', 'dist', '_blog', '_social', 'scripts',
   'package.json', 'package-lock.json', 'astro.config.mjs', 'cms.config.mjs', 'keystatic.config.ts', 'tsconfig.json',
   'vercel.json', '.gitignore', 'README.md', 'CLAUDE.md', 'blog',
 ]);
