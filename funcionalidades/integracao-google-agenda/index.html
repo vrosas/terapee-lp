@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Integração com o Google Agenda | Terapee</title>
-<meta name="description" content="Suas sessões da Terapee no Google Agenda, sem digitar duas vezes e sem dados do paciente no Google. Disponível em todos os planos da Terapee.">
+<meta name="description" content="Suas sessões da Terapee numa agenda própria no Google Agenda, só com o primeiro nome do paciente e nada clínico. Disponível em todos os planos.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.terapee.com.br/funcionalidades/integracao-google-agenda">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.terapee.com.br/funcionalidades/integracao-google-agenda">
 <meta property="og:title" content="Integração com o Google Agenda | Terapee">
-<meta property="og:description" content="Suas sessões da Terapee no Google Agenda, sem digitar duas vezes e sem dados do paciente no Google. Disponível em todos os planos da Terapee.">
+<meta property="og:description" content="Suas sessões da Terapee numa agenda própria no Google Agenda, só com o primeiro nome do paciente e nada clínico. Disponível em todos os planos.">
 <meta property="og:image" content="https://www.terapee.com.br/og-image.png">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="preload" href="/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -1773,15 +1773,15 @@ img { max-width: 100%; display: block; }
       "name": "Como funciona a integração da Terapee com o Google Agenda?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Cada profissional conecta a própria conta Google no seu perfil de usuário na Terapee. A partir daí, as sessões da agenda dele passam a aparecer no Google Agenda, no celular, no computador ou em qualquer app que mostre essa agenda. Quando uma sessão é remarcada ou cancelada na Terapee, o evento no Google é atualizado também."
+        "text": "Com a integração liberada pela clínica, cada profissional conecta a própria conta Google em Meu Perfil, na Terapee. A Terapee cria nessa conta uma agenda chamada “Terapee”, e as sessões dele passam a aparecer no Google Agenda, no celular, no computador ou em qualquer app que mostre essa agenda. Quando uma sessão é remarcada ou cancelada na Terapee, o evento no Google é atualizado também."
       }
     },
     {
       "@type": "Question",
-      "name": "O nome do paciente aparece no Google Agenda?",
+      "name": "O que aparece do paciente no Google Agenda?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Não. O evento enviado ao Google leva o horário da sessão com um título genérico, sem o nome do paciente e sem nenhuma informação clínica. Os dados do paciente continuam só na Terapee."
+        "text": "Só o primeiro nome. O evento leva data, horário, sala e o primeiro nome do paciente, sem sobrenome e sem nenhuma informação clínica. Ele é criado como privado, sem convidados, e o Google não envia e-mail ao paciente. Prontuário e demais dados continuam só na Terapee."
       }
     },
     {
@@ -1789,7 +1789,7 @@ img { max-width: 100%; display: block; }
       "name": "Se eu remarcar ou cancelar uma sessão, o Google Agenda é atualizado?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. Remarcações e cancelamentos feitos na Terapee também são enviados ao Google Agenda, então o evento muda de horário ou sai da agenda do Google sem você mexer nele."
+        "text": "Sim. Remarcações feitas na Terapee mudam o evento no Google Agenda, e uma sessão cancelada tem o evento removido, sem você mexer nele."
       }
     },
     {
@@ -1797,15 +1797,15 @@ img { max-width: 100%; display: block; }
       "name": "Os compromissos que já estão no Google bloqueiam horários na Terapee?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Não. A integração é de mão única: a Terapee envia as sessões para o Google Agenda, mas não lê os eventos do Google. Para segurar um horário na Terapee, use um bloqueio na própria agenda da Terapee."
+        "text": "Não. A integração é de mão única: a Terapee envia as sessões para a agenda “Terapee” no Google, mas não lê a sua agenda pessoal nem os eventos que você criou. Para segurar um horário na Terapee, use um bloqueio na própria agenda da Terapee."
       }
     },
     {
       "@type": "Question",
-      "name": "Na clínica, cada profissional precisa conectar a sua conta?",
+      "name": "Na clínica, como a integração é ativada?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. A conexão é individual: cada profissional liga a própria conta Google e vê no Google Agenda só as sessões da sua agenda. Quem não quiser usar a integração simplesmente não conecta, e quem conectou pode desconectar a conta Google pelo próprio perfil quando quiser."
+        "text": "Em duas etapas: a clínica libera a integração, e cada profissional conecta a própria conta Google em Meu Perfil, vendo no Google Agenda só as sessões da sua agenda. Quem não quiser usar simplesmente não conecta. Ao desconectar, a Terapee apaga a agenda “Terapee” da conta Google e revoga o acesso."
       }
     },
     {
@@ -1901,12 +1901,12 @@ img { max-width: 100%; display: block; }
       <div class="subpage-hero-copy">
     <div class="subpage-badge">Novidade</div>
     <h1>Integração com o Google Agenda: <span class="highlight">suas sessões ao lado dos seus compromissos</span></h1>
-    <p class="lead">Conecte a sua conta Google e as sessões que você marca na Terapee aparecem no seu Google Agenda, sem o nome do paciente. Cada profissional conecta a própria conta, em todos os planos.</p>
+    <p class="lead">Conecte a sua conta Google e as sessões que você marca na Terapee aparecem no seu Google Agenda, numa agenda separada e só com o primeiro nome do paciente. Cada profissional conecta a própria conta, em todos os planos.</p>
     <div class="subpage-cta-group">
       <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary">Testar grátis por 14 dias →</a>
       <a href="/funcionalidades/agenda" class="btn btn-outline">Conhecer a agenda</a>
     </div>
-    <div class="sp-assure"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Em todos os planos</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Sem dados do paciente no Google</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Cancele quando quiser</span></div>
+    <div class="sp-assure"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Em todos os planos</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Nada clínico no Google</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Cancele quando quiser</span></div>
   </div>
       <style>@media(max-width:600px){.subpage-hero-art .gc-card{top:57%!important;}.subpage-hero-art .gc-top{top:10px!important;right:12px!important;}.subpage-hero-art .gc-bottom{bottom:10px!important;left:12px!important;}}</style>
       <div class="subpage-hero-art" style="background:#EEF4FF;" aria-hidden="true">
@@ -1917,14 +1917,14 @@ img { max-width: 100%; display: block; }
               <div><div style="font-size:14px; font-weight:700; color:#111; line-height:1.2;">Google Agenda</div><div style="font-size:11px; color:#8A8F9C;">Quarta, 14 de outubro</div></div>
             </div>
             <div style="display:flex; flex-direction:column; gap:7px;">
-              <div style="border-left:3px solid #444CE7; background:#444CE71A; border-radius:7px; padding:6px 8px;"><div style="font-size:10px; font-weight:700; color:#111;">08:00 – 08:50</div><div style="font-size:10px; color:#4A4F5C;">Sessão · Terapee</div></div>
+              <div style="border-left:3px solid #444CE7; background:#444CE71A; border-radius:7px; padding:6px 8px;"><div style="font-size:10px; font-weight:700; color:#111;">08:00 – 08:50</div><div style="font-size:10px; color:#4A4F5C;">Helena · Sala 2</div></div>
               <div style="border-left:3px solid #16A34A; background:#16A34A1A; border-radius:7px; padding:6px 8px;"><div style="font-size:10px; font-weight:700; color:#111;">10:00 – 10:30</div><div style="font-size:10px; color:#4A4F5C;">Reunião da escola do filho</div></div>
-              <div style="border-left:3px solid #444CE7; background:#444CE71A; border-radius:7px; padding:6px 8px;"><div style="font-size:10px; font-weight:700; color:#111;">14:00 – 14:50</div><div style="font-size:10px; color:#4A4F5C;">Sessão · Terapee</div></div>
-              <div style="border-left:3px solid #444CE7; background:#444CE71A; border-radius:7px; padding:6px 8px;"><div style="font-size:10px; font-weight:700; color:#111;">15:00 – 15:50</div><div style="font-size:10px; color:#4A4F5C;">Sessão · Terapee</div></div>
+              <div style="border-left:3px solid #444CE7; background:#444CE71A; border-radius:7px; padding:6px 8px;"><div style="font-size:10px; font-weight:700; color:#111;">14:00 – 14:50</div><div style="font-size:10px; color:#4A4F5C;">Davi · Sala 1</div></div>
+              <div style="border-left:3px solid #444CE7; background:#444CE71A; border-radius:7px; padding:6px 8px;"><div style="font-size:10px; font-weight:700; color:#111;">15:00 – 15:50</div><div style="font-size:10px; color:#4A4F5C;">Alice · Sala 2</div></div>
             </div>
           </div>
           <div class="gc-top" style="position:absolute; top:28px; right:24px; display:flex; align-items:center; gap:8px; padding:9px 13px; background:#fff; border:1px solid #EEF0F5; border-radius:12px; box-shadow:0 10px 28px rgba(17,17,17,0.12); animation:tk-float 5s ease-in-out infinite;"><span style="width:24px; height:24px; border-radius:7px; background:rgba(22,163,74,0.12); display:flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="font-size:12px; font-weight:600; color:#111;">Conta conectada</span></div>
-          <div class="gc-bottom" style="position:absolute; bottom:26px; left:24px; display:flex; align-items:center; gap:8px; padding:8px 14px 8px 10px; background:#fff; border:1px solid #EEF0F5; border-radius:999px; box-shadow:0 10px 28px rgba(17,17,17,0.12);"><span style="width:24px; height:24px; border-radius:999px; background:#EEF4FF; display:flex; align-items:center; justify-content:center;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><span style="font-size:12px; font-weight:600; color:#4A4F5C; white-space:nowrap;">Sem nome do paciente</span></div>
+          <div class="gc-bottom" style="position:absolute; bottom:26px; left:24px; display:flex; align-items:center; gap:8px; padding:8px 14px 8px 10px; background:#fff; border:1px solid #EEF0F5; border-radius:999px; box-shadow:0 10px 28px rgba(17,17,17,0.12);"><span style="width:24px; height:24px; border-radius:999px; background:#EEF4FF; display:flex; align-items:center; justify-content:center;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#444CE7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><span style="font-size:12px; font-weight:600; color:#4A4F5C; white-space:nowrap;">Só o primeiro nome</span></div>
         </div>
     </div>
   </div>
@@ -1933,7 +1933,7 @@ img { max-width: 100%; display: block; }
 <section class="features-grid-section ft-features">
   <div class="container">
     <div class="ft-head"><h2 class="section-title">O que a integração resolve</h2>
-    <p class="section-subtitle">Uma agenda só para olhar, sem expor o paciente.</p></div>
+    <p class="section-subtitle">Uma agenda só para olhar, expondo o mínimo do paciente.</p></div>
     <div class="features-grid">
     <div class="feature-card animate-on-scroll">
       <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></div>
@@ -1943,20 +1943,20 @@ img { max-width: 100%; display: block; }
 
     <div class="feature-card animate-on-scroll">
       <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
-      <h3>Sem dados do paciente no Google</h3>
-      <p>O evento vai com um título genérico, sem nome do paciente e sem informação clínica. Os dados de saúde ficam na Terapee, como a LGPD pede.</p>
+      <h3>O mínimo do paciente no Google</h3>
+      <p>O evento leva horário, sala e só o primeiro nome do paciente, como evento privado e sem convidados. Nada clínico sai da Terapee.</p>
     </div>
 
     <div class="feature-card animate-on-scroll">
       <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div>
       <h3>Cada profissional com a sua conta</h3>
-      <p>A conexão é individual, pelo perfil de usuário. Cada terapeuta liga a própria conta Google, recebe só as sessões da sua agenda e pode desconectar quando quiser.</p>
+      <p>Com a integração liberada pela clínica, cada terapeuta liga a própria conta Google em Meu Perfil, recebe só as sessões da sua agenda e pode desconectar quando quiser.</p>
     </div>
 
     <div class="feature-card animate-on-scroll">
       <div class="feature-icon ft-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
       <h3>A rotina inteira numa tela</h3>
-      <p>Sessões da clínica e compromissos pessoais lado a lado no app do Google Agenda, no celular ou no computador.</p>
+      <p>As sessões ficam numa agenda “Terapee” separada, ao lado dos seus compromissos pessoais, no celular ou no computador. A Terapee não lê a sua agenda pessoal.</p>
     </div>
 
     <div class="feature-card animate-on-scroll">
@@ -1981,7 +1981,7 @@ img { max-width: 100%; display: block; }
       <div class="step-num">1</div>
       <div>
         <h3>Conecte a sua conta Google</h3>
-        <p>No seu perfil de usuário na Terapee, conecte a conta Google em que você quer ver as sessões e autorize o acesso à agenda.</p>
+        <p>Com a integração liberada pela clínica, vá em Meu Perfil, na Terapee, e conecte a conta Google em que você quer ver as sessões.</p>
       </div>
     </div>
 
@@ -1997,7 +1997,7 @@ img { max-width: 100%; display: block; }
       <div class="step-num">3</div>
       <div>
         <h3>As sessões aparecem no Google Agenda</h3>
-        <p>Cada sessão entra no seu Google Agenda com um título genérico, sem o nome do paciente.</p>
+        <p>A Terapee cria a agenda “Terapee” na sua conta, e cada sessão entra nela com horário, sala e o primeiro nome do paciente.</p>
       </div>
     </div>
 
@@ -2005,7 +2005,7 @@ img { max-width: 100%; display: block; }
       <div class="step-num">4</div>
       <div>
         <h3>Remarcou ou cancelou? O Google acompanha</h3>
-        <p>Mudou o horário ou cancelou a sessão na Terapee, o evento no Google Agenda é atualizado também.</p>
+        <p>Mudou o horário na Terapee, o evento muda no Google. Cancelou, o evento sai.</p>
       </div>
     </div></div>
   </div>
@@ -2026,31 +2026,31 @@ img { max-width: 100%; display: block; }
           <button class="faq-question">Como funciona a integração da Terapee com o Google Agenda?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Cada profissional conecta a própria conta Google no seu perfil de usuário na Terapee. A partir daí, as sessões da agenda dele passam a aparecer no Google Agenda, no celular, no computador ou em qualquer app que mostre essa agenda. Quando uma sessão é remarcada ou cancelada na Terapee, o evento no Google é atualizado também.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Com a integração liberada pela clínica, cada profissional conecta a própria conta Google em Meu Perfil, na Terapee. A Terapee cria nessa conta uma agenda chamada “Terapee”, e as sessões dele passam a aparecer no Google Agenda, no celular, no computador ou em qualquer app que mostre essa agenda. Quando uma sessão é remarcada ou cancelada na Terapee, o evento no Google é atualizado também.</div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">O nome do paciente aparece no Google Agenda?
+          <button class="faq-question">O que aparece do paciente no Google Agenda?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Não. O evento enviado ao Google leva o horário da sessão com um título genérico, sem o nome do paciente e sem nenhuma informação clínica. Os dados do paciente continuam só na Terapee.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Só o primeiro nome. O evento leva data, horário, sala e o primeiro nome do paciente, sem sobrenome e sem nenhuma informação clínica. Ele é criado como privado, sem convidados, e o Google não envia e-mail ao paciente. Prontuário e demais dados continuam só na Terapee.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-question">Se eu remarcar ou cancelar uma sessão, o Google Agenda é atualizado?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Sim. Remarcações e cancelamentos feitos na Terapee também são enviados ao Google Agenda, então o evento muda de horário ou sai da agenda do Google sem você mexer nele.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Sim. Remarcações feitas na Terapee mudam o evento no Google Agenda, e uma sessão cancelada tem o evento removido, sem você mexer nele.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-question">Os compromissos que já estão no Google bloqueiam horários na Terapee?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Não. A integração é de mão única: a Terapee envia as sessões para o Google Agenda, mas não lê os eventos do Google. Para segurar um horário na Terapee, use um bloqueio na própria agenda da Terapee.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Não. A integração é de mão única: a Terapee envia as sessões para a agenda “Terapee” no Google, mas não lê a sua agenda pessoal nem os eventos que você criou. Para segurar um horário na Terapee, use um bloqueio na própria agenda da Terapee.</div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-question">Na clínica, cada profissional precisa conectar a sua conta?
+          <button class="faq-question">Na clínica, como a integração é ativada?
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Sim. A conexão é individual: cada profissional liga a própria conta Google e vê no Google Agenda só as sessões da sua agenda. Quem não quiser usar a integração simplesmente não conecta, e quem conectou pode desconectar a conta Google pelo próprio perfil quando quiser.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Em duas etapas: a clínica libera a integração, e cada profissional conecta a própria conta Google em Meu Perfil, vendo no Google Agenda só as sessões da sua agenda. Quem não quiser usar simplesmente não conecta. Ao desconectar, a Terapee apaga a agenda “Terapee” da conta Google e revoga o acesso.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-question">A integração com o Google Agenda tem custo extra?

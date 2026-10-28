@@ -14,6 +14,7 @@ COVERS = {
     'c-nfse': 'nota-fiscal-para-psicologos-e-terapeutas.png',
     'c-repasse': 'repasse-de-profissionais-na-clinica.png',
     'c-pront': 'prontuario-psicologico-o-que-o-cfp-exige.png',
+    'c-gcal': 'google-agenda-na-clinica-de-terapia.png',
 }
 
 with sync_playwright() as p:
