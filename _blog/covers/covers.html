@@ -140,6 +140,23 @@ body { font-family: 'DM Sans', sans-serif; background: #e5e7eb; padding: 24px; d
 #c-pront .lock b { display: block; font-size: 22px; font-weight: 800; }
 #c-pront .lock small { display: block; font-size: 15px; color: var(--g500); margin-top: 6px; }
 #c-pront .c1 { right: 130px; bottom: 90px; }
+/* ===== 6. Google Agenda ===== */
+#c-gcal .day { left: 80px; top: 64px; width: 560px; padding: 28px 30px; }
+#c-gcal .day-h { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+#c-gcal .gico { width: 46px; height: 46px; border-radius: 12px; border: 1px solid #E7EAF2; display: grid; place-items: center; }
+#c-gcal .day-h b { font-size: 22px; font-weight: 800; } #c-gcal .day-h small { display: block; font-size: 15px; color: var(--g500); }
+#c-gcal .cals { margin-left: auto; display: grid; gap: 6px; font-size: 13px; font-weight: 700; color: var(--g600); }
+#c-gcal .cals span { display: flex; align-items: center; gap: 7px; } #c-gcal .cals i { width: 11px; height: 11px; border-radius: 3px; }
+#c-gcal .ev { display: grid; grid-template-columns: 82px 1fr; gap: 14px; align-items: center; padding: 9px 0; }
+#c-gcal .ev time { font-size: 16px; font-weight: 700; color: var(--g500); }
+#c-gcal .ev div { border-left: 4px solid var(--primary); background: var(--primary-50); border-radius: 10px; padding: 11px 14px; font-size: 17px; font-weight: 700; color: var(--dark); }
+#c-gcal .ev div small { font-weight: 500; color: var(--g600); margin-left: 6px; }
+#c-gcal .ev.me div { border-color: var(--green); background: var(--green-50); }
+#c-gcal .detail { right: 80px; top: 104px; width: 400px; padding: 28px 30px; }
+#c-gcal .detail h4 { font-size: 22px; font-weight: 800; margin: 6px 0 16px; }
+#c-gcal .f { display: flex; justify-content: space-between; padding: 11px 0; border-bottom: 1px dashed var(--g200); font-size: 16px; color: var(--g600); }
+#c-gcal .f b { color: var(--dark); } #c-gcal .f .no { color: var(--g400); font-weight: 600; text-decoration: line-through; }
+#c-gcal .c1 { right: 150px; bottom: 54px; }
 </style>
 </head>
 <body>
@@ -266,6 +283,34 @@ body { font-family: 'DM Sans', sans-serif; background: #e5e7eb; padding: 24px; d
   <div class="chip c1">
     <span class="ico" style="background:var(--primary-50);color:var(--primary)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></span>
     <span><b>Guarda mínima: 5 anos</b><small>Resolução CFP nº 001/2009</small></span>
+  </div>
+</section>
+
+<!-- 6. Google Agenda na clínica -->
+<section class="cover" id="c-gcal">
+  <div class="card day">
+    <div class="day-h">
+      <span class="gico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3" stroke="#4285F4"/><path d="M3 10h18" stroke="#EA4335"/><path d="M8 2v4" stroke="#FBBC05"/><path d="M16 2v4" stroke="#34A853"/></svg></span>
+      <span><b>Google Agenda</b><small>Quarta, 14 de outubro</small></span>
+      <span class="cals"><span><i style="background:var(--primary)"></i>Terapee</span><span><i style="background:var(--green)"></i>Pessoal</span></span>
+    </div>
+    <div class="ev"><time>08:00</time><div>Helena<small>· Sala 2</small></div></div>
+    <div class="ev"><time>09:00</time><div>Davi<small>· Sala 1</small></div></div>
+    <div class="ev me"><time>10:30</time><div>Reunião da escola<small>· pessoal</small></div></div>
+    <div class="ev"><time>14:00</time><div>Alice<small>· Sala 2</small></div></div>
+  </div>
+  <div class="card detail">
+    <p class="kicker">Evento particular</p>
+    <h4>O que vai para o Google</h4>
+    <div class="f"><span>Data e horário</span><b>✓</b></div>
+    <div class="f"><span>Sala</span><b>✓</b></div>
+    <div class="f"><span>Primeiro nome</span><b>✓</b></div>
+    <div class="f"><span class="no">Sobrenome</span><span class="no">não vai</span></div>
+    <div class="f" style="border-bottom:0"><span class="no">Dados clínicos</span><span class="no">não vão</span></div>
+  </div>
+  <div class="chip c1">
+    <span class="ico" style="background:var(--primary-50);color:var(--primary)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+    <span><b>Agenda separada</b><small>remarcou ou cancelou, o Google acompanha</small></span>
   </div>
 </section>
 
