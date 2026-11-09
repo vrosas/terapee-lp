@@ -1749,14 +1749,8 @@ img { max-width: 100%; display: block; }
   ]
 }
 </script>
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "h8iifiakrd");
-</script>
+<!-- Consentimento de cookies: carrega o Microsoft Clarity só depois do aceite -->
+<script src="/assets/consent.js" defer></script>
 <style>
 /* ========== HEADER MOBILE ==========
    Em telas estreitas o CTA do cabecalho cobria a logo: logo (173px) + botoes
@@ -2244,6 +2238,7 @@ img { max-width: 100%; display: block; }
       <div class="footer-legal">
         <a href="/politica-de-privacidade">Política de Privacidade</a>
         <a href="/termos-de-uso">Termos de Uso</a>
+        <a href="#" data-cookie-prefs>Preferências de cookies</a>
       </div>
     </div>
   </div>

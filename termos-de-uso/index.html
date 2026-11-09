@@ -813,14 +813,8 @@ img { max-width: 100%; display: block; }
 }
 
 </style>
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "h8iifiakrd");
-</script>
+<!-- Consentimento de cookies: carrega o Microsoft Clarity só depois do aceite -->
+<script src="/assets/consent.js" defer></script>
 <style>
 /* ========== HEADER MOBILE ==========
    Em telas estreitas o CTA do cabecalho cobria a logo: logo (173px) + botoes
@@ -978,6 +972,7 @@ img { max-width: 100%; display: block; }
         <li class="toc-item"><a href="#limitacao"><span class="toc-num">15</span>Limitação de Responsabilidade</a></li>
         <li class="toc-item"><a href="#lei"><span class="toc-num">16</span>Lei Aplicável</a></li>
         <li class="toc-item"><a href="#alteracoes"><span class="toc-num">17</span>Alterações dos Termos</a></li>
+        <li class="toc-item"><a href="#tratamento-de-dados"><span class="toc-num">18</span>Acordo de Tratamento de Dados</a></li>
       </ul>
     </div>
     <div class="sidebar-contact">
@@ -1208,6 +1203,9 @@ img { max-width: 100%; display: block; }
           <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>8x8 / Jitsi as a Service (JaaS)</strong> — infraestrutura de videochamada para teleatendimento (Cláusula 03).</span></li>
           <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Brevo</strong> — envio de e-mails.</span></li>
           <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Google (Agenda)</strong> — sincronização com a Agenda do Google, somente para o profissional que conectar a própria conta.</span></li>
+          <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Asaas</strong> — cobrança via PIX (Cláusula 10).</span></li>
+          <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Anthropic</strong> — assistente de atendimento usado pela equipe de suporte e chat do site.</span></li>
+          <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Chatwoot</strong> — atendimento de suporte aos Usuários via WhatsApp.</span></li>
         </ul>
         <div class="sub-section" style="margin-top: 20px;">
           <div class="sub-section-title">Validade da assinatura eletrônica</div>
@@ -1218,9 +1216,10 @@ img { max-width: 100%; display: block; }
           <p>Em relação aos dados pessoais de pacientes e de seus responsáveis inseridos na plataforma (cadastro, agenda, prontuário, formulários, documentos, arquivos e financeiro), o Usuário (clínica ou profissional) é o <strong>controlador</strong> e a Terapee é a <strong>operadora</strong>, nos termos do art. 5º, incisos VI e VII, e do art. 39 da Lei nº 13.709/2018 (LGPD). A Terapee trata esses dados apenas em nome do Usuário, conforme suas instruções e para a prestação do serviço contratado.</p>
           <p>Ao aceitar estes Termos, o Usuário <strong>autoriza a Terapee a contratar os suboperadores</strong> listados na <a href="/politica-de-privacidade#compartilhamento">Política de Privacidade (Seção 06)</a>, inclusive para o tratamento de dados pessoais sensíveis de saúde, e está ciente de que esses suboperadores tratam dados nos seguintes países:</p>
           <ul class="policy-list" style="margin-top: 8px;">
-            <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Estados Unidos:</strong> Supabase (infraestrutura Amazon Web Services), Vercel, Meta (WhatsApp), UAZAPI, 8x8 (Jitsi), Anthropic, Stripe e Google (Agenda do Google, somente para o profissional que conectar a própria conta).</span></li>
+            <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Estados Unidos:</strong> Supabase (infraestrutura Amazon Web Services), Vercel, Meta (WhatsApp), UAZAPI, 8x8 (Jitsi), Anthropic, Chatwoot, Stripe e Google (Agenda do Google, somente para o profissional que conectar a própria conta).</span></li>
             <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Estados Unidos e outros países:</strong> Cloudflare.</span></li>
             <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>França:</strong> Brevo.</span></li>
+            <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Brasil:</strong> Asaas e Clicksign.</span></li>
           </ul>
           <p style="margin-top: 12px;">A transferência internacional desses dados é realizada com base nas cláusulas-padrão contratuais aprovadas pela Autoridade Nacional de Proteção de Dados (ANPD), na forma do art. 33, inciso II, alínea "b", da LGPD e da Resolução CD/ANPD nº 19/2024, conforme descrito na Política de Privacidade. A Terapee exige de cada suboperador nível de proteção equivalente ao previsto nestes Termos e na LGPD.</p>
         </div>
@@ -1539,7 +1538,7 @@ img { max-width: 100%; display: block; }
           <div class="legal-bases" style="margin-top: 12px;">
             <div class="legal-base">
               <span class="legal-base-tag">11 nov 2026</span>
-              <span><strong>Versão vigente.</strong> Inclusão, na Cláusula 07, da relação operadora–controladora: o Usuário é controlador dos dados de pacientes, a Terapee é operadora, e o Usuário autoriza os suboperadores listados na Política de Privacidade, com os países onde tratam dados; transferência internacional com base nas cláusulas-padrão contratuais aprovadas pela ANPD; inclusão de Cloudflare, Brevo e Google (Agenda) na lista de subprocessadores.</span>
+              <span><strong>Versão vigente.</strong> Inclusão, na Cláusula 07, da relação operadora–controladora: o Usuário é controlador dos dados de pacientes, a Terapee é operadora, e o Usuário autoriza os suboperadores listados na Política de Privacidade, com os países onde tratam dados; transferência internacional com base nas cláusulas-padrão contratuais aprovadas pela ANPD; inclusão de Cloudflare, Brevo, Google (Agenda), Asaas, Anthropic e Chatwoot na lista de subprocessadores; nova Cláusula 18, Acordo de Tratamento de Dados (instruções, suboperadores, direitos dos titulares, incidentes, auditoria e fim do contrato).</span>
             </div>
             <div class="legal-base">
               <span class="legal-base-tag">17 jun 2026</span>
@@ -1555,6 +1554,33 @@ img { max-width: 100%; display: block; }
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="var(--gray-400)"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           Versão atual: 11 de novembro de 2026
         </div>
+      </div>
+    </div>
+
+    <!-- 18. Acordo de Tratamento de Dados -->
+    <div class="policy-section animate-on-scroll" id="tratamento-de-dados">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="section-heading">
+          <div class="section-num">Cláusula 18</div>
+          <h2>Acordo de Tratamento de Dados</h2>
+        </div>
+      </div>
+      <div class="policy-text">
+        <p>Esta cláusula é o acordo de tratamento de dados entre o Usuário, como <strong>Controlador</strong>, e a Terapee, como <strong>Operadora</strong>, para os dados pessoais de pacientes e responsáveis inseridos na plataforma (Cláusula 07). Em caso de conflito com outra cláusula destes Termos sobre esses dados, prevalece esta.</p>
+        <ul class="policy-list" style="margin-top: 12px;">
+          <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Instruções.</strong> A Terapee trata os dados pessoais de pacientes e responsáveis somente para prestar o serviço contratado, conforme estes Termos e as configurações que o Controlador faz na plataforma, que constituem as suas instruções documentadas (art. 39 da LGPD). Se receber instrução que, a seu ver, contrarie a lei, a Terapee informará o Controlador antes de cumpri-la.</span></li>
+          <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Pessoas autorizadas.</strong> O acesso da equipe da Terapee a esses dados fica restrito a quem precisa dele para suporte, operação ou segurança, sob dever de confidencialidade (Cláusula 13). Todo acesso à conta do Controlador pela equipe de suporte exige motivo registrado e fica visível ao Controlador em Configurações → Conta.</span></li>
+          <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Segurança.</strong> A Terapee mantém as medidas técnicas e administrativas descritas na Cláusula 06 e na Política de Privacidade, adequadas à natureza sensível dos dados de saúde (art. 46 da LGPD).</span></li>
+          <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Suboperadores.</strong> O Controlador autoriza os suboperadores listados na Cláusula 07 e na Política de Privacidade. A Terapee impõe a cada um obrigações de proteção equivalentes às desta cláusula e responde perante o Controlador pelo cumprimento delas. A inclusão ou troca de suboperador que trate dados de pacientes será comunicada com antecedência mínima de 15 dias, na forma da Cláusula 17; o Controlador que discordar pode encerrar o contrato sem ônus antes da mudança.</span></li>
+          <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Direitos dos titulares.</strong> A Terapee oferece na plataforma os meios para o Controlador atender aos pedidos dos titulares (art. 18 da LGPD), inclusive a exportação estruturada dos dados de um paciente, e encaminha ao Controlador, sem demora, qualquer pedido de titular que receber diretamente.</span></li>
+          <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Incidentes.</strong> A Terapee comunicará ao Controlador, sem demora injustificada, o incidente de segurança que possa acarretar risco ou dano relevante aos titulares, com as informações de que dispuser, para que o Controlador avalie e faça as comunicações à ANPD e aos titulares no prazo da Resolução CD/ANPD nº 15/2024.</span></li>
+          <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Registro e prestação de contas.</strong> A Terapee mantém o registro das operações de tratamento que realiza (art. 37 da LGPD) e, mediante solicitação, fornece ao Controlador as informações necessárias para demonstrar o cumprimento desta cláusula, inclusive cópia das cláusulas contratuais aplicáveis à transferência internacional.</span></li>
+          <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Auditoria.</strong> O Controlador pode, uma vez por ano e com aviso de 30 dias, solicitar a verificação do cumprimento desta cláusula, por questionário ou por auditor independente sujeito a confidencialidade, sem acesso a dados de outros clientes e com custos a cargo do Controlador.</span></li>
+          <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Fim do contrato.</strong> Encerrado o contrato, o Controlador pode exportar os seus dados (Cláusula 08). A Terapee elimina os dados em até 30 dias, salvo os que deva conservar por obrigação legal. Prontuários e registros clínicos não são eliminados enquanto não estiver definido como o Controlador cumprirá a guarda legal desses documentos; até lá, ficam inacessíveis a terceiros e preservados.</span></li>
+        </ul>
       </div>
     </div>
 
@@ -1679,6 +1705,7 @@ img { max-width: 100%; display: block; }
       <div class="footer-legal">
         <a href="/politica-de-privacidade">Política de Privacidade</a>
         <a href="/termos-de-uso">Termos de Uso</a>
+        <a href="#" data-cookie-prefs>Preferências de cookies</a>
       </div>
     </div>
   </div>

@@ -825,14 +825,8 @@ img { max-width: 100%; display: block; }
 }
 
 </style>
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "h8iifiakrd");
-</script>
+<!-- Consentimento de cookies: carrega o Microsoft Clarity só depois do aceite -->
+<script src="/assets/consent.js" defer></script>
 <style>
 /* ========== HEADER MOBILE ==========
    Em telas estreitas o CTA do cabecalho cobria a logo: logo (173px) + botoes
@@ -1128,13 +1122,13 @@ img { max-width: 100%; display: block; }
           <ul class="policy-list">
             <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Dados técnicos: endereço IP, tipo de navegador, sistema operacional e dispositivo utilizado.</span></li>
             <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Logs de acesso: registros de data, hora e atividades na plataforma, conforme exigido pelo Marco Civil da Internet (Lei nº 12.965/2014).</span></li>
-            <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Cookies e tecnologias similares: utilizados para manter sessões ativas e analisar o uso da plataforma (ver Seção 13).</span></li>
+            <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span>Cookies e tecnologias similares: essenciais, para manter a sessão ativa na plataforma, e de análise, apenas no site e com o seu aceite (ver Seção 13).</span></li>
           </ul>
         </div>
 
         <div class="sub-section">
           <p class="sub-section-title">3.4 Dados coletados diretamente do paciente (agendamento online)</p>
-          <p>Quando uma clínica disponibiliza sua página pública de agendamento, o próprio interessado — que ainda não é paciente cadastrado — pode inserir seus dados diretamente no sistema (nome, telefone, e-mail e horário desejado), com verificação por código de uso único (OTP) enviado ao titular.</p>
+          <p>Quando uma clínica disponibiliza sua página pública de agendamento, o próprio interessado — que ainda não é paciente cadastrado — pode inserir seus dados diretamente no sistema (nome, telefone, e-mail, horário desejado, CPF — quando a clínica o exige — e um campo livre de observações), com verificação por código de uso único (OTP) enviado ao titular.</p>
           <div class="alert-box info" style="margin-top:14px;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
             <span>Nessa coleta, a Terapee atua como <strong>operador</strong> em nome da clínica (Controladora) titular da página de agendamento. A verificação por OTP é utilizada para validar o contato do titular e prevenir agendamentos fraudulentos.</span>
@@ -1322,14 +1316,8 @@ img { max-width: 100%; display: block; }
                 <td><span class="subop-loc ext">Estados Unidos</span></td>
               </tr>
               <tr>
-                <td><strong>Google (Analytics e Tag Manager)</strong></td>
-                <td>Medição de audiência das nossas páginas (ver Seção 13)</td>
-                <td><span class="subop-tag analytics">Análise</span></td>
-                <td><span class="subop-loc ext">Estados Unidos</span></td>
-              </tr>
-              <tr>
                 <td><strong>Microsoft Clarity</strong></td>
-                <td>Análise de navegação das nossas páginas (ver Seção 13)</td>
+                <td>Análise de navegação das nossas páginas, só com o seu aceite (ver Seção 13)</td>
                 <td><span class="subop-tag analytics">Análise</span></td>
                 <td><span class="subop-loc ext">Estados Unidos</span></td>
               </tr>
@@ -1511,7 +1499,7 @@ img { max-width: 100%; display: block; }
         </div>
         <div class="alert-box info" style="margin-top:20px;">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          <span>Para exercer qualquer um desses direitos, envie sua solicitação para <strong>suporte@terapee.com.br</strong>. Responderemos em até 15 dias úteis, conforme prazo legal.</span>
+          <span>Para exercer qualquer um desses direitos, envie sua solicitação para <strong>suporte@terapee.com.br</strong>. Responderemos em até 15 dias, contados do pedido, conforme o art. 19, II, da LGPD.</span>
         </div>
       </div>
     </div>
@@ -1561,7 +1549,7 @@ img { max-width: 100%; display: block; }
           </div>
           <div class="legal-base">
             <span class="legal-base-tag">Logs de Acesso</span>
-            <span>Registros de acesso são mantidos por 6 meses, conforme exigido pelo Marco Civil da Internet (Lei nº 12.965/2014).</span>
+            <span>Registros de acesso à aplicação são mantidos por no mínimo 6 meses, conforme exigido pelo Marco Civil da Internet (Lei nº 12.965/2014). Registros de envio de mensagens (WhatsApp) são mantidos por 1 ano; registros de quem acessou ou exportou dados sensíveis, por 5 anos, para apuração de responsabilidade.</span>
           </div>
           <div class="legal-base">
             <span class="legal-base-tag">Litígio</span>
@@ -1586,9 +1574,9 @@ img { max-width: 100%; display: block; }
         <p>Utilizamos cookies e tecnologias similares para garantir o funcionamento correto da plataforma e entender como ela é utilizada:</p>
         <ul class="policy-list" style="margin-top: 12px;">
           <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Cookies essenciais:</strong> necessários para o funcionamento básico da plataforma, como manutenção da sessão autenticada.</span></li>
-          <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Cookies de análise:</strong> em nossas páginas, utilizamos ferramentas de medição de audiência e comportamento de navegação, como Google Tag Manager/Google Analytics e Microsoft Clarity, para fins estatísticos e de melhoria.</span></li>
+          <li><div class="list-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>Cookies de análise (opcionais):</strong> em nossas páginas (www.terapee.com.br), usamos o Microsoft Clarity para entender como o site é usado — cliques, rolagem e movimento do cursor —, para fins estatísticos e de melhoria. O Clarity só é carregado depois que você aceita no aviso de cookies (base legal: consentimento, art. 7º, I, da LGPD). Recusar não muda nada no funcionamento do site.</span></li>
         </ul>
-        <p style="margin-top: 16px;">O Usuário pode gerenciar ou desativar cookies nas configurações do seu navegador, bem como utilizar os mecanismos de opt-out das ferramentas de análise. A desativação de cookies essenciais pode afetar o funcionamento de algumas funcionalidades da plataforma.</p>
+        <p style="margin-top: 16px;">Você pode mudar a sua escolha a qualquer momento pelo link <a href="#" data-cookie-prefs>Preferências de cookies</a>, no rodapé de todas as páginas, ou apagar os cookies nas configurações do navegador. A plataforma (o aplicativo usado pelas clínicas) não usa cookies de análise nem de publicidade; os essenciais mantêm a sessão autenticada, e desativá-los impede o login.</p>
       </div>
     </div>
 
@@ -1615,7 +1603,7 @@ img { max-width: 100%; display: block; }
           <div class="legal-bases" style="margin-top: 12px;">
             <div class="legal-base">
               <span class="legal-base-tag">11 nov 2026</span>
-              <span><strong>Versão vigente.</strong> Transferência internacional de dados passa a se apoiar nas cláusulas-padrão contratuais aprovadas pela ANPD (art. 33, II, "b", da LGPD e Resolução CD/ANPD nº 19/2024), e não mais na execução do contrato; lista única de suboperadores e fornecedores com o país de cada um (remoção do n8n; inclusão de Cloudflare, Brevo, Google Agenda, Asaas, Anthropic, Google Analytics/Tag Manager e Microsoft Clarity; UAZAPI e Chatwoot nos Estados Unidos); papel de operadora da Terapee e canal para pedir cópia das cláusulas; nova Seção 07, sobre a integração com o Google Agenda e o Uso Limitado dos dados de usuários do Google, com renumeração das seções seguintes.</span>
+              <span><strong>Versão vigente.</strong> Transferência internacional de dados passa a se apoiar nas cláusulas-padrão contratuais aprovadas pela ANPD (art. 33, II, "b", da LGPD e Resolução CD/ANPD nº 19/2024), e não mais na execução do contrato; lista única de suboperadores e fornecedores com o país de cada um (remoção do n8n; inclusão de Cloudflare, Brevo, Google Agenda, Asaas, Anthropic e Microsoft Clarity; UAZAPI e Chatwoot nos Estados Unidos); papel de operadora da Terapee e canal para pedir cópia das cláusulas; nova Seção 07, sobre a integração com o Google Agenda e o Uso Limitado dos dados de usuários do Google, com renumeração das seções seguintes; aviso de cookies com consentimento prévio para o Microsoft Clarity (Seção 13); dados coletados no agendamento online (CPF e observações); prazos de retenção de registros; prazo de resposta aos titulares em 15 dias, como no art. 19, II.</span>
             </div>
             <div class="legal-base">
               <span class="legal-base-tag">17 jun 2026</span>
@@ -1790,6 +1778,7 @@ img { max-width: 100%; display: block; }
       <div class="footer-legal">
         <a href="/politica-de-privacidade">Política de Privacidade</a>
         <a href="/termos-de-uso">Termos de Uso</a>
+        <a href="#" data-cookie-prefs>Preferências de cookies</a>
       </div>
     </div>
   </div>

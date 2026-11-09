@@ -59,14 +59,8 @@ const image = new URL(ogImage ?? '/og-image.png', site).href;
 </style>
 <link rel="stylesheet" href="/assets/visual.css">
 {jsonLd.map((data) => <script type="application/ld+json" set:html={JSON.stringify(data)} />)}
-<!-- Microsoft Clarity -->
-<script is:inline type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "h8iifiakrd");
-</script>
+<!-- Consentimento de cookies: carrega o Microsoft Clarity só depois do aceite -->
+<script is:inline src="/assets/consent.js" defer></script>
 </head>
 <body class="blog-body">
 <SiteHeader />
