@@ -16,6 +16,7 @@ COVERS = {
     'c-pront': 'prontuario-psicologico-o-que-o-cfp-exige.png',
     'c-gcal': 'google-agenda-na-clinica-de-terapia.png',
     'c-escolha': 'como-escolher-sistema-de-gestao-para-clinica-de-terapia.png',
+    'c-docs': 'documentos-da-clinica-de-terapia.png',
 }
 
 with sync_playwright() as p:

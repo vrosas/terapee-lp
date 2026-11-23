@@ -174,6 +174,24 @@ body { font-family: 'DM Sans', sans-serif; background: #e5e7eb; padding: 24px; d
 #c-escolha .q:last-child { border-bottom: 0; }
 #c-escolha .q i { width: 30px; height: 30px; border-radius: 50%; background: var(--primary); color: #fff; display: grid; place-items: center; font-style: normal; font-weight: 800; font-size: 16px; }
 #c-escolha .c1 { right: 96px; bottom: 62px; }
+/* ===== Documentos da clínica ===== */
+#c-docs .list { left: 80px; top: 60px; width: 580px; padding: 28px 32px 18px; }
+#c-docs .list h4 { font-size: 23px; font-weight: 800; margin: 6px 0 10px; }
+#c-docs .d { display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--g100); }
+#c-docs .d:last-child { border-bottom: 0; }
+#c-docs .d .n { width: 44px; height: 44px; border-radius: 12px; background: var(--primary-50); color: var(--primary); display: grid; place-items: center; font-size: 15px; font-weight: 800; }
+#c-docs .d .t { font-size: 18px; font-weight: 700; color: var(--dark); }
+#c-docs .d .t small { display: block; font-size: 14px; font-weight: 500; color: var(--g500); }
+#c-docs .ok { color: #067647; background: var(--green-50); }
+#c-docs .wait { color: #B54708; background: #FEF0C7; }
+#c-docs .sent { color: var(--primary); background: var(--primary-50); }
+#c-docs .paper { right: 70px; top: 96px; width: 400px; padding: 28px 30px 24px; }
+#c-docs .paper h4 { font-size: 22px; font-weight: 800; margin: 6px 0 14px; }
+#c-docs .paper .f { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed var(--g200); font-size: 16px; color: var(--g600); }
+#c-docs .paper .f b { color: var(--dark); }
+#c-docs .paper .bar { margin-top: 16px; }
+#c-docs .sign { display: flex; align-items: center; justify-content: space-between; margin-top: 22px; padding-top: 14px; border-top: 2px solid var(--g300); font-size: 15px; font-weight: 600; color: var(--g600); }
+#c-docs .c1 { right: 110px; bottom: 50px; }
 </style>
 </head>
 <body>
@@ -352,6 +370,33 @@ body { font-family: 'DM Sans', sans-serif; background: #e5e7eb; padding: 24px; d
   <div class="chip c1">
     <span class="ico" style="background:var(--green-50);color:var(--green)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
     <span><b>Teste com a agenda real</b><small>uma semana mostra mais que a demonstração</small></span>
+  </div>
+</section>
+
+<!-- Documentos da clínica de terapia -->
+<section class="cover" id="c-docs">
+  <div class="card list">
+    <p class="kicker">Documentos do paciente</p>
+    <h4>Do primeiro contato ao recibo</h4>
+    <div class="d"><span class="n">CO</span><span class="t">Contrato de atendimento<small>honorários, faltas e encerramento</small></span><span class="pill ok">✓ Assinado</span></div>
+    <div class="d"><span class="n">TC</span><span class="t">Termo de consentimento<small>atendimento online e dados (LGPD)</small></span><span class="pill ok">✓ Assinado</span></div>
+    <div class="d"><span class="n">AU</span><span class="t">Autorização do responsável<small>criança ou adolescente</small></span><span class="pill wait">Aguardando</span></div>
+    <div class="d"><span class="n">AN</span><span class="t">Anamnese<small>vai para o prontuário</small></span><span class="pill sent">Respondida</span></div>
+    <div class="d"><span class="n">RE</span><span class="t">Recibo ou nota fiscal<small>a cada pagamento</small></span><span class="pill sent">Emitido</span></div>
+  </div>
+  <div class="card paper">
+    <p class="kicker">Emitido pelo profissional</p>
+    <h4>Declaração de comparecimento</h4>
+    <div class="f"><span>Data</span><b>23/11/2026</b></div>
+    <div class="f"><span>Horário</span><b>14h às 14h50</b></div>
+    <div class="f" style="border-bottom:0"><span>Diagnóstico</span><b style="color:var(--g400)">não entra</b></div>
+    <div class="bar" style="width:100%"></div>
+    <div class="bar" style="width:72%;margin-top:9px"></div>
+    <div class="sign"><span>Assinatura e nº do conselho</span><span class="pill ok">✓</span></div>
+  </div>
+  <div class="chip c1">
+    <span class="ico" style="background:var(--primary-50);color:var(--primary)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></span>
+    <span><b>Quem assina e até quando guardar</b><small>do contrato ao laudo</small></span>
   </div>
 </section>
 
