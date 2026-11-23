@@ -61,6 +61,7 @@ const image = new URL(ogImage ?? '/og-image.png', site).href;
 {jsonLd.map((data) => <script type="application/ld+json" set:html={JSON.stringify(data)} />)}
 <!-- Consentimento de cookies: carrega o Microsoft Clarity só depois do aceite -->
 <script is:inline src="/assets/consent.js" defer></script>
+<script is:inline src="/assets/track.js" defer></script>
 </head>
 <body class="blog-body">
 <SiteHeader />
