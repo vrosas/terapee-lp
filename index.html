@@ -2171,6 +2171,9 @@ document.addEventListener('click', function (e) {
 .nh .nh-trust li { display: flex; align-items: center; gap: 8px; }
 .nh .nh-trust svg.nh-i { width: 18px; height: 18px; color: var(--accent); }
 .nh .nh-trust b { color: var(--ink); }
+.nh .nh-trust a { color: var(--accent); font-weight: 600; white-space: nowrap; }
+.nh #planos { scroll-margin-top: 72px; }
+.nh .nh-trust a:hover { color: var(--accent-hover); text-decoration: underline; }
 @media (max-width: 900px) { .nh .nh-hero .nh-two { grid-template-columns: 1fr; } }
 
 /* App frame (agenda mock) */
@@ -2472,6 +2475,7 @@ document.addEventListener('click', function (e) {
         <ul class="nh-trust">
           <li><svg class="nh-i"><use href="#i-card"/></svg>Sem cartão de crédito · cancele quando quiser</li>
           <li><svg class="nh-i"><use href="#i-users"/></svg><span><b>+400 clínicas</b> de terapia usam a Terapee</span></li>
+          <li><svg class="nh-i"><use href="#i-wallet"/></svg><span><a href="#planos" data-track="ver_planos">Planos</a> <b>a partir de R$ 79/mês</b></span></li>
         </ul>
         <ul class="nh-checks">
           <li><span><b>Lembrete e confirmação pelo WhatsApp</b></span></li>
@@ -2534,7 +2538,7 @@ document.addEventListener('click', function (e) {
         <div class="nh-challenge"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-phone"/></svg></span><div><h3>A recepção passa o dia ao telefone</h3><p><b>As confirmações chegam sozinhas</b>, e o paciente pode pedir horário pela página de agendamento online.</p></div></div>
         <div class="nh-challenge"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-box"/></svg></span><div><h3>O saldo do pacote fica numa planilha</h3><p><b>O saldo é calculado sozinho.</b> Falta justificada devolve a sessão, falta sem aviso desconta.</p></div></div>
         <div class="nh-challenge"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-wallet"/></svg></span><div><h3>A cobrança é feita na mão</h3><p><b>As cobranças do mês são geradas de uma vez</b> e enviadas pelo WhatsApp com um clique, com o seu link de pagamento. A nota fiscal sai do pagamento.</p></div></div>
-        <div class="nh-actions" style="margin-top:12px"><a class="nh-btn nh-btn-primary" href="https://web.terapee.com.br/register" target="_blank" rel="noopener">Testar grátis por 14 dias</a></div>
+        <div class="nh-actions" style="margin-top:12px"><a class="nh-btn nh-btn-primary" href="https://web.terapee.com.br/register" target="_blank" rel="noopener">Testar grátis por 14 dias</a><a class="nh-btn nh-btn-ghost" href="#planos" data-track="ver_planos">Ver planos e preços</a></div>
       </div>
     </div>
   </section>
