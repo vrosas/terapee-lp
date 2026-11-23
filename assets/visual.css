@@ -331,3 +331,9 @@
 
 /* Selo de especialidade dentro do H1 (palavra-chave no título principal) */
 .subpage-hero h1 .subpage-badge{display:flex;width:fit-content;line-height:1.4;-webkit-text-fill-color:currentColor}
+
+/* ---------- Menu do celular: "Entrar" e "Começar grátis" ---------- */
+/* Os dois links ficam no fim do <nav> de todas as páginas e só aparecem
+   quando os botões do topo somem (até 768px). */
+.nav .nav-mobile-only{display:none}
+@media (max-width:768px){.nav .nav-mobile-only{display:block}.nav .nav-mobile-cta{color:var(--primary)}}

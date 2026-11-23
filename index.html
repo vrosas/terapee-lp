@@ -2171,6 +2171,9 @@ document.addEventListener('click', function (e) {
 .nh .nh-trust li { display: flex; align-items: center; gap: 8px; }
 .nh .nh-trust svg.nh-i { width: 18px; height: 18px; color: var(--accent); }
 .nh .nh-trust b { color: var(--ink); }
+.nh .nh-trust a { color: var(--accent); font-weight: 600; white-space: nowrap; }
+.nh #planos { scroll-margin-top: 72px; }
+.nh .nh-trust a:hover { color: var(--accent-hover); text-decoration: underline; }
 @media (max-width: 900px) { .nh .nh-hero .nh-two { grid-template-columns: 1fr; } }
 
 /* App frame (agenda mock) */
@@ -2384,7 +2387,30 @@ document.addEventListener('click', function (e) {
 .nh .nh-more { color: var(--accent); }
 @media (max-width: 900px) { .nh .nh-hero { padding-block: 112px 64px; } }
 
+/* Ilustrações clicáveis (levam à página da funcionalidade) */
+.nh a.nh-float, .nh .nh-collage a.nh-card { text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+.nh a.nh-float:hover, .nh .nh-collage a.nh-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.nh .nh-float .nh-ftxt { display: block; }
+.nh .nh-float .nh-ftxt > span { display: block; }
+.nh .nh-collage a.nh-card { display: block; }
+.nh .nh-collage a.nh-card > span { display: block; }
+.nh .nh-collage a.nh-card > span.nh-reply, .nh .nh-collage a.nh-card > span.nh-row { display: flex; }
+
+/* Topo no celular: "Começar grátis" sempre visível; "Entrar" e "Começar grátis" dentro do menu */
+@media (max-width: 768px) {
+  .header-actions { margin-left: auto; margin-right: 12px; }
+  .header-actions .btn-primary { display: inline-flex !important; padding: 8px 14px !important; font-size: 13px !important; white-space: nowrap; }
+}
+@media (max-width: 480px) {
+  .header-inner { padding: 0 16px; }
+  .logo .logo-img { height: 28px; }
+  .header-actions { margin-right: 10px; }
+  .header-actions .btn-primary { padding: 7px 12px !important; font-size: 12.5px !important; }
+}
+@media (max-width: 345px) { .header-actions .btn-primary { display: none !important; } }
+
 </style>
+<script src="/assets/track.js" defer></script>
 </head>
 <body>
 <!-- ============ HEADER ============ -->
@@ -2399,12 +2425,14 @@ document.addEventListener('click', function (e) {
       <a href="/planos/">Planos</a>
       <a href="/#faq">Dúvidas</a>
       <a href="/blog/">Blog</a>
+      <a href="https://web.terapee.com.br/" target="_blank" rel="noopener" class="nav-mobile-only">Entrar</a>
+      <a href="https://web.terapee.com.br/register" target="_blank" rel="noopener" class="nav-mobile-only nav-mobile-cta">Começar grátis</a>
     </nav>
     <div class="header-actions">
       <a href="https://web.terapee.com.br/" target="_blank" class="btn btn-outline" style="padding:10px 20px;font-size:14px;">Entrar</a>
       <a href="https://web.terapee.com.br/register" target="_blank" class="btn btn-primary" style="padding:10px 20px;font-size:14px;">Começar grátis</a>
     </div>
-    <button class="mobile-toggle" onclick="document.querySelector('.nav').classList.toggle('mobile-open')">
+    <button class="mobile-toggle" aria-label="Abrir menu" onclick="document.querySelector('.nav').classList.toggle('mobile-open')">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -2437,21 +2465,22 @@ document.addEventListener('click', function (e) {
   <!-- 1. Topo -->
   <section class="nh-hero nh-gutter" id="topo">
     <div class="nh-wrap nh-two">
-      <div class="nh-hero-copy">
+      <div class="nh-hero-copy" data-pos="hero">
         <span class="nh-chip-eyebrow"><svg class="nh-i"><use href="#i-spark"/></svg>Sistema de gestão feito para terapia</span>
         <h1>Menos faltas. <span class="nh-hl">Menos planilha.</span> Mais tempo para atender.</h1>
         <p class="nh-lead">A Terapee junta agenda, prontuário, cobrança e nota fiscal num só lugar, feita para quem atende por sessão, pacote e mensalidade.</p>
-        <ul class="nh-checks">
-          <li><span><b>Lembrete e confirmação pelo WhatsApp</b></span></li>
-          <li><span><b>Saldo de pacotes e mensalidades sem planilha</b></span></li>
-          <li><span><b>Prontuário, cobrança e NFS-e no mesmo lugar</b></span></li>
-        </ul>
         <div class="nh-actions">
           <a class="nh-btn nh-btn-primary" href="https://web.terapee.com.br/register" target="_blank" rel="noopener">Testar grátis por 14 dias <svg class="nh-i"><use href="#i-arrow"/></svg></a>
         </div>
         <ul class="nh-trust">
           <li><svg class="nh-i"><use href="#i-card"/></svg>Sem cartão de crédito · cancele quando quiser</li>
           <li><svg class="nh-i"><use href="#i-users"/></svg><span><b>+400 clínicas</b> de terapia usam a Terapee</span></li>
+          <li><svg class="nh-i"><use href="#i-wallet"/></svg><span><a href="#planos" data-track="ver_planos">Planos</a> <b>a partir de R$ 79/mês</b></span></li>
+        </ul>
+        <ul class="nh-checks">
+          <li><span><b>Lembrete e confirmação pelo WhatsApp</b></span></li>
+          <li><span><b>Saldo de pacotes e mensalidades sem planilha</b></span></li>
+          <li><span><b>Prontuário, cobrança e NFS-e no mesmo lugar</b></span></li>
         </ul>
       </div>
 
@@ -2467,9 +2496,9 @@ document.addEventListener('click', function (e) {
             <div class="nh-t">11:20</div><div class="nh-c"></div><div class="nh-c"><div class="nh-ev nh-v">Grupo<small>Habilidades</small></div></div><div class="nh-c"><div class="nh-ev nh-g">Rafa C.<small>Fono</small></div></div><div class="nh-c"></div><div class="nh-c"><div class="nh-ev nh-b">Bia F.<small>TO</small></div></div>
           </div>
         </div>
-        <div class="nh-float nh-f1"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-msg"/></svg></span><div><b>Helena confirmou</b><span>Sessão de terça, 08:00</span></div></div>
-        <div class="nh-float nh-f2"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-box"/></svg></span><div><b>Pacote 9 de 12</b><span>Lucas M. · 3 a realizar</span></div></div>
-        <div class="nh-float nh-f3"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-receipt"/></svg></span><div><b>NFS-e emitida</b><span>A partir do pagamento de outubro</span></div></div>
+        <a class="nh-float nh-f1" href="/funcionalidades/lembretes-whatsapp" data-track="ilustracao_confirmacao" data-pos="hero" aria-label="Helena confirmou a sessão de terça, 08:00. Ver como funcionam os lembretes pelo WhatsApp"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-msg"/></svg></span><span class="nh-ftxt"><b>Helena confirmou</b><span>Sessão de terça, 08:00</span></span></a>
+        <a class="nh-float nh-f2" href="/funcionalidades/pacotes-de-sessoes" data-track="ilustracao_pacote" data-pos="hero" aria-label="Pacote 9 de 12, 3 sessões a realizar. Ver como funcionam os pacotes de sessões"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-box"/></svg></span><span class="nh-ftxt"><b>Pacote 9 de 12</b><span>Lucas M. · 3 a realizar</span></span></a>
+        <a class="nh-float nh-f3" href="/funcionalidades/nota-fiscal-nfse" data-track="ilustracao_nfse" data-pos="hero" aria-label="NFS-e emitida a partir do pagamento. Ver como funciona a emissão de nota fiscal"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-receipt"/></svg></span><span class="nh-ftxt"><b>NFS-e emitida</b><span>A partir do pagamento de outubro</span></span></a>
       </div>
     </div>
   </section>
@@ -2485,23 +2514,23 @@ document.addEventListener('click', function (e) {
         </div>
         <div class="nh-collage" aria-hidden="true">
           <div class="nh-blue"></div>
-          <div class="nh-card nh-c1">
+          <a class="nh-card nh-c1" href="/funcionalidades/lembretes-whatsapp" tabindex="-1" data-track="ilustracao_lembrete" data-pos="desafios">
             <span class="nh-lbl">WhatsApp · ontem 10:30</span>
-            <div class="nh-msg">Olá, Helena! Lembrete da sessão de terça às 08:00. Você confirma?</div>
-            <div class="nh-reply"><span class="nh-y">Vou</span><span class="nh-n">Não vou</span></div>
-          </div>
-          <div class="nh-card nh-c2">
+            <span class="nh-msg">Olá, Helena! Lembrete da sessão de terça às 08:00. Você confirma?</span>
+            <span class="nh-reply"><span class="nh-y">Vou</span><span class="nh-n">Não vou</span></span>
+          </a>
+          <a class="nh-card nh-c2" href="/funcionalidades/pacotes-de-sessoes" tabindex="-1" data-track="ilustracao_saldo_pacote" data-pos="desafios">
             <span class="nh-lbl">Pacote · Lucas M.</span>
-            <div class="nh-row"><span>Realizadas</span><b>9</b></div>
-            <div class="nh-row"><span>A realizar</span><b>3</b></div>
-            <div class="nh-bar"><i></i></div>
-          </div>
-          <div class="nh-card nh-c3">
+            <span class="nh-row"><span>Realizadas</span><b>9</b></span>
+            <span class="nh-row"><span>A realizar</span><b>3</b></span>
+            <span class="nh-bar"><i></i></span>
+          </a>
+          <a class="nh-card nh-c3" href="/funcionalidades/cobranca-automatica" tabindex="-1" data-track="ilustracao_cobrancas" data-pos="desafios">
             <span class="nh-lbl">Cobranças de outubro</span>
-            <div class="nh-row"><span>Helena R.</span><span class="nh-tag nh-ok">Pago</span></div>
-            <div class="nh-row"><span>Davi S.</span><span class="nh-tag nh-wait">Enviada</span></div>
-            <div class="nh-row"><span>Maria L.</span><span class="nh-tag nh-ok">Pago</span></div>
-          </div>
+            <span class="nh-row"><span>Helena R.</span><span class="nh-tag nh-ok">Pago</span></span>
+            <span class="nh-row"><span>Davi S.</span><span class="nh-tag nh-wait">Enviada</span></span>
+            <span class="nh-row"><span>Maria L.</span><span class="nh-tag nh-ok">Pago</span></span>
+          </a>
         </div>
       </div>
       <div class="nh-challenges">
@@ -2509,7 +2538,7 @@ document.addEventListener('click', function (e) {
         <div class="nh-challenge"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-phone"/></svg></span><div><h3>A recepção passa o dia ao telefone</h3><p><b>As confirmações chegam sozinhas</b>, e o paciente pode pedir horário pela página de agendamento online.</p></div></div>
         <div class="nh-challenge"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-box"/></svg></span><div><h3>O saldo do pacote fica numa planilha</h3><p><b>O saldo é calculado sozinho.</b> Falta justificada devolve a sessão, falta sem aviso desconta.</p></div></div>
         <div class="nh-challenge"><span class="nh-ibadge"><svg class="nh-i"><use href="#i-wallet"/></svg></span><div><h3>A cobrança é feita na mão</h3><p><b>As cobranças do mês são geradas de uma vez</b> e enviadas pelo WhatsApp com um clique, com o seu link de pagamento. A nota fiscal sai do pagamento.</p></div></div>
-        <div class="nh-actions" style="margin-top:12px"><a class="nh-btn nh-btn-primary" href="https://web.terapee.com.br/register" target="_blank" rel="noopener">Testar grátis por 14 dias</a></div>
+        <div class="nh-actions" style="margin-top:12px"><a class="nh-btn nh-btn-primary" href="https://web.terapee.com.br/register" target="_blank" rel="noopener">Testar grátis por 14 dias</a><a class="nh-btn nh-btn-ghost" href="#planos" data-track="ver_planos">Ver planos e preços</a></div>
       </div>
     </div>
   </section>
