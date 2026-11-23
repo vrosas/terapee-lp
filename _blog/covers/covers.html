@@ -157,6 +157,23 @@ body { font-family: 'DM Sans', sans-serif; background: #e5e7eb; padding: 24px; d
 #c-gcal .f { display: flex; justify-content: space-between; padding: 11px 0; border-bottom: 1px dashed var(--g200); font-size: 16px; color: var(--g600); }
 #c-gcal .f b { color: var(--dark); } #c-gcal .f .no { color: var(--g400); font-weight: 600; text-decoration: line-through; }
 #c-gcal .c1 { right: 150px; bottom: 54px; }
+/* ===== Como escolher um sistema ===== */
+#c-escolha .eval { left: 80px; top: 62px; width: 580px; padding: 28px 32px 20px; }
+#c-escolha .eval h4 { font-size: 23px; font-weight: 800; margin: 6px 0 12px; }
+#c-escolha .crit { display: grid; grid-template-columns: 38px 1fr auto; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--g100); }
+#c-escolha .crit:last-child { border-bottom: 0; }
+#c-escolha .crit .n { width: 38px; height: 38px; border-radius: 11px; background: var(--primary-50); color: var(--primary); display: grid; place-items: center; font-size: 16px; font-weight: 800; }
+#c-escolha .crit .t { font-size: 18px; font-weight: 700; color: var(--dark); }
+#c-escolha .crit .t small { display: block; font-size: 14px; font-weight: 500; color: var(--g500); }
+#c-escolha .ok { color: #067647; background: var(--green-50); }
+#c-escolha .wait { color: #B54708; background: #FEF0C7; }
+#c-escolha .no { color: #B42318; background: #FEE4E2; }
+#c-escolha .ask { right: 70px; top: 104px; width: 400px; padding: 28px 30px 22px; }
+#c-escolha .ask h4 { font-size: 22px; font-weight: 800; margin: 6px 0 12px; }
+#c-escolha .q { display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: center; padding: 12px 0; border-bottom: 1px dashed var(--g200); font-size: 17px; font-weight: 600; color: var(--g700); }
+#c-escolha .q:last-child { border-bottom: 0; }
+#c-escolha .q i { width: 30px; height: 30px; border-radius: 50%; background: var(--primary); color: #fff; display: grid; place-items: center; font-style: normal; font-weight: 800; font-size: 16px; }
+#c-escolha .c1 { right: 96px; bottom: 62px; }
 </style>
 </head>
 <body>
@@ -311,6 +328,30 @@ body { font-family: 'DM Sans', sans-serif; background: #e5e7eb; padding: 24px; d
   <div class="chip c1">
     <span class="ico" style="background:var(--primary-50);color:var(--primary)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
     <span><b>Agenda separada</b><small>remarcou ou cancelou, o Google acompanha</small></span>
+  </div>
+</section>
+
+<!-- Como escolher um sistema de gestão -->
+<section class="cover" id="c-escolha">
+  <div class="card eval">
+    <p class="kicker">Avaliação do sistema</p>
+    <h4>O que comparar antes de assinar</h4>
+    <div class="crit"><span class="n">1</span><span class="t">Agenda recorrente<small>série semanal, bloqueios e salas</small></span><span class="pill ok">✓ Atende</span></div>
+    <div class="crit"><span class="n">2</span><span class="t">Prontuário e conselho<small>acesso por perfil, prazo de guarda</small></span><span class="pill ok">✓ Atende</span></div>
+    <div class="crit"><span class="n">3</span><span class="t">Pacotes e cobrança<small>saldo, falta e reposição</small></span><span class="pill wait">Parcial</span></div>
+    <div class="crit"><span class="n">4</span><span class="t">NFS-e nacional<small>custo por nota?</small></span><span class="pill ok">✓ Atende</span></div>
+    <div class="crit"><span class="n">5</span><span class="t">Saída e exportação<small>meus dados, se eu cancelar</small></span><span class="pill no">Não tem</span></div>
+  </div>
+  <div class="card ask">
+    <p class="kicker">Perguntas ao fornecedor</p>
+    <h4>Peça por escrito</h4>
+    <div class="q"><i>?</i><span>O preço é por profissional?</span></div>
+    <div class="q"><i>?</i><span>O que é cobrado à parte?</span></div>
+    <div class="q"><i>?</i><span>Vocês migram meus dados?</span></div>
+  </div>
+  <div class="chip c1">
+    <span class="ico" style="background:var(--green-50);color:var(--green)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+    <span><b>Teste com a agenda real</b><small>uma semana mostra mais que a demonstração</small></span>
   </div>
 </section>
 
